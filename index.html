@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Népszámlálás katolikus szemmel</title>
+
+	<!-- INCLUDING JQUERY-->
+	<script src=
+"https://code.jquery.com/jquery-3.7.1.js">
+	</script>
+
+	<!-- CSS FOR STYLING THE PAGE -->
+	<style>
+		table {
+			margin: 0 auto;
+			font-size: large;
+			border: 1px solid black;
+		}
+
+		h1 {
+			text-align: center;
+			color: #006600;
+			font-size: xx-large;
+			font-family: 'Gill Sans',
+				'Gill Sans MT', ' Calibri',
+				'Trebuchet MS', 'sans-serif';
+		}
+
+		td {
+			background-color: #E4F5D4;
+			border: 1px solid black;
+		}
+
+		th,
+		td {
+			font-weight: bold;
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+
+		td {
+			font-weight: lighter;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<h1>Római Katolikus Egyházmegyék</h1>
+
+		<!-- TABLE CONSTRUCTION-->
+		<table id='myTable'>
+			<!-- HEADING FORMATION -->
+			<tr id="table_header">
+				<th>Egyházmegye</th>
+			</tr>
+
+			<script>
+			
+				$(document).ready(function () {
+
+					/* COLLECT DATA */
+					var fullData = {
+						'relation-5635586' : {
+							'osmid' : 'relation-5635586',
+							'name' : 'Egri Főegyházmegye',
+							'ksh_refs' : [],
+							'names' : []
+						},
+						'relation-12535238' : {
+							'osmid' : 'relation-12535238',
+							'name' : 'Kaposvári Egyházmegye',
+							'ksh_refs' : [],
+							'names' : []
+						}
+
+					
+					};
+					
+					for (const [key, diocese] of Object.entries(fullData)) {
+											
+						$.getJSON("OSM DataSources/" + diocese.osmid + ".geojson", function (data) {
+							// ITERATING THROUGH OBJECTS
+							$.each(data.features, function (key, value) {
+								diocese.ksh_refs.push(value.properties.ksh_ref);
+								diocese.names.push(value.properties.name);
+							});											
+						});	
+						//fullData[key] = diocese;
+					};
+					
+					var sum = {};		
+					const colls = [] ;
+
+										
+										
+					$.getJSON("KSH DataSources/ksh-census2022-WBS003-unpivot.json", function (data) {
+						// ITERATING THROUGH OBJECTS
+						$.each(data, function (key, value) {
+							if ( ! colls.includes(value.TEL_SZ_ADAT) ) colls.push(value.TEL_SZ_ADAT);
+							
+							if(sum[value.TEL_SZ_ADAT] === undefined ){ sum[value.TEL_SZ_ADAT] = {} };							
+							if(sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] === undefined ){ sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] = 0;  }			
+							sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] +=  Number(value.OBS_VALUE);
+							
+							for (const key in fullData) {
+								var diocese = fullData[key];
+								
+								const ksh_refs = fullData[key].ksh_refs;
+								if( diocese.ksh_refs.includes(value.TERUL_GEO5)) {
+									if(diocese['data'] === undefined) diocese['data'] = {};
+								
+									if(diocese['data'][value.TEL_SZ_ADAT] === undefined ){ diocese['data'][value.TEL_SZ_ADAT] = {} };							
+									if(diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] === undefined ){ diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] = 0;  }			
+									diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] +=  Number(value.OBS_VALUE);
+								} 
+							
+							}
+						});											
+					});
+					
+					//fullData['sum'] = { 'data' : sum };
+					console.log(fullData);
+					console.log(colls);
+					console.log("Data has been prepared.");
+				
+					
+					
+					
+					
+				});
+			</script>
+	</section>
+</body>
+
+</html>
