@@ -10,40 +10,7 @@
 "https://code.jquery.com/jquery-3.7.1.js">
 	</script>
 
-	<!-- CSS FOR STYLING THE PAGE -->
-	<style>
-		table {
-			margin: 0 auto;
-			font-size: large;
-			border: 1px solid black;
-		}
-
-		h1 {
-			text-align: center;
-			color: #006600;
-			font-size: xx-large;
-			font-family: 'Gill Sans',
-				'Gill Sans MT', ' Calibri',
-				'Trebuchet MS', 'sans-serif';
-		}
-
-		td {
-			background-color: #E4F5D4;
-			border: 1px solid black;
-		}
-
-		th,
-		td {
-			font-weight: bold;
-			border: 1px solid black;
-			padding: 10px;
-			text-align: center;
-		}
-
-		td {
-			font-weight: lighter;
-		}
-	</style>
+	
 </head>
 
 <body>
@@ -63,14 +30,20 @@
       
 
     <div class="container">
-	
+	<div class=" text-nowrap">
+
 		<!-- TABLE CONSTRUCTION-->
-		<table class='table' id='myTable'>
+		<table class='table table-striped' id='myTable'>
 			<!-- HEADING FORMATION -->
+			<thead>
 			<tr id="table_header">
-				<th>Egyházmegye</th>
+				<th >Egyházmegye</th>
 			</tr>
+			</thead>
+			<tbody>
+			</tbody>
 		</table>
+		</div>
 	</div>		
 	<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on GitHub</a></center>
 	
@@ -172,11 +145,11 @@
 				
 			function publishTable(data, header) {
 				$.each(header, function (key, value) {
-					$("#table_header").append("<th>" + value + "</th>");
+					$("#table_header").append("<th class='w-25'>" + value + "</th>");
 				});
 				$.each(data, function (key, value) {
 
-					var markup = '<tr class="child"><td>' + value.name;
+					var markup = '<tr class="child"><th scope="row">' + value.name + '</th>';
 					
 					for(let i = 0; i < Object.keys(value.data).length; i++ ) {
 						var tmp = value.data[ Object.keys(value.data)[i]  ];
