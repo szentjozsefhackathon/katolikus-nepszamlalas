@@ -86,15 +86,14 @@
 								diocese.ksh_refs.push(value.properties.ksh_ref);
 								diocese.names.push(value.properties.name);
 							});											
-						});	
-						//fullData[key] = diocese;
+							
+						})  ;	
 					};
+					// console.log(Object.keys(fullData).length);
 					
 					var sum = {};		
 					const colls = [] ;
-
-										
-										
+											
 					$.getJSON("KSH DataSources/ksh-census2022-WBS003-unpivot.json", function (data) {
 						// ITERATING THROUGH OBJECTS
 						$.each(data, function (key, value) {
@@ -117,19 +116,37 @@
 								} 
 							
 							}
-						});											
+						});							
+						console.log("Data has been prepared.");	
+						console.log(fullData);
+						publishTable(fullData, colls);
+						
 					});
-					
-					//fullData['sum'] = { 'data' : sum };
-					console.log(fullData);
-					console.log(colls);
-					console.log("Data has been prepared.");
-				
-					
-					
-					
-					
+																			
 				});
+				
+			function publishTable(data, header) {
+				$.each(header, function (key, value) {
+					$("#table_header").append("<th>" + value + "</th>");
+				});
+				$.each(data, function (key, value) {
+
+					var markup = '<tr class="child"><td>' + value.name;
+					
+					for(let i = 0; i < Object.keys(value.data).length; i++ ) {
+						var tmp = value.data[ Object.keys(value.data)[i]  ];
+						markup += "<td>";
+						$.each(tmp, function (key, value) {
+							markup += key + ": " + value + "<br/>";
+						});
+						markup += "</td>";
+					}
+					
+					markup += '</tr>';
+				   $('#myTable tbody').append(markup);
+
+				});			
+			}			
 			</script>
 	</section>
 </body>
