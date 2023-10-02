@@ -75,10 +75,10 @@
 	<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on GitHub</a></center>
 	
 			<script>
-			
-				$(document).ready(function () {
-
-					/* COLLECT DATA */
+					var KSHData = [];
+					var sum = {};		
+					const colls = [] ;
+					
 					var fullData = [
 						{
 							'osmid' : 'relation-5635587',
@@ -131,6 +131,11 @@
 					
 					 ];
 					
+				$(document).ready(function () {
+
+					/* COLLECT DATA */
+					
+					
 					for (const [key, diocese] of Object.entries(fullData)) {
 						if(diocese.ksh_refs === undefined) diocese.ksh_refs = [];
 						if(diocese.names === undefined) diocese.names = [];
@@ -145,10 +150,51 @@
 					};
 					// console.log(Object.keys(fullData).length);
 					
-					var sum = {};		
-					const colls = [] ;
-											
-					$.getJSON("KSH DataSources/ksh-census2022-WBS003-unpivot.json", function (data) {
+
+					
+					readKSHFile(['DIV_DISREP','FY_GE65','FY15-64','MAR_REP','MY_GE65','MY15-64','RE_C','RE_GC','RE_NA','RE_NOT','RE_RC','SIN','WID_DTHREP'],0);
+					
+
+																			
+				});
+				
+			function publishTable(data, header) {
+				$.each(header, function (key, value) {
+					$("#table_header").append("<th>" + value + "</th>");
+				});
+				$.each(data, function (key, value) {
+
+					var markup = '<tr class="child"><td>' + value.name;
+					
+					for(let i = 0; i < Object.keys(value.data).length; i++ ) {
+						var tmp = value.data[ Object.keys(value.data)[i]  ];
+						markup += "<td>";
+						$.each(tmp, function (key, value) {
+							markup += key + ": " + value + "<br/>";
+						});
+						markup += "</td>";
+					}
+					
+					markup += '</tr>';
+				   $('#myTable tbody').append(markup);
+
+				});			
+			}
+
+		async function readKSHFile(array, i) {
+			const response = await fetch("KSH DataSources/" + array[i] + ".json");
+			const tmpData = await response.json();
+			KSHData.push(...tmpData);
+			console.log(KSHData);
+			if ( i + 1 < array.length) {
+				await readKSHFile(array, i + 1)
+			} else {
+				iterating(KSHData);
+			}
+			return KSHData;
+		}
+		
+		function iterating(data) {
 						// ITERATING THROUGH OBJECTS
 						$.each(data, function (key, value) {
 							if ( ! colls.includes(value.TEL_SZ_ADAT) ) colls.push(value.TEL_SZ_ADAT);
@@ -175,32 +221,7 @@
 						console.log(fullData);
 						publishTable(fullData, colls);
 						
-					});
-																			
-				});
-				
-			function publishTable(data, header) {
-				$.each(header, function (key, value) {
-					$("#table_header").append("<th>" + value + "</th>");
-				});
-				$.each(data, function (key, value) {
-
-					var markup = '<tr class="child"><td>' + value.name;
-					
-					for(let i = 0; i < Object.keys(value.data).length; i++ ) {
-						var tmp = value.data[ Object.keys(value.data)[i]  ];
-						markup += "<td>";
-						$.each(tmp, function (key, value) {
-							markup += key + ": " + value + "<br/>";
-						});
-						markup += "</td>";
-					}
-					
-					markup += '</tr>';
-				   $('#myTable tbody').append(markup);
-
-				});			
-			}			
+					};
 			</script>
 	
 	
