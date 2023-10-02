@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Népszámlálás katolikus szemmel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 	<!-- INCLUDING JQUERY-->
 	<script src=
@@ -46,16 +47,33 @@
 </head>
 
 <body>
-	<section>
-		<h1>Római Katolikus Egyházmegyék</h1>
 
+    <div class="container">
+	 <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">A népszámlálás és a<br/> katolikus egyházmegyék</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">A népszámlálási adatok a Magyar Katolikus Egyházról és összetételéről is sokat mesél. Ám míg az adatok alapvetően vármegye szinten és települési szinten érhetőek el legkönnyebben, addig a katolikus egyháznak az a leghasznosabb, ha egyházmegyei szinten is elérhetőek és elemezhetőek az adatok. Ehhez kívánunk segítséget nyújtani ezzel az egyszerű felelülettel. Talán az adatokat nézegetve észrevehetünk leheséges összefüggéseket, ami segíthet a reflexióban.</p>
+	  <div class="alert alert-danger">Az oldal még nagyon kezdetleges fázisban van. Gyere vissza később. Vagy inkább gyere segíteni nekünk a <a href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.</div>  
+	</div>
+  </div>
+
+  <div class="b-example-divider"></div>
+      
+        
+      
+
+    <div class="container">
+	
 		<!-- TABLE CONSTRUCTION-->
-		<table id='myTable'>
+		<table class='table' id='myTable'>
 			<!-- HEADING FORMATION -->
 			<tr id="table_header">
 				<th>Egyházmegye</th>
 			</tr>
-
+		</table>
+	</div>		
+	<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on GitHub</a></center>
+	
 			<script>
 			
 				$(document).ready(function () {
@@ -157,7 +175,10 @@
 				});			
 			}			
 			</script>
-	</section>
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
