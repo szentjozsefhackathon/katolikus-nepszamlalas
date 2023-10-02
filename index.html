@@ -61,25 +61,34 @@
 				$(document).ready(function () {
 
 					/* COLLECT DATA */
-					var fullData = {
-						'relation-5635586' : {
-							'osmid' : 'relation-5635586',
-							'name' : 'Egri Főegyházmegye',
-							'ksh_refs' : [],
-							'names' : []
+					var fullData = [
+						{
+							'osmid' : 'relation-5635587',
+							'name' : 'Esztergom-Budapesti főegyházmegye'
 						},
-						'relation-12535238' : {
+						{
+							'osmid' : 'relation-5635589',
+							'name' : 'Győri egyházmegye'
+						},
+						{
+							'osmid' : 'relation-5635765',
+							'name' : 'Székesfehérvári egyházmegye'
+						},						
+						{
+							'osmid' : 'relation-5635586',
+							'name' : 'Egri Főegyházmegye'
+						},
+						{
 							'osmid' : 'relation-12535238',
-							'name' : 'Kaposvári Egyházmegye',
-							'ksh_refs' : [],
-							'names' : []
+							'name' : 'Kaposvári Egyházmegye'
 						}
 
 					
-					};
+					 ];
 					
 					for (const [key, diocese] of Object.entries(fullData)) {
-											
+						if(diocese.ksh_refs === undefined) diocese.ksh_refs = [];
+						if(diocese.names === undefined) diocese.names = [];
 						$.getJSON("OSM DataSources/" + diocese.osmid + ".geojson", function (data) {
 							// ITERATING THROUGH OBJECTS
 							$.each(data.features, function (key, value) {
