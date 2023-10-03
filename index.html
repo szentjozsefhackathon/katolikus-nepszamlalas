@@ -51,6 +51,7 @@
 					var KSHData = [];
 					var sum = {};		
 					const colls = [] ;
+					var dictionary;
 					
 					var fullData = [
 						{
@@ -134,6 +135,8 @@
 						})  ;	
 					};
 					// console.log(Object.keys(fullData).length);
+
+					readDictionary()
 					
 
 					
@@ -145,7 +148,8 @@
 				
 			function publishTable(data, header) {
 				$.each(header, function (key, value) {
-					$("#table_header").append("<th class='w-25'>" + value + "</th>");
+					console.log(value)
+					$("#table_header").append("<th class='w-25'>" + (value in dictionary ? dictionary[value] : value) + "</th>");
 				});
 				$.each(data, function (key, value) {
 
@@ -177,6 +181,13 @@
 				iterating(KSHData);
 			}
 			return KSHData;
+		}
+
+		function readDictionary() {
+			$.getJSON("KSH DataSources/dictionary.json", function (data) {
+							dictionary = data									
+							
+						})  ;	
 		}
 		
 		function iterating(data) {
