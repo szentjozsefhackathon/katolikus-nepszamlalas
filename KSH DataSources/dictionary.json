@@ -19,6 +19,8 @@
     "LMS_INV": "15 évesnél fiatalabb személy",
     "WID_DTHREP": "Özvegy",
     "RE_C_NOTRG": "Katolikus, aki nem római katolikus és nem is görögkatolikus (származtatott)",
-    "Y_GE65": "65 éves és idősebb (származtatott)"
+    "Y_GE65": "65 éves és idősebb (származtatott)",
+    "Y15-64": "15-64 éves (származtatott)",
+    "Y_LT15": "15 évesnél fiatalabb (származtatott)"
 
 }
