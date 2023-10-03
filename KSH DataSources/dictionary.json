@@ -11,6 +11,7 @@
     "RE_C": "Katolikus",
     "RE_RC": "Katolikuson belül római katolikus",
     "RE_GC": "Katolikuson belül görögkatolikus",
+    "RE_C_NOTRG": "Katolikus, aki nem római katolikus és nem is görögkatolikus (származtatott)",
     "RE_NA": "Nem kíván válaszolni (vallás, felekezet)",
     "RE_NOT": "Vallási közösséghez, felekezethez nem tartozó",
     "SIN": "Nőtlen, hajadon",
