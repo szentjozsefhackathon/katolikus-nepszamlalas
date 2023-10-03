@@ -140,7 +140,7 @@
 				
 			function publishTable(data, header) {
 				$("#content").removeClass('alert');
-				$("#content").html("<!-- TABLE CONSTRUCTION--><table class='table table-striped' id='myTable'><!-- HEADING FORMATION --><thead><tr id='table_header'><th >Egyházmegye</th></tr></thead><tbody></tbody></table>");
+				$("#content").html("<!-- TABLE CONSTRUCTION--><table class='table table-striped' id='myTable'><!-- HEADING FORMATION --><thead><tr id='table_header' class='table-primary'><th >Egyházmegye</th></tr></thead><tbody></tbody></table>");
 
 
 				$.each(header, function (key, value) {
@@ -149,7 +149,7 @@
 				});
 				$.each(data, function (key, value) {
 
-					var markup = '<tr class="child"><th scope="row">' + value.name + '</th>';
+					var markup = '<tr class="child"><th scope="row text-nowrap"><span class="text-nowrap">' + value.name + '</span></th>';
 					
 					for(let i = 0; i < Object.keys(value.data).length; i++ ) {
 						var tmp = value.data[ Object.keys(value.data)[i]  ];
@@ -163,7 +163,10 @@
 						else if (diff < -5) var color = "danger";
 						else var color = "info"
 						markup += ' <span class="badge text-bg-' + color + ' even-larger-badge" title="Különbség a 2022-es és a 2001-es KSH adat között.">' + diff.toFixed(2) + '%</span>';
-						markup += '<br/><span class="badge text-bg-secondary" title="2001-es KSH adat">' + tmp[2001].toLocaleString('hu-HU') + '</span>&nbsp;<span class="badge text-bg-light" title="2011-es KSH adat">' + tmp[2011].toLocaleString('hu-HU') + '</span>';
+
+					var diff =  ( tmp[2011] - tmp[2001] ) / tmp[2001] * 100;
+						markup += '<br/><span class="badge text-bg-secondary" title="2001-es KSH adat">' + tmp[2001].toLocaleString('hu-HU') + '</span>&nbsp;<span class="badge text-bg-secondary" title="2011-es KSH adat">' + tmp[2011].toLocaleString('hu-HU') + '</span>&nbsp;<span class="badge text-bg-light" title="Változás 2001 és 2011 között.">' + diff.toFixed(2) + '%</span>';
+						
 
 						markup += "</td>";
 					}
