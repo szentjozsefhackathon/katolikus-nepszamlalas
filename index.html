@@ -10,7 +10,11 @@
 "https://code.jquery.com/jquery-3.7.1.js">
 	</script>
 
-	
+	<style>
+		.badge.even-larger-badge {
+  		font-size: 1.1em;
+		}
+	</style>
 </head>
 
 <body>
@@ -149,10 +153,18 @@
 					
 					for(let i = 0; i < Object.keys(value.data).length; i++ ) {
 						var tmp = value.data[ Object.keys(value.data)[i]  ];
-						markup += "<td>";
-						$.each(tmp, function (key, value) {
-							markup += key + ": " + value + "<br/>";
-						});
+						markup += "<td class='text-nowrap'>";
+
+						
+
+						markup += '<span class="badge text-bg-primary even-larger-badge" title="2022-es KSH adat">' + tmp[2022].toLocaleString('hu-HU') + '</span>';
+						var diff =  ( tmp[2022] - tmp[2001] ) / tmp[2001] * 100;
+						if(diff > 5 ) var color = "success";
+						else if (diff < -5) var color = "danger";
+						else var color = "info"
+						markup += ' <span class="badge text-bg-' + color + ' even-larger-badge" title="Különbség a 2022-es és a 2001-es KSH adat között.">' + diff.toFixed(2) + '%</span>';
+						markup += '<br/><span class="badge text-bg-secondary" title="2001-es KSH adat">' + tmp[2001].toLocaleString('hu-HU') + '</span>&nbsp;<span class="badge text-bg-light" title="2011-es KSH adat">' + tmp[2011].toLocaleString('hu-HU') + '</span>';
+
 						markup += "</td>";
 					}
 					
