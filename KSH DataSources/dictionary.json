@@ -11,12 +11,14 @@
     "RE_C": "Katolikus",
     "RE_RC": "Katolikuson belül római katolikus",
     "RE_GC": "Katolikuson belül görögkatolikus",
-    "RE_C_NOTRG": "Katolikus, aki nem római katolikus és nem is görögkatolikus (származtatott)",
     "RE_NA": "Nem kíván válaszolni (vallás, felekezet)",
     "RE_NOT": "Vallási közösséghez, felekezethez nem tartozó",
     "SIN": "Nőtlen, hajadon",
     "DIV_DISREP": "Elvált",
     "MAR_REP": "Házas",
     "LMS_INV": "15 évesnél fiatalabb személy",
-    "WID_DTHREP": "Özvegy"
+    "WID_DTHREP": "Özvegy",
+    "RE_C_NOTRG": "Katolikus, aki nem római katolikus és nem is görögkatolikus (származtatott)",
+    "Y_GE65": "65 éves és idősebb (származtatott)"
+
 }

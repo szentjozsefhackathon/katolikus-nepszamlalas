@@ -280,15 +280,21 @@
 						});							
 						console.log("Data has been prepared.");	
 						console.log(fullData);
-						var ret = countNonRGCatholics(fullData, colls);
+						
+						var ret = generateRE_C_NOTRG(fullData, colls);
 						fullData = ret[0];
 						colls = ret[1];
+
+						var ret = generateY_GE65(fullData, colls);
+						fullData = ret[0];
+						colls = ret[1];
+
 						publishTable(fullData, colls);
 						publishTable2(fullData, colls);
 						
 					};
 
-			function countNonRGCatholics(fullData, colls) {
+			function generateRE_C_NOTRG(fullData, colls) {
 					colls.push('RE_C_NOTRG');
 					$.each(fullData, function (key, value) {
 							console.log(value.data);
@@ -302,6 +308,24 @@
 					console.log(fullData);
 					return [fullData, colls];
 			};
+
+			function generateY_GE65(fullData, colls) {
+					colls.push('Y_GE65');
+					$.each(fullData, function (key, value) {
+							console.log(value.data);
+							fullData[key]['data']['Y_GE65'] = {
+								'2001': value.data['FY_GE65'][2001] + value.data['FY_GE65'][2001],
+								'2011': value.data['FY_GE65'][2011] + value.data['FY_GE65'][2011],
+								'2022': value.data['FY_GE65'][2022] + value.data['FY_GE65'][2022],
+							};
+
+					}	);		
+					console.log(fullData);
+					return [fullData, colls];
+			};
+
+
+
 			</script>
 	
 	
