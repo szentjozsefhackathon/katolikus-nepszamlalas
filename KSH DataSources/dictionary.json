@@ -1,8 +1,21 @@
 {
+    "NEME_SEX": "Összesen",
+    "M": "Férfi",
+    "F": "Nő",
     "MY_GE65": "65 éves és idősebb férfi",
     "FY_GE65": "65 éves és idősebb nő",
     "MY15-64": "15-64 éves férfi",
     "FY15-64": "15-64 éves nő",
+    "MY_LT15": "15 évesnél fiatalabb férfi",
+    "FY_LT15": "15 évesnél fiatalabb nő",
     "RE_C": "Katolikus",
-    "RE_RC": "Katolikuson belül római katolikus"
+    "RE_RC": "Katolikuson belül római katolikus",
+    "RE_GC": "Katolikuson belül görögkatolikus",
+    "RE_NA": "Nem kíván válaszolni (vallás, felekezet)",
+    "RE_NOT": "Vallási közösséghez, felekezethez nem tartozó",
+    "SIN": "Nőtlen, hajadon",
+    "DIV_DISREP": "Elvált",
+    "MAR_REP": "Házas",
+    "LMS_INV": "15 évesnél fiatalabb személy",
+    "WID_DTHREP": "Özvegy"
 }
