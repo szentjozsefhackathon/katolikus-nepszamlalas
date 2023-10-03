@@ -30,20 +30,7 @@
       
 
     <div class="container">
-	<div class=" text-nowrap">
-
-		<!-- TABLE CONSTRUCTION-->
-		<table class='table table-striped' id='myTable'>
-			<!-- HEADING FORMATION -->
-			<thead>
-			<tr id="table_header">
-				<th >Egyházmegye</th>
-			</tr>
-			</thead>
-			<tbody>
-			</tbody>
-		</table>
-		</div>
+		<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
 	</div>		
 	<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on GitHub</a></center>
 	
@@ -121,11 +108,13 @@
 
 					/* COLLECT DATA */
 					
-					
+					$("#content").html("Adatok begyűjtése");
+
 					for (const [key, diocese] of Object.entries(fullData)) {
 						if(diocese.ksh_refs === undefined) diocese.ksh_refs = [];
 						if(diocese.names === undefined) diocese.names = [];
 						$.getJSON("OSM DataSources/" + diocese.osmid + ".geojson", function (data) {
+							$("#content").append(".");
 							// ITERATING THROUGH OBJECTS
 							$.each(data.features, function (key, value) {
 								diocese.ksh_refs.push(value.properties.ksh_ref);
@@ -138,7 +127,6 @@
 
 					readDictionary()
 					
-
 					
 					readKSHFile(['NEME_SEX','DIV_DISREP','FY_GE65','FY15-64','MAR_REP','MY_GE65','MY15-64','RE_C','RE_GC','RE_NA','RE_NOT','RE_RC','SIN','WID_DTHREP'],0);
 					
@@ -147,6 +135,10 @@
 				});
 				
 			function publishTable(data, header) {
+				$("#content").removeClass('alert');
+				$("#content").html("<!-- TABLE CONSTRUCTION--><table class='table table-striped' id='myTable'><!-- HEADING FORMATION --><thead><tr id='table_header'><th >Egyházmegye</th></tr></thead><tbody></tbody></table>");
+
+
 				$.each(header, function (key, value) {
 					console.log(value)
 					$("#table_header").append("<th class='w-25'>" + (value in dictionary ? dictionary[value] : value) + "</th>");
@@ -173,11 +165,13 @@
 		async function readKSHFile(array, i) {
 			const response = await fetch("KSH DataSources/" + array[i] + ".json");
 			const tmpData = await response.json();
+			$("#content").append(".");
 			KSHData.push(...tmpData);
 			console.log(KSHData);
 			if ( i + 1 < array.length) {
 				await readKSHFile(array, i + 1)
 			} else {
+				$("#content").html("Adatok feldolgozása");
 				iterating(KSHData);
 			}
 			return KSHData;
@@ -193,6 +187,7 @@
 		function iterating(data) {
 						// ITERATING THROUGH OBJECTS
 						$.each(data, function (key, value) {
+							
 							if ( ! colls.includes(value.TEL_SZ_ADAT) ) colls.push(value.TEL_SZ_ADAT);
 							
 							if(sum[value.TEL_SZ_ADAT] === undefined ){ sum[value.TEL_SZ_ADAT] = {} };							
