@@ -17,23 +17,28 @@
     },
     "RE_CA": {
         "name": "Református",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "RE_LU": {
         "name": "Evangélikus",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "RE_OC": {
         "name": "Ortodox keresztény",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "RE_CD": {
         "name": "Más keresztény felekezet",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "RE_J": {
         "name": "Izraelita",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "RE_OCD": {
         "name": "Más vallási közösséghez, felekezethez tartozó",
@@ -53,11 +58,13 @@
     },
     "FY_GE65": {
         "name": "65 éves és idősebb nő",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "FY15-64": {
         "name": "15-64 éves nő",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "MAR_REP": {
         "name": "Házas",
@@ -65,31 +72,38 @@
     },
     "MY_GE65": {
         "name": "65 éves és idősebb férfi",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "MY15-64": {
         "name": "15-64 éves férfi",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "SIN": {
         "name": "Nőtlen, hajadon",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "WID_DTHREP": {
         "name": "Özvegy",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "FY_LT15": {
         "name": "15 évesnél fiatalabb nő",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "MY_LT15": {
         "name": "15 évesnél fiatalabb férfi",
-        "calculated": false
+        "calculated": false,
+        "hiddenInChart": true
     },
     "RE_C_NOTRG": {
         "name": "Katolikus, aki nem római katolikus és nem is görögkatolikus (származtatott)",
-        "calculated": true
+        "calculated": true,
+        "hiddenInChart": true
     },
     "Y_GE65": {
         "name": "65 éves és idősebb (származtatott)",

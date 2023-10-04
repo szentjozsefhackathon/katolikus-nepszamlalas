@@ -101,7 +101,6 @@
 
 					});
 				};
-				// console.log(Object.keys(fullData).length);
 
 				await readDictionary()
 
@@ -111,14 +110,12 @@
 			});
 
 			function publishTable(data, header) {
-				console.log("table", header)
 				$("#content").removeClass('alert');
 				$("#content").html("<h2>KSH adatok kategóriánként</h2>");
 				$("#content").append("<!-- TABLE CONSTRUCTION--><table class='table table-striped' id='myTable'><!-- HEADING FORMATION --><thead><tr id='table_header' class='table-primary'><th >Egyházmegye</th></tr></thead><tbody></tbody></table>");
 
 
 				$.each(header, function (key, value) {
-					console.log("Each", value)
 					$("#table_header").append("<th class='w-25'>" + (value in dictionary ? dictionary[value].name : value) + "</th>");
 				});
 				$.each(data, function (key, value) {
@@ -159,7 +156,6 @@
 
 
 				$.each(header, function (key, value) {
-					console.log(value)
 					$("#table_header2").append("<th class='w-25'>" + (value in dictionary ? dictionary[value].name : value) + "</th>");
 				});
 				$.each(data, function (key, value) {
@@ -209,7 +205,6 @@
 
 				}
 
-				console.log(KSHData);
 				if (i + 1 < array.length) {
 					await readKSHFile(array, i + 1)
 				} else {
@@ -259,7 +254,6 @@
 				console.log(fullData);
 
 				calculateData().then(() => {
-					console.log("Then")
 					publishTable(fullData, colls);
 					publishTable2(fullData, colls);
 					generateChart(fullData, colls, c1)
@@ -291,10 +285,11 @@
 					type: "bar",
 					data: {
 						labels: fullData.map(d => d.name),
-						datasets: colls.filter(c => c.name != "NEME_SEX").map(c => {
+						datasets: colls.filter(c => c != "NEME_SEX").map(c => {
 							return {
 								label: dictionary[c] ? dictionary[c].name : "Ismeretlen",
-								data: fullData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100)
+								data: fullData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
+								hidden: dictionary[c] ? (dictionary[c].hiddenInChart ? true : false) : false
 							}
 						})
 					}
