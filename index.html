@@ -3,148 +3,174 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Népszámlálás katolikus szemmel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 	<!-- INCLUDING JQUERY-->
-	<script src=
-"https://code.jquery.com/jquery-3.7.1.js">
+	<script src="https://code.jquery.com/jquery-3.7.1.js">
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 	<style>
 		.badge.even-larger-badge {
-  		font-size: 1.1em;
+			font-size: 1.1em;
 		}
 	</style>
 </head>
 
 <body>
 
-    <div class="container">
-	 <div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-body-emphasis">A népszámlálás és a<br/> katolikus egyházmegyék</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">A népszámlálási adatok a Magyar Katolikus Egyházról és összetételéről is sokat mesél. Ám míg az adatok alapvetően vármegye szinten és települési szinten érhetőek el legkönnyebben, addig a katolikus egyháznak az a leghasznosabb, ha egyházmegyei szinten is elérhetőek és elemezhetőek az adatok. Ehhez kívánunk segítséget nyújtani ezzel az egyszerű felelülettel. Talán az adatokat nézegetve észrevehetünk leheséges összefüggéseket, ami segíthet a reflexióban.</p>
-	  
-	  <div class="alert alert-danger">Az oldal még kezdetleges fázisban van. Gyere vissza később. Vagy inkább gyere segíteni nekünk a <a href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.</div>  
+	<div class="container">
+		<div class="px-4 py-5 my-5 text-center">
+			<h1 class="display-5 fw-bold text-body-emphasis">A népszámlálás és a<br /> katolikus egyházmegyék</h1>
+			<div class="col-lg-6 mx-auto">
+				<p class="lead mb-4">A népszámlálási adatok a Magyar Katolikus Egyházról és összetételéről is sokat
+					mesél. Ám míg az adatok alapvetően vármegye szinten és települési szinten érhetőek el legkönnyebben,
+					addig a katolikus egyháznak az a leghasznosabb, ha egyházmegyei szinten is elérhetőek és
+					elemezhetőek az adatok. Ehhez kívánunk segítséget nyújtani ezzel az egyszerű felelülettel. Talán az
+					adatokat nézegetve észrevehetünk leheséges összefüggéseket, ami segíthet a reflexióban.</p>
 
-	  <div class="alert alert-info"><h5>Mit jelentenek és mit nem jelentenek a számok?</h5>
-	  	<p>Vegyünk egy példát: elváltak a Győri egyházmegyében.</p>
-	  	<p>2001-ben a 30 891 elvált személy élt a Győri egyházmegye jelenlegi területén. 2022-ben pedig 53 724. Ez közel 74%-os növekedés. A legnagyobb arányú növekedés az egyházmegyék között. Jaj. De darabszámban a Váci egyházmegyében sokkal nagyobb a különbség 2001 és 2022 között az elváltak létszámát illetően: több mint negyven ezer. Közben ha lakosság arányában nézzük, akkor a Győri egyházmegyében 2001-ben a lakosság 5,8%-a volt elvált. 2022-ben pedig már 9,6%. Ám ezzel még mindig nem érte utol a Győri egyházmegye lakossága az országos átlagot. Juhú. Vagyis, hiába a legnagyobb növekedés az elváltak számában, az elváltak arányában még mindig nagyon jó a Győri egyházmegye.</p>
-	  	<p>Fontos még azt is látni, hogy 2022 és 2001 között minden bizonnyal nem 22 833 válás történt. Lehetett sokkal több válás, csak aztán elhunytak az elváltak. Vagy átköltöztek másik egyházmegyébe. De az is lehet, hogy sok elvált ember költözött az egyházmegye területére. És még megannyi magyarázat lehet. Ezek az adatok csak pillanatfelvételek!</p>
-	  </div>  
-	</div>
-  </div>
+				<div class="alert alert-danger">Az oldal még kezdetleges fázisban van. Gyere vissza később. Vagy inkább
+					gyere segíteni nekünk a <a href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.
+				</div>
 
-  <div class="b-example-divider"></div>
-      
-        
-      
+				<div class="alert alert-info">
+					<h5>Mit jelentenek és mit nem jelentenek a számok?</h5>
+					<p>Vegyünk egy példát: elváltak a Győri egyházmegyében.</p>
+					<p>2001-ben a 30 891 elvált személy élt a Győri egyházmegye jelenlegi területén. 2022-ben pedig 53
+						724. Ez közel 74%-os növekedés. A legnagyobb arányú növekedés az egyházmegyék között. Jaj. De
+						darabszámban a Váci egyházmegyében sokkal nagyobb a különbség 2001 és 2022 között az elváltak
+						létszámát illetően: több mint negyven ezer. Közben ha lakosság arányában nézzük, akkor a Győri
+						egyházmegyében 2001-ben a lakosság 5,8%-a volt elvált. 2022-ben pedig már 9,6%. Ám ezzel még
+						mindig nem érte utol a Győri egyházmegye lakossága az országos átlagot. Juhú. Vagyis, hiába a
+						legnagyobb növekedés az elváltak számában, az elváltak arányában még mindig nagyon jó a Győri
+						egyházmegye.</p>
+					<p>Fontos még azt is látni, hogy 2022 és 2001 között minden bizonnyal nem 22 833 válás történt.
+						Lehetett sokkal több válás, csak aztán elhunytak az elváltak. Vagy átköltöztek másik
+						egyházmegyébe. De az is lehet, hogy sok elvált ember költözött az egyházmegye területére. És még
+						megannyi magyarázat lehet. Ezek az adatok csak pillanatfelvételek!</p>
+				</div>
+			</div>
+		</div>
 
-    <div class="container">
-		<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
-	</div>		
-	<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on GitHub</a></center>
-	
-			<script>
-					var KSHData = [];
-					var sum = {};		
-					var colls = [] ;
-					var dictionary;
-					
-					var fullData = [
-						{
-							'osmid' : 'relation-5635587',
-							'name' : 'Esztergom-Budapesti főegyházmegye'
-						},
-						{
-							'osmid' : 'relation-5635589',
-							'name' : 'Győri egyházmegye'
-						},
-						{
-							'osmid' : 'relation-5635765',
-							'name' : 'Székesfehérvári egyházmegye'
-						},						
-						{
-							'osmid' : 'relation-5635590',
-							'name' : 'Kalocsa-Kecskeméti főegyházmegye'
-						},
-						{
-							'osmid' : 'relation-5635591',
-							'name' : 'Szeged-Csanádi egyházmegye'
-						},
-						{
-							'osmid' : 'relation-5638351',
-							'name' : 'Pécsi egyházmegye'
-						},						
-						{
-							'osmid' : 'relation-5635586',
-							'name' : 'Egri főegyházmegye'
-						},
-						{
-							'osmid' : 'relation-5635592',
-							'name' : 'Váci egyházmegye'
-						},
-						{
-							'osmid' : 'relation-5635585',
-							'name' : 'Debrecen-Nyíregyházi egyházmegye'
-						},
-						{
-							'osmid' : 'relation-13004858',
-							'name' : 'Veszprémi főegyházmegye'
-						},
-						{
-							'osmid' : 'relation-5665523',
-							'name' : 'Szombathelyi egyházmegye'
-						},
-						{
-							'osmid' : 'relation-12535238',
-							'name' : 'Kaposvári egyházmegye'
-						},
-						{
-							'osmid' : 'relation-14735896',
-							'name' : 'Hajdúdorogi főegyházmegye'
-						},
-						{
-							'osmid' : 'relation-14735845',
-							'name' : 'Miskolci egyházmegye'
-						},
-						{
-							'osmid' : 'relation-14730150',
-							'name' : 'Nyíregyházi egyházmegye'
-						},
-					
-					 ];
-					
-				$(document).ready(function () {
+		<div class="b-example-divider"></div>
 
-					/* COLLECT DATA */
-					
-					$("#content").html("Adatok begyűjtése");
 
-					for (const [key, diocese] of Object.entries(fullData)) {
-						if(diocese.ksh_refs === undefined) diocese.ksh_refs = [];
-						if(diocese.names === undefined) diocese.names = [];
-						$.getJSON("OSM DataSources/" + diocese.osmid + ".geojson", function (data) {
-							$("#content").append(".");
-							// ITERATING THROUGH OBJECTS
-							$.each(data.features, function (key, value) {
-								diocese.ksh_refs.push(value.properties.ksh_ref);
-								diocese.names.push(value.properties.name);
-							});											
-							
-						})  ;	
-					};
-					// console.log(Object.keys(fullData).length);
 
-					readDictionary()
-					
-					
-					readKSHFile(['NEME_SEX','RE_C','RE_RC','RE_GC','RE_NOT','RE_NA','DIV_DISREP','FY_GE65','FY15-64','MAR_REP','MY_GE65','MY15-64','SIN','WID_DTHREP','FY_LT15','MY_LT15'],0);
-					
 
-																			
-				});
-				
+		<div class="container">
+			<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
+		</div>
+		<div class="b-example-divider"></div>
+
+		<div class="container">
+			<h2 style="display: none" class="chart-title" id="ct1">KSH adatok vizualizálva</h2>
+			<canvas id="c1"></canvas>
+		</div>
+		<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on
+				GitHub</a></center>
+		<script>
+			const c1 = document.getElementById('c1');
+			var KSHData = [];
+			var sum = {};
+			var colls = [];
+			var dictionary;
+
+			var fullData = [
+				{
+					'osmid': 'relation-5635587',
+					'name': 'Esztergom-Budapesti főegyházmegye'
+				},
+				{
+					'osmid': 'relation-5635589',
+					'name': 'Győri egyházmegye'
+				},
+				{
+					'osmid': 'relation-5635765',
+					'name': 'Székesfehérvári egyházmegye'
+				},
+				{
+					'osmid': 'relation-5635590',
+					'name': 'Kalocsa-Kecskeméti főegyházmegye'
+				},
+				{
+					'osmid': 'relation-5635591',
+					'name': 'Szeged-Csanádi egyházmegye'
+				},
+				{
+					'osmid': 'relation-5638351',
+					'name': 'Pécsi egyházmegye'
+				},
+				{
+					'osmid': 'relation-5635586',
+					'name': 'Egri főegyházmegye'
+				},
+				{
+					'osmid': 'relation-5635592',
+					'name': 'Váci egyházmegye'
+				},
+				{
+					'osmid': 'relation-5635585',
+					'name': 'Debrecen-Nyíregyházi egyházmegye'
+				},
+				{
+					'osmid': 'relation-13004858',
+					'name': 'Veszprémi főegyházmegye'
+				},
+				{
+					'osmid': 'relation-5665523',
+					'name': 'Szombathelyi egyházmegye'
+				},
+				{
+					'osmid': 'relation-12535238',
+					'name': 'Kaposvári egyházmegye'
+				},
+				{
+					'osmid': 'relation-14735896',
+					'name': 'Hajdúdorogi főegyházmegye'
+				},
+				{
+					'osmid': 'relation-14735845',
+					'name': 'Miskolci egyházmegye'
+				},
+				{
+					'osmid': 'relation-14730150',
+					'name': 'Nyíregyházi egyházmegye'
+				},
+
+			];
+
+			$(document).ready(function () {
+
+				/* COLLECT DATA */
+
+				$("#content").html("Adatok begyűjtése");
+
+				for (const [key, diocese] of Object.entries(fullData)) {
+					if (diocese.ksh_refs === undefined) diocese.ksh_refs = [];
+					if (diocese.names === undefined) diocese.names = [];
+					$.getJSON("OSM DataSources/" + diocese.osmid + ".geojson", function (data) {
+						$("#content").append(".");
+						// ITERATING THROUGH OBJECTS
+						$.each(data.features, function (key, value) {
+							diocese.ksh_refs.push(value.properties.ksh_ref);
+							diocese.names.push(value.properties.name);
+						});
+
+					});
+				};
+				// console.log(Object.keys(fullData).length);
+
+				readDictionary()
+
+
+				readKSHFile(['NEME_SEX', 'RE_C', 'RE_RC', 'RE_GC', 'RE_NOT', 'RE_NA', 'DIV_DISREP', 'FY_GE65', 'FY15-64', 'MAR_REP', 'MY_GE65', 'MY15-64', 'SIN', 'WID_DTHREP', 'FY_LT15', 'MY_LT15'], 0);
+
+
+
+			});
+
 			function publishTable(data, header) {
 				$("#content").removeClass('alert');
 				$("#content").html("<h2>KSH adatok kategóriánként</h2>");
@@ -158,32 +184,32 @@
 				$.each(data, function (key, value) {
 
 					var markup = '<tr class="child"><th scope="row text-nowrap"><span class="text-nowrap">' + value.name + '</span></th>';
-					
-					for(let i = 0; i < Object.keys(value.data).length; i++ ) {
-						var tmp = value.data[ Object.keys(value.data)[i]  ];
+
+					for (let i = 0; i < Object.keys(value.data).length; i++) {
+						var tmp = value.data[Object.keys(value.data)[i]];
 						markup += "<td class='text-nowrap'>";
 
-						
+
 
 						markup += '<span class="badge text-bg-primary even-larger-badge" title="2022-es KSH adat">' + tmp[2022].toLocaleString('hu-HU') + '</span>';
-						var diff =  ( tmp[2022] - tmp[2001] ) / tmp[2001] * 100;
-						if(diff > 5 ) var color = "success";
+						var diff = (tmp[2022] - tmp[2001]) / tmp[2001] * 100;
+						if (diff > 5) var color = "success";
 						else if (diff < -5) var color = "danger";
 						else var color = "info"
 						markup += ' <span class="badge text-bg-' + color + ' even-larger-badge" title="Különbség a 2022-es és a 2001-es KSH adat között.">' + diff.toFixed(2) + '%</span>';
 
-					var diff1 =  ( tmp[2011] - tmp[2001] ) / tmp[2001] * 100;
-					var diff2 =  ( tmp[2022] - tmp[2011] ) / tmp[2011] * 100;
+						var diff1 = (tmp[2011] - tmp[2001]) / tmp[2001] * 100;
+						var diff2 = (tmp[2022] - tmp[2011]) / tmp[2011] * 100;
 						markup += '<br/><span class="badge text-bg-secondary" title="2001-es KSH adat">' + tmp[2001].toLocaleString('hu-HU') + '</span>&nbsp;<span class="badge text-bg-secondary" title="2011-es KSH adat">' + tmp[2011].toLocaleString('hu-HU') + '</span>&nbsp;<span class="badge text-bg-light" title="Változás 2001 és 2011 között.">' + diff1.toFixed(2) + '%</span><span class="badge text-bg-light" title="Változás 2011 és 2022 között.">' + diff2.toFixed(2) + '%</span>';
-						
+
 
 						markup += "</td>";
 					}
-					
-					markup += '</tr>';
-				   $('#myTable tbody').append(markup);
 
-				});			
+					markup += '</tr>';
+					$('#myTable tbody').append(markup);
+
+				});
 			}
 
 
@@ -199,174 +225,193 @@
 				$.each(data, function (key, value) {
 
 					var markup = '<tr class="child"><th scope="row text-nowrap"><span class="text-nowrap">' + value.name + '</span></th>';
-					
-					for(let i = 0; i < Object.keys(value.data).length; i++ ) {
-						var tmpOrig = value.data[ Object.keys(value.data)[i]  ];
+
+					for (let i = 0; i < Object.keys(value.data).length; i++) {
+						var tmpOrig = value.data[Object.keys(value.data)[i]];
 						markup += "<td class='text-nowrap'>";
 
 						var sum = value.data["NEME_SEX"];
 						var tmp = {
-								'2022' : tmpOrig[2022] / sum[2022] * 100 ,
-								'2011' : tmpOrig[2011] / sum[2011] * 100 ,
-								'2001' : tmpOrig[2001] / sum[2001] * 100 ,
-							};
+							'2022': tmpOrig[2022] / sum[2022] * 100,
+							'2011': tmpOrig[2011] / sum[2011] * 100,
+							'2001': tmpOrig[2001] / sum[2001] * 100,
+						};
 
 						markup += '<span class="badge text-bg-primary even-larger-badge" title="Lakosság arányos 2022-es KSH adat">' + tmp[2022].toFixed(1) + '%</span>';
-						var diff =  ( tmp[2022] - tmp[2001] ) ;
-						if(diff > 5 ) var color = "success";
+						var diff = (tmp[2022] - tmp[2001]);
+						if (diff > 5) var color = "success";
 						else if (diff < -5) var color = "danger";
 						else var color = "info"
 						markup += ' <span class="badge text-bg-' + color + ' even-larger-badge" title="A 2022-es és a 2001-es lakosságarányos KSH adat közötti különbség (és nem százalék!)">' + diff.toFixed(1) + '</span>';
 
-					var diff1 =  ( tmp[2011] - tmp[2001] ) ;
-					var diff2 =  ( tmp[2022] - tmp[2011] ) ;
+						var diff1 = (tmp[2011] - tmp[2001]);
+						var diff2 = (tmp[2022] - tmp[2011]);
 						markup += '<br/><span class="badge text-bg-secondary" title="2001-es KSH adat">' + tmp[2001].toFixed(1).toLocaleString('hu-HU') + '%</span>&nbsp;<span class="badge text-bg-secondary" title="2011-es KSH adat">' + tmp[2011].toFixed(1).toLocaleString('hu-HU') + '%</span>&nbsp;<span class="badge text-bg-light" title="Változás 2001 és 2011 között.">' + diff1.toFixed(1) + '</span><span class="badge text-bg-light" title="Változás 2011 és 2022 között.">' + diff2.toFixed(1) + '</span>';
-						
+
 
 						markup += "</td>";
 					}
-					
+
 					markup += '</tr>';
-				   $('#myTable2 tbody').append(markup);
+					$('#myTable2 tbody').append(markup);
 
-				});			
+				});
 			}
 
-		async function readKSHFile(array, i) {
-			const response = await fetch("KSH DataSources/" + array[i] + ".json");
-			const tmpData = await response.json();
-			$("#content").append(".");
-			KSHData.push(...tmpData);
-			console.log(KSHData);
-			if ( i + 1 < array.length) {
-				await readKSHFile(array, i + 1)
-			} else {
-				$("#content").html("Adatok feldolgozása");
-				iterating(KSHData);
+			async function readKSHFile(array, i) {
+				const response = await fetch("KSH DataSources/" + array[i] + ".json");
+				const tmpData = await response.json();
+				$("#content").append(".");
+				KSHData.push(...tmpData);
+				console.log(KSHData);
+				if (i + 1 < array.length) {
+					await readKSHFile(array, i + 1)
+				} else {
+					$("#content").html("Adatok feldolgozása");
+					iterating(KSHData);
+				}
+				return KSHData;
 			}
-			return KSHData;
-		}
 
-		function readDictionary() {
-			$.getJSON("KSH DataSources/dictionary.json", function (data) {
-							dictionary = data									
-							
-						})  ;	
-		}
-		
-		function iterating(data) {
-						// ITERATING THROUGH OBJECTS
-						$.each(data, function (key, value) {
-							
-							if ( ! colls.includes(value.TEL_SZ_ADAT) ) colls.push(value.TEL_SZ_ADAT);
-							
-							if(sum[value.TEL_SZ_ADAT] === undefined ){ sum[value.TEL_SZ_ADAT] = {} };							
-							if(sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] === undefined ){ sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] = 0;  }			
-							sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] +=  Number(value.OBS_VALUE);
-							
-							for (const key in fullData) {
-								var diocese = fullData[key];
-								
-								const ksh_refs = fullData[key].ksh_refs;
-								if( diocese.ksh_refs.includes(value.TERUL_GEO5)) {
-									if(diocese['data'] === undefined) diocese['data'] = {};
-								
-									if(diocese['data'][value.TEL_SZ_ADAT] === undefined ){ diocese['data'][value.TEL_SZ_ADAT] = {} };							
-									if(diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] === undefined ){ diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] = 0;  }			
-									diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] +=  Number(value.OBS_VALUE);
-								} 
-							
-							}
-						});							
-						console.log("Data has been prepared.");	
-						console.log(fullData);
-						
-						var ret = generateRE_C_NOTRG(fullData, colls);
-						fullData = ret[0];
-						colls = ret[1];
+			function readDictionary() {
+				$.getJSON("KSH DataSources/dictionary.json", function (data) {
+					dictionary = data
+				});
+			}
 
-						var ret = generateY_GE65(fullData, colls);
-						fullData = ret[0];
-						colls = ret[1];
+			function iterating(data) {
+				// ITERATING THROUGH OBJECTS
+				$.each(data, function (key, value) {
 
-						var ret = generateY_LT15(fullData, colls);
-						fullData = ret[0];
-						colls = ret[1];
+					if (!colls.includes(value.TEL_SZ_ADAT)) colls.push(value.TEL_SZ_ADAT);
 
-						var ret = generateY1564(fullData, colls);
-						fullData = ret[0];
-						colls = ret[1];
+					if (sum[value.TEL_SZ_ADAT] === undefined) { sum[value.TEL_SZ_ADAT] = {} };
+					if (sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] === undefined) { sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] = 0; }
+					sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] += Number(value.OBS_VALUE);
+
+					for (const key in fullData) {
+						var diocese = fullData[key];
+
+						const ksh_refs = fullData[key].ksh_refs;
+						if (diocese.ksh_refs.includes(value.TERUL_GEO5)) {
+							if (diocese['data'] === undefined) diocese['data'] = {};
+
+							if (diocese['data'][value.TEL_SZ_ADAT] === undefined) { diocese['data'][value.TEL_SZ_ADAT] = {} };
+							if (diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] === undefined) { diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] = 0; }
+							diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] += Number(value.OBS_VALUE);
+						}
+
+					}
+				});
+				console.log("Data has been prepared.");
+				console.log(fullData);
+
+				var ret = generateRE_C_NOTRG(fullData, colls);
+				fullData = ret[0];
+				colls = ret[1];
+
+				var ret = generateY_GE65(fullData, colls);
+				fullData = ret[0];
+				colls = ret[1];
+
+				var ret = generateY_LT15(fullData, colls);
+				fullData = ret[0];
+				colls = ret[1];
+
+				var ret = generateY1564(fullData, colls);
+				fullData = ret[0];
+				colls = ret[1];
 
 
-						publishTable(fullData, colls);
-						publishTable2(fullData, colls);
-						
-					};
+				publishTable(fullData, colls);
+				publishTable2(fullData, colls);
+				generateChart(fullData, colls, c1)
+
+			};
 
 			function generateRE_C_NOTRG(fullData, colls) {
-					colls.push('RE_C_NOTRG');
-					$.each(fullData, function (key, value) {
-							console.log(value.data);
-							fullData[key]['data']['RE_C_NOTRG'] = {
-								'2001': value.data['RE_C'][2001] - value.data['RE_RC'][2001] - value.data['RE_GC'][2001],
-								'2011': value.data['RE_C'][2011] - value.data['RE_RC'][2011] - value.data['RE_GC'][2011],
-								'2022': value.data['RE_C'][2022] - value.data['RE_RC'][2022] - value.data['RE_GC'][2022],
-							};
+				colls.push('RE_C_NOTRG');
+				$.each(fullData, function (key, value) {
+					console.log(value.data);
+					fullData[key]['data']['RE_C_NOTRG'] = {
+						'2001': value.data['RE_C'][2001] - value.data['RE_RC'][2001] - value.data['RE_GC'][2001],
+						'2011': value.data['RE_C'][2011] - value.data['RE_RC'][2011] - value.data['RE_GC'][2011],
+						'2022': value.data['RE_C'][2022] - value.data['RE_RC'][2022] - value.data['RE_GC'][2022],
+					};
 
-					}	);		
-					console.log(fullData);
-					return [fullData, colls];
+				});
+				console.log(fullData);
+				return [fullData, colls];
 			};
 
 			function generateY_GE65(fullData, colls) {
-					colls.push('Y_GE65');
-					$.each(fullData, function (key, value) {
-							console.log(value.data);
-							fullData[key]['data']['Y_GE65'] = {
-								'2001': value.data['FY_GE65'][2001] + value.data['FY_GE65'][2001],
-								'2011': value.data['FY_GE65'][2011] + value.data['FY_GE65'][2011],
-								'2022': value.data['FY_GE65'][2022] + value.data['FY_GE65'][2022],
-							};
+				colls.push('Y_GE65');
+				$.each(fullData, function (key, value) {
+					console.log(value.data);
+					fullData[key]['data']['Y_GE65'] = {
+						'2001': value.data['FY_GE65'][2001] + value.data['FY_GE65'][2001],
+						'2011': value.data['FY_GE65'][2011] + value.data['FY_GE65'][2011],
+						'2022': value.data['FY_GE65'][2022] + value.data['FY_GE65'][2022],
+					};
 
-					}	);		
-					console.log(fullData);
-					return [fullData, colls];
+				});
+				console.log(fullData);
+				return [fullData, colls];
 			};
 
 			function generateY_LT15(fullData, colls) {
-					colls.push('Y_LT15');
-					$.each(fullData, function (key, value) {
-							console.log(value.data);
-							fullData[key]['data']['Y_LT15'] = {
-								'2001': value.data['FY_LT15'][2001] + value.data['FY_LT15'][2001],
-								'2011': value.data['FY_LT15'][2011] + value.data['FY_LT15'][2011],
-								'2022': value.data['FY_LT15'][2022] + value.data['FY_LT15'][2022],
-							};
+				colls.push('Y_LT15');
+				$.each(fullData, function (key, value) {
+					console.log(value.data);
+					fullData[key]['data']['Y_LT15'] = {
+						'2001': value.data['FY_LT15'][2001] + value.data['FY_LT15'][2001],
+						'2011': value.data['FY_LT15'][2011] + value.data['FY_LT15'][2011],
+						'2022': value.data['FY_LT15'][2022] + value.data['FY_LT15'][2022],
+					};
 
-					}	);		
-					console.log(fullData);
-					return [fullData, colls];
+				});
+				console.log(fullData);
+				return [fullData, colls];
 			};
 
 			function generateY1564(fullData, colls) {
-					colls.push('Y15-64');
-					$.each(fullData, function (key, value) {
-							console.log(value.data);
-							fullData[key]['data']['Y15-64'] = {
-								'2001': value.data['FY15-64'][2001] + value.data['FY15-64'][2001],
-								'2011': value.data['FY15-64'][2011] + value.data['FY15-64'][2011],
-								'2022': value.data['FY15-64'][2022] + value.data['FY15-64'][2022],
-							};
+				colls.push('Y15-64');
+				$.each(fullData, function (key, value) {
+					console.log(value.data);
+					fullData[key]['data']['Y15-64'] = {
+						'2001': value.data['FY15-64'][2001] + value.data['FY15-64'][2001],
+						'2011': value.data['FY15-64'][2011] + value.data['FY15-64'][2011],
+						'2022': value.data['FY15-64'][2022] + value.data['FY15-64'][2022],
+					};
 
-					}	);		
-					console.log(fullData);
-					return [fullData, colls];
-			};			
+				});
+				console.log(fullData);
+				return [fullData, colls];
+			};
 
-			</script>
-	
-	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+			function generateChart(fullData, colls, chart) {
+				document.getElementById("ct1").style.display = "block"
+				new Chart(chart, {
+					type: "bar",
+					data: {
+						labels: fullData.map(d => d.name),
+						datasets: colls.filter(c => c != "NEME_SEX").map(c => {
+							return {
+								label: dictionary[c] ? dictionary[c] : "Ismeretlen",
+								data: fullData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100)
+							}
+						})
+					}
+				})
+			}
+
+		</script>
+
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+			crossorigin="anonymous"></script>
 
 </body>
 
