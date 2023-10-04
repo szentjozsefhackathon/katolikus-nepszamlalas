@@ -75,76 +75,16 @@
 			var KSHData = [];
 			var sum = {};
 			var colls = [];
-			var dictionary;
+			var dictionary = {};
 
-			var fullData = [
-				{
-					'osmid': 'relation-5635587',
-					'name': 'Esztergom-Budapesti főegyházmegye'
-				},
-				{
-					'osmid': 'relation-5635589',
-					'name': 'Győri egyházmegye'
-				},
-				{
-					'osmid': 'relation-5635765',
-					'name': 'Székesfehérvári egyházmegye'
-				},
-				{
-					'osmid': 'relation-5635590',
-					'name': 'Kalocsa-Kecskeméti főegyházmegye'
-				},
-				{
-					'osmid': 'relation-5635591',
-					'name': 'Szeged-Csanádi egyházmegye'
-				},
-				{
-					'osmid': 'relation-5638351',
-					'name': 'Pécsi egyházmegye'
-				},
-				{
-					'osmid': 'relation-5635586',
-					'name': 'Egri főegyházmegye'
-				},
-				{
-					'osmid': 'relation-5635592',
-					'name': 'Váci egyházmegye'
-				},
-				{
-					'osmid': 'relation-5635585',
-					'name': 'Debrecen-Nyíregyházi egyházmegye'
-				},
-				{
-					'osmid': 'relation-13004858',
-					'name': 'Veszprémi főegyházmegye'
-				},
-				{
-					'osmid': 'relation-5665523',
-					'name': 'Szombathelyi egyházmegye'
-				},
-				{
-					'osmid': 'relation-12535238',
-					'name': 'Kaposvári egyházmegye'
-				},
-				{
-					'osmid': 'relation-14735896',
-					'name': 'Hajdúdorogi főegyházmegye'
-				},
-				{
-					'osmid': 'relation-14735845',
-					'name': 'Miskolci egyházmegye'
-				},
-				{
-					'osmid': 'relation-14730150',
-					'name': 'Nyíregyházi egyházmegye'
-				},
+			var fullData = []
 
-			];
 
-			$(document).ready(function () {
+
+			$(document).ready(async function () {
 
 				/* COLLECT DATA */
-
+				await readInitData()
 				$("#content").html("Adatok begyűjtése");
 
 				for (const [key, diocese] of Object.entries(fullData)) {
@@ -162,22 +102,23 @@
 				};
 				// console.log(Object.keys(fullData).length);
 
-				readDictionary()
+				await readDictionary()
 
 
-				readKSHFile(['NEME_SEX','RE_C','RE_RC','RE_GC','RE_CA','RE_LU','RE_OC','RE_CD','RE_J','RE_OCD','RE_NOT','RE_NA','DIV_DISREP','FY_GE65','FY15-64','MAR_REP','MY_GE65','MY15-64','SIN','WID_DTHREP','FY_LT15','MY_LT15'],0);
+				readKSHFile(Object.keys(dictionary), 0);
 
 			});
 
 			function publishTable(data, header) {
+				console.log("table", header)
 				$("#content").removeClass('alert');
 				$("#content").html("<h2>KSH adatok kategóriánként</h2>");
 				$("#content").append("<!-- TABLE CONSTRUCTION--><table class='table table-striped' id='myTable'><!-- HEADING FORMATION --><thead><tr id='table_header' class='table-primary'><th >Egyházmegye</th></tr></thead><tbody></tbody></table>");
 
 
 				$.each(header, function (key, value) {
-					console.log(value)
-					$("#table_header").append("<th class='w-25'>" + (value in dictionary ? dictionary[value] : value) + "</th>");
+					console.log("Each", value)
+					$("#table_header").append("<th class='w-25'>" + (value in dictionary ? dictionary[value].name : value) + "</th>");
 				});
 				$.each(data, function (key, value) {
 
@@ -218,7 +159,7 @@
 
 				$.each(header, function (key, value) {
 					console.log(value)
-					$("#table_header2").append("<th class='w-25'>" + (value in dictionary ? dictionary[value] : value) + "</th>");
+					$("#table_header2").append("<th class='w-25'>" + (value in dictionary ? dictionary[value].name : value) + "</th>");
 				});
 				$.each(data, function (key, value) {
 
@@ -257,10 +198,16 @@
 			}
 
 			async function readKSHFile(array, i) {
-				const response = await fetch("KSH DataSources/" + array[i] + ".json");
-				const tmpData = await response.json();
-				$("#content").append(".");
-				KSHData.push(...tmpData);
+				if(!dictionary[array[i]].calculated && !dictionary[array[i]].unused) {
+					const response = await fetch("KSH DataSources/" + array[i] + ".json");
+					if (response.ok) {
+						const tmpData = await response.json();
+						$("#content").append(".");
+						KSHData.push(...tmpData);
+					}
+
+				}
+
 				console.log(KSHData);
 				if (i + 1 < array.length) {
 					await readKSHFile(array, i + 1)
@@ -271,8 +218,14 @@
 				return KSHData;
 			}
 
-			function readDictionary() {
-				$.getJSON("KSH DataSources/dictionary.json", function (data) {
+			async function readInitData() {
+				await $.getJSON("OSM DataSources/initData.json", function (data) {
+					fullData = data
+				});
+			}
+
+			async function readDictionary() {
+				await $.getJSON("KSH DataSources/dictionary.json", function (data) {
 					dictionary = data
 				});
 			}
@@ -304,89 +257,32 @@
 				console.log("Data has been prepared.");
 				console.log(fullData);
 
-				var ret = generateRE_C_NOTRG(fullData, colls);
-				fullData = ret[0];
-				colls = ret[1];
-
-				var ret = generateY_GE65(fullData, colls);
-				fullData = ret[0];
-				colls = ret[1];
-
-				var ret = generateY_LT15(fullData, colls);
-				fullData = ret[0];
-				colls = ret[1];
-
-				var ret = generateY1564(fullData, colls);
-				fullData = ret[0];
-				colls = ret[1];
+				calculateData().then(() => {
+					console.log("Then")
+					publishTable(fullData, colls);
+					publishTable2(fullData, colls);
+					generateChart(fullData, colls, c1)
+				})
 
 
-				publishTable(fullData, colls);
-				publishTable2(fullData, colls);
-				generateChart(fullData, colls, c1)
 
 			};
 
-			function generateRE_C_NOTRG(fullData, colls) {
-				colls.push('RE_C_NOTRG');
-				$.each(fullData, function (key, value) {
-					console.log(value.data);
-					fullData[key]['data']['RE_C_NOTRG'] = {
-						'2001': value.data['RE_C'][2001] - value.data['RE_RC'][2001] - value.data['RE_GC'][2001],
-						'2011': value.data['RE_C'][2011] - value.data['RE_RC'][2011] - value.data['RE_GC'][2011],
-						'2022': value.data['RE_C'][2022] - value.data['RE_RC'][2022] - value.data['RE_GC'][2022],
-					};
+			async function calculateData() {
+				await Promise.all(Object.keys(dictionary).map(k => {
+					return new Promise(async (resolve, reject) => {
+						if(dictionary[k].calculated) {
+							const module = await import("./Calculators/" + k + ".js")
+							var ret = await module.generate(fullData, colls)
+							fullData = ret[0]
+							colls = ret[1]
+							resolve()
+						}
+						resolve()
+					})
 
-				});
-				console.log(fullData);
-				return [fullData, colls];
-			};
-
-			function generateY_GE65(fullData, colls) {
-				colls.push('Y_GE65');
-				$.each(fullData, function (key, value) {
-					console.log(value.data);
-					fullData[key]['data']['Y_GE65'] = {
-						'2001': value.data['FY_GE65'][2001] + value.data['FY_GE65'][2001],
-						'2011': value.data['FY_GE65'][2011] + value.data['FY_GE65'][2011],
-						'2022': value.data['FY_GE65'][2022] + value.data['FY_GE65'][2022],
-					};
-
-				});
-				console.log(fullData);
-				return [fullData, colls];
-			};
-
-			function generateY_LT15(fullData, colls) {
-				colls.push('Y_LT15');
-				$.each(fullData, function (key, value) {
-					console.log(value.data);
-					fullData[key]['data']['Y_LT15'] = {
-						'2001': value.data['FY_LT15'][2001] + value.data['FY_LT15'][2001],
-						'2011': value.data['FY_LT15'][2011] + value.data['FY_LT15'][2011],
-						'2022': value.data['FY_LT15'][2022] + value.data['FY_LT15'][2022],
-					};
-
-				});
-				console.log(fullData);
-				return [fullData, colls];
-			};
-
-			function generateY1564(fullData, colls) {
-				colls.push('Y15-64');
-				$.each(fullData, function (key, value) {
-					console.log(value.data);
-					fullData[key]['data']['Y15-64'] = {
-						'2001': value.data['FY15-64'][2001] + value.data['FY15-64'][2001],
-						'2011': value.data['FY15-64'][2011] + value.data['FY15-64'][2011],
-						'2022': value.data['FY15-64'][2022] + value.data['FY15-64'][2022],
-					};
-
-				});
-				console.log(fullData);
-				return [fullData, colls];
-			};
-
+				}))
+			}
 
 			function generateChart(fullData, colls, chart) {
 				document.getElementById("ct1").style.display = "block"
@@ -394,9 +290,9 @@
 					type: "bar",
 					data: {
 						labels: fullData.map(d => d.name),
-						datasets: colls.filter(c => c != "NEME_SEX").map(c => {
+						datasets: colls.filter(c => c.name != "NEME_SEX").map(c => {
 							return {
-								label: dictionary[c] ? dictionary[c] : "Ismeretlen",
+								label: dictionary[c] ? dictionary[c].name : "Ismeretlen",
 								data: fullData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100)
 							}
 						})
