@@ -1,0 +1,62 @@
+[
+    {
+        "osmid": "relation-5635587",
+        "name": "Esztergom-Budapesti főegyházmegye"
+    },
+    {
+        "osmid": "relation-5635589",
+        "name": "Győri egyházmegye"
+    },
+    {
+        "osmid": "relation-5635765",
+        "name": "Székesfehérvári egyházmegye"
+    },
+    {
+        "osmid": "relation-5635590",
+        "name": "Kalocsa-Kecskeméti főegyházmegye"
+    },
+    {
+        "osmid": "relation-5635591",
+        "name": "Szeged-Csanádi egyházmegye"
+    },
+    {
+        "osmid": "relation-5638351",
+        "name": "Pécsi egyházmegye"
+    },
+    {
+        "osmid": "relation-5635586",
+        "name": "Egri főegyházmegye"
+    },
+    {
+        "osmid": "relation-5635592",
+        "name": "Váci egyházmegye"
+    },
+    {
+        "osmid": "relation-5635585",
+        "name": "Debrecen-Nyíregyházi egyházmegye"
+    },
+    {
+        "osmid": "relation-13004858",
+        "name": "Veszprémi főegyházmegye"
+    },
+    {
+        "osmid": "relation-5665523",
+        "name": "Szombathelyi egyházmegye"
+    },
+    {
+        "osmid": "relation-12535238",
+        "name": "Kaposvári egyházmegye"
+    },
+    {
+        "osmid": "relation-14735896",
+        "name": "Hajdúdorogi főegyházmegye"
+    },
+    {
+        "osmid": "relation-14735845",
+        "name": "Miskolci egyházmegye"
+    },
+    {
+        "osmid": "relation-14730150",
+        "name": "Nyíregyházi egyházmegye"
+    }
+]
