@@ -64,8 +64,9 @@
 		</div>
 		<div class="b-example-divider"></div>
 
-		<div class="container">
-			<h2 style="display: none" class="chart-title" id="ct1">KSH adatok vizualizálva</h2>
+		<div class="container" id="cc1" style="display: none">
+			<h2  class="chart-title">KSH adatok vizualizálva</h2>
+			<p>A diagram a 2022-es adatokból készült. Amennyiben a jelmagyarázatnál a címkékre ráklikkel, akkor változtathatja az oszlopok láthatóságát</p>
 			<canvas id="c1"></canvas>
 		</div>
 		<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on
@@ -285,7 +286,7 @@
 			}
 
 			function generateChart(fullData, colls, chart) {
-				document.getElementById("ct1").style.display = "block"
+				document.getElementById("cc1").style.display = "block"
 				new Chart(chart, {
 					type: "bar",
 					data: {
