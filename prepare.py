@@ -113,6 +113,6 @@ print('Done', flush=True)
 # Dump JSON data to file
 print('Dumping JSON data to file ...', end=' ', flush=True)
 #
-with open("allPreparedData.json", "w") as write_file:
+with open("fullData.json", "w") as write_file:
     json.dump(areas, write_file, indent=4)
 print('Done', flush=True)

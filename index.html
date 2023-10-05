@@ -93,34 +93,22 @@
 			$(document).ready(async function () {
 
 				/* COLLECT DATA */
-				await readInitData()
+				await loadFullData();
+				console.log(fullData);
+				
 				$("#content").html("Adatok begyűjtése");
 
-				for (const [key, diocese] of Object.entries(fullData)) {
-					if (diocese.ksh_refs === undefined) diocese.ksh_refs = [];
-					if (diocese.names === undefined) diocese.names = [];
-					$.getJSON("OSM DataSources/" + diocese.osmid + ".geojson", function (data) {
-						$("#content").append(".");
-						// ITERATING THROUGH OBJECTS
-						$.each(data.features, function (key, value) {
-							diocese.ksh_refs.push(value.properties.ksh_ref);
-							diocese.names.push(value.properties.name);
-						});
-
-					});
-				};
 
 				await readDictionary()
-
-
-				readKSHFile(Object.keys(dictionary), 0);
+				publishCheckboxes(fullData);
+				publishAll();
+				
 
 			});
 
 			function publishCheckboxes(data) {
 				document.getElementById("cb_dioceses").style.display = "block";
-				$.each(data, function (key, value) {
-					console.log(value)
+				$.each(data, function (key, value) {					
 					$("#cb_dioceses").append(
 						`<div class="form-check form-check-inline">
  	<input class="form-check-input" type="checkbox" value="" id="cb_dioceses_${value.osmid}" checked onclick="reRender()">
@@ -238,95 +226,26 @@
 			}
 
 			function publishAll() {
+			
 				publishTable(fullData, colls)
 				publishTable2(fullData, colls)
 				generateChart(fullData, colls, c1)
 			}
+			
 
-			async function readKSHFile(array, i) {
-				if (!dictionary[array[i]].calculated && !dictionary[array[i]].unused) {
-					const response = await fetch("KSH DataSources/" + array[i] + ".json");
-					if (response.ok) {
-						const tmpData = await response.json();
-						$("#content").append(".");
-						KSHData.push(...tmpData);
+			async function loadFullData() {
+				await $.getJSON("fullData.json", function (data) {
+					for (const [key, value] of Object.entries(data[0]['data'])) {						
+							colls.push(key);
 					}
-
-				}
-
-				if (i + 1 < array.length) {
-					await readKSHFile(array, i + 1)
-				} else {
-					$("#content").html("Adatok feldolgozása");
-					iterating(KSHData);
-				}
-				return KSHData;
-			}
-
-			async function readInitData() {
-				await $.getJSON("OSM DataSources/initData.json", function (data) {
-					fullData = data
-				});
+  					fullData = data					
+				});				
 			}
 
 			async function readDictionary() {
 				await $.getJSON("KSH DataSources/dictionary.json", function (data) {
 					dictionary = data
 				});
-			}
-
-			function iterating(data) {
-				// ITERATING THROUGH OBJECTS
-				$.each(data, function (key, value) {
-
-					if (!colls.includes(value.TEL_SZ_ADAT)) colls.push(value.TEL_SZ_ADAT);
-
-					if (sum[value.TEL_SZ_ADAT] === undefined) { sum[value.TEL_SZ_ADAT] = {} };
-					if (sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] === undefined) { sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] = 0; }
-					sum[value.TEL_SZ_ADAT][value.TIME_PERIOD] += Number(value.OBS_VALUE);
-
-					for (const key in fullData) {
-						var diocese = fullData[key];
-
-						const ksh_refs = fullData[key].ksh_refs;
-						if (diocese.ksh_refs.includes(value.TERUL_GEO5)) {
-							if (diocese['data'] === undefined) diocese['data'] = {};
-
-							if (diocese['data'][value.TEL_SZ_ADAT] === undefined) { diocese['data'][value.TEL_SZ_ADAT] = {} };
-							if (diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] === undefined) { diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] = 0; }
-							diocese['data'][value.TEL_SZ_ADAT][value.TIME_PERIOD] += Number(value.OBS_VALUE);
-						}
-
-					}
-				});
-				console.log("Data has been prepared.");
-				console.log(fullData);
-
-				calculateData().then(() => {
-					publishCheckboxes(fullData);
-					publishTable(fullData, colls);
-					publishTable2(fullData, colls);
-					generateChart(fullData, colls, c1)
-				})
-
-
-
-			};
-
-			async function calculateData() {
-				await Promise.all(Object.keys(dictionary).map(k => {
-					return new Promise(async (resolve, reject) => {
-						if (dictionary[k].calculated) {
-							const module = await import("./Calculators/" + k + ".js")
-							var ret = await module.generate(fullData, colls)
-							fullData = ret[0]
-							colls = ret[1]
-							resolve()
-						}
-						resolve()
-					})
-
-				}))
 			}
 
 			function generateChart(fullData, colls, chart) {
