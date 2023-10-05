@@ -60,19 +60,27 @@
 
 
 		<div class="container">
+			<div id="cb_dioceses" style="display: none;">
+				<h2>Egyházmegyék kiválasztása</h2>
+			</div>
 			<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
 		</div>
 		<div class="b-example-divider"></div>
 
 		<div class="container" id="cc1" style="display: none">
-			<h2  class="chart-title">KSH adatok vizualizálva</h2>
-			<p>A diagram a 2022-es adatokból készült. Amennyiben a jelmagyarázatnál a címkékre ráklikkel, akkor változtathatja az oszlopok láthatóságát</p>
+			<h2 class="chart-title">KSH adatok vizualizálva</h2>
+			<p>A diagram a 2022-es százalékos adatokból készült. Amennyiben a jelmagyarázatnál a címkékre ráklikkel, akkor
+				változtathatja az oszlopok láthatóságát</p>
 			<canvas id="c1"></canvas>
+
+
 		</div>
+
 		<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on
 				GitHub</a></center>
 		<script>
 			const c1 = document.getElementById('c1');
+			var chart1 = null
 			var KSHData = [];
 			var sum = {};
 			var colls = [];
@@ -109,6 +117,41 @@
 
 			});
 
+			function publishCheckboxes(data) {
+				document.getElementById("cb_dioceses").style.display = "block";
+				$.each(data, function (key, value) {
+					console.log(value)
+					$("#cb_dioceses").append(
+						`<div class="form-check form-check-inline">
+ 	<input class="form-check-input" type="checkbox" value="" id="cb_dioceses_${value.osmid}" checked onclick="reRender()">
+  	<label class="form-check-label" for="cb_dioceses_${value.osmid}">
+    	${value.name}
+  	</label>
+ </div>`)
+				})
+			}
+
+
+
+			function clearTable1() {
+				$("myTable").remove()
+			}
+
+			function clearTable2() {
+				$("myTable2").remove()
+			}
+
+			function clearAll() {
+				clearTable1()
+				clearTable2()
+			}
+
+			function reRender() {
+				clearAll()
+				publishAll()
+			}
+
+
 			function publishTable(data, header) {
 				$("#content").removeClass('alert');
 				$("#content").html("<h2>KSH adatok kategóriánként</h2>");
@@ -116,10 +159,10 @@
 
 
 				$.each(header, function (key, value) {
-					$("#table_header").append("<th class='w-25'>" + (value in dictionary ? dictionary[value].name : value) + "</th>");
+					$("#table_header").append("<th class='w-25'>" + (value in dictionary ? (dictionary[value].name ? dictionary[value].name : dictionary[value]) : value) + "</th>");
 				});
 				$.each(data, function (key, value) {
-
+					if (!document.getElementById(`cb_dioceses_${value.osmid}`).checked) return;
 					var markup = '<tr class="child"><th scope="row text-nowrap"><span class="text-nowrap">' + value.name + '</span></th>';
 
 					for (let i = 0; i < Object.keys(value.data).length; i++) {
@@ -156,10 +199,10 @@
 
 
 				$.each(header, function (key, value) {
-					$("#table_header2").append("<th class='w-25'>" + (value in dictionary ? dictionary[value].name : value) + "</th>");
+					$("#table_header2").append("<th class='w-25'>" + (value in dictionary ? (dictionary[value].name ? dictionary[value].name : dictionary[value]) : value) + "</th>");
 				});
 				$.each(data, function (key, value) {
-
+					if (!document.getElementById(`cb_dioceses_${value.osmid}`).checked) return;
 					var markup = '<tr class="child"><th scope="row text-nowrap"><span class="text-nowrap">' + value.name + '</span></th>';
 
 					for (let i = 0; i < Object.keys(value.data).length; i++) {
@@ -194,8 +237,14 @@
 				});
 			}
 
+			function publishAll() {
+				publishTable(fullData, colls)
+				publishTable2(fullData, colls)
+				generateChart(fullData, colls, c1)
+			}
+
 			async function readKSHFile(array, i) {
-				if(!dictionary[array[i]].calculated && !dictionary[array[i]].unused) {
+				if (!dictionary[array[i]].calculated && !dictionary[array[i]].unused) {
 					const response = await fetch("KSH DataSources/" + array[i] + ".json");
 					if (response.ok) {
 						const tmpData = await response.json();
@@ -254,6 +303,7 @@
 				console.log(fullData);
 
 				calculateData().then(() => {
+					publishCheckboxes(fullData);
 					publishTable(fullData, colls);
 					publishTable2(fullData, colls);
 					generateChart(fullData, colls, c1)
@@ -266,7 +316,7 @@
 			async function calculateData() {
 				await Promise.all(Object.keys(dictionary).map(k => {
 					return new Promise(async (resolve, reject) => {
-						if(dictionary[k].calculated) {
+						if (dictionary[k].calculated) {
 							const module = await import("./Calculators/" + k + ".js")
 							var ret = await module.generate(fullData, colls)
 							fullData = ret[0]
@@ -280,15 +330,17 @@
 			}
 
 			function generateChart(fullData, colls, chart) {
+				if (chart1) chart1.destroy()
 				document.getElementById("cc1").style.display = "block"
-				new Chart(chart, {
+				filteredData = fullData.filter(d => document.getElementById(`cb_dioceses_${d.osmid}`).checked)
+				chart1 = new Chart(chart, {
 					type: "bar",
 					data: {
-						labels: fullData.map(d => d.name),
+						labels: filteredData.map(d => d.name),
 						datasets: colls.filter(c => c != "NEME_SEX").map(c => {
 							return {
-								label: dictionary[c] ? dictionary[c].name : "Ismeretlen",
-								data: fullData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
+								label: dictionary[c] ? (dictionary[c].name ? dictionary[c].name : dictionary[c]) : "Ismeretlen",
+								data: filteredData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
 								hidden: dictionary[c] ? (dictionary[c].hiddenInChart ? true : false) : false
 							}
 						})

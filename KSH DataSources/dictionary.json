@@ -1,103 +1,63 @@
 {
-    "NEME_SEX": {
-        "name": "Összesen",
-        "calculated": false
-    },
-    "RE_C": {
-        "name": "Katolikus",
-        "calculated": false
-    },
-    "RE_RC": {
-        "name": "Katolikuson belül római katolikus",
-        "calculated": false
-    },
-    "RE_GC": {
-        "name": "Katolikuson belül görögkatolikus",
-        "calculated": false
-    },
+    "NEME_SEX": "Összesen",
+    "RE_C": "Katolikus",
+    "RE_RC":  "Katolikuson belül római katolikus",
+    "RE_GC": "Katolikuson belül görögkatolikus",
     "RE_CA": {
         "name": "Református",
-        "calculated": false,
         "hiddenInChart": true
     },
     "RE_LU": {
         "name": "Evangélikus",
-        "calculated": false,
         "hiddenInChart": true
     },
     "RE_OC": {
         "name": "Ortodox keresztény",
-        "calculated": false,
         "hiddenInChart": true
     },
     "RE_CD": {
         "name": "Más keresztény felekezet",
-        "calculated": false,
         "hiddenInChart": true
     },
     "RE_J": {
         "name": "Izraelita",
-        "calculated": false,
         "hiddenInChart": true
     },
-    "RE_OCD": {
-        "name": "Más vallási közösséghez, felekezethez tartozó",
-        "calculated": false
-    },
-    "RE_NOT": {
-        "name": "Vallási közösséghez, felekezethez nem tartozó",
-        "calculated": false
-    },
-    "RE_NA": {
-        "name": "Nem kíván válaszolni (vallás, felekezet)",
-        "calculated": false
-    },
-    "DIV_DISREP": {
-        "name": "Elvált",
-        "calculated": false
-    },
+    "RE_OCD": "Más vallási közösséghez, felekezethez tartozó",
+    "RE_NOT":  "Vallási közösséghez, felekezethez nem tartozó",
+    "RE_NA": "Nem kíván válaszolni (vallás, felekezet)",
+    "DIV_DISREP": "Elvált",
     "FY_GE65": {
         "name": "65 éves és idősebb nő",
-        "calculated": false,
         "hiddenInChart": true
     },
     "FY15-64": {
         "name": "15-64 éves nő",
-        "calculated": false,
         "hiddenInChart": true
     },
-    "MAR_REP": {
-        "name": "Házas",
-        "calculated": false
-    },
+    "MAR_REP": "Házas",
     "MY_GE65": {
         "name": "65 éves és idősebb férfi",
-        "calculated": false,
         "hiddenInChart": true
     },
     "MY15-64": {
         "name": "15-64 éves férfi",
-        "calculated": false,
         "hiddenInChart": true
     },
     "SIN": {
         "name": "Nőtlen, hajadon",
-        "calculated": false,
         "hiddenInChart": true
     },
     "WID_DTHREP": {
         "name": "Özvegy",
-        "calculated": false,
         "hiddenInChart": true
     },
     "FY_LT15": {
         "name": "15 évesnél fiatalabb nő",
-        "calculated": false,
         "hiddenInChart": true
     },
     "MY_LT15": {
         "name": "15 évesnél fiatalabb férfi",
-        "calculated": false,
         "hiddenInChart": true
     },
     "RE_C_NOTRG": {
@@ -119,17 +79,14 @@
     },
     "M": {
         "name": "Férfi",
-        "calculated": false,
         "unused": true
     },
     "F": {
         "name": "Nő",
-        "calculated": false,
         "unused": true
     },
     "LMS_INV": {
         "name": "15 évesnél fiatalabb személy",
-        "calculated": false,
         "unused": true
     }
 }
