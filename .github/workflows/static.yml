@@ -22,6 +22,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-python@v4
+          with:
+            python-version: '3.x'
+        - name: Prepare data
+          run: python prepare.py
+          shell: sh
   # Single deploy job since we're just deploying
   deploy:
     environment:
