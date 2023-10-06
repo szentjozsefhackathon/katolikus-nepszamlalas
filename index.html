@@ -220,7 +220,7 @@
 
 			async function loadFullData() {
 				await $.getJSON("fullData.json", function (data) {
-					for (const [key, value] of Object.entries(data[0]['data'])) {						
+					for (const [key, value] of Object.entries(data[Object.keys(data)[0]]['data'])) {						
 							colls.push(key);
 					}
   					fullData = data					

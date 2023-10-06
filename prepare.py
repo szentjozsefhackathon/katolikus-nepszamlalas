@@ -4,9 +4,10 @@ import json, glob, re, sys
 # Load list of Areas aka Dioceses
 stringe = open('OSM DataSources/initData.json', 'r',  encoding="utf-8")
 #
-areas = json.load(stringe)
-#for area in areas:    
-#     print(area['name'])
+areas = {}
+initData = json.load(stringe)
+for data in initData:    
+    areas[data['osmid']] = data
 
 
 
@@ -30,12 +31,11 @@ for geojson_file in geojsons_files:
         osms[id]['settlements'].append(feature['properties']['name'])
         osms[id]['ksh_refs'].append(feature['properties']['ksh_ref'])
                 
-i = 0;
-for area in areas:
+for key, area in areas.items():
     if area['osmid'] in osms:
-        areas[i]['settlements'] = osms[area['osmid']]['settlements']
-        areas[i]['ksh_refs'] = osms[area['osmid']]['ksh_refs']
-    i+=1
+        areas[key]['settlements'] = osms[area['osmid']]['settlements']
+        areas[key]['ksh_refs'] = osms[area['osmid']]['ksh_refs']
+
 print('Done', flush=True)
 
 #
@@ -81,22 +81,25 @@ for geojson_file in geojsons_files:
             settlementCounty[feature['properties']['ksh_ref']] = ksh_ref
 
 # Population of Areas (aka Dioceses)    
-i = 0;
-for area in areas:
-    areas[i]['inCounties'] = {}
-    areas[i]['population'] = 0
+for key, area in areas.items():
+    areas[key]['inCounties'] = {}
+    areas[key]['population'] = 0
     for ksh_ref in area['ksh_refs']:
         if not settlementCounty[ksh_ref] in area['inCounties']:
-            areas[i]['inCounties'][settlementCounty[ksh_ref]] = { 'name' : counties[settlementCounty[ksh_ref]]['name'],  'ksh_ref' : counties[settlementCounty[ksh_ref]]['TERUL_GEO3'], 'population' : 0 }
-        areas[i]['inCounties'][settlementCounty[ksh_ref]]['population'] += int(settlementPopulations[ksh_ref])
-        areas[i]['population'] += int(settlementPopulations[ksh_ref])
-    i+=1
+            areas[key]['inCounties'][settlementCounty[ksh_ref]] = { 'name' : counties[settlementCounty[ksh_ref]]['name'],  'ksh_ref' : counties[settlementCounty[ksh_ref]]['TERUL_GEO3'], 'population' : 0 }
+        areas[key]['inCounties'][settlementCounty[ksh_ref]]['population'] += int(settlementPopulations[ksh_ref])
+        areas[key]['population'] += int(settlementPopulations[ksh_ref])
     
-    
-for area in areas:  
+areasOfCounties = {}    
+for key, area in areas.items():  
     for ksh_ref, county in area['inCounties'].items():
-        county['percentageOfCounty'] = county['population'] / counties[ksh_ref]['population'] * 100
+        percentage =  county['population'] / counties[ksh_ref]['population'] * 100
+        county['percentageOfCounty'] = percentage
+        if not ksh_ref in areasOfCounties:
+            areasOfCounties[ksh_ref] = {}
+        areasOfCounties[ksh_ref][area['osmid']] = percentage
 print('Done', flush=True) 
+
 
 #
 # Collect KSH Data by Settlements
@@ -107,8 +110,7 @@ for ksh_file in ksh_files:
     print('.', end=' ', flush=True)
     kshjson = json.load(open(ksh_file, 'r', encoding="utf-8"))
     
-    i = 0
-    for area in areas:
+    for key, area in areas.items():
         c = 0
         for kshitem in kshjson:
             # check if its valid ksh json
@@ -116,63 +118,90 @@ for ksh_file in ksh_files:
                 break
             
             if kshitem["TERUL_GEO5"] in area['ksh_refs']:
-                if not 'data' in areas[i]:
-                    areas[i]['data'] = {}
-                if not kshitem["TEL_SZ_ADAT"] in areas[i]['data']:
-                    areas[i]['data'][kshitem["TEL_SZ_ADAT"]] = {}     
-                if not kshitem["TIME_PERIOD"] in areas[i]['data'][ kshitem["TEL_SZ_ADAT"] ]:
-                    areas[i]['data'][kshitem["TEL_SZ_ADAT"]][kshitem["TIME_PERIOD"]] = 0
+                if not 'data' in areas[key]:
+                    areas[key]['data'] = {}
+                if not kshitem["TEL_SZ_ADAT"] in areas[key]['data']:
+                    areas[key]['data'][kshitem["TEL_SZ_ADAT"]] = {}     
+                if not kshitem["TIME_PERIOD"] in areas[key]['data'][ kshitem["TEL_SZ_ADAT"] ]:
+                    areas[key]['data'][kshitem["TEL_SZ_ADAT"]][kshitem["TIME_PERIOD"]] = 0
                 if kshitem["OBS_VALUE"]:                
-                    areas[i]['data'][ kshitem["TEL_SZ_ADAT"] ][ kshitem["TIME_PERIOD"] ] += int(kshitem["OBS_VALUE"])
+                    areas[key]['data'][ kshitem["TEL_SZ_ADAT"] ][ kshitem["TIME_PERIOD"] ] += int(kshitem["OBS_VALUE"])
             
             c+=1
-        i+=1
 print('Done', flush=True)
 
+#
+# Collect KSH Data by Counties
+print('Collecting KSH data by Counties', end=' ', flush=True)
+#
+ksh_files = glob.glob('KSH DataSources/byCounty/*.json')
+for ksh_file in ksh_files:
+    print('.', end=' ', flush=True)
+    kshjson = json.load(open(ksh_file, 'r', encoding="utf-8"))
+
+    for kshitem in kshjson:
+        # check if its valid ksh json
+        if not "OBS_VALUE" in kshitem or not "TIME_PERIOD" in kshitem or not "TARSJELL1" in kshitem or not "TERUL_GEO3" in kshitem or not "VALLAS_V2" in kshitem :
+            break
+        
+        #TODO: fix, miért kell az if!!?? KeyError: 'HU11'
+        if kshitem['TERUL_GEO3'] in areasOfCounties:
+            for area, perc in areasOfCounties[kshitem['TERUL_GEO3']].items():
+                dataKey = kshitem['TARSJELL1'] + ":" + kshitem['VALLAS_V2']
+                if not 'data' in areas[area]:
+                    areas[area]['data'] = {}
+                if not dataKey in areas[area]['data']:
+                    areas[area]['data'][dataKey] = {}
+                if not kshitem['TIME_PERIOD'] in areas[area]['data'][dataKey]:
+                    areas[area]['data'][dataKey][kshitem['TIME_PERIOD']] = 0                    
+                
+                areas[area]['data'][dataKey][kshitem['TIME_PERIOD']] += int(int(kshitem['OBS_VALUE']) * ( perc / 100 ))
+
+print('Done', flush=True)
+            
 #
 # Calculations
 print('Makeing some calculated data', end=' ', flush=True)
 #
-i = 0
-for area in areas:
+for key, area in areas.items():
     if not "data" in area:
         break
     
-    areas[i]['data']['Y_LT15'] = {
+    areas[key]['data']['Y_LT15'] = {
         '2001': area['data']['FY_LT15']['2001'] + area['data']['FY_LT15']['2001'],
         '2011': area['data']['FY_LT15']['2011'] + area['data']['FY_LT15']['2011'],
         '2022': area['data']['FY_LT15']['2022'] + area['data']['FY_LT15']['2022']
     }    
     print('.', end=' ', flush=True)
     
-    areas[i]['data']['Y15-64'] = {
+    areas[key]['data']['Y15-64'] = {
         '2001': area['data']['FY15-64']['2001'] + area['data']['FY15-64']['2001'],
         '2011': area['data']['FY15-64']['2011'] + area['data']['FY15-64']['2011'],
         '2022': area['data']['FY15-64']['2022'] + area['data']['FY15-64']['2022']
     }
     print('.', end=' ', flush=True)
     
-    areas[i]['data']['Y_GE65'] = {
+    areas[key]['data']['Y_GE65'] = {
         '2001': area['data']['FY_GE65']['2001'] + area['data']['FY_GE65']['2001'],
         '2011': area['data']['FY_GE65']['2011'] + area['data']['FY_GE65']['2011'],
         '2022': area['data']['FY_GE65']['2022'] + area['data']['FY_GE65']['2022']
     }
     print('.', end=' ', flush=True)
 
-    areas[i]['data']['RE_C_NOTRG'] = {
+    areas[key]['data']['RE_C_NOTRG'] = {
         '2001': area['data']['RE_C']['2001'] - area['data']['RE_RC']['2001'] - area['data']['RE_GC']['2001'],
         '2011': area['data']['RE_C']['2011'] - area['data']['RE_RC']['2011'] - area['data']['RE_GC']['2011'],
         '2022': area['data']['RE_C']['2022'] - area['data']['RE_RC']['2022'] - area['data']['RE_GC']['2022'],
     }
     print('.', end=' ', flush=True)    
     
-    i+=1
 print('Done', flush=True)
+
 
 #
 # Clean JSON data file
 print('Cleaning JSON fullData ...', end=' ', flush=True)
-for area in areas:
+for key, area in areas.items():
     area.pop("ksh_refs")
 print('Done', flush=True)
 
