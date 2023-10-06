@@ -87,6 +87,8 @@ for key, area in areas.items():
     areas[key]['inCounties'] = {}
     areas[key]['population'] = 0
     for ksh_ref in area['ksh_refs']:
+        if not ksh_ref in settlementCounty:
+            break
         if not settlementCounty[ksh_ref] in area['inCounties']:
             areas[key]['inCounties'][settlementCounty[ksh_ref]] = { 'name' : counties[settlementCounty[ksh_ref]]['name'],  'ksh_ref' : counties[settlementCounty[ksh_ref]]['TERUL_GEO3'], 'population' : 0 }
         areas[key]['inCounties'][settlementCounty[ksh_ref]]['population'] += int(settlementPopulations[ksh_ref])
