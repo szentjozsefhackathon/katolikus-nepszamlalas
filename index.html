@@ -21,36 +21,55 @@
 	<div class="container">
 		<div class="px-4 py-5 my-5 text-center">
 			<h1 class="display-5 fw-bold text-body-emphasis">A népszámlálás és a<br /> katolikus egyházmegyék</h1>
-			<div class="col-lg-6 mx-auto">
-				<p class="lead mb-4">A népszámlálási adatok a Magyar Katolikus Egyházról és összetételéről is sokat
-					mesél. Ám míg az adatok alapvetően vármegye szinten és települési szinten érhetőek el legkönnyebben,
-					addig a katolikus egyháznak az a leghasznosabb, ha egyházmegyei szinten is elérhetőek és
-					elemezhetőek az adatok. Ehhez kívánunk segítséget nyújtani ezzel az egyszerű felelülettel. Talán az
-					adatokat nézegetve észrevehetünk leheséges összefüggéseket, ami segíthet a reflexióban.</p>
+			<div class="col-lg-8 mx-auto">
+				<p class="lead mb-4">A népszámlálási- és általában a KSH adatok leginkább települési ill. vármegyei felosztásban érhetőek el. Mivel a Magyar Katolikus Egyháznak az egyházmegyei bontás az igazán érdekes és hasznos, ezért átalakítjuk az adatokat egyházmegyei szintekre. <br/>Jó böngészést és kutakodást kívánunk!</p>
 
-				<div class="alert alert-danger">Az oldal még kezdetleges fázisban van. Gyere vissza később. Vagy inkább
-					gyere segíteni nekünk a <a href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.
+				<h3>Mielőtt belevágnánk:</h3>
+				<div class="alert alert-danger">Míg az egyházmegyei szintre átalakított (<a href="fullData.json">letölthető</a>) adatok már elég pontosak és részletesek, addig a megjelenítő felület még elég kezdetleges. Kérünk, hogy nézz vissza később. Illetve segíts nekünk a fejlesztésben, véleményezésben, megjelenítés változat igénylésében a a <a href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.
 				</div>
 
-				<div class="alert alert-info">
+				<div class="alert alert-info" id="about_the_data">
+					<h5>Hogy készültek az adatok?</h5>
+					<p>Az Open Street Map alapján az egy-egy egyházmegye területén lévő települések KSH adatait szépen összegeztük, ahol erre lehetőség volt. Más KSH adatok vármegye szinten érhetőek el, ezért megnéztük, hogy egy-egy egyházmegye mely vármegyék mekkora részét foglalja el és így arányosítottuk a KSH adatokat. <span class="badge bg-primary" data-bs-toggle="collapse" href="#about_the_data_details" role="button" aria-expanded="false" aria-controls="about_the_data_details">Részletek</span></p>					
+					<div id="about_the_data_details" class="collapse">
+						<h6>Települések és település részek:</h6>
+						<p>A <a href="https://wiki.openstreetmap.org/wiki/Hungary/Katolikus_Templomok">Hungary/Katolikus Templomok</a> Open Street Map projekt keretében valamennyi magyar katolikus egyházmegye felkerült az OSM térképre: <a href="https://wiki.openstreetmap.org/wiki/Hungary/Katolikus_Templomok#Aktu.C3.A1lis_katolikus_ter.C3.BCleti_feloszt.C3.A1s">Aktuális katolikus területi felosztás</a>. Az <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass-turbo</a> segítségével le tudjuk kérdezni, hogy egy-egy egyházmegye vagy vármegye területén milyen települések vagy település részletek vannak. Mivel az OSM-ben <a href="https://www.openstreetmap.org/changeset/2983791">már bő 14 éve felvitték</a> a KSH azonosítókat, így igazán egyszerű volt a dolgunk: a `ksh_ref` kulcsokra szűrtünk az overpass-turbo.eu segítségével. Például: <a href="https://overpass-turbo.eu/s/1Bxv">overpass-turbo.eu/s/1Bxv</a>. Így létrejött a nagy adattömb, ahol minden egyházmegyéhez tartozik egy rakat `ksh_ref`. Vigyázat! Nem ellenőriztük, hogy egy település(rész) csak egy egyházmegyéhez tartozik-e (azonos rítus esetén)! Vigyázat! Nem ellenőriztük, hogy az OSM-ből kapott ksh_ref kulccsal rendelkező adatok mind település szintű adatok-e. Amivel egészen addig nincs baj, amíg a KSH-ból összeszedésre szerzett adatoknál a TERUL_GEO5 kulccsal kaptuk meg az adatokat. Vigyázat! Aktuális (2023-as) települési felosztást néztünk, ami elvileg eltérhet 2001, 2011 és akár 2022 esetén. Pl. olykor történnek egyházmegyéknél határváltozások.</p>
+						<h6>Település szintű KSH adatokból egyházmegyei adatok:</h6>
+						<p>A KSH <a href="https://nepszamlalas2022.ksh.hu/">nepszamlalas2022.ksh.hu</a> honlapjáról szabadon le lehet kérdezni adatokat. Az "<a href="https://nepszamlalas2022.ksh.hu/adatbazis/#/table/WBS003">A népesség adatai településenként</a>" lekérdezési felületen a `Letöltés` gombra kattintva JSON formában kapjuk meg az adatokat, ahol minden cella (sortól és oszloptól függetlenül) külön JSON elem a következő elemekkel: "OBS_STATUS": <i>ismeretlen</i>, "OBS_VALUE": <i>az adott érték/eredmény</i>, "TIME_PERIOD": <i>2001, 2011, vagy 2022</i>, "TERUL_GEO5": <i>település azonosítója (ksh_ref)</i>, "TEL_SZ_ADAT": <i>az adat fajtája (pl. családi állapota özvegy)</i>. Mivel egy-egy lekérdezés maximálisan 40 000 cellát tartalmazhat, ezért darabokban töltöttük le a számunkra releváns adatokat.</p>
+						<p>Majd végig mentünk minden így letöltött KSH adatcellán, és az értéket (OBS_VALUE) ahhoz az egyházmegye megfelelő adatához (TEL_SZ_ADAT) hozzáadtuk, amelyik egyházmegyéhez a település tartozik. Vigyázat! Ha egy település több egyházmegyéhez tartozna, akkor mindegyikhez hozzáadódik az érték. </p>
+						<h6>Vármegye szintű KSH adatokból egyházmegyei adatok:</h6>
+						<p>A részletes vallási adatokat a KSH vármegyénként ill. településtípusonként tette elérhetővé az "<a href="https://nepszamlalas2022.ksh.hu/adatbazis/#/table/WBS008">A népesség vallása vármegyénként, településtípusonként</a>" lekérdezési felületen. Mi a "Vármegye, régió" dimenziót használtuk külön-külön letöltve a releváns "Vallás, részletes" dimenziókat minden elérhető "Társadalmi jellemzők" adattal. Ezekben a lerkédezésekben "TEL_SZ_ADAT" helyett "TARSJELL1" érhető el. A területi hivatkozásokat pedig a "TERUL_GEO3" tartalmazza. A vallási dimenziót a "VALLAS_V2". (Az érték továbbra is "OBS_VALUE". Az időpont pedig "TIME_PERIOD".)</p>
+						<p>Egy-egy egyházmegye több vármegyét is érint. Olykor teljes egészében lefed, olykor csak részlegesen. Az adatok átalakításánál ezért arányosítottunk. Az OSM adatbázisból lekértük az egyházmegyékhez hasonló módon a vármegyék minden település(rész)ét amihez `ksh_ref` kulcs tartozik. A fent említett "A népesség adati településenként" oldalról letöltöttük a teljes lakosság számát a "NEME_SEX" kulcsot alkalmazva. Így minden településnek megkaptuk a lakosságát, amiket összeadva megkaptuk a vármegyének (ill. egyházmegyék) populációját. Egy-egy egyházmegyének az adott vármegyében lévő településeinek lakossainak összegét hasonlítjuk össze a vármegye teljes lakosságával (2022-es adatokkal mindig!) és így jegyezzük fel, hogy a KSH-nak az adott vármegyére megadott bármilyen adata esetén milyen szorzót / arányosítást használjunk.</p>
+						<p>Vigyázat! A települések hovatartozását, populációját és így az arányosítást mostani (2023 ill. 2022) adatokra alapoztuk. Ha esetleg az egyik egyházmegyének egy vármegyére benyúló településének a lakossága lényegesen jobban változott mint az adott vármegye teljes lakossága, akkor az egyházmegyének a vármegye teljes adatából kiérdemelt részének aránya megváltozhatott. Mindenhol 2022-es adatokat figyelünk és 2001-es adatok esetén nem a 2001-es populációs arányokat használjuk! Vigyázat! Nem vizsgáljuk, hogy nicsenek-e hibás átfedések, ill. nem vizsgáljuk hogy az összeg mindenütt helyes-e. Az arányosítást jópár tizedesjegyig számoljuk, de a KSH adatokat vármegyénként már egész számra kerekítjük.</p>
+						<h6>Tehát az adatok a lehetőségekhez képest igen pontosak, de fenntartásokkal kezelendőek.</h6>
+					</div>
+				</div>
+
+				<div class="alert alert-info" id="warning">
 					<h5>Mit jelentenek és mit nem jelentenek a számok?</h5>
-					<p>Vegyünk egy példát: elváltak a Győri egyházmegyében.</p>
-					<p>2001-ben a 30 891 elvált személy élt a Győri egyházmegye jelenlegi területén. 2022-ben pedig 53
-						724. Ez közel 74%-os növekedés. A legnagyobb arányú növekedés az egyházmegyék között. Jaj. De
-						darabszámban a Váci egyházmegyében sokkal nagyobb a különbség 2001 és 2022 között az elváltak
-						létszámát illetően: több mint negyven ezer. Közben ha lakosság arányában nézzük, akkor a Győri
-						egyházmegyében 2001-ben a lakosság 5,8%-a volt elvált. 2022-ben pedig már 9,6%. Ám ezzel még
-						mindig nem érte utol a Győri egyházmegye lakossága az országos átlagot. Juhú. Vagyis, hiába a
-						legnagyobb növekedés az elváltak számában, az elváltak arányában még mindig nagyon jó a Győri
-						egyházmegye.</p>
-					<p>Fontos még azt is látni, hogy 2022 és 2001 között minden bizonnyal nem 22 833 válás történt.
-						Lehetett sokkal több válás, csak aztán elhunytak az elváltak. Vagy átköltöztek másik
-						egyházmegyébe. De az is lehet, hogy sok elvált ember költözött az egyházmegye területére. És még
-						megannyi magyarázat lehet. Ezek az adatok csak pillanatfelvételek!</p>
+					<p>Az adatok értelmezése nem könnyű. Például egy állítás: a Győri egyházmegye kiemelkedik a válások tekintetében. Viszont a tények egy része: az elváltak számának növekedésének mértéke valóban a legnagyobb, de így is lakosságarányosan a legkevesebb az elvált az egyházmegyében. <span class="badge bg-primary" data-bs-toggle="collapse" href="#warning_details" role="button" aria-expanded="false" aria-controls="warning_details">Részletek</span></p>					
+					<div id="warning_details" class="collapse">
+						<p>2001-ben a 30 891 elvált személy élt a Győri egyházmegye jelenlegi területén. 2022-ben pedig 53
+							724. Ez közel 74%-os növekedés. A legnagyobb arányú növekedés az egyházmegyék között. Jaj. De
+							darabszámban a Váci egyházmegyében sokkal nagyobb a különbség 2001 és 2022 között az elváltak
+							létszámát illetően: több mint negyven ezer. Közben ha lakosság arányában nézzük, akkor a Győri
+							egyházmegyében 2001-ben a lakosság 5,8%-a volt elvált. 2022-ben pedig már 9,6%. Ám ezzel még
+							mindig nem érte utol a Győri egyházmegye lakossága az országos átlagot. Juhú. Vagyis, hiába a
+							legnagyobb növekedés az elváltak számában, az elváltak arányában még mindig nagyon jó a Győri
+							egyházmegye.</p>
+						<p>Fontos még azt is látni, hogy 2022 és 2001 között minden bizonnyal nem 22 833 válás történt.
+							Lehetett sokkal több válás, csak aztán elhunytak az elváltak. Vagy átköltöztek másik
+							egyházmegyébe. De az is lehet, hogy sok elvált ember költözött az egyházmegye területére. És még
+							megannyi magyarázat lehet. Ezek az adatok csak pillanatfelvételek!</p>
+					</div>
 				</div>
 			</div>
 		</div>
 
+		<center>
+			<h3>Adatok, kimutatások, elemzések:</h3>
+			<div class="alert alert-danger">Fejlesztés folyamatban...</div>
+		</center>
 		<div class="b-example-divider"></div>
 
 		<div id="sections">
