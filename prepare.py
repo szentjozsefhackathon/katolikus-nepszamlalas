@@ -62,6 +62,8 @@ for geojson_file in geojsons_files:
     geojson = json.load(open(geojson_file, 'r',  encoding="utf-8"))    
     relationRegex = re.compile(r'(\\(.*))\.geojson')
     mo = relationRegex.search(geojson_file)
+    if mo is None:
+        break
     name = mo.group(2)
     
     for key, county in counties.items():
@@ -147,7 +149,7 @@ for ksh_file in ksh_files:
         #TODO: fix, miért kell az if!!?? KeyError: 'HU11'
         if kshitem['TERUL_GEO3'] in areasOfCounties:
             for area, perc in areasOfCounties[kshitem['TERUL_GEO3']].items():
-                dataKey = kshitem['TARSJELL1'] + ":" + kshitem['VALLAS_V2']
+                dataKey = kshitem['VALLAS_V2'] + ":" + kshitem['TARSJELL1']
                 if not 'data' in areas[area]:
                     areas[area]['data'] = {}
                 if not dataKey in areas[area]['data']:
