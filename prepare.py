@@ -60,11 +60,9 @@ geojsons_files = glob.glob('OSM DataSources/counties/*.geojson')
 for geojson_file in geojsons_files:
     print('.', end=' ', flush=True)
     geojson = json.load(open(geojson_file, 'r',  encoding="utf-8"))    
-    relationRegex = re.compile(r'(\\(.*))\.geojson')
-    mo = relationRegex.search(geojson_file)
-    if mo is None:
-        break
-    name = mo.group(2)
+    relationRegex = re.compile(r'([^\\\/]*)\.geojson')
+    mo = relationRegex.search(geojson_file)    
+    name = mo.group(1)
     
     for key, county in counties.items():
         if county['name'] == name:
