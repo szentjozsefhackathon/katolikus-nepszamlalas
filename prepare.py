@@ -12,7 +12,8 @@ areas = json.load(stringe)
 
 #
 # Collect OSM data
-print('Collecting OSM data', end=' ', flush=True)
+# by settlements
+print('Settlements in Areas (aka Dioceses)', end=' ', flush=True)
 #
 osms = {}
 geojsons_files = glob.glob('OSM DataSources/relation-*.geojson')
@@ -36,6 +37,66 @@ for area in areas:
         areas[i]['ksh_refs'] = osms[area['osmid']]['ksh_refs']
     i+=1
 print('Done', flush=True)
+
+#
+# Collect OSM data
+#by counties
+print('Settlements in Counties', end=' ', flush=True)
+#
+
+# Collect population of settlements and counties from KSH data
+datas = json.load(open("KSH DataSources/NEME_SEX.json", 'r',  encoding="utf-8")) 
+settlementPopulations = {}
+for data in datas:
+    settlementPopulations[data['TERUL_GEO5']] = data['OBS_VALUE']
+    
+counties = {}    
+json_data = json.load(open("KSH DataSources/byCounty/initData.json", 'r',  encoding="utf-8") )
+for data in json_data:
+    counties[data['TERUL_GEO3']] = data
+
+settlementCounty = {}
+geojsons_files = glob.glob('OSM DataSources/counties/*.geojson')
+for geojson_file in geojsons_files:
+    print('.', end=' ', flush=True)
+    geojson = json.load(open(geojson_file, 'r',  encoding="utf-8"))    
+    relationRegex = re.compile(r'(\\(.*))\.geojson')
+    mo = relationRegex.search(geojson_file)
+    name = mo.group(2)
+    
+    for key, county in counties.items():
+        if county['name'] == name:
+            ksh_ref = county['TERUL_GEO3']
+            break
+    
+    counties[ksh_ref]['ksh_refs'] = []
+    counties[ksh_ref]['settlements'] = []
+    counties[ksh_ref]['population'] = 0
+    
+    for feature in geojson['features']:
+        counties[ksh_ref]['settlements'].append(feature['properties']['name'])
+        counties[ksh_ref]['ksh_refs'].append(feature['properties']['ksh_ref'])
+        counties[ksh_ref]['population'] += int(settlementPopulations[feature['properties']['ksh_ref']])
+        if not feature['properties']['ksh_ref'] in settlementCounty or not name == 'Magyarország':
+            settlementCounty[feature['properties']['ksh_ref']] = ksh_ref
+
+# Population of Areas (aka Dioceses)    
+i = 0;
+for area in areas:
+    areas[i]['inCounties'] = {}
+    areas[i]['population'] = 0
+    for ksh_ref in area['ksh_refs']:
+        if not settlementCounty[ksh_ref] in area['inCounties']:
+            areas[i]['inCounties'][settlementCounty[ksh_ref]] = { 'name' : counties[settlementCounty[ksh_ref]]['name'],  'ksh_ref' : counties[settlementCounty[ksh_ref]]['TERUL_GEO3'], 'population' : 0 }
+        areas[i]['inCounties'][settlementCounty[ksh_ref]]['population'] += int(settlementPopulations[ksh_ref])
+        areas[i]['population'] += int(settlementPopulations[ksh_ref])
+    i+=1
+    
+    
+for area in areas:  
+    for ksh_ref, county in area['inCounties'].items():
+        county['percentageOfCounty'] = county['population'] / counties[ksh_ref]['population'] * 100
+print('Done', flush=True) 
 
 #
 # Collect KSH Data by Settlements
@@ -108,6 +169,12 @@ for area in areas:
     i+=1
 print('Done', flush=True)
 
+#
+# Clean JSON data file
+print('Cleaning JSON fullData ...', end=' ', flush=True)
+for area in areas:
+    area.pop("ksh_refs")
+print('Done', flush=True)
 
 #
 # Dump JSON data to file

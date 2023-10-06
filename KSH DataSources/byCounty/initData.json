@@ -1,0 +1,86 @@
+[
+	{
+		"name" : "Magyarország",
+		"TERUL_GEO3" : "none"
+	},
+	{
+		"name" : "Budapest",
+		"TERUL_GEO3" : "HU110"
+	},
+	{
+		"name" : "Pest vármegye",
+		"TERUL_GEO3" : "HU120"
+	},
+	{
+		"name" : "Fejér vármegye",
+		"TERUL_GEO3" : "HU211"
+	},
+	{
+		"name" : "Komárom-Esztergom vármegye",
+		"TERUL_GEO3" : "HU212"
+	},
+	{
+		"name" : "Veszprém vármegye",
+		"TERUL_GEO3" : "HU213"
+	},
+	{
+		"name" : "Győr-Moson-Sopron vármegye",
+		"TERUL_GEO3" : "HU221"
+	},
+	{
+		"name" : "Vas vármegye",
+		"TERUL_GEO3" : "HU222"
+	},
+	{
+		"name" : "Zala vármegye",
+		"TERUL_GEO3" : "HU223"
+	},
+	{
+		"name" : "Baranya vármegye",
+		"TERUL_GEO3" : "HU231"
+	},
+	{
+		"name" : "Somogy vármegye",
+		"TERUL_GEO3" : "HU232"
+	},
+	{
+		"name" : "Tolna vármegye",
+		"TERUL_GEO3" : "HU233"
+	},
+	{
+		"name" : "Borsod-Abaúj-Zemplén vármegye",
+		"TERUL_GEO3" : "HU311"
+	},
+	{
+		"name" : "Heves vármegye",
+		"TERUL_GEO3" : "HU312"
+	},
+	{
+		"name" : "Nógrád vármegye",
+		"TERUL_GEO3" : "HU313"
+	},
+	{
+		"name" : "Hajdú-Bihar vármegye",
+		"TERUL_GEO3" : "HU321"
+	},
+	{
+		"name" : "Jász-Nagykun-Szolnok vármegye",
+		"TERUL_GEO3" : "HU322"
+	},
+	{
+		"name" : "Szabolcs-Szatmár-Bereg vármegye",
+		"TERUL_GEO3" : "HU323"
+	},
+	{
+		"name" : "Bács-Kiskun vármegye",
+		"TERUL_GEO3" : "HU331"
+	},
+	{
+		"name" : "Békés vármegye",
+		"TERUL_GEO3" : "HU332"
+	},
+	{
+		"name" : "Csongrád-Csanád vármegye",
+		"TERUL_GEO3" : "HU333"
+	}
+]

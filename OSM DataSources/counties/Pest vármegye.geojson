@@ -1,0 +1,4836 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2023-10-06T06:16:39Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/31377320",
+        "ksh_ref": "19716",
+        "name": "Nagykőrös",
+        "name:de": "Grosskirisch",
+        "name:ru": "Надькёрёш",
+        "name:sk": "Veľký Kereš",
+        "name:sr": "Нађкереш",
+        "place": "town",
+        "place:hu": "város",
+        "population": "23327",
+        "postal_code": "2750",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q830394"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7863141,
+          47.0374257
+        ]
+      },
+      "id": "node/31377320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/59976001",
+        "ksh_ref": "06372",
+        "name": "Pomáz",
+        "name:de": "Paumasch",
+        "name:ru": "Помаз",
+        "name:sk": "Pomáz",
+        "place": "town",
+        "place:hu": "város",
+        "population": "17765",
+        "postal_code": "2013",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q842923"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0236304,
+          47.6468212
+        ]
+      },
+      "id": "node/59976001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/73993229",
+        "ksh_ref": "15440",
+        "name": "Szentendre",
+        "name:de": "Sankt Andrä",
+        "name:hr": "Senandrija",
+        "name:ru": "Сентендре",
+        "name:sk": "Svätý Ondrej",
+        "name:sr": "Сентандреја",
+        "place": "town",
+        "place:hu": "város",
+        "population": "27641",
+        "postal_code": "2000",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q390798"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0760467,
+          47.6677606
+        ]
+      },
+      "id": "node/73993229"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/73993237",
+        "ksh_ref": "23463",
+        "name": "Budakalász",
+        "name:de": "Kalasch",
+        "name:ru": "Будакалас",
+        "place": "town",
+        "place:hu": "város",
+        "population": "11933",
+        "postal_code": "2011",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0468565,
+          47.6192785
+        ]
+      },
+      "id": "node/73993237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/73993250",
+        "ksh_ref": "18731",
+        "name": "Pilisszentkereszt",
+        "name:ru": "Пилишсенткерест",
+        "name:sk": "Mlynky",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2196",
+        "postal_code": "2098",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9024298,
+          47.6931455
+        ]
+      },
+      "id": "node/73993250"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/73993255",
+        "ksh_ref": "08457",
+        "name": "Pilisszentlászló",
+        "name:sk": "Svätý Václav",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1300",
+        "postal_code": "2009",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9892166,
+          47.7231462
+        ]
+      },
+      "id": "node/73993255"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/77907835",
+        "ksh_ref": "10816",
+        "name": "Kiskunlacháza",
+        "name:ru": "Кишкунлацхаза",
+        "place": "town",
+        "place:hu": "város",
+        "population": "9296",
+        "postal_code": "2340",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q1095159",
+        "wikipedia": "hu:Kiskunlacháza"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.00569,
+          47.1903391
+        ]
+      },
+      "id": "node/77907835"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/77909368",
+        "ksh_ref": "29647",
+        "name": "Dömsöd",
+        "name:ru": "Дёмшёд",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "5906",
+        "postal_code": "2344",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "website": "https://www.domsod.hu",
+        "wikidata": "Q241396",
+        "wikipedia": "hu:Dömsöd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0070461,
+          47.094771
+        ]
+      },
+      "id": "node/77909368"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/84782806",
+        "ksh_ref": "11341",
+        "name": "Cegléd",
+        "name:de": "Zieglet",
+        "name:ru": "Цеглед",
+        "name:sk": "Ceglíd",
+        "place": "town",
+        "place:hu": "város",
+        "population": "35088",
+        "postal_code": "2700",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q214948"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7977516,
+          47.1716447
+        ]
+      },
+      "id": "node/84782806"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/122406968",
+        "ksh_ref": "33729",
+        "name": "Verőce",
+        "name:sk": "Verovce",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4215",
+        "postal_code": "2621",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0339651,
+          47.8230548
+        ]
+      },
+      "id": "node/122406968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/122408345",
+        "ksh_ref": "33738",
+        "name": "Kismaros",
+        "name:de": "Kleinmarosch",
+        "name:sk": "Malá Maruša",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2560",
+        "postal_code": "2623",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0129068,
+          47.8266438
+        ]
+      },
+      "id": "node/122408345"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/123770266",
+        "alt_name:de": "Rotenburg",
+        "ksh_ref": "14340",
+        "name": "Pilisvörösvár",
+        "name:de": "Werischwar",
+        "name:ru": "Пилишвёрёшвар",
+        "place": "town",
+        "place:hu": "város",
+        "population": "14518",
+        "postal_code": "2085",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9115754,
+          47.6210817
+        ]
+      },
+      "id": "node/123770266"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/130074165",
+        "ksh_ref": "17260",
+        "name": "Ráckeve",
+        "name:de": "Rautzenmarkt",
+        "name:ru": "Рацкеве",
+        "old_name": "Ráczkéve",
+        "place": "town",
+        "place:hu": "város",
+        "population": "11113",
+        "postal_code": "2300",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q755701",
+        "wikipedia": "hu:Ráckeve"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9436266,
+          47.1609765
+        ]
+      },
+      "id": "node/130074165"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/130577677",
+        "ksh_ref": "09140",
+        "name": "Lórév",
+        "name:sr": "Ловра",
+        "place": "village",
+        "place:hu": "község",
+        "population": "297",
+        "postal_code": "2309",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8966037,
+          47.1157416
+        ]
+      },
+      "id": "node/130577677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/134495162",
+        "ksh_ref": "03407",
+        "name": "Budajenő",
+        "name:de": "Jeine",
+        "name:ru": "Будаенё",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2264",
+        "postal_code": "2093",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8038041,
+          47.555673
+        ]
+      },
+      "id": "node/134495162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/134498430",
+        "ksh_ref": "08280",
+        "name": "Telki",
+        "name:de": "Tölleck",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4603",
+        "postal_code": "2089",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8206574,
+          47.551193
+        ]
+      },
+      "id": "node/134498430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/139327118",
+        "ksh_ref": "29823",
+        "name": "Tököl",
+        "name:de": "Teckel",
+        "name:hr": "Tukulja",
+        "name:ru": "Тёкёль",
+        "name:sr": "Тукуља",
+        "place": "town",
+        "place:hu": "város",
+        "population": "10709",
+        "postal_code": "2316",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9632427,
+          47.3226787
+        ]
+      },
+      "id": "node/139327118"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/140332206",
+        "ksh_ref": "22804",
+        "name": "Csömör",
+        "name:de": "Tschemmern",
+        "name:ru": "Чёмёр",
+        "name:sk": "Čemer",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "10365",
+        "postal_code": "2141",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2242144,
+          47.5489158
+        ]
+      },
+      "id": "node/140332206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/140335407",
+        "ksh_ref": "32559",
+        "name": "Gödöllő",
+        "name:de": "Getterle",
+        "name:ru": "Гёдёллё",
+        "name:sk": "Jedľovo",
+        "place": "town",
+        "place:hu": "város",
+        "population": "31494",
+        "postal_code": "2100",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q209988"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3476981,
+          47.601529
+        ]
+      },
+      "id": "node/140335407"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/141699600",
+        "ksh_ref": "23278",
+        "name": "Budaörs",
+        "name:de": "Wudersch",
+        "name:hr": "Jerša",
+        "name:ru": "Будаэрш",
+        "place": "town",
+        "place:hu": "város",
+        "population": "28864",
+        "postal_code": "2040",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q755691"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9541818,
+          47.4600185
+        ]
+      },
+      "id": "node/141699600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/148195197",
+        "ksh_ref": "12052",
+        "name": "Budakeszi",
+        "name:de": "Wudigeß",
+        "name:ru": "Будакеси",
+        "place": "town",
+        "place:hu": "város",
+        "population": "15466",
+        "postal_code": "2092",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.929382,
+          47.5099444
+        ]
+      },
+      "id": "node/148195197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/155311912",
+        "ksh_ref": "24013",
+        "name": "Diósd",
+        "name:de": "Orasch",
+        "place": "town",
+        "place:hu": "város",
+        "population": "11689",
+        "postal_code": "2049",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9448604,
+          47.406256
+        ]
+      },
+      "id": "node/155311912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/156531665",
+        "ksh_ref": "30988",
+        "name": "Érd",
+        "name:de": "Hanselbeck",
+        "name:hr": "Andzabeg",
+        "name:ru": "Эрд",
+        "place": "town",
+        "place:hu": "megyei jogú város",
+        "population": "71641",
+        "postal_code": "2030",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q193050"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9213833,
+          47.3772495
+        ]
+      },
+      "id": "node/156531665"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/157102172",
+        "ksh_ref": "09991",
+        "name": "Nagykovácsi",
+        "name:de": "Kowatsch",
+        "name:hu": "Nagykovácsi",
+        "name:ru": "Надьковачи",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "8733",
+        "population:date": "2022-01-01",
+        "postal_code": "2094",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q1070875",
+        "wikipedia": "hu:Nagykovácsi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.882064,
+          47.5762363
+        ]
+      },
+      "id": "node/157102172"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/176436051",
+        "ksh_ref": "04154",
+        "name": "Tárnok",
+        "name:ru": "Тарнок",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "10488",
+        "postal_code": "2461",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8660065,
+          47.3668787
+        ]
+      },
+      "id": "node/176436051"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/177532814",
+        "ksh_ref": "24934",
+        "name": "Vác",
+        "name:de": "Waitzen",
+        "name:ru": "Вац",
+        "name:sk": "Vacov",
+        "name:sr": "Вац",
+        "place": "town",
+        "place:hu": "város",
+        "population": "32977",
+        "postal_code": "2600",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q207408",
+        "wikipedia": "hu:Vác"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1278294,
+          47.7782873
+        ]
+      },
+      "id": "node/177532814"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/179713047",
+        "ksh_ref": "15024",
+        "name": "Páty",
+        "name:de": "Bath",
+        "name:ru": "Пать",
+        "place": "village",
+        "place:hu": "község",
+        "population": "8277",
+        "postal_code": "2071",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "wikidata": "Q1186235",
+        "wikipedia": "hu:Páty"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8271695,
+          47.5154504
+        ]
+      },
+      "id": "node/179713047"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/179713955",
+        "ksh_ref": "08891",
+        "name": "Biatorbágy",
+        "name:de": "Wiehall-Kleinturwall",
+        "name:ru": "Биаторбадь",
+        "place": "town",
+        "place:hu": "város",
+        "population": "15187",
+        "postal_code": "2051",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8232855,
+          47.4739442
+        ]
+      },
+      "id": "node/179713955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/179715154",
+        "ksh_ref": "06840",
+        "name": "Sóskút",
+        "name:ru": "Шошкуд",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3636",
+        "postal_code": "2038",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8305621,
+          47.4047185
+        ]
+      },
+      "id": "node/179715154"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/179735154",
+        "ksh_ref": "15583",
+        "name": "Pusztazámor",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1291",
+        "postal_code": "2039",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7855309,
+          47.4024957
+        ]
+      },
+      "id": "node/179735154"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/180730584",
+        "ksh_ref": "32610",
+        "name": "Fót",
+        "name:ru": "Фот",
+        "place": "town",
+        "place:hu": "város",
+        "population": "20773",
+        "postal_code": "2151",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q830652"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1980105,
+          47.6125871
+        ]
+      },
+      "id": "node/180730584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/180731026",
+        "ksh_ref": "18616",
+        "name": "Dunakeszi",
+        "name:ru": "Дунакеси",
+        "place": "town",
+        "place:hu": "város",
+        "population": "43907",
+        "postal_code": "2120",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q547479"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1294055,
+          47.6316697
+        ]
+      },
+      "id": "node/180731026"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/196174247",
+        "ksh_ref": "17312",
+        "name": "Százhalombatta",
+        "name:ru": "Саэхаломбатта",
+        "place": "town",
+        "place:hu": "város",
+        "population": "17403",
+        "postal_code": "2440",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q773203"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9120948,
+          47.3171992
+        ]
+      },
+      "id": "node/196174247"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/201505357",
+        "ksh_ref": "34166",
+        "name": "Kerepes",
+        "name:ru": "Керепеш",
+        "name:sk": "Kerepeš",
+        "place": "town",
+        "place:hu": "város",
+        "population": "10611",
+        "postal_code": "2144",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2869071,
+          47.5616135
+        ]
+      },
+      "id": "node/201505357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/204008081",
+        "ksh_ref": "09247",
+        "name": "Dabas",
+        "name:de": "Dabotz",
+        "name:ru": "Дабаш",
+        "name:sk": "Dabaš",
+        "place": "town",
+        "place:hu": "város",
+        "population": "17546",
+        "postal_code": "2370",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q854940"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3229242,
+          47.1729302
+        ]
+      },
+      "id": "node/204008081"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/204009228",
+        "ksh_ref": "06293",
+        "name": "Újhartyán",
+        "name:de": "Neuhartian",
+        "name:sk": "Nové Chrťany",
+        "place": "town",
+        "place:hu": "város",
+        "population": "2846",
+        "postal_code": "2367",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3841049,
+          47.2200186
+        ]
+      },
+      "id": "node/204009228"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/205084744",
+        "ksh_ref": "19682",
+        "name": "Újlengyel",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1702",
+        "postal_code": "2724",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.444332,
+          47.2322939
+        ]
+      },
+      "id": "node/205084744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206282578",
+        "ksh_ref": "07144",
+        "name": "Piliscsaba",
+        "name:de": "Tschawa",
+        "name:ru": "Пилишчаба",
+        "name:sk": "Pilišská Čaba",
+        "place": "town",
+        "place:hu": "város",
+        "population": "8904",
+        "postal_code": "2081",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8261229,
+          47.6329416
+        ]
+      },
+      "id": "node/206282578"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206344756",
+        "ksh_ref": "07108",
+        "name": "Tinnye",
+        "name:de": "Tiene",
+        "name:ru": "Тиннье",
+        "name:sk": "Tyňa",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1835",
+        "postal_code": "2086",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7778879,
+          47.6208911
+        ]
+      },
+      "id": "node/206344756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206344906",
+        "ksh_ref": "28185",
+        "name": "Perbál",
+        "name:de": "Perwall",
+        "name:sk": "Prieval",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2111",
+        "postal_code": "2074",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "website": "http://www.perbal.hu/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.759802,
+          47.5912451
+        ]
+      },
+      "id": "node/206344906"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206345080",
+        "ksh_ref": "24527",
+        "name": "Tök",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1415",
+        "postal_code": "2073",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7310553,
+          47.564671
+        ]
+      },
+      "id": "node/206345080"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206345175",
+        "ksh_ref": "25034",
+        "name": "Zsámbék",
+        "name:de": "Schambeck",
+        "name:hu": "Zsámbék",
+        "name:ru": "Жамбек",
+        "place": "town",
+        "place:hu": "város",
+        "population": "5821",
+        "postal_code": "2072",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7174344,
+          47.5483115
+        ]
+      },
+      "id": "node/206345175"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206345858",
+        "ksh_ref": "33552",
+        "name": "Herceghalom",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2927",
+        "postal_code": "2053",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7448861,
+          47.496236
+        ]
+      },
+      "id": "node/206345858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206359948",
+        "ksh_ref": "18342",
+        "name": "Veresegyház",
+        "place": "town",
+        "place:hu": "város",
+        "population": "20634",
+        "postal_code": "2112",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q843039"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2868815,
+          47.655235
+        ]
+      },
+      "id": "node/206359948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206359962",
+        "ksh_ref": "13480",
+        "name": "Erdőkertes",
+        "name:ru": "Эрдёкертеш",
+        "place": "village",
+        "place:hu": "község",
+        "population": "9081",
+        "postal_code": "2113",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "website": "https://www.erdokertes.hu/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.308359,
+          47.6702447
+        ]
+      },
+      "id": "node/206359962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206360043",
+        "ksh_ref": "08545",
+        "name": "Őrbottyán",
+        "name:sk": "Boťany",
+        "place": "town",
+        "place:hu": "város",
+        "population": "7997",
+        "postal_code": "2162",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.263848,
+          47.6827581
+        ]
+      },
+      "id": "node/206360043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206360324",
+        "ksh_ref": "33118",
+        "name": "Csomád",
+        "name:sk": "Čomad",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1783",
+        "postal_code": "2161",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2368611,
+          47.6547632
+        ]
+      },
+      "id": "node/206360324"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206360824",
+        "ksh_ref": "17668",
+        "name": "Vácrátót",
+        "name:sk": "Ratót",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2107",
+        "postal_code": "2163",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "website": "http://vacratot.hu/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2363045,
+          47.7094372
+        ]
+      },
+      "id": "node/206360824"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206360857",
+        "ksh_ref": "23649",
+        "name": "Göd",
+        "name:ru": "Гёд",
+        "place": "town",
+        "place:hu": "város",
+        "population": "21265",
+        "postal_code": "2131",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009",
+        "wikidata": "Q604258"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1341568,
+          47.6834336
+        ]
+      },
+      "id": "node/206360857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206360917",
+        "ksh_ref": "12690",
+        "name": "Sződ",
+        "name:ru": "Сёд",
+        "name:sk": "Seď",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3938",
+        "postal_code": "2134",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1819507,
+          47.7191669
+        ]
+      },
+      "id": "node/206360917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206360960",
+        "ksh_ref": "28866",
+        "name": "Sződliget",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "4894",
+        "postal_code": "2133",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q659772",
+        "wikipedia": "hu:Sződliget"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1473194,
+          47.7299732
+        ]
+      },
+      "id": "node/206360960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361086",
+        "ksh_ref": "34333",
+        "name": "Csörög",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2182",
+        "postal_code": "2135",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1904009,
+          47.7344093
+        ]
+      },
+      "id": "node/206361086"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361122",
+        "ksh_ref": "05917",
+        "name": "Vácduka",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1761",
+        "postal_code": "2167",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2145913,
+          47.7445953
+        ]
+      },
+      "id": "node/206361122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361183",
+        "ksh_ref": "19886",
+        "name": "Váchartyán",
+        "name:sk": "Vacovské Chrťany",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1825",
+        "postal_code": "2164",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2537343,
+          47.7270056
+        ]
+      },
+      "id": "node/206361183"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361192",
+        "ksh_ref": "05227",
+        "name": "Kisnémedi",
+        "place": "village",
+        "place:hu": "község",
+        "population": "642",
+        "postal_code": "2165",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2901265,
+          47.7377432
+        ]
+      },
+      "id": "node/206361192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361233",
+        "ksh_ref": "04303",
+        "name": "Püspökszilágy",
+        "place": "village",
+        "place:hu": "község",
+        "population": "744",
+        "postal_code": "2166",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3154773,
+          47.7402533
+        ]
+      },
+      "id": "node/206361233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361516",
+        "ksh_ref": "05698",
+        "name": "Váckisújfalu",
+        "name:sk": "Vacovská Nová Ves",
+        "place": "village",
+        "place:hu": "község",
+        "population": "462",
+        "postal_code": "2185",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3489985,
+          47.7044226
+        ]
+      },
+      "id": "node/206361516"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361599",
+        "ksh_ref": "03300",
+        "name": "Iklad",
+        "name:ru": "Иклад",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2029",
+        "postal_code": "2181",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4433911,
+          47.6593942
+        ]
+      },
+      "id": "node/206361599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361624",
+        "ksh_ref": "30331",
+        "name": "Vácegres",
+        "name:sk": "Židov",
+        "old_name:-1943": "Zsidó",
+        "place": "village",
+        "place:hu": "község",
+        "population": "905",
+        "postal_code": "2184",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3656575,
+          47.6751335
+        ]
+      },
+      "id": "node/206361624"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361642",
+        "ksh_ref": "21458",
+        "name": "Szada",
+        "name:sk": "Sada",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "6421",
+        "postal_code": "2111",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3116981,
+          47.6363332
+        ]
+      },
+      "id": "node/206361642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361787",
+        "ksh_ref": "04808",
+        "name": "Domony",
+        "name:sk": "Domoň",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2222",
+        "postal_code": "2182",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4384419,
+          47.6535146
+        ]
+      },
+      "id": "node/206361787"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/206361816",
+        "ksh_ref": "16188",
+        "name": "Aszód",
+        "name:ru": "Асод",
+        "name:sk": "Asód",
+        "place": "town",
+        "place:hu": "város",
+        "population": "6233",
+        "postal_code": "2170",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4747432,
+          47.6532732
+        ]
+      },
+      "id": "node/206361816"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/228651748",
+        "ksh_ref": "29850",
+        "name": "Kisoroszi",
+        "place": "village",
+        "place:hu": "község",
+        "population": "988",
+        "postal_code": "2024",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0071715,
+          47.8077589
+        ]
+      },
+      "id": "node/228651748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240512600",
+        "ksh_ref": "02370",
+        "name": "Rád",
+        "name:sk": "Rad",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2037",
+        "postal_code": "2613",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2194322,
+          47.7920791
+        ]
+      },
+      "id": "node/240512600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240513031",
+        "ksh_ref": "18689",
+        "name": "Penc",
+        "name:ru": "Пенц",
+        "name:sk": "Penec",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1565",
+        "postal_code": "2614",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2513708,
+          47.8024259
+        ]
+      },
+      "id": "node/240513031"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240516707",
+        "ksh_ref": "27687",
+        "name": "Kosd",
+        "name:ru": "Кошд",
+        "name:sk": "Košd",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2438",
+        "postal_code": "2612",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q265671",
+        "wikipedia": "hu:Kosd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1758423,
+          47.8068226
+        ]
+      },
+      "id": "node/240516707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240520466",
+        "ksh_ref": "13295",
+        "name": "Galgagyörk",
+        "name:sk": "Ďurka",
+        "place": "village",
+        "place:hu": "község",
+        "population": "960",
+        "postal_code": "2681",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3752627,
+          47.7406871
+        ]
+      },
+      "id": "node/240520466"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240520893",
+        "ksh_ref": "21388",
+        "name": "Püspökhatvan",
+        "name:ru": "Пюшпёкхатаван",
+        "name:sk": "Pišpek",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1380",
+        "postal_code": "2682",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3660724,
+          47.77594
+        ]
+      },
+      "id": "node/240520893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240521201",
+        "ksh_ref": "18573",
+        "name": "Acsa",
+        "name:ru": "Ача",
+        "name:sk": "Jača",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1382",
+        "postal_code": "2683",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.386298,
+          47.7925337
+        ]
+      },
+      "id": "node/240521201"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/240521689",
+        "ksh_ref": "26985",
+        "name": "Csővár",
+        "name:sk": "Čuvár",
+        "place": "village",
+        "place:hu": "község",
+        "population": "591",
+        "postal_code": "2615",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3238481,
+          47.8137655
+        ]
+      },
+      "id": "node/240521689"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/243682087",
+        "ksh_ref": "24916",
+        "name": "Szob",
+        "name:de": "Zopp an der Donau",
+        "name:ru": "Соб",
+        "name:sk": "Soba",
+        "old_name": "Gakata",
+        "place": "town",
+        "place:hu": "város",
+        "population": "2585",
+        "postal_code": "2628",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8711331,
+          47.8182921
+        ]
+      },
+      "id": "node/243682087"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/243682090",
+        "ksh_ref": "14960",
+        "name": "Zebegény",
+        "name:sk": "Zebegíň",
+        "old_name": "Fristat",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1338",
+        "population:date": "2022-01-01",
+        "postal_code": "2627",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q686161",
+        "wikipedia": "hu:Zebegény"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9101541,
+          47.8000375
+        ]
+      },
+      "id": "node/243682090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/243682091",
+        "description": "Nagymaros a 13.sz-ban a Rosd nemzetség birtoka volt. 1285:IV. László a visegrádi várhoz csatolta. Első lakói a korai Árpád-korban telepített németek voltak. 14.szd Anjouk kor: Maros (Nova Civitas), Visegrád ikervárosaként gyors fejlődésnek indult.",
+        "ksh_ref": "31732",
+        "name": "Nagymaros",
+        "name:de": "Freistadt",
+        "name:ru": "Надьмарош",
+        "name:sk": "Veľká Maruša",
+        "old_name": "Marosch",
+        "place": "town",
+        "place:hu": "város",
+        "population": "5069",
+        "population:date": "2022-01-01",
+        "postal_code": "2626",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q282460",
+        "wikipedia": "hu:Nagymaros"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9587262,
+          47.7891142
+        ]
+      },
+      "id": "node/243682091"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/243682125",
+        "ksh_ref": "28413",
+        "name": "Visegrád",
+        "name:cs": "Vyšehrad",
+        "name:da": "Visegrád",
+        "name:de": "Plintenburg",
+        "name:en": "Visegrád",
+        "name:eo": "Visegrád",
+        "name:es": "Visegrád",
+        "name:et": "Visegrád",
+        "name:fi": "Visegrád",
+        "name:fr": "Visegrád",
+        "name:he": "וישגרד",
+        "name:hr": "Višegrad",
+        "name:hu": "Visegrád",
+        "name:it": "Visegrád",
+        "name:ja": "ヴィシェグラード",
+        "name:ka": "ვიშეგრადი",
+        "name:ko": "비셰그라드",
+        "name:lt": "Višegradas",
+        "name:mk": "Вишеград",
+        "name:ms": "Visegrád",
+        "name:nl": "Visegrád",
+        "name:no": "Visegrád",
+        "name:pl": "Wyszehrad",
+        "name:pt": "Visegrád",
+        "name:ro": "Visegrád",
+        "name:ru": "Вишеград",
+        "name:sk": "Vyšehrad",
+        "name:sl": "Višegrad",
+        "name:sr": "Вишеград",
+        "name:sv": "Visegrád",
+        "name:tr": "Vişegrad",
+        "name:uk": "Вишеград",
+        "name:vi": "Visegrád",
+        "name:zh": "維謝格拉德",
+        "old_name": "Plindenburg",
+        "place": "town",
+        "place:hu": "város",
+        "population": "1829",
+        "postal_code": "2025",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9703373,
+          47.7845811
+        ]
+      },
+      "id": "node/243682125"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/243682273",
+        "ksh_ref": "25362",
+        "name": "Dunabogdány",
+        "name:de": "Bogdan",
+        "name:sk": "Bohdanovce",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3198",
+        "postal_code": "2023",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0352037,
+          47.7937922
+        ]
+      },
+      "id": "node/243682273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/243684196",
+        "ksh_ref": "06947",
+        "name": "Szokolya",
+        "name:ru": "Сокойя",
+        "name:sk": "Sokolová",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2022",
+        "postal_code": "2624",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0089279,
+          47.8667937
+        ]
+      },
+      "id": "node/243684196"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252013624",
+        "ksh_ref": "06859",
+        "name": "Törökbálint",
+        "name:de": "Großturwall",
+        "name:ru": "Тёрёкбалинт",
+        "place": "town",
+        "place:hu": "város",
+        "population": "14531",
+        "postal_code": "2045",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9130312,
+          47.4349579
+        ]
+      },
+      "id": "node/252013624"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/254966946",
+        "ksh_ref": "22488",
+        "name": "Verseg",
+        "name:ru": "Вершег",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1265",
+        "postal_code": "2174",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5487063,
+          47.722441
+        ]
+      },
+      "id": "node/254966946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/254968160",
+        "ksh_ref": "30696",
+        "name": "Kartal",
+        "name:ru": "Карталь",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "5839",
+        "postal_code": "2173",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5311002,
+          47.66792
+        ]
+      },
+      "id": "node/254968160"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/257084778",
+        "ksh_ref": "29601",
+        "name": "Pilisborosjenő",
+        "name:de": "Weindorf",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4168",
+        "postal_code": "2097",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9920278,
+          47.6072769
+        ]
+      },
+      "id": "node/257084778"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/257085343",
+        "ksh_ref": "11934",
+        "name": "Üröm",
+        "name:de": "Erben",
+        "name:hr": "Urma",
+        "place": "village",
+        "place:hu": "község",
+        "population": "8365",
+        "postal_code": "2096",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0134262,
+          47.5987004
+        ]
+      },
+      "id": "node/257085343"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/257448661",
+        "ksh_ref": "07807",
+        "name": "Isaszeg",
+        "name:ru": "Ишасег",
+        "name:sk": "Išaseg",
+        "place": "town",
+        "place:hu": "város",
+        "population": "11685",
+        "postal_code": "2117",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4017001,
+          47.5303335
+        ]
+      },
+      "id": "node/257448661"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/257448831",
+        "ksh_ref": "17598",
+        "name": "Valkó",
+        "name:ru": "Валько",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "2539",
+        "postal_code": "2114",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5100231,
+          47.5641727
+        ]
+      },
+      "id": "node/257448831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/260277741",
+        "ksh_ref": "18777",
+        "name": "Bernecebaráti",
+        "name:sk": "Brnice-Barátovce",
+        "place": "village",
+        "place:hu": "község",
+        "population": "830",
+        "postal_code": "2639",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9139865,
+          48.038167
+        ]
+      },
+      "id": "node/260277741"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/260277743",
+        "ksh_ref": "19248",
+        "name": "Tésa",
+        "name:sk": "Tieša",
+        "place": "village",
+        "place:hu": "község",
+        "population": "93",
+        "postal_code": "2636",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8416839,
+          48.0330424
+        ]
+      },
+      "id": "node/260277743"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/260277756",
+        "ksh_ref": "10737",
+        "name": "Vámosmikola",
+        "name:de": "Lorenzen",
+        "name:ru": "Вамошмикола",
+        "name:sk": "Mikula",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1640",
+        "postal_code": "2635",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7841116,
+          47.9774677
+        ]
+      },
+      "id": "node/260277756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/260277762",
+        "ksh_ref": "04978",
+        "name": "Ipolytölgyes",
+        "name:sk": "Teldeš",
+        "place": "village",
+        "place:hu": "község",
+        "population": "394",
+        "postal_code": "2633",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7743978,
+          47.9229018
+        ]
+      },
+      "id": "node/260277762"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/260277767",
+        "ksh_ref": "22682",
+        "name": "Letkés",
+        "name:ru": "Леткес",
+        "name:sk": "Letkýš",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1069",
+        "postal_code": "2632",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.776906,
+          47.8853112
+        ]
+      },
+      "id": "node/260277767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/260411877",
+        "alt_name": "Szántó",
+        "int_name": "Pilisszántó",
+        "ksh_ref": "05290",
+        "name": "Pilisszántó",
+        "name:sk": "Santov",
+        "old_name": "Santov",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3040",
+        "postal_code": "2095",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.886298,
+          47.6692875
+        ]
+      },
+      "id": "node/260411877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/261661934",
+        "ksh_ref": "22345",
+        "name": "Kemence",
+        "name:ru": "Кеменце",
+        "name:sk": "Kamenica",
+        "place": "village",
+        "place:hu": "község",
+        "population": "892",
+        "postal_code": "2638",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.891553,
+          48.0171336
+        ]
+      },
+      "id": "node/261661934"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/267608553",
+        "ksh_ref": "28653",
+        "name": "Szentmártonkáta",
+        "name:ru": "Сентмартонката",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "4826",
+        "postal_code": "2254",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6916458,
+          47.4440884
+        ]
+      },
+      "id": "node/267608553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274956384",
+        "ksh_ref": "07870",
+        "name": "Szigetcsép",
+        "name:de": "Tschip",
+        "name:sr": "Чип",
+        "name:sr_latin": "Čip",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2621",
+        "postal_code": "2317",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9672674,
+          47.2671482
+        ]
+      },
+      "id": "node/274956384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274956387",
+        "ksh_ref": "22114",
+        "name": "Szigetújfalu",
+        "name:de": "Ujflu",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2088",
+        "postal_code": "2319",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9235417,
+          47.2332083
+        ]
+      },
+      "id": "node/274956387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274960000",
+        "ksh_ref": "09690",
+        "name": "Halásztelek",
+        "name:bg": "Халастелек",
+        "place": "town",
+        "place:hu": "város",
+        "population": "11992",
+        "postal_code": "2314",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9811444,
+          47.363105
+        ]
+      },
+      "id": "node/274960000"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274960662",
+        "ksh_ref": "13277",
+        "name": "Szigethalom",
+        "place": "town",
+        "place:hu": "város",
+        "population": "18600",
+        "postal_code": "2315",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q784229"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0001884,
+          47.3245067
+        ]
+      },
+      "id": "node/274960662"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274960664",
+        "ksh_ref": "20534",
+        "name": "Dunavarsány",
+        "name:ru": "Дунаваршань",
+        "place": "town",
+        "place:hu": "város",
+        "population": "8728",
+        "postal_code": "2336",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0661045,
+          47.2789632
+        ]
+      },
+      "id": "node/274960664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274960665",
+        "ksh_ref": "09973",
+        "name": "Délegyháza",
+        "place": "village",
+        "place:hu": "község",
+        "population": "6093",
+        "postal_code": "2337",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.066912,
+          47.247818
+        ]
+      },
+      "id": "node/274960665"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274960757",
+        "ksh_ref": "26259",
+        "name": "Szigetbecse",
+        "name:de": "Wetsch",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1318",
+        "postal_code": "2321",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9491726,
+          47.1305562
+        ]
+      },
+      "id": "node/274960757"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274960777",
+        "ksh_ref": "04394",
+        "name": "Makád",
+        "name:ru": "Макад",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1203",
+        "postal_code": "2322",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9263252,
+          47.0884358
+        ]
+      },
+      "id": "node/274960777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274961265",
+        "ksh_ref": "28954",
+        "name": "Szigetszentmiklós",
+        "name:de": "Nigglau",
+        "name:ru": "Сигетсентмиклош",
+        "place": "town",
+        "place:hu": "város",
+        "population": "40750",
+        "postal_code": "2310",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q740853"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0409037,
+          47.345765
+        ]
+      },
+      "id": "node/274961265"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274961269",
+        "ksh_ref": "09584",
+        "name": "Dunaharaszti",
+        "name:de": "Harast",
+        "name:gsw": "Hrascht",
+        "name:ru": "Дунахарасти",
+        "place": "town",
+        "place:hu": "város",
+        "population": "23688",
+        "postal_code": "2330",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q854933"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0953357,
+          47.359976
+        ]
+      },
+      "id": "node/274961269"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274961396",
+        "ksh_ref": "30720",
+        "name": "Taksony",
+        "name:de": "Taks",
+        "name:ru": "Ташконь",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "6709",
+        "postal_code": "2335",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0623899,
+          47.3299781
+        ]
+      },
+      "id": "node/274961396"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/274961837",
+        "ksh_ref": "25627",
+        "name": "Gyál",
+        "name:ru": "Дьяль",
+        "place": "town",
+        "place:hu": "város",
+        "population": "24370",
+        "postal_code": "2360",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q842908"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2173066,
+          47.3845453
+        ]
+      },
+      "id": "node/274961837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286199233",
+        "ksh_ref": "04075",
+        "name": "Ócsa",
+        "name:ru": "Оча",
+        "place": "town",
+        "place:hu": "város",
+        "population": "9799",
+        "postal_code": "2364",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2313617,
+          47.3011895
+        ]
+      },
+      "id": "node/286199233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286200051",
+        "ksh_ref": "26815",
+        "name": "Vecsés",
+        "name:de": "Wetschesch",
+        "name:ru": "Вечеш",
+        "name:sk": "Večeš",
+        "place": "town",
+        "place:hu": "város",
+        "population": "21517",
+        "postal_code": "2220",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q36063"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2650378,
+          47.4095417
+        ]
+      },
+      "id": "node/286200051"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286200348",
+        "ksh_ref": "12894",
+        "name": "Üllő",
+        "name:ru": "Илле",
+        "name:sk": "Ilov",
+        "place": "town",
+        "place:hu": "város",
+        "population": "12869",
+        "postal_code": "2225",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3453263,
+          47.3850605
+        ]
+      },
+      "id": "node/286200348"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286200470",
+        "ksh_ref": "10551",
+        "name": "Monor",
+        "name:de": "Monnor",
+        "name:ru": "Монор",
+        "name:sk": "Monor",
+        "place": "town",
+        "place:hu": "város",
+        "population": "18772",
+        "postal_code": "2200",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q749320"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4468404,
+          47.3527433
+        ]
+      },
+      "id": "node/286200470"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286201239",
+        "ksh_ref": "09821",
+        "name": "Pilis",
+        "name:ru": "Пилиш",
+        "name:sk": "Pilíš",
+        "place": "town",
+        "place:hu": "város",
+        "population": "12011",
+        "population:date": "2022-01-01",
+        "postal_code": "2721",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q845575",
+        "wikipedia": "hu:Pilis (település)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5467411,
+          47.2860696
+        ]
+      },
+      "id": "node/286201239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286201536",
+        "ksh_ref": "31653",
+        "name": "Albertirsa",
+        "name:de": "Irschingen",
+        "name:ru": "Альбертиша",
+        "name:sk": "Irša",
+        "place": "town",
+        "place:hu": "város",
+        "population": "13518",
+        "postal_code": "2730",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6127835,
+          47.2457295
+        ]
+      },
+      "id": "node/286201536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286202645",
+        "ksh_ref": "29735",
+        "name": "Gyömrő",
+        "name:ru": "Дьёмрё",
+        "name:sk": "Demrov",
+        "place": "town",
+        "place:hu": "város",
+        "population": "20548",
+        "postal_code": "2230",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "telephone_area_code": "29",
+        "wikidata": "Q854906"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.394503,
+          47.4223375
+        ]
+      },
+      "id": "node/286202645"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286202716",
+        "ksh_ref": "10922",
+        "name": "Maglód",
+        "name:de": "Maglau",
+        "name:sk": "Maglovec",
+        "place": "town",
+        "place:hu": "város",
+        "population": "12600",
+        "postal_code": "2234",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3593136,
+          47.4449622
+        ]
+      },
+      "id": "node/286202716"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286203307",
+        "ksh_ref": "04057",
+        "name": "Pécel",
+        "name:ru": "Пецель",
+        "place": "town",
+        "place:hu": "város",
+        "population": "17233",
+        "postal_code": "2119",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q222964"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3446801,
+          47.4911201
+        ]
+      },
+      "id": "node/286203307"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286933452",
+        "ksh_ref": "34157",
+        "name": "Kistarcsa",
+        "name:ru": "Киштарча",
+        "name:sk": "Malá Tarča",
+        "place": "town",
+        "place:hu": "város",
+        "population": "13657",
+        "postal_code": "2143",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2636378,
+          47.5447322
+        ]
+      },
+      "id": "node/286933452"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286935167",
+        "ksh_ref": "13435",
+        "name": "Nagykáta",
+        "name:ru": "Надьката",
+        "place": "town",
+        "place:hu": "város",
+        "population": "12208",
+        "postal_code": "2760",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7503736,
+          47.4138187
+        ]
+      },
+      "id": "node/286935167"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286936520",
+        "ksh_ref": "09593",
+        "name": "Tura",
+        "name:ru": "Тура",
+        "place": "town",
+        "place:hu": "város",
+        "population": "7743",
+        "population:date": "2022-01-01",
+        "postal_code": "2194",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q1064032",
+        "wikipedia": "hu:Tura"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5949442,
+          47.60935
+        ]
+      },
+      "id": "node/286936520"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286937639",
+        "ksh_ref": "05281",
+        "name": "Örkény",
+        "name:ru": "Эркень",
+        "place": "town",
+        "place:hu": "város",
+        "population": "4998",
+        "postal_code": "2377",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4309024,
+          47.1297585
+        ]
+      },
+      "id": "node/286937639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/286937857",
+        "ksh_ref": "09849",
+        "name": "Hernád",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "4218",
+        "postal_code": "2376",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4070801,
+          47.1650755
+        ]
+      },
+      "id": "node/286937857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/289638278",
+        "ksh_ref": "24466",
+        "name": "Mikebuda",
+        "place": "village",
+        "place:hu": "község",
+        "population": "685",
+        "postal_code": "2736",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6152108,
+          47.1568933
+        ]
+      },
+      "id": "node/289638278"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/303079703",
+        "ksh_ref": "15185",
+        "name": "Szigetszentmárton",
+        "name:de": "Sankt Martin",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2493",
+        "postal_code": "2318",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9576052,
+          47.2286092
+        ]
+      },
+      "id": "node/303079703"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/305051680",
+        "ksh_ref": "21467",
+        "name": "Tóalmás",
+        "name:ru": "Тоальмаш",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3801",
+        "postal_code": "2252",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6637179,
+          47.5095624
+        ]
+      },
+      "id": "node/305051680"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/311447932",
+        "ksh_ref": "31811",
+        "name": "Dánszentmiklós",
+        "name:ru": "Дансентмиклош",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2726",
+        "postal_code": "2735",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5561129,
+          47.2077306
+        ]
+      },
+      "id": "node/311447932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/311448013",
+        "ksh_ref": "23083",
+        "name": "Pusztavacs",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1311",
+        "postal_code": "2378",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.498132,
+          47.173855
+        ]
+      },
+      "id": "node/311448013"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/311449303",
+        "ksh_ref": "27386",
+        "name": "Tatárszentgyörgy",
+        "name:ru": "Татарсентдьёрдь",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1821",
+        "postal_code": "2375",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3694988,
+          47.0823354
+        ]
+      },
+      "id": "node/311449303"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/311451853",
+        "ksh_ref": "27827",
+        "name": "Káva",
+        "place": "village",
+        "place:hu": "község",
+        "population": "686",
+        "postal_code": "2215",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5879305,
+          47.3556823
+        ]
+      },
+      "id": "node/311451853"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/311452054",
+        "ksh_ref": "22248",
+        "name": "Pánd",
+        "name:ru": "Панд",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1953",
+        "postal_code": "2214",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6327453,
+          47.3507322
+        ]
+      },
+      "id": "node/311452054"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/311452334",
+        "ksh_ref": "15015",
+        "name": "Tápióbicske",
+        "name:ru": "Тапиобичке",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3506",
+        "postal_code": "2764",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "website": "http://www.tapiobicske.hu/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6867465,
+          47.3622153
+        ]
+      },
+      "id": "node/311452334"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/311454673",
+        "ksh_ref": "09122",
+        "name": "Farmos",
+        "name:ru": "Фамош",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3493",
+        "postal_code": "2765",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8489595,
+          47.3616376
+        ]
+      },
+      "id": "node/311454673"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/314389096",
+        "alt_name:sk": "Beržeň",
+        "ksh_ref": "14775",
+        "name": "Nagybörzsöny",
+        "name:de": "Deutschpilsen",
+        "name:sk": "Beršen",
+        "old_name": "Bersen",
+        "place": "village",
+        "place:hu": "község",
+        "population": "629",
+        "postal_code": "2634",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q305046"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8243865,
+          47.9360037
+        ]
+      },
+      "id": "node/314389096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317186008",
+        "ksh_ref": "23409",
+        "name": "Nagytarcsa",
+        "name:sk": "Veľká Tarča",
+        "place": "village",
+        "place:hu": "község",
+        "population": "6293",
+        "postal_code": "2142",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2835163,
+          47.5267788
+        ]
+      },
+      "id": "node/317186008"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/323154585",
+        "ksh_ref": "09131",
+        "name": "Bag",
+        "name:ru": "Баг",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "3767",
+        "postal_code": "2191",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4792099,
+          47.6337331
+        ]
+      },
+      "id": "node/323154585"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/335618042",
+        "ksh_ref": "28097",
+        "name": "Ipolydamásd",
+        "name:hu": "Ipolydamásd",
+        "name:sk": "Damašd nad Ipľom",
+        "place": "village",
+        "place:hu": "község",
+        "population": "374",
+        "population:date": "2022-01-01",
+        "postal_code": "2631",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q1089639",
+        "wikipedia": "hu:Ipolydamásd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8293316,
+          47.8416246
+        ]
+      },
+      "id": "node/335618042"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/335618637",
+        "ksh_ref": "24679",
+        "name": "Kóspallag",
+        "name:sk": "Kóšpalag",
+        "place": "village",
+        "place:hu": "község",
+        "population": "770",
+        "postal_code": "2625",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q1185508",
+        "wikipedia": "hu:Kóspallag"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9360409,
+          47.874093
+        ]
+      },
+      "id": "node/335618637"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/335618940",
+        "ksh_ref": "04570",
+        "name": "Márianosztra",
+        "name:de": "Naßraden",
+        "name:sk": "Márianostra",
+        "place": "village",
+        "place:hu": "község",
+        "population": "819",
+        "postal_code": "2629",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q1188098",
+        "wikipedia": "hu:Márianosztra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8719747,
+          47.8648044
+        ]
+      },
+      "id": "node/335618940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/335619070",
+        "ksh_ref": "04181",
+        "name": "Perőcsény",
+        "name:sk": "Perovčany",
+        "place": "village",
+        "place:hu": "község",
+        "population": "361",
+        "postal_code": "2637",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8609112,
+          47.9955256
+        ]
+      },
+      "id": "node/335619070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/368446354",
+        "ksh_ref": "34315",
+        "name": "Remeteszőlős",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1077",
+        "postal_code": "2090",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.921676,
+          47.5598939
+        ]
+      },
+      "id": "node/368446354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/368447565",
+        "ksh_ref": "07384",
+        "name": "Solymár",
+        "name:de": "Schaumar",
+        "name:ru": "Шоймар",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "10951",
+        "postal_code": "2083",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q1184326",
+        "wikipedia": "hu:Solymár"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9284943,
+          47.5913333
+        ]
+      },
+      "id": "node/368447565"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/372865480",
+        "ksh_ref": "06822",
+        "name": "Csobánka",
+        "name:de": "Tschowanka",
+        "name:sk": "Čobanka",
+        "name:sr": "Чобанац",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3640",
+        "postal_code": "2014",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9672147,
+          47.6436909
+        ]
+      },
+      "id": "node/372865480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/410917170",
+        "ksh_ref": "08332",
+        "name": "Táborfalva",
+        "name:ru": "Таборфальва",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "3436",
+        "postal_code": "2381",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4828926,
+          47.104349
+        ]
+      },
+      "id": "node/410917170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/411738806",
+        "ksh_ref": "32027",
+        "name": "Bugyi",
+        "name:ru": "Будьи",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "5183",
+        "postal_code": "2347",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q851614",
+        "wikipedia": "hu:Bugyi (település)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1490336,
+          47.221978
+        ]
+      },
+      "id": "node/411738806"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/411746492",
+        "ksh_ref": "33561",
+        "name": "Apaj",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1128",
+        "postal_code": "2345",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0882667,
+          47.1139942
+        ]
+      },
+      "id": "node/411746492"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/414953971",
+        "ksh_ref": "17303",
+        "name": "Tápiógyörgye",
+        "name:ru": "Тапиодьёрдьдье",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3439",
+        "postal_code": "2767",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.9519935,
+          47.3341052
+        ]
+      },
+      "id": "node/414953971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/414953978",
+        "ksh_ref": "14146",
+        "name": "Tápiószele",
+        "name:ru": "Тапиоселе",
+        "place": "town",
+        "place:hu": "város",
+        "population": "5846",
+        "postal_code": "2766",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.875582,
+          47.3320634
+        ]
+      },
+      "id": "node/414953978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/414966958",
+        "ksh_ref": "02769",
+        "name": "Tápiószőlős",
+        "name:ru": "Тапиосёлёш",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2812",
+        "postal_code": "2769",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8337577,
+          47.2958281
+        ]
+      },
+      "id": "node/414966958"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/414969642",
+        "ksh_ref": "17808",
+        "name": "Újszilvás",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2576",
+        "postal_code": "2768",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.9142046,
+          47.2697146
+        ]
+      },
+      "id": "node/414969642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/472221384",
+        "ksh_ref": "06035",
+        "name": "Felsőpakony",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "3880",
+        "postal_code": "2363",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "website": "http://www.felsopakony.hu/",
+        "wikidata": "Q976187",
+        "wikipedia": "hu:Felsőpakony"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2362156,
+          47.3432696
+        ]
+      },
+      "id": "node/472221384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/472221394",
+        "ksh_ref": "23199",
+        "name": "Alsónémedi",
+        "name:ru": "Альшонемеди",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "5597",
+        "postal_code": "2351",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.165704,
+          47.3146713
+        ]
+      },
+      "id": "node/472221394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/472368968",
+        "ksh_ref": "17783",
+        "name": "Mogyoród",
+        "name:de": "Munjeroth",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "7746",
+        "postal_code": "2146",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2384215,
+          47.5986636
+        ]
+      },
+      "id": "node/472368968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/473726330",
+        "ksh_ref": "34148",
+        "name": "Pilisjászfalu",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1888",
+        "postal_code": "2080",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q927584"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7935633,
+          47.6541958
+        ]
+      },
+      "id": "node/473726330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/473905478",
+        "ksh_ref": "26213",
+        "name": "Szigetmonostor",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2858",
+        "postal_code": "2015",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1009549,
+          47.6896702
+        ]
+      },
+      "id": "node/473905478"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/473905712",
+        "ksh_ref": "31963",
+        "name": "Tahitótfalu",
+        "place": "village",
+        "place:hu": "község",
+        "population": "6085",
+        "postal_code": "2021",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009",
+        "wikidata": "Q967910",
+        "wikipedia": "hu:Tahitótfalu",
+        "wikipedia:hu": "Tahitótfalu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0844571,
+          47.75434
+        ]
+      },
+      "id": "node/473905712"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/473905723",
+        "ksh_ref": "04905",
+        "name": "Pócsmegyer",
+        "name:ru": "Почмедьер",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2737",
+        "postal_code": "2017",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0956199,
+          47.7158378
+        ]
+      },
+      "id": "node/473905723"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/473905725",
+        "ksh_ref": "30809",
+        "name": "Leányfalu",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "4039",
+        "postal_code": "2016",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0888422,
+          47.718888
+        ]
+      },
+      "id": "node/473905725"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/475337031",
+        "ksh_ref": "10755",
+        "name": "Majosháza",
+        "name:ru": "Майошхаза",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1714",
+        "postal_code": "2339",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "wikidata": "Q950601",
+        "wikipedia": "hu:Majosháza"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9958458,
+          47.2644792
+        ]
+      },
+      "id": "node/475337031"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/475337032",
+        "ksh_ref": "10108",
+        "name": "Áporka",
+        "name:ru": "Апорка",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1202",
+        "postal_code": "2338",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0120921,
+          47.232627
+        ]
+      },
+      "id": "node/475337032"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/492138672",
+        "ksh_ref": "21713",
+        "name": "Sülysáp",
+        "name:sk": "Šap",
+        "place": "town",
+        "place:hu": "város",
+        "population": "8760",
+        "population:date": "2022-01-01",
+        "postal_code": "2241",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009",
+        "wikidata": "Q1072216",
+        "wikipedia": "hu:Sülysáp"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5214828,
+          47.4542606
+        ]
+      },
+      "id": "node/492138672"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/492138677",
+        "ksh_ref": "31796",
+        "name": "Tápiószecső",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "6209",
+        "postal_code": "2251",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6077248,
+          47.4506254
+        ]
+      },
+      "id": "node/492138677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/619723828",
+        "ksh_ref": "32106",
+        "name": "Inárcs",
+        "name:bg": "Инарч",
+        "name:ru": "Инарч",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "4631",
+        "postal_code": "2365",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3291422,
+          47.260939
+        ]
+      },
+      "id": "node/619723828"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/619723830",
+        "ksh_ref": "32230",
+        "name": "Kakucs",
+        "name:bg": "Какуч",
+        "name:ru": "Какуч",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3197",
+        "postal_code": "2366",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3667431,
+          47.2416179
+        ]
+      },
+      "id": "node/619723830"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/703128458",
+        "ksh_ref": "22008",
+        "name": "Törtel",
+        "name:ru": "Тёртель",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4352",
+        "postal_code": "2747",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009",
+        "wikidata": "Q1187106",
+        "wikipedia": "hu:Törtel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.9350507,
+          47.1208483
+        ]
+      },
+      "id": "node/703128458"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/703584276",
+        "ksh_ref": "11004",
+        "name": "Jászkarajenő",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2548",
+        "postal_code": "2746",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.0683316,
+          47.0537807
+        ]
+      },
+      "id": "node/703584276"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/718510631",
+        "ksh_ref": "23038",
+        "name": "Nyáregyháza",
+        "name:ru": "Надьредьхаза",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3772",
+        "postal_code": "2723",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5026386,
+          47.2627494
+        ]
+      },
+      "id": "node/718510631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/718510633",
+        "ksh_ref": "22585",
+        "name": "Vasad",
+        "name:ru": "Вашад",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1942",
+        "postal_code": "2211",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.400671,
+          47.322178
+        ]
+      },
+      "id": "node/718510633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/718510636",
+        "ksh_ref": "18476",
+        "name": "Csévharaszt",
+        "name:ru": "Чевхараст",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2019",
+        "postal_code": "2212",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4326126,
+          47.2995594
+        ]
+      },
+      "id": "node/718510636"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/718510638",
+        "ksh_ref": "25098",
+        "name": "Bénye",
+        "name:sk": "Bíň",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1249",
+        "postal_code": "2216",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5398939,
+          47.3553415
+        ]
+      },
+      "id": "node/718510638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/718510642",
+        "ksh_ref": "05184",
+        "name": "Csemő",
+        "name:ru": "Чемё",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4319",
+        "postal_code": "2713",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.697672,
+          47.1183779
+        ]
+      },
+      "id": "node/718510642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/718510643",
+        "ksh_ref": "14571",
+        "name": "Tápiószentmárton",
+        "name:ru": "Тапиосентмартон",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "5537",
+        "postal_code": "2711",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.744694,
+          47.340459
+        ]
+      },
+      "id": "node/718510643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/722724650",
+        "ksh_ref": "11396",
+        "name": "Pilisszentiván",
+        "name:de": "Sankt Iwan",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4222",
+        "postal_code": "2084",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.8969359,
+          47.6095461
+        ]
+      },
+      "id": "node/722724650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724863128",
+        "ksh_ref": "24518",
+        "name": "Ecser",
+        "name:sk": "Ečer",
+        "place": "village",
+        "place:hu": "nagyközség",
+        "population": "4166",
+        "postal_code": "2233",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3184563,
+          47.4445025
+        ]
+      },
+      "id": "node/724863128"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901561",
+        "ksh_ref": "03692",
+        "name": "Mende",
+        "name:ru": "Менде",
+        "name:sk": "Menďa",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4265",
+        "postal_code": "2235",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4552503,
+          47.4303237
+        ]
+      },
+      "id": "node/724901561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901563",
+        "ksh_ref": "09441",
+        "name": "Gomba",
+        "name:ru": "Гомба",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3193",
+        "postal_code": "2217",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5311516,
+          47.3703744
+        ]
+      },
+      "id": "node/724901563"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901566",
+        "ksh_ref": "28644",
+        "name": "Úri",
+        "name:ru": "Ури",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2678",
+        "postal_code": "2244",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5244931,
+          47.415309
+        ]
+      },
+      "id": "node/724901566"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901568",
+        "ksh_ref": "09405",
+        "name": "Tápióság",
+        "name:ru": "Тапиошап",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2644",
+        "postal_code": "2253",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6303259,
+          47.3992437
+        ]
+      },
+      "id": "node/724901568"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901571",
+        "ksh_ref": "31361",
+        "name": "Kóka",
+        "name:ru": "Кока",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4453",
+        "postal_code": "2243",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5806089,
+          47.4891593
+        ]
+      },
+      "id": "node/724901571"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901574",
+        "ksh_ref": "18397",
+        "name": "Dány",
+        "name:ru": "Дань",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4557",
+        "postal_code": "2118",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009",
+        "wikidata": "Q912580",
+        "wikipedia": "hu:Dány"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5508325,
+          47.5222089
+        ]
+      },
+      "id": "node/724901574"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901576",
+        "ksh_ref": "22035",
+        "name": "Zsámbok",
+        "name:ru": "Жамбонь",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2387",
+        "postal_code": "2116",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6066136,
+          47.5431221
+        ]
+      },
+      "id": "node/724901576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901579",
+        "ksh_ref": "09104",
+        "name": "Vácszentlászló",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2178",
+        "postal_code": "2115",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5366483,
+          47.5735196
+        ]
+      },
+      "id": "node/724901579"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901582",
+        "ksh_ref": "13949",
+        "name": "Hévízgyörk",
+        "place": "village",
+        "place:hu": "község",
+        "population": "3260",
+        "postal_code": "2192",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5190457,
+          47.6303011
+        ]
+      },
+      "id": "node/724901582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901585",
+        "ksh_ref": "19503",
+        "name": "Galgahévíz",
+        "name:ru": "Гальгахевиз",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2536",
+        "postal_code": "2193",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5558378,
+          47.6222577
+        ]
+      },
+      "id": "node/724901585"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/724901613",
+        "ksh_ref": "07542",
+        "name": "Szentlőrinckáta",
+        "name:ru": "Сентлёринцката",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1955",
+        "postal_code": "2255",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7558396,
+          47.5220313
+        ]
+      },
+      "id": "node/724901613"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/760267291",
+        "ksh_ref": "20640",
+        "name": "Ceglédbercel",
+        "name:ru": "Цегледберцель",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4234",
+        "postal_code": "2737",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.678569,
+          47.2150336
+        ]
+      },
+      "id": "node/760267291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/835624111",
+        "ksh_ref": "20066",
+        "name": "Nyársapát",
+        "name:de": "Niersabtau",
+        "name:ru": "Ньяршапат",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1942",
+        "postal_code": "2712",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.801682,
+          47.1011746
+        ]
+      },
+      "id": "node/835624111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1033020647",
+        "ksh_ref": "32975",
+        "name": "Kőröstetétlen",
+        "place": "village",
+        "place:hu": "község",
+        "population": "820",
+        "postal_code": "2745",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.0218963,
+          47.0986909
+        ]
+      },
+      "id": "node/1033020647"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1037122686",
+        "ksh_ref": "27872",
+        "name": "Abony",
+        "name:de": "Wabing",
+        "name:ru": "Абонь",
+        "place": "town",
+        "place:hu": "város",
+        "population": "14312",
+        "postal_code": "2740",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.0047823,
+          47.1887402
+        ]
+      },
+      "id": "node/1037122686"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1535667627",
+        "ksh_ref": "21847",
+        "name": "Péteri",
+        "name:de": "Pettigau",
+        "name:sk": "Peterka",
+        "place": "village",
+        "place:hu": "község",
+        "population": "2719",
+        "postal_code": "2209",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4107817,
+          47.3880659
+        ]
+      },
+      "id": "node/1535667627"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1673915113",
+        "ksh_ref": "34397",
+        "name": "Monorierdő",
+        "name:de": "Monnorerwald",
+        "place": "village",
+        "place:hu": "község",
+        "population": "4766",
+        "postal_code": "2213",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009",
+        "website": "https://monorierdo.hu/",
+        "wikidata": "Q1049396",
+        "wikipedia": "hu:Monorierdő"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4991507,
+          47.3094997
+        ]
+      },
+      "id": "node/1673915113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2375099310",
+        "ksh_ref": "27128",
+        "name": "Galgamácsa",
+        "name:ru": "Гальгамача",
+        "name:sk": "Mača",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1866",
+        "postal_code": "2183",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.3848053,
+          47.693753
+        ]
+      },
+      "id": "node/2375099310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6340405239",
+        "ksh_ref": "32771",
+        "name": "Kocsér",
+        "name:ru": "Кочер",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1852",
+        "postal_code": "2755",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009",
+        "wikidata": "Q1114801",
+        "wikipedia": "hu:Kocsér"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.9225502,
+          47.0020122
+        ]
+      },
+      "id": "node/6340405239"
+    }
+  ]
+}
