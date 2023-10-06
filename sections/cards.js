@@ -51,6 +51,12 @@ class DataCard extends Card {
 		var tmp = this.allData[this.data];
 		
 		var markup = '';
+		if ( ! tmp) {
+			this.content = "Hibás / ismeretlen adat";
+			return;
+		}
+		
+		
 		markup += '<span class="badge text-bg-primary even-larger-badge" title="2022-es KSH adat">' + tmp[2022].toLocaleString('hu-HU') + '</span>';
 						var diff = (tmp[2022] - tmp[2001]) / tmp[2001] * 100;
 						if (diff > 5) var color = "success";
