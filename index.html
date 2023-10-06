@@ -53,8 +53,10 @@
 
 		<div class="b-example-divider"></div>
 
-
-
+		<div id="sections">
+		
+		</div>
+		
 
 		<div class="container">
 			<div id="cb_dioceses" style="display: none;">
@@ -73,7 +75,14 @@
 
 		<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on
 				GitHub</a></center>
+
+
+	<script src="sections/cards.js"></script>
+		<script src="sections/Section.js"></script>
+		<script src="sections/AreaSection.js"></script>
+
 		<script>
+			
 			const c1 = document.getElementById('c1');
 			var chart1 = null
 			var sum = {};
@@ -88,9 +97,19 @@
 				console.log(fullData);			
 				await readDictionary()
 				
-				publishCheckboxes(fullData);
+    			 publishCheckboxes(fullData);
 
 				publishAll();				
+				
+				areasection("relation-5635587");
+				$("#areaSection .select").on("change", function() {
+					areasection(this.value);
+				});			
+			    function areasection(areaId) {
+					const areasection = new AreaSection(fullData, colls)
+					areasection.setAreaId(areaId);
+					areasection.publish()
+				}
 
 			});
 
@@ -214,7 +233,7 @@
 			function publishAll() {	
 				publishTable(fullData, colls)
 				publishTable2(fullData, colls)
-				generateChart(fullData, colls, c1)
+				// generateChart(fullData, colls, c1)
 			}
 			
 
