@@ -1,92 +1,60 @@
 {
     "NEME_SEX": "Összesen",
     "RE_C": "Katolikus",
-    "RE_RC":  "Katolikuson belül római katolikus",
+    "RE_RC": "Katolikuson belül római katolikus",
     "RE_GC": "Katolikuson belül görögkatolikus",
-    "RE_CA": {
-        "name": "Református",
-        "hiddenInChart": true
-    },
-    "RE_LU": {
-        "name": "Evangélikus",
-        "hiddenInChart": true
-    },
-    "RE_OC": {
-        "name": "Ortodox keresztény",
-        "hiddenInChart": true
-    },
-    "RE_CD": {
-        "name": "Más keresztény felekezet",
-        "hiddenInChart": true
-    },
-    "RE_J": {
-        "name": "Izraelita",
-        "hiddenInChart": true
-    },
+    "RE_CA": "Református",
+    "RE_LU": "Evangélikus",
+    "RE_OC": "Ortodox keresztény",
+    "RE_CD": "Más keresztény felekezet",
+    "RE_J": "Izraelita",
     "RE_OCD": "Más vallási közösséghez, felekezethez tartozó",
     "RE_NOT":  "Vallási közösséghez, felekezethez nem tartozó",
     "RE_NA": "Nem kíván válaszolni (vallás, felekezet)",
     "DIV_DISREP": "Elvált",
-    "FY_GE65": {
-        "name": "65 éves és idősebb nő",
-        "hiddenInChart": true
-    },
-    "FY15-64": {
-        "name": "15-64 éves nő",
-        "hiddenInChart": true
-    },
+    "FY_GE65": "65 éves és idősebb nő",
+    "FY15-64": "15-64 éves nő",
     "MAR_REP": "Házas",
-    "MY_GE65": {
-        "name": "65 éves és idősebb férfi",
-        "hiddenInChart": true
-    },
-    "MY15-64": {
-        "name": "15-64 éves férfi",
-        "hiddenInChart": true
-    },
-    "SIN": {
-        "name": "Nőtlen, hajadon",
-        "hiddenInChart": true
-    },
-    "WID_DTHREP": {
-        "name": "Özvegy",
-        "hiddenInChart": true
-    },
-    "FY_LT15": {
-        "name": "15 évesnél fiatalabb nő",
-        "hiddenInChart": true
-    },
-    "MY_LT15": {
-        "name": "15 évesnél fiatalabb férfi",
-        "hiddenInChart": true
-    },
-    "RE_C_NOTRG": {
-        "name": "Katolikus, aki nem római katolikus és nem is görögkatolikus (származtatott)",
-        "calculated": true,
-        "hiddenInChart": true
-    },
-    "Y_GE65": {
-        "name": "65 éves és idősebb (származtatott)",
-        "calculated": true
-    },
-    "Y_LT15": {
-        "name": "15 évesnél fiatalabb (származtatott)",
-        "calculated": true
-    },
-    "Y15-64": {
-        "name": "15-64 éves (származtatott)",
-        "calculated": true
-    },
-    "M": {
-        "name": "Férfi",
-        "unused": true
-    },
-    "F": {
-        "name": "Nő",
-        "unused": true
-    },
-    "LMS_INV": {
-        "name": "15 évesnél fiatalabb személy",
-        "unused": true
-    }
+    "MY_GE65": "65 éves és idősebb férfi",
+    "MY15-64": "15-64 éves férfi",
+    "SIN": "Nőtlen, hajadon",
+    "WID_DTHREP": "Özvegy",
+    "FY_LT15": "15 évesnél fiatalabb nő",
+    "MY_LT15": "15 évesnél fiatalabb férfi",
+    "RE_C_NOTRG": "Katolikus, aki nem római katolikus és nem is görögkatolikus (származtatott)",
+    "Y_GE65": "65 éves és idősebb (származtatott)",
+    "Y_LT15": "15 évesnél fiatalabb (származtatott)",
+    "Y15-64": "15-64 éves (származtatott)",
+    "M": "Férfi",
+    "F": "Nő",
+    "LMS_INV": "15 évesnél fiatalabb személy (hol?)",
+    "ALLAMP_V1": "Állampolgárság (Összes)",
+    "BISK_V1": "Legmagasabb befejezett iskolai végzettség (Összes)",
+    "CSPOT_LMS1": "Családi állapot (Összes)",
+    "EMP": "Foglalkoztatott",
+    "EU_FOR": "EU-tagországbeli külföldi állampolgár",
+    "FOR": "Külföldi állampolgár",
+    "GAKT_V1": "Gazdasági aktivitás",
+    "INACE": "Eltartott",
+    "INACI": "Ellátásban részesülő inaktív",
+    "KEV_AGE10": "Korcsoport (Összes)",
+    "LISK1": "Általános iskola 8. évfolyam vagy annál alacsonyabb",
+    "LISK2": "Általános iskola 8. évfolyam",
+    "LISK3": "Középfokú iskola érettségi nélkül, szakmai oklevéllel",
+    "LISK4": "Érettségi",
+    "LISK5": "Egyetem, főiskola oklevéllel",
+    "LISKNAP": "15 évesnél fiatalabb személy (iskola)",
+    "NAT": "Magyar állampolgár",
+    "NEU": "EU-tagországon kívüli külföldi állampolgár",
+    "UNE": "Munkanélküli",
+    "Y10-19": "10-19 éves",
+    "Y20-29": "20-29 éves",
+    "Y30-39": "30-39 éves",
+    "Y40-49": "40-49 éves",
+    "Y50-59": "50-59 éves",
+    "Y60-69": "60-69 éves",
+    "Y70-79": "70-79 éves",
+    "Y80-89": "80-89 éves",
+    "Y_GE90": "90 éves és idősebb",
+    "Y_LT10": "10 évesnél fiatalabb"
 }
