@@ -8,10 +8,19 @@
 
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link href="https://cdn.datatables.net/v/dt/dt-1.13.6/cr-1.7.0/datatables.min.css" rel="stylesheet">
+
+	<script src="https://cdn.datatables.net/v/dt/dt-1.13.6/cr-1.7.0/datatables.min.js"></script>
 
 	<style>
 		.badge.even-larger-badge {
 			font-size: 1.1em;
+		}
+
+		th,
+		td {
+			white-space: nowrap;
+			overflow: hidden;
 		}
 	</style>
 </head>
@@ -22,44 +31,121 @@
 		<div class="px-4 py-5 my-5 text-center">
 			<h1 class="display-5 fw-bold text-body-emphasis">A népszámlálás és a<br /> katolikus egyházmegyék</h1>
 			<div class="col-lg-8 mx-auto">
-				<p class="lead mb-4">A népszámlálási- és általában a KSH adatok leginkább települési ill. vármegyei felosztásban érhetőek el. Mivel a Magyar Katolikus Egyháznak az egyházmegyei bontás az igazán érdekes és hasznos, ezért átalakítjuk az adatokat egyházmegyei szintekre. <br/>Jó böngészést és kutakodást kívánunk!</p>
+				<p class="lead mb-4">A népszámlálási- és általában a KSH adatok leginkább települési ill. vármegyei
+					felosztásban érhetőek el. Mivel a Magyar Katolikus Egyháznak az egyházmegyei bontás az igazán
+					érdekes és hasznos, ezért átalakítjuk az adatokat egyházmegyei szintekre. <br />Jó böngészést és
+					kutakodást kívánunk!</p>
 
 				<h3>Mielőtt belevágnánk:</h3>
-				<div class="alert alert-danger">Míg az egyházmegyei szintre átalakított (<a href="fullData.json">letölthető</a>) adatok már elég pontosak és részletesek, addig a megjelenítő felület még elég kezdetleges. Kérünk, hogy nézz vissza később. Illetve segíts nekünk a fejlesztésben, véleményezésben, megjelenítés változat igénylésében a a <a href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.
+				<div class="alert alert-danger">Míg az egyházmegyei szintre átalakított (<a
+						href="fullData.json">letölthető</a>) adatok már elég pontosak és részletesek, addig a
+					megjelenítő felület még elég kezdetleges. Kérünk, hogy nézz vissza később. Illetve segíts nekünk a
+					fejlesztésben, véleményezésben, megjelenítés változat igénylésében a a <a
+						href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.
 				</div>
 
 				<div class="alert alert-info" id="about_the_data">
 					<h5>Hogy készültek az adatok?</h5>
-					<p>Az Open Street Map alapján az egy-egy egyházmegye területén lévő települések KSH adatait szépen összegeztük, ahol erre lehetőség volt. Más KSH adatok vármegye szinten érhetőek el, ezért megnéztük, hogy egy-egy egyházmegye mely vármegyék mekkora részét foglalja el és így arányosítottuk a KSH adatokat. <span class="badge bg-primary" data-bs-toggle="collapse" href="#about_the_data_details" role="button" aria-expanded="false" aria-controls="about_the_data_details">Részletek</span></p>					
+					<p>Az Open Street Map alapján az egy-egy egyházmegye területén lévő települések KSH adatait szépen
+						összegeztük, ahol erre lehetőség volt. Más KSH adatok vármegye szinten érhetőek el, ezért
+						megnéztük, hogy egy-egy egyházmegye mely vármegyék mekkora részét foglalja el és így
+						arányosítottuk a KSH adatokat. <span class="badge bg-primary" data-bs-toggle="collapse"
+							href="#about_the_data_details" role="button" aria-expanded="false"
+							aria-controls="about_the_data_details">Részletek</span></p>
 					<div id="about_the_data_details" class="collapse">
 						<h6>Települések és település részek:</h6>
-						<p>A <a href="https://wiki.openstreetmap.org/wiki/Hungary/Katolikus_Templomok">Hungary/Katolikus Templomok</a> Open Street Map projekt keretében valamennyi magyar katolikus egyházmegye felkerült az OSM térképre: <a href="https://wiki.openstreetmap.org/wiki/Hungary/Katolikus_Templomok#Aktu.C3.A1lis_katolikus_ter.C3.BCleti_feloszt.C3.A1s">Aktuális katolikus területi felosztás</a>. Az <a href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass-turbo</a> segítségével le tudjuk kérdezni, hogy egy-egy egyházmegye vagy vármegye területén milyen települések vagy település részletek vannak. Mivel az OSM-ben <a href="https://www.openstreetmap.org/changeset/2983791">már bő 14 éve felvitték</a> a KSH azonosítókat, így igazán egyszerű volt a dolgunk: a `ksh_ref` kulcsokra szűrtünk az overpass-turbo.eu segítségével. Például: <a href="https://overpass-turbo.eu/s/1Bxv">overpass-turbo.eu/s/1Bxv</a>. Így létrejött a nagy adattömb, ahol minden egyházmegyéhez tartozik egy rakat `ksh_ref`. Vigyázat! Nem ellenőriztük, hogy egy település(rész) csak egy egyházmegyéhez tartozik-e (azonos rítus esetén)! Vigyázat! Nem ellenőriztük, hogy az OSM-ből kapott ksh_ref kulccsal rendelkező adatok mind település szintű adatok-e. Amivel egészen addig nincs baj, amíg a KSH-ból összeszedésre szerzett adatoknál a TERUL_GEO5 kulccsal kaptuk meg az adatokat. Vigyázat! Aktuális (2023-as) települési felosztást néztünk, ami elvileg eltérhet 2001, 2011 és akár 2022 esetén. Pl. olykor történnek egyházmegyéknél határváltozások.</p>
+						<p>A <a href="https://wiki.openstreetmap.org/wiki/Hungary/Katolikus_Templomok">Hungary/Katolikus
+								Templomok</a> Open Street Map projekt keretében valamennyi magyar katolikus egyházmegye
+							felkerült az OSM térképre: <a
+								href="https://wiki.openstreetmap.org/wiki/Hungary/Katolikus_Templomok#Aktu.C3.A1lis_katolikus_ter.C3.BCleti_feloszt.C3.A1s">Aktuális
+								katolikus területi felosztás</a>. Az <a
+								href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">Overpass-turbo</a>
+							segítségével le tudjuk kérdezni, hogy egy-egy egyházmegye vagy vármegye területén milyen
+							települések vagy település részletek vannak. Mivel az OSM-ben <a
+								href="https://www.openstreetmap.org/changeset/2983791">már bő 14 éve felvitték</a> a KSH
+							azonosítókat, így igazán egyszerű volt a dolgunk: a `ksh_ref` kulcsokra szűrtünk az
+							overpass-turbo.eu segítségével. Például: <a
+								href="https://overpass-turbo.eu/s/1Bxv">overpass-turbo.eu/s/1Bxv</a>. Így létrejött a
+							nagy adattömb, ahol minden egyházmegyéhez tartozik egy rakat `ksh_ref`. Vigyázat! Nem
+							ellenőriztük, hogy egy település(rész) csak egy egyházmegyéhez tartozik-e (azonos rítus
+							esetén)! Vigyázat! Nem ellenőriztük, hogy az OSM-ből kapott ksh_ref kulccsal rendelkező
+							adatok mind település szintű adatok-e. Amivel egészen addig nincs baj, amíg a KSH-ból
+							összeszedésre szerzett adatoknál a TERUL_GEO5 kulccsal kaptuk meg az adatokat. Vigyázat!
+							Aktuális (2023-as) települési felosztást néztünk, ami elvileg eltérhet 2001, 2011 és akár
+							2022 esetén. Pl. olykor történnek egyházmegyéknél határváltozások.</p>
 						<h6>Település szintű KSH adatokból egyházmegyei adatok:</h6>
-						<p>A KSH <a href="https://nepszamlalas2022.ksh.hu/">nepszamlalas2022.ksh.hu</a> honlapjáról szabadon le lehet kérdezni adatokat. Az "<a href="https://nepszamlalas2022.ksh.hu/adatbazis/#/table/WBS003">A népesség adatai településenként</a>" lekérdezési felületen a `Letöltés` gombra kattintva JSON formában kapjuk meg az adatokat, ahol minden cella (sortól és oszloptól függetlenül) külön JSON elem a következő elemekkel: "OBS_STATUS": <i>ismeretlen</i>, "OBS_VALUE": <i>az adott érték/eredmény</i>, "TIME_PERIOD": <i>2001, 2011, vagy 2022</i>, "TERUL_GEO5": <i>település azonosítója (ksh_ref)</i>, "TEL_SZ_ADAT": <i>az adat fajtája (pl. családi állapota özvegy)</i>. Mivel egy-egy lekérdezés maximálisan 40 000 cellát tartalmazhat, ezért darabokban töltöttük le a számunkra releváns adatokat.</p>
-						<p>Majd végig mentünk minden így letöltött KSH adatcellán, és az értéket (OBS_VALUE) ahhoz az egyházmegye megfelelő adatához (TEL_SZ_ADAT) hozzáadtuk, amelyik egyházmegyéhez a település tartozik. Vigyázat! Ha egy település több egyházmegyéhez tartozna, akkor mindegyikhez hozzáadódik az érték. </p>
+						<p>A KSH <a href="https://nepszamlalas2022.ksh.hu/">nepszamlalas2022.ksh.hu</a> honlapjáról
+							szabadon le lehet kérdezni adatokat. Az "<a
+								href="https://nepszamlalas2022.ksh.hu/adatbazis/#/table/WBS003">A népesség adatai
+								településenként</a>" lekérdezési felületen a `Letöltés` gombra kattintva JSON formában
+							kapjuk meg az adatokat, ahol minden cella (sortól és oszloptól függetlenül) külön JSON elem
+							a következő elemekkel: "OBS_STATUS": <i>ismeretlen</i>, "OBS_VALUE": <i>az adott
+								érték/eredmény</i>, "TIME_PERIOD": <i>2001, 2011, vagy 2022</i>, "TERUL_GEO5":
+							<i>település azonosítója (ksh_ref)</i>, "TEL_SZ_ADAT": <i>az adat fajtája (pl. családi
+								állapota özvegy)</i>. Mivel egy-egy lekérdezés maximálisan 40 000 cellát tartalmazhat,
+							ezért darabokban töltöttük le a számunkra releváns adatokat.
+						</p>
+						<p>Majd végig mentünk minden így letöltött KSH adatcellán, és az értéket (OBS_VALUE) ahhoz az
+							egyházmegye megfelelő adatához (TEL_SZ_ADAT) hozzáadtuk, amelyik egyházmegyéhez a település
+							tartozik. Vigyázat! Ha egy település több egyházmegyéhez tartozna, akkor mindegyikhez
+							hozzáadódik az érték. </p>
 						<h6>Vármegye szintű KSH adatokból egyházmegyei adatok:</h6>
-						<p>A részletes vallási adatokat a KSH vármegyénként ill. településtípusonként tette elérhetővé az "<a href="https://nepszamlalas2022.ksh.hu/adatbazis/#/table/WBS008">A népesség vallása vármegyénként, településtípusonként</a>" lekérdezési felületen. Mi a "Vármegye, régió" dimenziót használtuk külön-külön letöltve a releváns "Vallás, részletes" dimenziókat minden elérhető "Társadalmi jellemzők" adattal. Ezekben a lerkédezésekben "TEL_SZ_ADAT" helyett "TARSJELL1" érhető el. A területi hivatkozásokat pedig a "TERUL_GEO3" tartalmazza. A vallási dimenziót a "VALLAS_V2". (Az érték továbbra is "OBS_VALUE". Az időpont pedig "TIME_PERIOD".)</p>
-						<p>Egy-egy egyházmegye több vármegyét is érint. Olykor teljes egészében lefed, olykor csak részlegesen. Az adatok átalakításánál ezért arányosítottunk. Az OSM adatbázisból lekértük az egyházmegyékhez hasonló módon a vármegyék minden település(rész)ét amihez `ksh_ref` kulcs tartozik. A fent említett "A népesség adati településenként" oldalról letöltöttük a teljes lakosság számát a "NEME_SEX" kulcsot alkalmazva. Így minden településnek megkaptuk a lakosságát, amiket összeadva megkaptuk a vármegyének (ill. egyházmegyék) populációját. Egy-egy egyházmegyének az adott vármegyében lévő településeinek lakossainak összegét hasonlítjuk össze a vármegye teljes lakosságával (2022-es adatokkal mindig!) és így jegyezzük fel, hogy a KSH-nak az adott vármegyére megadott bármilyen adata esetén milyen szorzót / arányosítást használjunk.</p>
-						<p>Vigyázat! A települések hovatartozását, populációját és így az arányosítást mostani (2023 ill. 2022) adatokra alapoztuk. Ha esetleg az egyik egyházmegyének egy vármegyére benyúló településének a lakossága lényegesen jobban változott mint az adott vármegye teljes lakossága, akkor az egyházmegyének a vármegye teljes adatából kiérdemelt részének aránya megváltozhatott. Mindenhol 2022-es adatokat figyelünk és 2001-es adatok esetén nem a 2001-es populációs arányokat használjuk! Vigyázat! Nem vizsgáljuk, hogy nicsenek-e hibás átfedések, ill. nem vizsgáljuk hogy az összeg mindenütt helyes-e. Az arányosítást jópár tizedesjegyig számoljuk, de a KSH adatokat vármegyénként már egész számra kerekítjük.</p>
+						<p>A részletes vallási adatokat a KSH vármegyénként ill. településtípusonként tette elérhetővé
+							az "<a href="https://nepszamlalas2022.ksh.hu/adatbazis/#/table/WBS008">A népesség vallása
+								vármegyénként, településtípusonként</a>" lekérdezési felületen. Mi a "Vármegye, régió"
+							dimenziót használtuk külön-külön letöltve a releváns "Vallás, részletes" dimenziókat minden
+							elérhető "Társadalmi jellemzők" adattal. Ezekben a lerkédezésekben "TEL_SZ_ADAT" helyett
+							"TARSJELL1" érhető el. A területi hivatkozásokat pedig a "TERUL_GEO3" tartalmazza. A vallási
+							dimenziót a "VALLAS_V2". (Az érték továbbra is "OBS_VALUE". Az időpont pedig "TIME_PERIOD".)
+						</p>
+						<p>Egy-egy egyházmegye több vármegyét is érint. Olykor teljes egészében lefed, olykor csak
+							részlegesen. Az adatok átalakításánál ezért arányosítottunk. Az OSM adatbázisból lekértük az
+							egyházmegyékhez hasonló módon a vármegyék minden település(rész)ét amihez `ksh_ref` kulcs
+							tartozik. A fent említett "A népesség adati településenként" oldalról letöltöttük a teljes
+							lakosság számát a "NEME_SEX" kulcsot alkalmazva. Így minden településnek megkaptuk a
+							lakosságát, amiket összeadva megkaptuk a vármegyének (ill. egyházmegyék) populációját.
+							Egy-egy egyházmegyének az adott vármegyében lévő településeinek lakossainak összegét
+							hasonlítjuk össze a vármegye teljes lakosságával (2022-es adatokkal mindig!) és így
+							jegyezzük fel, hogy a KSH-nak az adott vármegyére megadott bármilyen adata esetén milyen
+							szorzót / arányosítást használjunk.</p>
+						<p>Vigyázat! A települések hovatartozását, populációját és így az arányosítást mostani (2023
+							ill. 2022) adatokra alapoztuk. Ha esetleg az egyik egyházmegyének egy vármegyére benyúló
+							településének a lakossága lényegesen jobban változott mint az adott vármegye teljes
+							lakossága, akkor az egyházmegyének a vármegye teljes adatából kiérdemelt részének aránya
+							megváltozhatott. Mindenhol 2022-es adatokat figyelünk és 2001-es adatok esetén nem a 2001-es
+							populációs arányokat használjuk! Vigyázat! Nem vizsgáljuk, hogy nicsenek-e hibás átfedések,
+							ill. nem vizsgáljuk hogy az összeg mindenütt helyes-e. Az arányosítást jópár tizedesjegyig
+							számoljuk, de a KSH adatokat vármegyénként már egész számra kerekítjük.</p>
 						<h6>Tehát az adatok a lehetőségekhez képest igen pontosak, de fenntartásokkal kezelendőek.</h6>
 					</div>
 				</div>
 
 				<div class="alert alert-info" id="warning">
 					<h5>Mit jelentenek és mit nem jelentenek a számok?</h5>
-					<p>Az adatok értelmezése nem könnyű. Például egy állítás: a Győri egyházmegye kiemelkedik a válások tekintetében. Viszont a tények egy része: az elváltak számának növekedésének mértéke valóban a legnagyobb, de így is lakosságarányosan a legkevesebb az elvált az egyházmegyében. <span class="badge bg-primary" data-bs-toggle="collapse" href="#warning_details" role="button" aria-expanded="false" aria-controls="warning_details">Részletek</span></p>					
+					<p>Az adatok értelmezése nem könnyű. Például egy állítás: a Győri egyházmegye kiemelkedik a válások
+						tekintetében. Viszont a tények egy része: az elváltak számának növekedésének mértéke valóban a
+						legnagyobb, de így is lakosságarányosan a legkevesebb az elvált az egyházmegyében. <span
+							class="badge bg-primary" data-bs-toggle="collapse" href="#warning_details" role="button"
+							aria-expanded="false" aria-controls="warning_details">Részletek</span></p>
 					<div id="warning_details" class="collapse">
-						<p>2001-ben a 30 891 elvált személy élt a Győri egyházmegye jelenlegi területén. 2022-ben pedig 53
-							724. Ez közel 74%-os növekedés. A legnagyobb arányú növekedés az egyházmegyék között. Jaj. De
-							darabszámban a Váci egyházmegyében sokkal nagyobb a különbség 2001 és 2022 között az elváltak
-							létszámát illetően: több mint negyven ezer. Közben ha lakosság arányában nézzük, akkor a Győri
+						<p>2001-ben a 30 891 elvált személy élt a Győri egyházmegye jelenlegi területén. 2022-ben pedig
+							53
+							724. Ez közel 74%-os növekedés. A legnagyobb arányú növekedés az egyházmegyék között. Jaj.
+							De
+							darabszámban a Váci egyházmegyében sokkal nagyobb a különbség 2001 és 2022 között az
+							elváltak
+							létszámát illetően: több mint negyven ezer. Közben ha lakosság arányában nézzük, akkor a
+							Győri
 							egyházmegyében 2001-ben a lakosság 5,8%-a volt elvált. 2022-ben pedig már 9,6%. Ám ezzel még
-							mindig nem érte utol a Győri egyházmegye lakossága az országos átlagot. Juhú. Vagyis, hiába a
-							legnagyobb növekedés az elváltak számában, az elváltak arányában még mindig nagyon jó a Győri
+							mindig nem érte utol a Győri egyházmegye lakossága az országos átlagot. Juhú. Vagyis, hiába
+							a
+							legnagyobb növekedés az elváltak számában, az elváltak arányában még mindig nagyon jó a
+							Győri
 							egyházmegye.</p>
 						<p>Fontos még azt is látni, hogy 2022 és 2001 között minden bizonnyal nem 22 833 válás történt.
 							Lehetett sokkal több válás, csak aztán elhunytak az elváltak. Vagy átköltöztek másik
-							egyházmegyébe. De az is lehet, hogy sok elvált ember költözött az egyházmegye területére. És még
+							egyházmegyébe. De az is lehet, hogy sok elvált ember költözött az egyházmegye területére. És
+							még
 							megannyi magyarázat lehet. Ezek az adatok csak pillanatfelvételek!</p>
 					</div>
 				</div>
@@ -73,9 +159,9 @@
 		<div class="b-example-divider"></div>
 
 		<div id="sections">
-		
+
 		</div>
-		
+
 
 		<div class="container">
 			<div id="cb_dioceses" style="display: none;">
@@ -83,218 +169,390 @@
 			</div>
 			<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
 		</div>
-		<div class="b-example-divider"></div>
 
+		<div class="b-example-divider"></div>
 		<div class="container" id="cc1" style="display: none">
 			<h2 class="chart-title">KSH adatok vizualizálva</h2>
-			<p>A diagram a 2022-es százalékos adatokból készült. Amennyiben a jelmagyarázatnál a címkékre ráklikkel, akkor
-				változtathatja az oszlopok láthatóságát</p>
+			<p>A diagram a 2022-es százalékos adatokból készült. Amennyiben a jelmagyarázatnál a címkékre ráklikkel,
+				akkor
+				változtathatja az oszlopok láthatóságát és ez kihatással lesz a táblázatokra is.</p>
 			<canvas id="c1"></canvas>
 		</div>
 
-		<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on
-				GitHub</a></center>
+		<div id="container_1" style="display: none">
+			<h2>KSH adatok kategóriánként</h2>
+			<label for="selectOrder1">Rendezés alapja</label>
+			<select class="form-control" id="selectOrder1" onchange="reRender()">
+				<option value="2022data">2022-es KSH adatok</option>
+				<option value="2011data">2011-es KSH adatok</option>
+				<option value="2001data">2001-es KSH adatok</option>
+				<option value="diff20012011">Változás 2001 és 2011 között</option>
+				<option value="diff20112022">Változás 2011 és 2022 között</option>
+				<option value="diff20012022">Változás 2001 és 2022 között</option>
+			</select>
+			<table id="datatable1">
+
+			</table>
+		</div>
+		<div id="container_2" style="display: none">
+			<h2>KSH adatok lakosság létszámához arányosítva százalékban</h2>
+			<label for="selectOrder2">Rendezés alapja</label>
+			<select class="form-control" id="selectOrder2" onchange="reRender()">
+				<option value="2022data">2022-es KSH adatok</option>
+				<option value="2011data">2011-es KSH adatok</option>
+				<option value="2001data">2001-es KSH adatok</option>
+				<option value="diff20012011">Változás 2001 és 2011 között</option>
+				<option value="diff20112022">Változás 2011 és 2022 között</option>
+				<option value="diff20012022">Változás 2001 és 2022 között</option>
+			</select>
+			<table id="datatable2">
+
+			</table>
+		</div>
+
+	</div>
+
+	<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on
+			GitHub</a></center>
 
 
 	<script src="sections/cards.js"></script>
-		<script src="sections/Section.js"></script>
-		<script src="sections/AreaSection.js"></script>
+	<script src="sections/Section.js"></script>
+	<script src="sections/AreaSection.js"></script>
 
-		<script>
-			
-			const c1 = document.getElementById('c1');
-			var chart1 = null
-			var sum = {};
-			var colls = [];
-			var dictionary = {};
-			var fullData = []
+	<script>
 
-			$(document).ready(async function () {
+		const c1 = document.getElementById('c1');
+		var chart1 = null
+		var datatable1;
+		var datatable2;
+		var sum = {};
+		var colls = [];
+		var dictionary = {};
+		var fullData = []
 
-				$("#content").html("Adatok begyűjtése");
-				await loadFullData();
-				console.log(fullData);			
-				await readDictionary()
-				
-    			 publishCheckboxes(fullData);
+		$(document).ready(async function () {
 
-				publishAll();				
-				
-				areasection("relation-5635587");
-				$("#areaSection .select").on("change", function() {
-					areasection(this.value);
-				});			
-			    function areasection(areaId) {
-					const areasection = new AreaSection(fullData, colls)
-					areasection.setAreaId(areaId);
-					areasection.publish()
-				}
+			$("#content").html("Adatok begyűjtése");
+			await loadFullData();
+			console.log(fullData);
+			await readDictionary()
 
+			publishCheckboxes(fullData);
+
+			publishAll();
+
+			areasection("relation-5635587");
+			$("#areaSection .select").on("change", function () {
+				areasection(this.value);
 			});
+			function areasection(areaId) {
+				const areasection = new AreaSection(fullData, colls)
+				areasection.setAreaId(areaId);
+				areasection.publish()
+			}
 
-			function publishCheckboxes(data) {
-				document.getElementById("cb_dioceses").style.display = "block";
-				$.each(data, function (key, value) {					
-					$("#cb_dioceses").append(
-						`<div class="form-check form-check-inline">
- 	<input class="form-check-input" type="checkbox" value="" id="cb_dioceses_${value.osmid}" checked onclick="reRender()">
-  	<label class="form-check-label" for="cb_dioceses_${value.osmid}">
+		});
+
+		function publishCheckboxes(data) {
+			document.getElementById("cb_dioceses").style.display = "block";
+			$.each(data, function (key, value) {
+				$("#cb_dioceses").append(
+					`<div class="form-check form-check-inline">
+ 	<input class="form-check-input" type="checkbox" value="" id="cb_dioceses_${key}" checked onclick="reRender()">
+  	<label class="form-check-label" for="cb_dioceses_${key}">
     	${value.name}
   	</label>
  </div>`)
-				})
+			})
+		}
+
+
+		function reRender() {
+			publishAll()
+		}
+
+
+		function getDatasetHidden(label) {
+			if (label == "Összesen") return false
+			console.log(label)
+			const idx = chart1.config.data.datasets.findIndex(d => d.label == label)
+			console.log(idx)
+			const meta = chart1.getDatasetMeta(idx)
+			return meta.hidden == null ? chart1.config._config.data.datasets[idx].hidden : meta.hidden
+		}
+		function publishDatatable1(data, headers) {
+
+			$("#content").removeClass('alert');
+			$("#content").html("")
+			document.getElementById("container_1").style.display = "block";
+
+			if (datatable1) {
+				datatable1.destroy()
+				$('#datatable1').html('')
 			}
+			datatable1 = $('#datatable1').DataTable(
+				{
+					paging: false,
+					searching: false,
+					info: false, //english footer,
+					colReorder: true,
+					buttons: ["print"],
+					data: Object.keys(data).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
+						.reduce((cur, key) => {
+							data[key]
+							cur.push({
+								diocese: data[key].name,
+								...data[key].data
+							})
+							return cur
+						}, []),
+					columns: [{
+						data: 'diocese',
+						title: 'Egyházmegye',
+					},
+					...headers.filter(c => dictionary[c] && !getDatasetHidden(dictionary[c].name ? dictionary[c].name : dictionary[c])).map(c => {
+						return {
+							data: c,
+							title: dictionary[c].name ? dictionary[c].name : dictionary[c],
+							render: function (data, type, row) {
+								var diff = (data[2022] - data[2001]) / data[2001] * 100;
+								var diff1 = (data[2011] - data[2001]) / data[2001] * 100;
+								var diff2 = (data[2022] - data[2011]) / data[2011] * 100;
 
-			function clearTable1() {
-				$("myTable").remove()
+								if (type == "sort" || type == 'type') {
+									switch (document.getElementById("selectOrder1").value) {
+										case "2022data":
+											return data["2022"]
+
+										case "2011data":
+											return data["2011"]
+
+										case "2001data":
+											return data["2001"]
+
+										case "diff20012011":
+											return diff1
+
+										case "diff20112022":
+											return diff2
+
+										case "diff20012022":
+											return diff
+
+									}
+								}
+								if (diff > 5) var color = "success"
+								else if (diff < -5) var color = "danger"
+								else var color = "info"
+								var markup =
+									`<span class="badge text-bg-primary even-larger-badge" title="2022-es KSH adat">
+	${data[2022].toLocaleString('hu-HU')}
+</span>
+<span class="badge text-bg-${color} even-larger-badge" title="Különbség a 2022-es és a 2001-es KSH adat között.">
+	${diff.toFixed(2)}%
+</span><br/>
+<span class="badge text-bg-secondary" title="2001-es KSH adat">
+	${data[2001].toLocaleString('hu-HU')}
+</span>&nbsp;
+<span class="badge text-bg-secondary" title="2011-es KSH adat">
+	${data[2011].toLocaleString('hu-HU')}
+</span>&nbsp;
+<span class="badge text-bg-light" title="Változás 2001 és 2011 között.">
+	${diff1.toFixed(2)}%
+</span>
+<span class="badge text-bg-light" title="Változás 2011 és 2022 között.">
+	${diff2.toFixed(2)}%
+</span>
+`
+								return markup
+							}
+						}
+					})]
+				}
+			);
+		}
+
+		function publishDatatable2(data, headers) {
+			document.getElementById("container_2").style.display = "block";
+
+			if (datatable2) {
+				datatable2.destroy()
+				$('#datatable2').html('')
 			}
+			datatable2 = $('#datatable2').DataTable(
+				{
+					paging: false,
+					searching: false,
+					info: false, //english footer,
+					colReorder: true,
+					data: Object.keys(data).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
+						.reduce((cur, key) => {
+							data[key]
+							cur.push({
+								diocese: data[key].name,
+								...data[key].data
+							})
+							return cur
+						}, []),
+					columns: [{
+						data: 'diocese',
+						title: 'Egyházmegye',
+					},
+					...headers.filter(c => dictionary[c] && !getDatasetHidden(dictionary[c].name ? dictionary[c].name : dictionary[c])).map(c => {
+						return {
+							data: c,
+							title: dictionary[c].name ? dictionary[c].name : dictionary[c],
+							render: function (data, type, row) {
+								var diff = (data[2022] - data[2001]) / data[2001] * 100;
+								var diff1 = (data[2011] - data[2001]) / data[2001] * 100;
+								var diff2 = (data[2022] - data[2011]) / data[2011] * 100;
 
-			function clearTable2() {
-				$("myTable2").remove()
-			}
+								if (type == "sort" || type == 'type') {
+									switch (document.getElementById("selectOrder1").value) {
+										case "2022data":
+											return data["2022"]
 
-			function clearAll() {
-				clearTable1()
-				clearTable2()
-			}
+										case "2011data":
+											return data["2011"]
 
-			function reRender() {
-				clearAll()
-				publishAll()
-			}
+										case "2001data":
+											return data["2001"]
 
+										case "diff20012011":
+											return diff1
 
-			function publishTable(data, header) {
-				$("#content").removeClass('alert');
-				$("#content").html("<h2>KSH adatok kategóriánként</h2>");
-				$("#content").append("<!-- TABLE CONSTRUCTION--><table class='table table-striped' id='myTable'><!-- HEADING FORMATION --><thead><tr id='table_header' class='table-primary'><th >Egyházmegye</th></tr></thead><tbody></tbody></table>");
+										case "diff20112022":
+											return diff2
 
+										case "diff20012022":
+											return diff
 
-				$.each(header, function (key, value) {
-					$("#table_header").append("<th class='w-25'>" + (value in dictionary ? (dictionary[value].name ? dictionary[value].name : dictionary[value]) : value) + "</th>");
-				});
-				$.each(data, function (key, value) {
-					if (!document.getElementById(`cb_dioceses_${value.osmid}`).checked) return;
-					var markup = '<tr class="child"><th scope="row text-nowrap"><span class="text-nowrap">' + value.name + '</span></th>';
+									}
+								}
+								var tmpOrig = data;
+								markup += "<td class='text-nowrap'>";
 
-					for (let i = 0; i < Object.keys(value.data).length; i++) {
-						var tmp = value.data[Object.keys(value.data)[i]];
-						markup += "<td class='text-nowrap'>";
+								var sum = row["NEME_SEX"];
+								var tmp = {
+									'2022': tmpOrig[2022] / sum[2022] * 100,
+									'2011': tmpOrig[2011] / sum[2011] * 100,
+									'2001': tmpOrig[2001] / sum[2001] * 100,
+								};
 
+								var diff = (tmp[2022] - tmp[2001]);
+								if (diff > 5) var color = "success";
+								else if (diff < -5) var color = "danger";
+								else var color = "info"
 
-
-						markup += '<span class="badge text-bg-primary even-larger-badge" title="2022-es KSH adat">' + tmp[2022].toLocaleString('hu-HU') + '</span>';
-						var diff = (tmp[2022] - tmp[2001]) / tmp[2001] * 100;
-						if (diff > 5) var color = "success";
-						else if (diff < -5) var color = "danger";
-						else var color = "info"
-						markup += ' <span class="badge text-bg-' + color + ' even-larger-badge" title="Különbség a 2022-es és a 2001-es KSH adat között.">' + diff.toFixed(2) + '%</span>';
-
-						var diff1 = (tmp[2011] - tmp[2001]) / tmp[2001] * 100;
-						var diff2 = (tmp[2022] - tmp[2011]) / tmp[2011] * 100;
-						markup += '<br/><span class="badge text-bg-secondary" title="2001-es KSH adat">' + tmp[2001].toLocaleString('hu-HU') + '</span>&nbsp;<span class="badge text-bg-secondary" title="2011-es KSH adat">' + tmp[2011].toLocaleString('hu-HU') + '</span>&nbsp;<span class="badge text-bg-light" title="Változás 2001 és 2011 között.">' + diff1.toFixed(2) + '%</span><span class="badge text-bg-light" title="Változás 2011 és 2022 között.">' + diff2.toFixed(2) + '%</span>';
-
-
-						markup += "</td>";
-					}
-
-					markup += '</tr>';
-					$('#myTable tbody').append(markup);
-
-				});
-			}
-
-
-			function publishTable2(data, header) {
-				$("#content").append("<h2>KSH adatok lakosság létszámához arányosítva százalékban</h2>");
-				$("#content").append("<!-- TABLE CONSTRUCTION--><table class='table table-striped' id='myTable2'><!-- HEADING FORMATION --><thead><tr id='table_header2' class='table-primary'><th >Egyházmegye</th></tr></thead><tbody></tbody></table>");
-
-
-				$.each(header, function (key, value) {
-					$("#table_header2").append("<th class='w-25'>" + (value in dictionary ? (dictionary[value].name ? dictionary[value].name : dictionary[value]) : value) + "</th>");
-				});
-				$.each(data, function (key, value) {
-					if (!document.getElementById(`cb_dioceses_${value.osmid}`).checked) return;
-					var markup = '<tr class="child"><th scope="row text-nowrap"><span class="text-nowrap">' + value.name + '</span></th>';
-
-					for (let i = 0; i < Object.keys(value.data).length; i++) {
-						var tmpOrig = value.data[Object.keys(value.data)[i]];
-						markup += "<td class='text-nowrap'>";
-
-						var sum = value.data["NEME_SEX"];
-						var tmp = {
-							'2022': tmpOrig[2022] / sum[2022] * 100,
-							'2011': tmpOrig[2011] / sum[2011] * 100,
-							'2001': tmpOrig[2001] / sum[2001] * 100,
-						};
-
-						markup += '<span class="badge text-bg-primary even-larger-badge" title="Lakosság arányos 2022-es KSH adat">' + tmp[2022].toFixed(1) + '%</span>';
-						var diff = (tmp[2022] - tmp[2001]);
-						if (diff > 5) var color = "success";
-						else if (diff < -5) var color = "danger";
-						else var color = "info"
-						markup += ' <span class="badge text-bg-' + color + ' even-larger-badge" title="A 2022-es és a 2001-es lakosságarányos KSH adat közötti különbség (és nem százalék!)">' + diff.toFixed(1) + '</span>';
-
-						var diff1 = (tmp[2011] - tmp[2001]);
-						var diff2 = (tmp[2022] - tmp[2011]);
-						markup += '<br/><span class="badge text-bg-secondary" title="2001-es KSH adat">' + tmp[2001].toFixed(1).toLocaleString('hu-HU') + '%</span>&nbsp;<span class="badge text-bg-secondary" title="2011-es KSH adat">' + tmp[2011].toFixed(1).toLocaleString('hu-HU') + '%</span>&nbsp;<span class="badge text-bg-light" title="Változás 2001 és 2011 között.">' + diff1.toFixed(1) + '</span><span class="badge text-bg-light" title="Változás 2011 és 2022 között.">' + diff2.toFixed(1) + '</span>';
+								var diff1 = (tmp[2011] - tmp[2001]);
+								var diff2 = (tmp[2022] - tmp[2011]);
 
 
-						markup += "</td>";
-					}
+								var markup =
+									`<span class="badge text-bg-primary even-larger-badge" title="Lakosságarányos 2022-es KSH adat">
+	${tmp[2022].toFixed(1)}%
+</span>
+<span class="badge text-bg-${color} even-larger-badge" title="A 2022-es és a 2001-es lakosságarányos KSH adat közötti különbség (és nem százalék!)"">
+	${diff.toFixed(1)}
+</span><br/>
+<span class="badge text-bg-secondary" title="Lakosságarányos 2001-es KSH adat">
+	${tmp[2001].toFixed(1).toLocaleString('hu-HU')}%
+</span>&nbsp;
+<span class="badge text-bg-secondary" title="Lakosságarányos 2011-es KSH adat">
+	${tmp[2011].toFixed(1).toLocaleString('hu-HU')}%
+</span>&nbsp;
+<span class="badge text-bg-light" title="A 2001-es és a 2011-es lakosságarányos KSH adat közötti különbség (és nem százalék!)">
+	${diff1.toFixed(1)}
+</span>
+<span class="badge text-bg-light" title="A 2011-es és a 2022-es lakosságarányos KSH adat közötti különbség (és nem százalék!)">
+	${diff2.toFixed(1)}
+</span>
+`
+								return markup
+							}
+						}
+					})]
+				}
+			);
+		}
 
-					markup += '</tr>';
-					$('#myTable2 tbody').append(markup);
 
-				});
-			}
 
-			function publishAll() {	
-				publishTable(fullData, colls)
-				publishTable2(fullData, colls)
-				// generateChart(fullData, colls, c1)
-			}
-			
 
-			async function loadFullData() {
-				await $.getJSON("fullData.json", function (data) {
-					for (const [key, value] of Object.entries(data[Object.keys(data)[0]]['data'])) {						
-							colls.push(key);
-					}
-  					fullData = data					
-				});				
-			}
+		function publishAll() {
+			generateChart(fullData, colls, c1)
 
-			async function readDictionary() {
-				await $.getJSON("KSH DataSources/dictionary.json", function (data) {
-					dictionary = data
-				});
-			}
+			publishDatatable1(fullData, colls)
+			publishDatatable2(fullData, colls)
+		}
 
-			function generateChart(fullData, colls, chart) {
+
+		async function loadFullData() {
+			await $.getJSON("fullData.json", function (data) {
+				for (const [key, value] of Object.entries(data[Object.keys(data)[0]]['data'])) {
+					colls.push(key);
+				}
+				fullData = data
+			});
+		}
+
+		async function readDictionary() {
+			await $.getJSON("KSH DataSources/dictionary.json", function (data) {
+				dictionary = data
+			});
+		}
+
+		function generateChart(fullData, colls, chart) {
+			const defaultLegendClickHandler = Chart.defaults.plugins.legend.onClick;
+				const pieDoughnutLegendClickHandler = Chart.controllers.doughnut.overrides.plugins.legend.onClick;
 				if (chart1) chart1.destroy()
 				document.getElementById("cc1").style.display = "block"
-				filteredData = fullData.filter(d => document.getElementById(`cb_dioceses_${d.osmid}`).checked)
+				filteredData = Object.keys(fullData).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
+					.reduce((cur, key) => {
+						cur.push(fullData[key])
+						return cur
+					}, []);
 				chart1 = new Chart(chart, {
 					type: "bar",
 					data: {
 						labels: filteredData.map(d => d.name),
-						datasets: colls.filter(c => c != "NEME_SEX").map(c => {
+						datasets: colls.filter(c => c != "NEME_SEX" && dictionary[c]).map(c => {
 							return {
 								label: dictionary[c] ? (dictionary[c].name ? dictionary[c].name : dictionary[c]) : "Ismeretlen",
 								data: filteredData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
 								hidden: dictionary[c] ? (dictionary[c].hiddenInChart ? true : false) : false
 							}
 						})
+					},
+					options: {
+						plugins: {
+							legend: {
+								onClick: (evt, legendItem, legend) => {
+									const type = legend.chart.config.type;
+
+									if (type === 'pie' || type === 'doughnut') {
+										pieDoughnutLegendClickHandler(evt, legendItem, legend)
+									} else {
+										defaultLegendClickHandler(evt, legendItem, legend);
+									}
+									publishDatatable1(fullData, colls)
+									publishDatatable2(fullData, colls)
+
+
+								}
+							},
+						}
 					}
 				})
-			}
 
-		</script>
+		}
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-			crossorigin="anonymous"></script>
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
 
 </body>
 
