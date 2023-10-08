@@ -211,6 +211,20 @@
 		</div>
 
 	</div>
+	
+	<div class="container">
+		<div class="px-4 py-5 my-5 text-center">
+	
+		<h4>Beállítások</h4>
+		<p>Az adatokat megjelnítő táblázatokban és más elemekben megjelenő információkat az alábbi JSON határozza meg. Ennek megváltoztatásával sok mindent meg lehet nézni. </p>
+		<div class="alert alert-warning">A beállítási lehetőségek dokumentáció még később várható. Köszönjük a türelmet.</div>
+		<textarea id="config" cols="40" rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
+		<br/><br/>
+		<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a beállítások alapján</button>
+
+	
+	</div>
+	</div>
 
 	<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on
 			GitHub</a></center>
@@ -241,8 +255,7 @@
 
 			publishCheckboxes(fullData);
 
-			publishAll();
-
+			publishAll();		
 			areasection("relation-5635587");
 			$("#areaSection .select").on("change", function () {
 				areasection(this.value);
@@ -252,6 +265,16 @@
 				areasection.setAreaId(areaId);
 				areasection.publish()
 			}
+			
+			
+			$("#config_button").click(function(){
+				// defaultShow = jQuery.parseJSON($("#config").html());				
+				var configString = $("#config").val()
+				console.log(configString);
+				defaultShow = jQuery.parseJSON(configString);
+				console.log(defaultShow);
+				publishAll();
+			});
 
 		});
 
@@ -276,9 +299,9 @@
 
 		function getDatasetHidden(label) {
 			if (label == "Összesen") return false
-			console.log(label)
+			//console.log(label)
 			const idx = chart1.config.data.datasets.findIndex(d => d.label == label)
-			console.log(idx)
+			//console.log(idx)
 			const meta = chart1.getDatasetMeta(idx)
 			return meta.hidden == null ? chart1.config._config.data.datasets[idx].hidden : meta.hidden
 		}
@@ -511,9 +534,13 @@
 			});
 		}
 
+		
+
 		async function loadShow() {
 			await $.getJSON("show.json", function (data) {
-				defaultShow = data
+				defaultShow = data;
+				$("#config").html(JSON.stringify(data, null, 2));
+				
 			})
 		}
 		async function readDictionary() {
