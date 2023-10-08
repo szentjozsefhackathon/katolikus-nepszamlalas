@@ -1,0 +1,2970 @@
+[
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "ALLAMP_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1165",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2316",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "25730",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "432780",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "120344",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "205720",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "6619",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9627057",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "527086",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "41669",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5144",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "14781",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2079",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7350",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "39266",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4832",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7393",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BEG_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "BISK_V2",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1159645",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "CH_00",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1006535",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "CH_01",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1608898",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "CH_02",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "502644",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "CH_03",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "140119",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "CH_04",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "102270",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "CH_GE05",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "CSPOT_LMS1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "758030",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "DIV_DISREP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "620",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1358",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "15597",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "312405",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "62105",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "189984",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2509",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9416045",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "570537",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "16086",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2962",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7995",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1098",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3816",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "17693",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3025",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5070",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EG_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3690269",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EMP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "54103",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "EU_FOR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5347665",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "F",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "300",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1118",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "14779",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "163094",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "52912",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "53075",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1974",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9584836",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "558246",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "28381",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2659",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8215",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1068",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4186",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "18057",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3108",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4519",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FMF_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "93241",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FOR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3548843",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FY15-64",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "827554",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FY_15LT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "971268",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FY_GE65",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "827554",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "FY_LT15",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "GAKT_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1092115",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "INACE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3304785",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "INACI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "KEV_AGE10",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1897471",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "LISK1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2911369",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "LISK2",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1581315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "LISK3",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2162996",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "LISK4",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "934036",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "LISK5",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "711128",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "LISKNAP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1694936",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "LMS_INV",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1694936",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "LT_MWA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4850650",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "M",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4850650",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4445714",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MAR_REP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "294",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1299",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "14326",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "135021",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "33774",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "48438",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1921",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9546374",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "541106",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "16290",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2580",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8482",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1113",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3388",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "11817",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3180",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4885",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MT_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3408286",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MY15-64",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "574982",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MY_GE65",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "867382",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "MY_LT15",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10105074",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "NAT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "NEME_KEV1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "NEME_SEX",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "38902",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "NEU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5558961",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_C",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1622796",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_CA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "83193",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_CD",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "268935",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_GC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "12871",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_J",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "304705",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_LU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1104333",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1483369",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_NOT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "14520",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_OC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "13567",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_OCD",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5289521",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "RE_RC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2309090",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "SIN",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "TERM_KAT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "416210",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "UNE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10198315",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "VALLAS_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "990545",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "WID_DTHREP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1293104",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y10-19",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1596293",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y20-29",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1309591",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y30-39",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1533309",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y40-49",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1314018",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y50-59",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1025606",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y60-69",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "776170",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y70-79",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "243672",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y80-89",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "36111",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y_GE90",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1070441",
+		"TIME_PERIOD": "2001",
+		"TEL_SZ_ADAT": "Y_LT10",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "ALLAMP_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3571",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "6272",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "26774",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "638506",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "185696",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "315583",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4642",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8504492",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1399713",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "121539",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7001",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "35641",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3882",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10038",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "35208",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2820",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7396",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BEG_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "BISK_V2",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1207260",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "CH_00",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1010029",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "CH_01",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1600075",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "CH_02",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "494516",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "CH_03",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "125075",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "CH_04",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "77780",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "CH_GE05",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "CSPOT_LMS1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "980663",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "DIV_DISREP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3293",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3556",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "23561",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "553487",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "131951",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "308957",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3916",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8314029",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1463887",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "47591",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5730",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "26345",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3323",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7210",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "29647",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2385",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5633",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EG_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3942723",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EMP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "82812",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "EU_FOR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5219149",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "F",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "496",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2756",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "16053",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "227658",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "95661",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "61143",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2346",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8409011",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1486218",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "104340",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3815",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "17983",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1131",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5713",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "16266",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1745",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3245",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FMF_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "143310",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FOR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3455171",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FY15-64",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "704414",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FY_15LT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1059564",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FY_GE65",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "704414",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "FY_LT15",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "GAKT_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1029022",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "INACE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2949727",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "INACI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "KEV_AGE10",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1149200",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "LISK1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2319319",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "LISK2",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1805051",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "LISK3",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2551276",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "LISK4",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1439616",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "LISK5",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "673166",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "LISKNAP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1447659",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "LMS_INV",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1447659",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "LT_MWA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4718479",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "M",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4718479",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3769734",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MAR_REP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "444",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2899",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "13716",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "147723",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "38248",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "54339",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1872",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8409049",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1443840",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "40256",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3049",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "13886",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "999",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3708",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9888",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1723",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3384",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MT_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3357678",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MY15-64",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "617556",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MY_GE65",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "743245",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "MY_LT15",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9794318",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "NAT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "NEME_KEV1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "NEME_SEX",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "60385",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "NEU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3871922",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_C",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1153454",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_CA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "131378",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_CD",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "179176",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_GC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10965",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_J",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "215093",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_LU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2698844",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1806409",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_NOT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "13710",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_OC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "35853",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_OCD",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3691389",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "RE_RC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2765061",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "SIN",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "TERM_KAT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "568497",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "UNE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9937628",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "VALLAS_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "974511",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "WID_DTHREP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1083602",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y10-19",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1229536",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y20-29",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1580913",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y30-39",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1316193",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y40-49",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1438682",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y50-59",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1176962",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y60-69",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "754917",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y70-79",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "356804",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y80-89",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "42428",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y_GE90",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "957591",
+		"TIME_PERIOD": "2011",
+		"TEL_SZ_ADAT": "Y_LT10",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "ALLAMP_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4199",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "6109",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "21824",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "492377",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "142551",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "209909",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "6178",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8438129",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1086239",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "377884",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7398",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "27554",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7111",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "11622",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "29881",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3965",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "24615",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BEG_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "BISK_V2",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1174002",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "CH_00",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "976770",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "CH_01",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1502768",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "CH_02",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "479608",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "CH_03",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "111817",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "CH_04",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "60348",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "CH_GE05",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "CSPOT_LMS1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "DIGI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1576669",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "DIGI0",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2648807",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "DIGI1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3984836",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "DIGI2",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "834916",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "DIGI3",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "558406",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "DIGI4",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1008915",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "DIV_DISREP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3242",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3770",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "19099",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "410302",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "98402",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "200306",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4773",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8095852",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1316716",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "66654",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5602",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "18195",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "5162",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8035",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "25534",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2984",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "19064",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EG_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4718660",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EMP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "91814",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "EU_FOR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4982788",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "F",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "901",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2027",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9171",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "165910",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "66491",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "31173",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9332",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_GIB",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "22275",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_GIR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2167",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8201455",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1317723",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "354918",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3520",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "13633",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2382",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "6017",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "12521",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1732",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "15356",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FMF_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "218061",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FOR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3088521",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FY15-64",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "677475",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FY_15LT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1216792",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FY_GE65",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "677475",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "FY_LT15",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "GAKT_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "990142",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "INACE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2264545",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "INACI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "KEV_AGE10",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "881853",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "LISK1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1785610",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "LISK2",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1733767",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "LISK3",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2716187",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "LISK4",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1833716",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "LISK5",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "652501",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "LISKNAP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1393232",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "LMS_INV",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1393232",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "LT_MWA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4620846",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "M",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4620846",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3559976",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MAR_REP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "676",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_AR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2536",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_BU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8232",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_CR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "112014",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_D",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "28473",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_GE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "23192",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_GI",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7979",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_GIB",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "15440",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_GIR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1761",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_GR",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "8302828",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_HU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1175656",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "70526",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_O",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3398",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_PO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "11186",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_RO",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1981",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_RU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "4249",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_SE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "10123",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_SK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1541",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_SL",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "15315",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MT_UK",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3142438",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MY15-64",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "762651",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MY_GE65",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "715757",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "MY_LT15",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9385573",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "NAT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "NEME_KEV1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "NEME_SEX",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "126131",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "NEU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2886619",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_C",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "943982",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_CA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "141197",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_CD",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "165135",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_GC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "7635",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_J",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "176503",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_LU",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "3852533",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_NA",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1549610",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_NOT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "15578",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_OC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "29977",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_OCD",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2643855",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "RE_RC",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "2839123",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "SIN",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "TERM_KAT",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "237055",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "UNE",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "9603634",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "VALLAS_V1",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "802388",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "WID_DTHREP",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "950356",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y10-19",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1075492",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y20-29",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1239557",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y30-39",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1572064",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y40-49",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1292541",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y50-59",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "1221677",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y60-69",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "888828",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y70-79",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "377371",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y80-89",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "56820",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y_GE90",
+		"TERUL_GEO5": "HU"
+	},
+	{
+		"OBS_STATUS": null,
+		"OBS_VALUE": "928928",
+		"TIME_PERIOD": "2022",
+		"TEL_SZ_ADAT": "Y_LT10",
+		"TERUL_GEO5": "HU"
+	}
+]
