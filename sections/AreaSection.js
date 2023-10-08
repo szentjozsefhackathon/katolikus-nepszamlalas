@@ -44,7 +44,7 @@ class AreaSection {
 		title.setSelectorId(this.id);
 		title.publish();
 
-		var datacards = ["NEME_SEX","RE_C","DIV_DISREP:RE_C","DIV_DISREP","RE_CD","SIN","SIN:RE_C"];
+		var datacards = settings;
 		for (let i = 0; i < datacards.length; i++) {			
 			var title = new DataCard();
 			title.setData(area['data'],datacards[i])

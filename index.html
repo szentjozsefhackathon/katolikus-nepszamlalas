@@ -194,20 +194,6 @@
 
 			</table>
 		</div>
-		<div id="container_2" style="display: none">
-			<h2>KSH adatok lakosság létszámához arányosítva százalékban</h2>
-			<label for="selectOrder2">Rendezés alapja</label>
-			<select class="form-control" id="selectOrder2" onchange="reRender()">
-				<option value="2022data">2022-es KSH adatok</option>
-				<option value="2011data">2011-es KSH adatok</option>
-				<option value="2001data">2001-es KSH adatok</option>
-				<option value="diff20012011">Változás 2001 és 2011 között</option>
-				<option value="diff20112022">Változás 2011 és 2022 között</option>
-				<option value="diff20012022">Változás 2001 és 2022 között</option>
-			</select>
-			<table id="datatable2">
-			</table>
-		</div>
 	</div>
 	
 	<div class="container" id="config">
@@ -420,118 +406,11 @@
 			);
 		}
 
-		function publishDatatable2(data, headers) {
-			document.getElementById("container_2").style.display = "block";
-
-			if (datatable2) {
-				datatable2.destroy()
-				$('#datatable2').html('')
-			}
-			datatable2 = $('#datatable2').DataTable(
-				{
-					paging: false,
-					searching: false,
-					info: false, //english footer,
-					colReorder: true,
-					data: Object.keys(data).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
-						.reduce((cur, key) => {
-							data[key]
-							cur.push({
-								diocese: data[key].name,
-								...data[key].data
-							})
-							return cur
-						}, []),
-					columns: [{
-						data: 'diocese',
-						title: 'Egyházmegye',
-					},
-					...headers.filter(c => getLabel(c) && !getDatasetHidden(getLabel(c)) && c!="NEME_SEX").map(c => {
-						return {
-							data: c,
-							title: getLabel(c),
-							render: function (data, type, row) {
-								var diff = (data[2022] - data[2001]) / data[2001] * 100;
-								var diff1 = (data[2011] - data[2001]) / data[2001] * 100;
-								var diff2 = (data[2022] - data[2011]) / data[2011] * 100;
-
-								if (type == "sort" || type == 'type') {
-									switch (document.getElementById("selectOrder1").value) {
-										case "2022data":
-											return data["2022"]
-
-										case "2011data":
-											return data["2011"]
-
-										case "2001data":
-											return data["2001"]
-
-										case "diff20012011":
-											return diff1
-
-										case "diff20112022":
-											return diff2
-
-										case "diff20012022":
-											return diff
-
-									}
-								}
-								var tmpOrig = data;
-								markup += "<td class='text-nowrap'>";
-
-								var sum = row["NEME_SEX"];
-								var tmp = {
-									'2022': tmpOrig[2022] / sum[2022] * 100,
-									'2011': tmpOrig[2011] / sum[2011] * 100,
-									'2001': tmpOrig[2001] / sum[2001] * 100,
-								};
-
-								var diff = (tmp[2022] - tmp[2001]);
-								if (diff > 5) var color = "success";
-								else if (diff < -5) var color = "danger";
-								else var color = "info"
-
-								var diff1 = (tmp[2011] - tmp[2001]);
-								var diff2 = (tmp[2022] - tmp[2011]);
-
-
-								var markup =
-									`<span class="badge text-bg-primary even-larger-badge" title="Lakosságarányos 2022-es KSH adat">
-	${tmp[2022].toFixed(1)}%
-</span>
-<span class="badge text-bg-${color} even-larger-badge" title="A 2022-es és a 2001-es lakosságarányos KSH adat közötti különbség (és nem százalék!)"">
-	${diff.toFixed(1)}
-</span><br/>
-<span class="badge text-bg-secondary" title="Lakosságarányos 2001-es KSH adat">
-	${tmp[2001].toFixed(1).toLocaleString('hu-HU')}%
-</span>&nbsp;
-<span class="badge text-bg-secondary" title="Lakosságarányos 2011-es KSH adat">
-	${tmp[2011].toFixed(1).toLocaleString('hu-HU')}%
-</span>&nbsp;
-<span class="badge text-bg-light" title="A 2001-es és a 2011-es lakosságarányos KSH adat közötti különbség (és nem százalék!)">
-	${diff1.toFixed(1)}
-</span>
-<span class="badge text-bg-light" title="A 2011-es és a 2022-es lakosságarányos KSH adat közötti különbség (és nem százalék!)">
-	${diff2.toFixed(1)}
-</span>
-`
-								return markup
-							}
-						}
-					})]
-				}
-			);
-		}
-
-
-
-
+		
 		function publishAll() {
 			generateChart(fullData, colls, c1)
-
 			publishDatatable1(fullData, colls)
-			publishDatatable2(fullData, colls)
+
 		}
 
 
@@ -592,8 +471,8 @@
 									} else {
 										defaultLegendClickHandler(evt, legendItem, legend);
 									}
-									publishDatatable1(fullData, colls)
-									publishDatatable2(fullData, colls)
+									// publishDatatable1(fullData, colls)
+									// publishDatatable2(fullData, colls)
 
 
 								}
