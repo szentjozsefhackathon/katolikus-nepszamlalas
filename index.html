@@ -156,30 +156,45 @@
 			<h3>Adatok, kimutatások, elemzések:</h3>
 			<div class="alert alert-danger">Fejlesztés folyamatban...</div>
 		</center>
-		<div class="b-example-divider"></div>
-
-		<div id="sections">
-
+		
+		
+		<div id="container_dashboard" style="display: none">
+			<h2 class="chart-title">Egyházmegyénkénti Dashboard</h2>
+			
+			<div id="dashboard"  class="">
+				<div class="description"></div>
+				<div class="settings"></div>
+				<div class="content card-columns">
+					<i>Content is coming...</i>
+				</div>
+				<div class=""></div>			
+			</div>
+			<script src="sections/dashboard.js"></script>		
 		</div>
-
-
+		<div class="b-example-divider" "  class="float-end"></div>
+		
+		
+		
 		<div class="container">
 			<div id="cb_dioceses" style="display: none;">
 				<h2>Egyházmegyék kiválasztása</h2>
 			</div>
 			<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
 		</div>
-
 		<div class="b-example-divider"></div>
-		<div class="container" id="cc1" style="display: none">
+				
+		<div class="container" id="container_chart" style="display: none">
 			<h2 class="chart-title">KSH adatok vizualizálva</h2>
 			<p>A diagram a 2022-es százalékos adatokból készült. Amennyiben a jelmagyarázatnál a címkékre ráklikkel,
 				akkor
 				változtathatja az oszlopok láthatóságát és ez kihatással lesz a táblázatokra is.</p>
-			<canvas id="c1"></canvas>
+			<canvas id="chart"></canvas>
+			<script src="sections/chart.js"></script>
 		</div>
+		<div class="b-example-divider"></div>
 
-		<div id="container_1" style="display: none">
+
+		<div id="container_datatable" style="display: none">
 			<h2>KSH adatok kategóriánként</h2>
 			<label for="selectOrder1">Rendezés alapja</label>
 			<select class="form-control" id="selectOrder1" onchange="reRender()">
@@ -190,10 +205,13 @@
 				<option value="diff20112022">Változás 2011 és 2022 között</option>
 				<option value="diff20012022">Változás 2001 és 2022 között</option>
 			</select>
-			<table id="datatable1">
-
-			</table>
+			<table id="datatable"></table>
+			<script src="sections/datatable.js"></script>
 		</div>
+		<div class="b-example-divider"></div>
+		
+
+		
 	</div>
 	
 	<div class="container" id="config">
@@ -215,45 +233,31 @@
 			GitHub</a></center>
 
 
-	<script src="sections/cards.js"></script>
-	<script src="sections/Section.js"></script>
-	<script src="sections/AreaSection.js"></script>
+	
+	
+	
+	
+	<script src="markups/simpleData.js"></script>
+	<script src="markups/data.js"></script>
 
 	<script>
-		var settings = {};
-		const c1 = document.getElementById('c1');
-		var chart1 = null
-		var datatable1;
-		var datatable2;
-		var sum = {};
-		var colls = [];
-		var dictionary = {};
-		var fullData = []
-
+		var settings = {}; //A beállítások. Főként a mezők/dimenziók
+		var dictionary = {}; // KSH rövidítésből leírás
+		var fullData = []; // Minden ami adat
+		var colls = [];  // A minden adatban elérhető mezők/dimenziók
+		
 		$(document).ready(async function () {
 
 			$("#content").html("Adatok begyűjtése");
 			
-			await loadFullData(); // A teljes adatsor betöltése, amit korábban a prepare.py hozott létre
-			console.log(fullData);
-			await readDictionary() // A teljes KHS szótár, hogy melyik mező/dimenzió mit jelent
 			await loadSettings() // Alapértelmezett mezők/dimenziók
-
+			await readDictionary() // A teljes KHS szótár, hogy melyik mező/dimenzió mit jelent
+			await loadFullData(); // A teljes adatsor betöltése, amit korábban a prepare.py hozott létre
+						
 			publishCheckboxes(fullData); //Az egyházmegye választó szűrő betöltése
 
 			publishAll(); // A nagy táblázatok és csartok betöltése. Minden beállítás módosításkor újrahívjuk ezt.
-			
-			areasection("relation-5635587");
-			$("#areaSection .select").on("change", function () {
-				areasection(this.value);
-			});
-			function areasection(areaId) {
-				const areasection = new AreaSection(fullData, colls)
-				areasection.setAreaId(areaId);
-				areasection.publish()
-			}
-			
-			
+								
 			// A "Beállítások" részhez kellenek a következő részek
 			// A lehetséges mezők/dimenziók kilistázása
 			$("#config_colls div.colls").html( function() {
@@ -292,21 +296,11 @@
 			publishAll()
 		}
 
-
-		function getDatasetHidden(label) {
-			if (label == "Összesen") return false
-			//console.log(label)
-			const idx = chart1.config.data.datasets.findIndex(d => d.label == label)
-			//console.log(idx)
-			const meta = chart1.getDatasetMeta(idx)
-			return meta.hidden == null ? chart1.config._config.data.datasets[idx].hidden : meta.hidden
-		}
-
 		function getLabel(col) {
 			var label = [];
 			col = col.split(":")
 
-			for ( var i = 0; i<col.length; i++) {
+			for ( var i = 0; i< col.length; i++) {
 				if (dictionary[col[i]]) {
 					label.push(dictionary[col[i]].name || dictionary[col[i]])
 				}
@@ -314,103 +308,21 @@
 			}
 			return label.join(" - ")
 		}
-		function publishDatatable1(data, headers) {
-
-			$("#content").removeClass('alert');
-			$("#content").html("")
-			document.getElementById("container_1").style.display = "block";
-
-			if (datatable1) {
-				datatable1.destroy()
-				$('#datatable1').html('')
-			}
-			datatable1 = $('#datatable1').DataTable(
-				{
-					paging: false,
-					searching: false,
-					info: false, //english footer,
-					colReorder: true,
-					buttons: ["print"],
-					data: Object.keys(data).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
-						.reduce((cur, key) => {
-							data[key]
-							cur.push({
-								diocese: data[key].name,
-								...data[key].data
-							})
-							return cur
-						}, []),
-					columns: [{
-						data: 'diocese',
-						title: 'Egyházmegye',
-					},
-					...headers.filter(c => getLabel(c) && !getDatasetHidden(getLabel(c))).map(c => {
-						return {
-							data: c,
-							title: getLabel(c),
-							render: function (data, type, row) {
-								var diff = (data[2022] - data[2001]) / data[2001] * 100;
-								var diff1 = (data[2011] - data[2001]) / data[2001] * 100;
-								var diff2 = (data[2022] - data[2011]) / data[2011] * 100;
-
-								if (type == "sort" || type == 'type') {
-									switch (document.getElementById("selectOrder1").value) {
-										case "2022data":
-											return data["2022"]
-
-										case "2011data":
-											return data["2011"]
-
-										case "2001data":
-											return data["2001"]
-
-										case "diff20012011":
-											return diff1
-
-										case "diff20112022":
-											return diff2
-
-										case "diff20012022":
-											return diff
-
-									}
-								}
-								if (diff > 5) var color = "success"
-								else if (diff < -5) var color = "danger"
-								else var color = "info"
-								var markup =
-									`<span class="badge text-bg-primary even-larger-badge" title="2022-es KSH adat">
-	${data[2022].toLocaleString('hu-HU')}
-</span>
-<span class="badge text-bg-${color} even-larger-badge" title="Különbség a 2022-es és a 2001-es KSH adat között.">
-	${diff.toFixed(2)}%
-</span><br/>
-<span class="badge text-bg-secondary" title="2001-es KSH adat">
-	${data[2001].toLocaleString('hu-HU')}
-</span>&nbsp;
-<span class="badge text-bg-secondary" title="2011-es KSH adat">
-	${data[2011].toLocaleString('hu-HU')}
-</span>&nbsp;
-<span class="badge text-bg-light" title="Változás 2001 és 2011 között.">
-	${diff1.toFixed(2)}%
-</span>
-<span class="badge text-bg-light" title="Változás 2011 és 2022 között.">
-	${diff2.toFixed(2)}%
-</span>
-`
-								return markup
-							}
-						}
-					})]
-				}
-			);
-		}
+		
+		
 
 		
 		function publishAll() {
-			generateChart(fullData, colls, c1)
-			publishDatatable1(fullData, colls)
-
+		
+			filteredData = Object.keys(fullData).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
+					.reduce((cur, key) => {
+						cur.push(fullData[key])
+						return cur
+					}, []);
+								
+			publishDatatable(filteredData, colls)
+			publishChart(filteredData, colls)
+			publishDashboard(filteredData, colls)			
 		}
 
 
@@ -438,50 +350,7 @@
 			});
 		}
 
-		function generateChart(fullData, colls, chart) {
-			const defaultLegendClickHandler = Chart.defaults.plugins.legend.onClick;
-				const pieDoughnutLegendClickHandler = Chart.controllers.doughnut.overrides.plugins.legend.onClick;
-				if (chart1) chart1.destroy()
-				document.getElementById("cc1").style.display = "block"
-				filteredData = Object.keys(fullData).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
-					.reduce((cur, key) => {
-						cur.push(fullData[key])
-						return cur
-					}, []);
-				chart1 = new Chart(chart, {
-					type: "bar",
-					data: {
-						labels: filteredData.map(d => d.name),
-						datasets: colls.filter(c => c != "NEME_SEX" && getLabel(c)).map(c => {
-							return {
-								label: getLabel(c) || "Ismeretlen",
-								data: filteredData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
-								hidden: !settings.includes(c)
-							}
-						})
-					},
-					options: {
-						plugins: {
-							legend: {
-								onClick: (evt, legendItem, legend) => {
-									const type = legend.chart.config.type;
-
-									if (type === 'pie' || type === 'doughnut') {
-										pieDoughnutLegendClickHandler(evt, legendItem, legend)
-									} else {
-										defaultLegendClickHandler(evt, legendItem, legend);
-									}
-									// publishDatatable1(fullData, colls)
-									// publishDatatable2(fullData, colls)
-
-
-								}
-							},
-						}
-					}
-				})
-
-		}
+	
 
 	</script>
 
