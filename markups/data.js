@@ -31,7 +31,8 @@ function markupData (data, type, row, settings) {
 		
 		var proptional = {};
 			(["2001","2011","2022"]).forEach(year => {
-				proptional[year] = data[year] /  row[settings['inProprotionTo']][year] * 100;
+				if(!data[year]) proptional[year] = data[year] /  row[settings['inProprotionTo']][year] * 100;
+				else proptional[year] = 0;
 			});
 			
 		var diff = (proptional[2022] - proptional[2001]) ;
