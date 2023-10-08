@@ -22,7 +22,7 @@ if( ! $("#container_datatable").length ) {
 }
 
 
-function publishDatatable(data, headers) {
+function publishDatatable(data, settings) {
 
 			document.getElementById("container_datatable").style.display = "block";
 				
@@ -30,6 +30,8 @@ function publishDatatable(data, headers) {
 				datatable1.destroy()
 				$('#datatable').html('')
 			}
+			
+			
 			
 			datatable1 = $('#datatable').DataTable(
 				{
@@ -51,12 +53,15 @@ function publishDatatable(data, headers) {
 						data: 'diocese',
 						title: 'Egyházmegye',
 					},
-					...headers.filter(c => getLabel(c) && settings.includes(c)).map(c => {
+					...settings.map(c => {						
 						return {
-							data: c,
-							title: getLabel(c),
+							data: c['data'],
+							title: getLabel(c['data']),
 							render: function (data, type, row) {
-								return markupData(data, type, row)
+								 var markup = c['markup'];
+								 markup = markup.charAt(0).toUpperCase() + markup.slice(1);
+								 markup = "markup" + markup;
+								 return eval ( markup + "(data, type, row)");
 							}
 						}
 					})]

@@ -1,12 +1,18 @@
 [
     "NEME_SEX",
-	"RE_C",
+	{
+		"data": "RE_C",
+		"inProprotionTo" : "NEME_SEX"
+	},
     "RE_RC",
-    "RE_GC",
+    {
+		"data" : "RE_GC"
+	},
     "RE_OCD",
     "RE_NOT",
     "RE_NA",
     "DIV_DISREP",
+	"DIV_DISREP:RE_C",
     "MAR_REP",
     "Y_GE65",
     "Y_LT15",

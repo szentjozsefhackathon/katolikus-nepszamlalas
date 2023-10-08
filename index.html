@@ -280,13 +280,32 @@
 						cur.push(fullData[key])
 						return cur
 					}, []);
-										
+
+			var unnfoldedSettings = unnfoldSettings(settings);
+															
 			for ( var i = 0; i< sections.length; i++) {			
-				eval(sections[i] + "(filteredData, colls)");  
+				eval(sections[i] + "(filteredData, unnfoldedSettings)");  
 			}
 						
 		}
 
+		function unnfoldSettings(settings) {
+			
+			var unfoldedSettings = [];
+			for (const [key, value] of Object.entries(settings)) {
+				var item = {};
+				const defaultMarkup = "data";
+				if( typeof value !== 'object') {
+					item['data'] = value;
+					item['markup'] = defaultMarkup;
+				} else {
+					item = value;
+					if(!item['markup']) item['markup'] = defaultMarkup;
+				}
+				unfoldedSettings.push(item);
+			}
+			return unfoldedSettings;
+		}
 
 		async function loadFullData() {
 			await $.getJSON("fullData.json", function (data) {

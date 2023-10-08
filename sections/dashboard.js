@@ -17,7 +17,7 @@ if( ! $("#container_dashboard").length ) {
 }
 		
 
-function publishDashboard (filteredData, colls) {
+function publishDashboard (filteredData, settings) {
 	
 	document.getElementById("container_dashboard").style.display = "block";
 	$('#dashboard .content').html('')
@@ -34,8 +34,6 @@ function publishDashboard (filteredData, colls) {
 	}
 	
 	
-	var cards = colls.filter(c => getLabel(c) && settings.includes(c));
-
 	var osmid = $("#dashboard_select option:selected" )[0].value;
 	
 	var id;
@@ -56,14 +54,19 @@ function publishDashboard (filteredData, colls) {
 	  </div>
 	</div>`);
 	
-	for ( var i = 0; i < cards.length; i++) {
+	for (const [key, value] of Object.entries(settings)) {
+		 
+		 var markup = "markup" + value['markup'].charAt(0).toUpperCase() + value['markup'].slice(1);			
+		markup = eval ( markup + "( data['data'][value['data']], false, data )");
+	
 		$("#dashboard .content").append(` <div class="card float-start" style="width: 18rem;">
 		  <div class="card-body">
-			<h5 class="card-title">` + getLabel(cards[i]) + `</h5>
-			<h6 class="card-subtitle mb-2 text-muted">` + cards[i] + `</h6>
-			` + markupData (data['data'][cards[i]], false , data ) + `
+			<h5 class="card-title">` + getLabel(value['data']) + `</h5>
+			<h6 class="card-subtitle mb-2 text-muted">` + value['data'] + `</h6>
+			` + markup + `
 		  </div>
 		</div>`);
+		
 	}
 	
 }

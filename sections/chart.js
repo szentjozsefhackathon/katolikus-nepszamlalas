@@ -14,7 +14,7 @@ if( ! $("#container_chart").length ) {
 		);
 }
 
-function publishChart(filteredData, colls) {
+function publishChart(filteredData, settings) {
 		var chart = document.getElementById('chart');
 		const defaultLegendClickHandler = Chart.defaults.plugins.legend.onClick;
 			const pieDoughnutLegendClickHandler = Chart.controllers.doughnut.overrides.plugins.legend.onClick;
@@ -24,10 +24,10 @@ function publishChart(filteredData, colls) {
 				type: "bar",
 				data: {
 					labels: filteredData.map(d => d.name),
-					datasets: colls.filter(c => c != "NEME_SEX" && getLabel(c)).map(c => {
+					datasets: settings.map(c => {
 						return {
-							label: getLabel(c) || "Ismeretlen",
-							data: filteredData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
+							label: getLabel(c['data']) || c['data'],
+							data: filteredData.map(d => (d.data[c['data']]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
 							hidden: !settings.includes(c)
 						}
 					})
