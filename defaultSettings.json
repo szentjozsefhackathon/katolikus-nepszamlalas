@@ -1,20 +1,24 @@
 [
-    "NEME_SEX",
-	{
-		"data": "RE_C",
-		"inProprotionTo" : "NEME_SEX"
-	},
-    "RE_RC",
-    {
-		"data" : "RE_GC"
-	},
-    "RE_OCD",
-    "RE_NOT",
-    "RE_NA",
-    "DIV_DISREP",
-	"DIV_DISREP:RE_C",
-    "MAR_REP",
-    "Y_GE65",
-    "Y_LT15",
-    "Y15-64"
+  "NEME_SEX",
+  {
+    "data": "RE_C"
+  },
+  {
+    "data": "RE_C",
+    "inProprotionTo": "NEME_SEX",
+	"markup": "simpleData"	
+  },
+  "RE_NA",
+  {
+	"data": "DIV_DISREP",
+	"inProprotionTo": "NEME_SEX"
+  },
+  {
+	"data": "DIV_DISREP:RE_C",
+	"inProprotionTo": "RE_C"
+  },
+  "MAR_REP",
+  "Y_GE65",
+  "Y_LT15",
+  "Y15-64"
 ]

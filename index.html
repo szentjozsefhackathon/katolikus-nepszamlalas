@@ -154,7 +154,7 @@
 
 		<center>
 			<h3>Adatok, kimutatások, elemzések:</h3>
-			<div class="alert alert-danger">Fejlesztés folyamatban...</div>
+			<div class="alert alert-info">Rengeteg különféle oszlopot és arányosítási adatot lekérdezni a <a href="#config">Beállítások</a> résznél kézzel írt JSON formátummal.</div>
 		</center>
 		
 		<div id="sections">
@@ -224,10 +224,13 @@
 			$("#config_colls div.colls").html( function() {
 				colls.sort();
 				var ret = [];
+				var ret2 = [];
 				for ( var i = 0; i < colls.length; i++) {
 					ret.push('<span title="' + getLabel(colls[i]) + '">' + colls[i] + '</span>');
+					ret2.push(colls[i] + " = " + getLabel(colls[i]));
 				}				
-				return ret.join(", ");
+				return ret2.join("<br/>");
+				//return ret.join(", ");
 				});
 			// A beállítások textarea átírása után frissítjük a megjelenítéset
 			$("#config_button").click(function(){

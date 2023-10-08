@@ -55,14 +55,21 @@ function publishDashboard (filteredData, settings) {
 	</div>`);
 	
 	for (const [key, value] of Object.entries(settings)) {
-		 
-		 var markup = "markup" + value['markup'].charAt(0).toUpperCase() + value['markup'].slice(1);			
-		markup = eval ( markup + "( data['data'][value['data']], false, data )");
+		
+		
+		var markup = "markup" + value['markup'].charAt(0).toUpperCase() + value['markup'].slice(1);			
+		markup = eval ( markup + "( data['data'][value['data']], false, data['data'], value )");
 	
+		var subtitle = "";
+		if(value['inProprotionTo']) subtitle =`
+			<h6 class="card-subtitle mb-2 text-muted" title="${subtitle}">
+				Arányosítva: ${getLabel(value['inProprotionTo'])}</h6>`;
+		
+		
 		$("#dashboard .content").append(` <div class="card float-start" style="width: 18rem;">
 		  <div class="card-body">
-			<h5 class="card-title">` + getLabel(value['data']) + `</h5>
-			<h6 class="card-subtitle mb-2 text-muted">` + value['data'] + `</h6>
+			<h5 class="card-title" title="` + value['data'] + `">` + getLabel(value['data']) + `</h5>
+			${subtitle}
 			` + markup + `
 		  </div>
 		</div>`);

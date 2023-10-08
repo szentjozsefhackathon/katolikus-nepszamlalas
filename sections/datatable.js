@@ -53,15 +53,24 @@ function publishDatatable(data, settings) {
 						data: 'diocese',
 						title: 'Egyházmegye',
 					},
-					...settings.map(c => {						
+					...settings.map(c => {	
+														
+						if(c['inProprotionTo']) {
+							var title = `<span title="${c['data']}">${getLabel(c['data'])}</span>
+								<br/><small>Arányosítva: <span title="${c['inProprotionTo']}">${getLabel(c['inProprotionTo'])}</span></small>`;
+							
+						} else { 
+							var title =  "<span title='" + c['data'] + "'>" + getLabel(c['data']) + "</span>";
+						}
+					
 						return {
 							data: c['data'],
-							title: getLabel(c['data']),
+							title: title,							
 							render: function (data, type, row) {
 								 var markup = c['markup'];
 								 markup = markup.charAt(0).toUpperCase() + markup.slice(1);
 								 markup = "markup" + markup;
-								 return eval ( markup + "(data, type, row)");
+								 return eval ( markup + "(data, type, row, c)");
 							}
 						}
 					})]
