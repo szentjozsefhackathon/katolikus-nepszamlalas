@@ -234,7 +234,7 @@
 	<script src="sections/AreaSection.js"></script>
 
 	<script>
-		var defaultShow = {};
+		var settings = {};
 		const c1 = document.getElementById('c1');
 		var chart1 = null
 		var datatable1;
@@ -247,14 +247,16 @@
 		$(document).ready(async function () {
 
 			$("#content").html("Adatok begyűjtése");
-			await loadFullData();
+			
+			await loadFullData(); // A teljes adatsor betöltése, amit korábban a prepare.py hozott létre
 			console.log(fullData);
-			await readDictionary()
-			await loadShow()
+			await readDictionary() // A teljes KHS szótár, hogy melyik mező/dimenzió mit jelent
+			await loadSettings() // Alapértelmezett mezők/dimenziók
 
-			publishCheckboxes(fullData);
+			publishCheckboxes(fullData); //Az egyházmegye választó szűrő betöltése
 
-			publishAll();		
+			publishAll(); // A nagy táblázatok és csartok betöltése. Minden beállítás módosításkor újrahívjuk ezt.
+			
 			areasection("relation-5635587");
 			$("#areaSection .select").on("change", function () {
 				areasection(this.value);
@@ -266,6 +268,8 @@
 			}
 			
 			
+			// A "Beállítások" részhez kellenek a következő részek
+			// A lehetséges mezők/dimenziók kilistázása
 			$("#config_colls div.colls").html( function() {
 				colls.sort();
 				var ret = [];
@@ -274,13 +278,16 @@
 				}				
 				return ret.join(", ");
 				});
+			// A beállítások textarea átírása után frissítjük a megjelenítéset
 			$("#config_button").click(function(){
-				defaultShow = jQuery.parseJSON($("#config_textarea").val());
+				settings = jQuery.parseJSON($("#config_textarea").val());
 				publishAll();
+				// TODO: valami visszajelző <div class="alert-success"> ami aztán eltűnik
 			});
 
 		});
 
+		// Egyházmegye (area) választó izé.
 		function publishCheckboxes(data) {
 			document.getElementById("cb_dioceses").style.display = "block";
 			$.each(data, function (key, value) {
@@ -539,9 +546,9 @@
 
 		
 
-		async function loadShow() {
-			await $.getJSON("show.json", function (data) {
-				defaultShow = data;
+		async function loadSettings() {
+			await $.getJSON("defaultSettings.json", function (data) {
+				settings = data;
 				$("#config_textarea").html(JSON.stringify(data, null, 2));
 				
 			})
@@ -570,7 +577,7 @@
 							return {
 								label: getLabel(c) || "Ismeretlen",
 								data: filteredData.map(d => (d.data[c]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
-								hidden: !defaultShow.includes(c)
+								hidden: !settings.includes(c)
 							}
 						})
 					},
