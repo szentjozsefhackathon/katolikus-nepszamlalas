@@ -1,4 +1,6 @@
 function markupSimpleData (data, type, row, settings) {
+
+	if(!data) return '<span class="alert alert-danger">' + settings['data'] + ' is missing!</span>';
 								
 	// A dataTable sorrendiségéhez szükséges. Nem lehetne innen kiszervezni?
 	if (type == "sort" || type == 'type') {

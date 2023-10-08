@@ -14,7 +14,7 @@
 	"inProprotionTo": "NEME_SEX"
   },
   {
-	"data": "DIV_DISREP:RE_C",
+	"data": "RE_C:DIV_DISREP",
 	"inProprotionTo": "RE_C"
   },
   "MAR_REP",

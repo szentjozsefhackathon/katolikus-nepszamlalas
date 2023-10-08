@@ -25,6 +25,24 @@ function publishChart(filteredData, settings) {
 				data: {
 					labels: filteredData.map(d => d.name),
 					datasets: settings.map(c => {
+						var istrue = false;
+						for(i=1;i<colls.length;i++) {
+							if(colls[i] == c["data"]) {
+								istrue = true;
+								break;
+							}
+						}
+						
+						
+						if(!istrue ) {
+								return {
+									label: c['data'],
+									hidden: true,
+									data: []
+								}
+						}
+						
+						
 						return {
 							label: getLabel(c['data']) || c['data'],
 							data: filteredData.map(d => (d.data[c['data']]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),

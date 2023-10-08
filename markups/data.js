@@ -1,7 +1,9 @@
 function markupData (data, type, row, settings) {
 	
+	if(!data) return '<span class="alert alert-danger">' + settings['data'] + ' is missing!</span>';
+	
 	// A dataTable sorrendiségéhez szükséges. Nem lehetne innen kiszervezni?
-	if (type == "sort" || type == 'type') {
+	if (type == "sort" || type == 'type') {		
 		switch (document.getElementById("selectOrder1").value) {
 			case "2022data":
 				return data["2022"]
@@ -30,10 +32,12 @@ function markupData (data, type, row, settings) {
 		}
 		
 		var proptional = {};
-			(["2001","2011","2022"]).forEach(year => {
-				if(!data[year]) proptional[year] = data[year] /  row[settings['inProprotionTo']][year] * 100;
-				else proptional[year] = 0;
-			});
+			(["2001","2011","2022"]).forEach(year => {				
+				if(data) proptional[year] = data[year] /  row[settings['inProprotionTo']][year] * 100;
+				else {
+					return "hibás adat";
+				}
+			});			
 			
 		var diff = (proptional[2022] - proptional[2001]) ;
 		var diff1 = (proptional[2011] - proptional[2001]);
