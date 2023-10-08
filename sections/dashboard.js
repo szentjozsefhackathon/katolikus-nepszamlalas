@@ -1,4 +1,21 @@
+sections.push('publishDashboard');
 
+if( ! $("#container_dashboard").length ) {
+	$("#sections").append(`<div id="container_dashboard" class="float-end" style="display: none">
+			<h2 class="chart-title">Egyházmegyénkénti Dashboard</h2>
+			
+			<div id="dashboard"  class="">
+				<div class="description"></div>
+				<div class="settings"></div>
+				<div class="content card-columns">
+					<i>Content is coming...</i>
+				</div>
+				<div class=""></div>			
+			</div>
+		<div class="b-example-divider float-end"></div>`
+		);
+}
+		
 
 function publishDashboard (filteredData, colls) {
 	

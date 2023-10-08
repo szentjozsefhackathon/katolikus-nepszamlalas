@@ -1,4 +1,18 @@
+sections.push('publishChart');
+
 var chart1;
+
+if( ! $("#container_chart").length ) {
+	$("#sections").append(`<div class="container float-end" id="container_chart" style="display: none">
+			<h2 class="chart-title">KSH adatok vizualizálva</h2>
+			<p>A diagram a 2022-es százalékos adatokból készült. Amennyiben a jelmagyarázatnál a címkékre ráklikkel,
+				akkor
+				változtathatja az oszlopok láthatóságát és ez kihatással lesz a táblázatokra is.</p>
+			<canvas id="chart"></canvas>
+		</div>
+		<div class="b-example-divider float-end"></div>`
+		);
+}
 
 function publishChart(filteredData, colls) {
 		var chart = document.getElementById('chart');

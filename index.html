@@ -26,7 +26,7 @@
 </head>
 
 <body>
-
+	<script>var sections = [];</script>
 	<div class="container">
 		<div class="px-4 py-5 my-5 text-center">
 			<h1 class="display-5 fw-bold text-body-emphasis">A népszámlálás és a<br /> katolikus egyházmegyék</h1>
@@ -157,62 +157,25 @@
 			<div class="alert alert-danger">Fejlesztés folyamatban...</div>
 		</center>
 		
+		<div id="sections">
 		
-		<div id="container_dashboard" style="display: none">
-			<h2 class="chart-title">Egyházmegyénkénti Dashboard</h2>
-			
-			<div id="dashboard"  class="">
-				<div class="description"></div>
-				<div class="settings"></div>
-				<div class="content card-columns">
-					<i>Content is coming...</i>
-				</div>
-				<div class=""></div>			
-			</div>
-			<script src="sections/dashboard.js"></script>		
+		<script src="sections/datatable.js"></script>
+		<script src="sections/dashboard.js"></script>
+		<script src="sections/chart.js"></script>
+		
 		</div>
-		<div class="b-example-divider" "  class="float-end"></div>
+
 		
-		
-		
-		<div class="container">
+	</div>
+	
+	
+	<div class="container">
 			<div id="cb_dioceses" style="display: none;">
 				<h2>Egyházmegyék kiválasztása</h2>
 			</div>
 			<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
 		</div>
-		<div class="b-example-divider"></div>
-				
-		<div class="container" id="container_chart" style="display: none">
-			<h2 class="chart-title">KSH adatok vizualizálva</h2>
-			<p>A diagram a 2022-es százalékos adatokból készült. Amennyiben a jelmagyarázatnál a címkékre ráklikkel,
-				akkor
-				változtathatja az oszlopok láthatóságát és ez kihatással lesz a táblázatokra is.</p>
-			<canvas id="chart"></canvas>
-			<script src="sections/chart.js"></script>
-		</div>
-		<div class="b-example-divider"></div>
-
-
-		<div id="container_datatable" style="display: none">
-			<h2>KSH adatok kategóriánként</h2>
-			<label for="selectOrder1">Rendezés alapja</label>
-			<select class="form-control" id="selectOrder1" onchange="reRender()">
-				<option value="2022data">2022-es KSH adatok</option>
-				<option value="2011data">2011-es KSH adatok</option>
-				<option value="2001data">2001-es KSH adatok</option>
-				<option value="diff20012011">Változás 2001 és 2011 között</option>
-				<option value="diff20112022">Változás 2011 és 2022 között</option>
-				<option value="diff20012022">Változás 2001 és 2022 között</option>
-			</select>
-			<table id="datatable"></table>
-			<script src="sections/datatable.js"></script>
-		</div>
-		<div class="b-example-divider"></div>
-		
-
-		
-	</div>
+	<div class="b-example-divider"></div>
 	
 	<div class="container" id="config">
 		<div class="px-4 py-5 my-5 text-center">	
@@ -247,11 +210,9 @@
 		var colls = [];  // A minden adatban elérhető mezők/dimenziók
 		
 		$(document).ready(async function () {
-
-			$("#content").html("Adatok begyűjtése");
 			
 			await loadSettings() // Alapértelmezett mezők/dimenziók
-			await readDictionary() // A teljes KHS szótár, hogy melyik mező/dimenzió mit jelent
+			await loadDictionary() // A teljes KHS szótár, hogy melyik mező/dimenzió mit jelent
 			await loadFullData(); // A teljes adatsor betöltése, amit korábban a prepare.py hozott létre
 						
 			publishCheckboxes(fullData); //Az egyházmegye választó szűrő betöltése
@@ -319,10 +280,11 @@
 						cur.push(fullData[key])
 						return cur
 					}, []);
-								
-			publishDatatable(filteredData, colls)
-			publishChart(filteredData, colls)
-			publishDashboard(filteredData, colls)			
+										
+			for ( var i = 0; i< sections.length; i++) {			
+				eval(sections[i] + "(filteredData, colls)");  
+			}
+						
 		}
 
 
@@ -344,7 +306,7 @@
 				
 			})
 		}
-		async function readDictionary() {
+		async function loadDictionary() {
 			await $.getJSON("KSH DataSources/dictionary.json", function (data) {
 				dictionary = data
 			});
