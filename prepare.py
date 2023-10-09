@@ -10,7 +10,6 @@ for data in initData:
     areas[data['osmid']] = data
 
 
-
 #
 # Collect OSM data
 # by settlements
@@ -160,7 +159,30 @@ for ksh_file in ksh_files:
                 areas[area]['data'][dataKey][kshitem['TIME_PERIOD']] += int(int(kshitem['OBS_VALUE']) * ( perc / 100 ))
 
 print('Done', flush=True)
-            
+ 
+
+#
+# Collect MKPK Data by Years
+print('Collecting MKPK data by Years', end=' ', flush=True)
+#
+mkpk_files = glob.glob('MKPK DataSources/*.json')
+mkpk = {}
+for mkpk_file in mkpk_files:
+    print('.', end=' ', flush=True)
+    mkpkjson = json.load(open(mkpk_file, 'r', encoding="utf-8"))
+
+    for key, area in areas.items():
+        if not 'data' in areas[key]:
+                    areas[key]['data'] = {}
+        for datatype, data in mkpkjson[area['name']].items():
+            if not datatype in areas[key]['data']:
+                    areas[key]['data'][datatype] = {}
+            areas[key]['data'][datatype][2022] = data
+
+print('Done', flush=True)
+
+
+
 #
 # Calculations
 print('Makeing some calculated data', end=' ', flush=True)

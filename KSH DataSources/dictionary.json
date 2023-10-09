@@ -56,5 +56,15 @@
     "Y70-79": "70-79 éves",
     "Y80-89": "80-89 éves",
     "Y_GE90": "90 éves és idősebb",
-    "Y_LT10": "10 évesnél fiatalabb"
+    "Y_LT10": "10 évesnél fiatalabb",
+    "MKPK_AREA" : "Terület (MKPK)",
+    "MKPK_BISHOP": "Aktív püspökök (MKPK)",
+    "MKPK_C": "Katolikusok (MKPK)",
+    "MKPK_DISTRICT" : "Espereskerületek (MKPK)",
+    "MKPK_GC": "Görögkatolikusok (MKPK)",
+    "MKPK_PARISH": "Plébániák (MKPK)",
+    "MKPK_POP": "Lélekszám (MKPK)",
+    "MKPK_PRIEST_D": "Egyházmegye papjai (MKPK)",
+    "MKPK_PRIEST_R": "Szerzetes papok (MKPK)",
+    "MKPK_RECTORY": "Templomigazgatóságok (MKPK)"
 }

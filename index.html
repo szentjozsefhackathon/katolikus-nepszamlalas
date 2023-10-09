@@ -268,7 +268,7 @@
 				if (dictionary[col[i]]) {
 					label.push(dictionary[col[i]].name || dictionary[col[i]])
 				}
-				else return false
+				else return col
 			}
 			return label.join(" - ")
 		}

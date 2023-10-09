@@ -41,11 +41,14 @@ function publishChart(filteredData, settings) {
 									data: []
 								}
 						}
-						
+												
 						
 						return {
 							label: getLabel(c['data']) || c['data'],
-							data: filteredData.map(d => (d.data[c['data']]["2022"] / d.data["NEME_SEX"]["2022"]) * 100),
+							data: filteredData.map(function(item) { 
+							
+							return item.data[c['data']] ? (item.data[c['data']]["2022"] / item.data["NEME_SEX"]["2022"]) * 100 : "false"
+						}),
 							hidden: !settings.includes(c)
 						}
 					})

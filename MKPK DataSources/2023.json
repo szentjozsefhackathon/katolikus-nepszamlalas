@@ -1,0 +1,182 @@
+{
+    "Esztergom-Budapesti főegyházmegye":
+        {        
+            "MKPK_AREA": 1543,
+            "MKPK_POP": 1800000,
+            "MKPK_C": 900000,
+            "MKPK_PARISH": 158,
+            "MKPK_RECTORY": 22,
+            "MKPK_PRIEST_D": 184,
+            "MKPK_PRIEST_R": 129,
+            "MKPK_BISHOP" : 3
+        },
+        "Győri egyházmegye":
+        {        
+            "MKPK_AREA": 5005,
+            "MKPK_POP": 570299,
+            "MKPK_C": 341230,
+            "MKPK_PARISH": 258,
+            "MKPK_DISTRICT": 8,
+            "MKPK_RECTORY": 6,
+            "MKPK_PRIEST_D": 102,
+            "MKPK_PRIEST_R": 29,
+            "MKPK_BISHOP" : 1
+        },
+        "Székesfehérvári egyházmegye":
+        {        
+            "MKPK_AREA": 5170,
+            "MKPK_POP": 800000,
+            "MKPK_C": 402000,
+            "MKPK_DISTRICT" : 5,
+            "MKPK_PARISH": 149,
+            "MKPK_RECTORY": 4,
+            "MKPK_PRIEST_D": 78,
+            "MKPK_PRIEST_R": 9,
+            "MKPK_BISHOP" : 1
+        },
+        "Kalocsa-Kecskeméti főegyházmegye":
+        {        
+            "MKPK_AREA": 8372,
+            "MKPK_POP": 514630,
+            "MKPK_C": 354014,
+            "MKPK_DISTRICT" : 10,
+            "MKPK_PARISH": 127,
+            "MKPK_RECTORY": 6,
+            "MKPK_PRIEST_D": 106,
+            "MKPK_PRIEST_R": 11,
+            "MKPK_BISHOP" : 1
+        },
+        "Pécsi egyházmegye":
+        {        
+            "MKPK_AREA": 8196,
+            "MKPK_POP": 614385,
+            "MKPK_C": 387063,
+            "MKPK_PARISH": 65,
+            "MKPK_RECTORY": 4,
+            "MKPK_PRIEST_D": 84,
+            "MKPK_PRIEST_R": 7,
+            "MKPK_BISHOP" : 1
+        },
+        "Szeged-Csanádi egyházmegye":
+        {        
+            "MKPK_AREA": 10851,
+            "MKPK_POP": 821673,
+            "MKPK_C": 239989,
+            "MKPK_PARISH": 111,
+            "MKPK_RECTORY": 4,
+            "MKPK_PRIEST_D": 76,
+            "MKPK_PRIEST_R": 14,
+            "MKPK_BISHOP" : 1
+        },
+        "Egri főegyházmegye":
+        {        
+            "MKPK_AREA": 11500,
+            "MKPK_POP": 1264000,
+            "MKPK_C": 692000,
+            "MKPK_DISTRICT" : 19,
+            "MKPK_PARISH": 310,
+            "MKPK_RECTORY": 3,
+            "MKPK_PRIEST_D": 170,
+            "MKPK_PRIEST_R": 22,
+            "MKPK_BISHOP" : 1
+        },
+        "Váci egyházmegye":
+        {        
+            "MKPK_AREA": 8805,
+            "MKPK_POP": 1197000,
+            "MKPK_C": 640000,
+            "MKPK_PARISH": 220,
+            "MKPK_RECTORY": 5,
+            "MKPK_PRIEST_D": 145,
+            "MKPK_PRIEST_R": 36,
+            "MKPK_BISHOP" : 2
+        },
+        "Debrecen-Nyíregyházi egyházmegye":
+        {        
+            "MKPK_AREA": 11300,
+            "MKPK_POP": 1132481,
+            "MKPK_C": 162363,
+            "MKPK_DISTRICT" : 7,
+            "MKPK_PARISH": 56,
+            "MKPK_PRIEST_D": 77,
+            "MKPK_PRIEST_R": 5,
+            "MKPK_BISHOP" : 1
+        },
+        "Veszprémi főegyházmegye":
+        {        
+            "MKPK_AREA": 6920,
+            "MKPK_POP": 433742,
+            "MKPK_C": 268497,
+            "MKPK_DISTRICT" : 7,
+            "MKPK_PARISH": 179,
+            "MKPK_RECTORY": 3,
+            "MKPK_PRIEST_D": 120,
+            "MKPK_PRIEST_R": 17,
+            "MKPK_BISHOP" : 1
+        },
+        "Kaposvári egyházmegye":
+        {        
+            "MKPK_AREA": 6764,
+            "MKPK_POP": 387927,
+            "MKPK_C": 212783,
+            "MKPK_DISTRICT" : 5,
+            "MKPK_PARISH": 103,
+            "MKPK_PRIEST_D": 93,
+            "MKPK_PRIEST_R": 3,
+            "MKPK_BISHOP" : 1
+        },
+        "Szombathelyi egyházmegye":
+        {        
+            "MKPK_AREA": 4660,
+            "MKPK_POP": 366550,
+            "MKPK_C": 259666,
+            "MKPK_PARISH": 71,
+            "MKPK_RECTORY": 3,
+            "MKPK_PRIEST_D": 98,
+            "MKPK_PRIEST_R": 24,
+            "MKPK_BISHOP" : 2
+        },
+        "Hajdúdorogi főegyházmegye":
+        {        
+            "MKPK_AREA": 76210,
+            "MKPK_POP": 8290013,
+            "MKPK_GC": 150000,
+            "MKPK_DISTRICT" : 7,
+            "MKPK_PARISH": 60,
+            "MKPK_RECTORY": 1,
+            "MKPK_PRIEST_D": 80,
+            "MKPK_PRIEST_R": 3,
+            "MKPK_BISHOP" : 1
+        },
+        "Miskolci egyházmegye":
+        {        
+            "MKPK_AREA": 10887,
+            "MKPK_POP": 968000,
+            "MKPK_GC": 45000,
+            "MKPK_DISTRICT" : 6,
+            "MKPK_PARISH": 65,
+            "MKPK_PRIEST_D": 79,
+            "MKPK_BISHOP" : 1
+        },
+        "Nyíregyházi egyházmegye":
+        {        
+            "MKPK_AREA": 5936,
+            "MKPK_POP": 559272,
+            "MKPK_GC": 102484,
+            "MKPK_DISTRICT" : 9,
+            "MKPK_PARISH": 86,
+            "MKPK_PRIEST_D": 111,
+            "MKPK_PRIEST_R": 6,
+            "MKPK_BISHOP" : 1
+        },
+        "Pannonhalmi területi főapátság":
+        {        
+            "MKPK_AREA": 356,
+            "MKPK_POP": 26375,
+            "MKPK_C": 21929,
+            "MKPK_PARISH": 13,
+            "MKPK_RECTORY": 2,
+            "MKPK_PRIEST_R": 31,
+            "MKPK_BISHOP" : 1
+        }
+}

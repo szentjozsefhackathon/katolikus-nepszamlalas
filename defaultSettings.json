@@ -4,9 +4,13 @@
     "data": "RE_C"
   },
   {
+    "data": "MKPK_C",
+    "markup": "simpleData" 
+  },
+  {
     "data": "RE_C",
     "inProprotionTo": "NEME_SEX",
-	"markup": "simpleData"	
+	  "markup": "simpleData"	
   },
   "RE_NA",
   {
