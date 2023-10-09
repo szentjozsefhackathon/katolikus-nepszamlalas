@@ -161,6 +161,11 @@ for ksh_file in ksh_files:
 print('Done', flush=True)
  
 
+# egyszázalélk
+# 2011: https://nav.gov.hu/ado/szja1_1/kimutatasok_elszamolasok/egyhazak_kiemelt/kozl_szja11_110607
+# 2022: https://nav.gov.hu/ado/szja1_1/kimutatasok_elszamolasok/technikai-szammal-rendelkezok/felajanlasban-reszesultek-2022
+# 2001: https://web.archive.org/web/20021210105632/http://www.apeh.hu/kozlemen/egyh1105.htm
+
 #
 # Collect MKPK Data by Years
 print('Collecting MKPK data by Years', end=' ', flush=True)
