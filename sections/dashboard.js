@@ -23,14 +23,14 @@ function publishDashboard (filteredData, settings) {
 	$('#dashboard .content').html('')
 		
 	if(!$('#dashboard .select').length) { 
-		var markup = "<select id='dashboard_select' class='select' onchange='reRender()'>";		
+		var _markup = "<select id='dashboard_select' class='select' onchange='reRender()'>";		
 		for (let i = 0; i < Object.values(filteredData).length; i++) {
 			
-			markup += "<option value=\"" + filteredData[Object.keys(filteredData)[i]]['osmid'] + "\">" + filteredData[Object.keys(filteredData)[i]]['name'] + "</option>"
+			_markup += "<option value=\"" + filteredData[Object.keys(filteredData)[i]]['osmid'] + "\">" + filteredData[Object.keys(filteredData)[i]]['name'] + "</option>"
 		}
-		markup += "</select>";
+		_markup += "</select>";
 
-		$("#dashboard .settings").html(markup);
+		$("#dashboard .settings").html(_markup);
 	}
 	
 	
@@ -49,20 +49,18 @@ function publishDashboard (filteredData, settings) {
 	$("#dashboard .content").append(` <div class="card" style="width: 18rem;">
 	  <div class="card-body">
 		<h5 class="card-title">` + data['name'] + `</h5>
-		<h6 class="card-subtitle mb-2 text-muted">Ez egy remek hely.</h6>
+		<h6 class="card-subtitle mb-2 text-_markupted">Ez egy remek hely.</h6>
 		<p class="card-text">Bármi összefoglaló leírás itten.</p>	
 	  </div>
 	</div>`);
 	
 	for (const [key, value] of Object.entries(settings)) {
 		
-		
-		var markup = "markup" + value['markup'].charAt(0).toUpperCase() + value['markup'].slice(1);			
-		markup = eval ( markup + "( data['data'][value['data']], false, data['data'], value )");
+		var _markup = markup(data['data'][value['data']], false, data['data'], value)
 	
 		var subtitle = "";
 		if(value['inProprotionTo']) subtitle =`
-			<h6 class="card-subtitle mb-2 text-muted" title="${subtitle}">
+			<h6 class="card-subtitle mb-2 text-_markupted" title="${subtitle}">
 				Arányosítva: ${getLabel(value['inProprotionTo'])}</h6>`;
 		
 		
@@ -70,7 +68,7 @@ function publishDashboard (filteredData, settings) {
 		  <div class="card-body">
 			<h5 class="card-title" title="` + value['data'] + `">` + getLabel(value['data']) + `</h5>
 			${subtitle}
-			` + markup + `
+			` + _markup + `
 		  </div>
 		</div>`);
 		
