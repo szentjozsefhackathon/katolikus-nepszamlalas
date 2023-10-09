@@ -34,7 +34,7 @@ jobs:
         with:
           python-version: '3.x'
       - name: install python modules
-        run: pip install pandas
+        run: pip install pandas openpyxl
       - name: Prepare data with python
         run: python prepare.py
         shell: sh        
