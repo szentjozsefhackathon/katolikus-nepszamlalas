@@ -33,7 +33,9 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-      - name: Prepare data with pythn
+      - name: install python modules
+        run: pip install pandas
+      - name: Prepare data with python
         run: python prepare.py
         shell: sh        
       - name: Setup Pages
