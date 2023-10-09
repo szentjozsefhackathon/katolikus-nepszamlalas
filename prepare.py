@@ -1,4 +1,5 @@
 import json, glob, re, sys
+import pandas as pd
 
 #
 # Load list of Areas aka Dioceses
@@ -189,25 +190,78 @@ def collectMKPK():
             for datatype, data in mkpkjson[area['name']].items():
                 if not datatype in areas[key]['data']:
                         areas[key]['data'][datatype] = {}
-                areas[key]['data'][datatype][2022] = data
+                areas[key]['data'][datatype]['2022'] = data
 
     print('Done', flush=True)
+
+
+def collectCatholicHierarchy():
+
+
+    df = pd.read_excel('CatholicHierarchy DataSources/areas.xlsx')
+    datatable = df.to_dict('index')
+    
+    
+    data = {}
+    for k, row in datatable.items():
+        if not row['Name'] in data:
+            data[row['Name']] = {}
+        for key, value in row.items():
+            if not key in ['Name','URL','Year','Source']:  
+                    
+                dict = {
+                    "Catholics" : "R_C",
+                    "Total Population": "TOTAL",
+                    "Percent Catholic": "R_CPERT",
+                    "Diocesan Priests": "PRIEST_D",
+                    "Religious Priests": "PRIEST_R",
+                    "Total Priests": "PRIEST",
+                    "Catholics Per Priest": "R_CPERP",
+                    "Permanent Deacons": "DEACON",
+                    "Male Religious": "MREL",
+                    "Female Religious": "FREL",
+                    "Parishes": "PARISH"
+                }
+                
+                key = "CH_" + dict[key]
+            
+                if not key in data[row['Name']]: 
+                    data[row['Name']][key] = {}
+                    
+                #Mivel nincs minden adatunk, ezért csalunk
+                if row['Year'] < 2005: year = 2001
+                elif row['Year'] < 2015: year = 2011
+                else: year = 2022
+                
+                #Egy-két mezőt számosítunk
+                if type(value) == str: value = float(value.replace(',', '').replace('%', ''))
+                if value != value : value = 'sd'
+                else:
+                    data[row['Name']][key][year] = value
+            
+    
+    for key, area in areas.items():
+        if area['name'] in data:
+            if not 'data' in area: areas[key]['data'] = {}
+            areas[key]['data'].update(data[area['name']])
+            
+    print('Done', flush=True)    
 
 collectKSHbySettlements()
 collectKSHbyCounties()
 collectMKPK()
-
+collectCatholicHierarchy()
 #
 # Calculations
 print('Makeing some calculated data', end=' ', flush=True)
 #
 for key, area in areas.items():
 
-    data = areas[key]['data']
-
     if not "data" in area:
         break
         
+    data = areas[key]['data']
+    
     if 'FY_LT15' in data and 'MY_LT15' in data:
         areas[key]['data']['Y_LT15'] = {}
         for year in ['2001', '2011', '2022']:
@@ -241,6 +295,18 @@ for key, area in areas.items():
         '2011': area['data']['RE_C']['2011'] - area['data']['RE_RC']['2011'] - area['data']['RE_GC']['2011'],
         '2022': area['data']['RE_C']['2022'] - area['data']['RE_RC']['2022'] - area['data']['RE_GC']['2022'],
     }
+
+    if 'MKPK_PRIEST_D' in data and 'MKPK_PRIEST_R' in data:
+        areas[key]['data']['MKPK_PRIEST'] = {}
+        for year in ['2001', '2011', '2022']:
+            tmp = 0
+            if year in data['MKPK_PRIEST_D']: tmp += int(data['MKPK_PRIEST_D'][year])
+            if year in data['MKPK_PRIEST_R']: tmp += int(data['MKPK_PRIEST_R'][year])
+            areas[key]['data']['MKPK_PRIEST'][year] = tmp
+        print('.', end=' ', flush=True)
+
+
+    
     print('.', end=' ', flush=True)    
     
 print('Done', flush=True)
