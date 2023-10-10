@@ -67,10 +67,7 @@ function publishDatatable(data, settings) {
 							data: c['data'],
 							title: title,							
 							render: function (data, type, row) {
-								 var markup = c['markup'];
-								 markup = markup.charAt(0).toUpperCase() + markup.slice(1);
-								 markup = "markup" + markup;
-								 return eval ( markup + "(data, type, row, c)");
+								return Markup.callMarkup(data, type, row, c)
 							}
 						}
 					})]
