@@ -5,12 +5,23 @@
   },
   {
     "data": "MKPK_C",
-    "markup": "simpleData" 
+	"inProprotionTo": "MKPK_POP",
+    "markup": "simpleData"
+  },
+  {
+    "data": "CH_R_C",
+	"inProprotionTo": "CH_TOTAL"
   },
   {
     "data": "RE_C",
     "inProprotionTo": "NEME_SEX",
 	  "markup": "simpleData"	
+  },
+  "CH_R_CPERP",
+  "CH_PRIEST",
+  {
+	"data": "MKPK_PRIEST",
+	"markup": "simpleData"	
   },
   "RE_NA",
   {

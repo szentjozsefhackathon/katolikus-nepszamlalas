@@ -66,5 +66,17 @@
     "MKPK_POP": "Lélekszám (MKPK)",
     "MKPK_PRIEST_D": "Egyházmegye papjai (MKPK)",
     "MKPK_PRIEST_R": "Szerzetes papok (MKPK)",
-    "MKPK_RECTORY": "Templomigazgatóságok (MKPK)"
+	"MKPK_PRIEST": "Papok összesen(MKPK) (származtatott)",
+    "MKPK_RECTORY": "Templomigazgatóságok (MKPK)",
+	"CH_R_C": "Katolikusok (CH)",
+    "CH_R_CPERP": "Egy papra jutó katoliksok (CH)" ,
+    "CH_PRIEST_D": "Egyházmegyés papok (CH)", 
+    "CH_MREL": "Női szerzetes (CH)",
+    "CH_FREL": "Férfi szerzetes (CH)",
+    "CH_PARISH": "Plébániák (CH)",
+    "CH_R_CPERT": "Katolikusok aránya (CH)",
+    "CH_DEACON": "Állandó diakónusok (CH)",
+    "CH_PRIEST_R": "Szerzetes papok (CH)",
+    "CH_TOTAL": "Lakosság (CH)",
+    "CH_PRIEST": "Papok összesen (CH)"
 }
