@@ -14,7 +14,7 @@ if( ! $("#container_datatable").length ) {
 				<option value="diff20112022">Változás 2011 és 2022 között</option>
 				<option value="diff20012022">Változás 2001 és 2022 között</option>
 			</select>
-			<table id="datatable"></table>
+			<table id="datatable" class="stripe row-border hover"></table>
 			
 		</div>
 		<div class="b-example-divider float-end"></div>`
