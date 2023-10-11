@@ -3,14 +3,15 @@ class ChartMarkup extends Markup {
         const type = this.settings["markup"].slice(0, -5)
         const random = Math.random()
 
-        // A dataTable sorrendiségéhez szükséges. Nem lehetne innen kiszervezni?
         if (this.type == "sort" || this.type == 'type') return 0
         const labels = JSON.stringify(this.settings.data.map(d => getLabel(d)))
-        const _datasets = JSON.stringify(["2001", "2011", "2022"].map(y => {
+        const years = this.settings["years"] || YEARS
+        const _datasets = JSON.stringify(YEARS.map(y => {
             return {
                 type,
                 label: y,
-                data: this.settings.data.map(d => this.row[d][y])
+                data: this.settings.data.map(d => this.row[d][y]),
+                hidden: !years.includes(y)
             }
         }))
         var chart = `<canvas id="chart${random}"></canvas>
@@ -24,7 +25,8 @@ class ChartMarkup extends Markup {
     options: {
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          display: false
         }
       }
     }
