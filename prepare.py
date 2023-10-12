@@ -187,10 +187,11 @@ def collectMKPK():
         for key, area in areas.items():
             if not 'data' in areas[key]:
                         areas[key]['data'] = {}
-            for datatype, data in mkpkjson[area['name']].items():
-                if not datatype in areas[key]['data']:
-                        areas[key]['data'][datatype] = {}
-                areas[key]['data'][datatype]['2022'] = data
+            if area['name'] in mkpkjson:
+                for datatype, data in mkpkjson[area['name']].items():
+                    if not datatype in areas[key]['data']:
+                            areas[key]['data'][datatype] = {}
+                    areas[key]['data'][datatype]['2022'] = data
 
     print('Done', flush=True)
 
