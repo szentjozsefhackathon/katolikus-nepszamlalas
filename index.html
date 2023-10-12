@@ -115,21 +115,27 @@
 							megváltozhatott. Mindenhol 2022-es adatokat figyelünk és 2001-es adatok esetén nem a 2001-es
 							populációs arányokat használjuk! Vigyázat! Nem vizsgáljuk, hogy nicsenek-e hibás átfedések,
 							ill. nem vizsgáljuk hogy az összeg mindenütt helyes-e. Az arányosítást jópár tizedesjegyig
-							számoljuk, de a KSH adatokat vármegyénként már egész számra kerekítjük.</p>						
+							számoljuk, de a KSH adatokat vármegyénként már egész számra kerekítjük.</p>
 						<h6>MKPK adatok:</h6>
-						<p>A Magyar Katolikus Püspöki Kar Titkársága megbízásából olykor megjelenik egy kiadvány 
-						  „A Katolikus Egyház - Magyarországon" címmel, amihez az adatokat az MKPK Sajtószolgálata gyűjti. 
-						  Arról nem tudunk részleteket, hogy hogyan szerzi be a Sajtószolgálat az adatokat.
-						  Adatbázisunkban a 2023-as kiadvány adatait használjuk 2022-es adatokként.</p>
+						<p>A Magyar Katolikus Püspöki Kar Titkársága megbízásából olykor megjelenik egy kiadvány
+							„A Katolikus Egyház - Magyarországon" címmel, amihez az adatokat az MKPK Sajtószolgálata
+							gyűjti.
+							Arról nem tudunk részleteket, hogy hogyan szerzi be a Sajtószolgálat az adatokat.
+							Adatbázisunkban a 2023-as kiadvány adatait használjuk 2022-es adatokként.</p>
 						<h6>CH azaz Catholic Hierarchy adatok:</h6>
-						<p>A Vatikánban minden évben megjelenik az Annuario Pontificio mely tartalmazza a világ valamennyi 
-						egyházmegyéjének fontosabb adatait. Ez a kiadvány sajnos nem érhető el digitálisan, de a <a 
-						href="https://www.catholic-hierarchy.org/">Catholic-Hierarchy.org</a> honlap az egyes egyházmegyék 
-						adatait főként az Annuario alapján mutatja meg. Ezért hát a Catholic-Hierarchy (CH) adatait használtuk
-						fel mi is.</p>
-						<p>Vigyázat! Sajnos a CH oldalán nem minden egyházmegyének van meg minden évre az összes adat, ezért
-						gyakran nem a 2001-es, 2011-es és 2022-es adatokat használjuk, hanem ami ezekhez legközelebb van! Tehát 
-						a CH_ adatok nem megbízhatóak és csak közelítőlegesek!</p>
+						<p>A Vatikánban minden évben megjelenik az Annuario Pontificio mely tartalmazza a világ
+							valamennyi
+							egyházmegyéjének fontosabb adatait. Ez a kiadvány sajnos nem érhető el digitálisan, de a <a
+								href="https://www.catholic-hierarchy.org/">Catholic-Hierarchy.org</a> honlap az egyes
+							egyházmegyék
+							adatait főként az Annuario alapján mutatja meg. Ezért hát a Catholic-Hierarchy (CH) adatait
+							használtuk
+							fel mi is.</p>
+						<p>Vigyázat! Sajnos a CH oldalán nem minden egyházmegyének van meg minden évre az összes adat,
+							ezért
+							gyakran nem a 2001-es, 2011-es és 2022-es adatokat használjuk, hanem ami ezekhez legközelebb
+							van! Tehát
+							a CH_ adatok nem megbízhatóak és csak közelítőlegesek!</p>
 						<h6>Tehát az adatok a lehetőségekhez képest igen pontosak, de fenntartásokkal kezelendőek.</h6>
 					</div>
 				</div>
@@ -168,41 +174,49 @@
 
 		<center>
 			<h3>Adatok, kimutatások, elemzések:</h3>
-			<div class="alert alert-info">Rengeteg különféle oszlopot és arányosítási adatot lekérdezni a <a href="#config">Beállítások</a> résznél kézzel írt JSON formátummal.</div>
+			<div class="alert alert-info">Rengeteg különféle oszlopot és arányosítási adatot lekérdezni a <a
+					href="#config">Beállítások</a> résznél kézzel írt JSON formátummal.</div>
 		</center>
-		
+
 		<div id="sections">
-		
-		<script src="sections/datatable.js"></script>
-		<script src="sections/dashboard.js"></script>
-		<script src="sections/chart.js"></script>
-		
+
+			<script src="sections/datatable.js"></script>
+			<script src="sections/dashboard.js"></script>
+			<script src="sections/chart.js"></script>
+
 		</div>
 
-		
+
 	</div>
-	
-	
+
+
 	<div class="container">
-			<div id="cb_dioceses" style="display: none;">
-				<h2>Egyházmegyék kiválasztása</h2>
-			</div>
-			<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
+		<div id="cb_dioceses" style="display: none;">
+			<h2>Egyházmegyék kiválasztása</h2>
 		</div>
+		<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
+	</div>
 	<div class="b-example-divider"></div>
-	
+
 	<div class="container" id="config">
-		<div class="px-4 py-5 my-5 text-center">	
+		<div class="px-4 py-5 my-5 text-center">
 			<h4>Beállítások</h4>
 			<p id="settings_url"></p>
-			<p>Az adatokat megjelenítő táblázatokban és más elemekben megjelenő információkat az alábbi JSON határozza meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON (szerű) fájl esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
-			<textarea id="config_textarea" cols="40" rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
-			<br/><br/>
-			<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a beállítások alapján</button>
-			
+			<p>Az adatokat megjelenítő táblázatokban és más elemekben megjelenő információkat az alábbi JSON határozza
+				meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON (szerű) fájl
+				esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
+			<textarea id="config_textarea" cols="40"
+				rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
+			<br /><br />
+			<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a beállítások
+				alapján</button>
+
 			<div id="config_colls">
-				<p>A következő dimenziók érhetőek el adatbázisunkban (a rövidítésre húzva az egeret megjelenik a teljes leírása a mezőnek): <span class="badge bg-primary" data-bs-toggle="collapse" href="#config_colls_details" role="button" aria-expanded="false" aria-controls="config_colls_details">Részletek</span></p>
-				<div id="config_colls_details" class="colls collapse"></div>			
+				<p>A következő dimenziók érhetőek el adatbázisunkban (a rövidítésre húzva az egeret megjelenik a teljes
+					leírása a mezőnek): <span class="badge bg-primary" data-bs-toggle="collapse"
+						href="#config_colls_details" role="button" aria-expanded="false"
+						aria-controls="config_colls_details">Részletek</span></p>
+				<div id="config_colls_details" class="colls collapse"></div>
 			</div>
 		</div>
 	</div>
@@ -211,44 +225,42 @@
 			GitHub</a></center>
 
 
-	
-	
-	
-	
-	<script src="markups/simpleData.js"></script>
-	<script src="markups/data.js"></script>
+	<script src="markups/Markup.js"></script>
+	<script src="markups/SimpleDataMarkup.js"></script>
+	<script src="markups/DataMarkup.js"></script>
+	<script src="markups/ChartMarkup.js"></script>
 
 	<script>
 		var settings = {}; //A beállítások. Főként a mezők/dimenziók
 		var dictionary = {}; // KSH rövidítésből leírás
 		var fullData = []; // Minden ami adat
 		var colls = [];  // A minden adatban elérhető mezők/dimenziók
-		
+
 		$(document).ready(async function () {
-			
+
 			await loadSettings() // Alapértelmezett mezők/dimenziók
 			await loadDictionary() // A teljes KHS szótár, hogy melyik mező/dimenzió mit jelent
 			await loadFullData(); // A teljes adatsor betöltése, amit korábban a prepare.py hozott létre
-						
+
 			publishCheckboxes(fullData); //Az egyházmegye választó szűrő betöltése
 
 			publishAll(); // A nagy táblázatok és csartok betöltése. Minden beállítás módosításkor újrahívjuk ezt.
-								
+
 			// A "Beállítások" részhez kellenek a következő részek
 			// A lehetséges mezők/dimenziók kilistázása
-			$("#config_colls div.colls").html( function() {
+			$("#config_colls div.colls").html(function () {
 				colls.sort();
 				var ret = [];
 				var ret2 = [];
-				for ( var i = 0; i < colls.length; i++) {
+				for (var i = 0; i < colls.length; i++) {
 					ret.push('<span title="' + getLabel(colls[i]) + '">' + colls[i] + '</span>');
 					ret2.push(colls[i] + " = " + getLabel(colls[i]));
-				}				
+				}
 				return ret2.join("<br/>");
 				//return ret.join(", ");
-				});
+			});
 			// A beállítások textarea átírása után frissítjük a megjelenítéset
-			$("#config_button").click(function(){
+			$("#config_button").click(function () {
 				settings = jQuery.parseJSON($("#config_textarea").val());
 
 				changeSetting();
@@ -272,9 +284,9 @@
 			})
 		}
 
-		function changeSetting() {			
-				var newUrl = updateUrlParameter(window.location.href, "settings", encodeURI(JSON.stringify(settings)));
-				window.location.replace(newUrl);
+		function changeSetting() {
+			var newUrl = updateUrlParameter(window.location.href, "settings", encodeURI(JSON.stringify(settings)));
+			window.location.replace(newUrl);
 		}
 
 		function reRender() {
@@ -283,49 +295,53 @@
 
 		function getLabel(col) {
 			var label = [];
-			col = col.split(":")
-
-			for ( var i = 0; i< col.length; i++) {
+			const isDiagram = typeof col !== "string"
+			if (!isDiagram) col = col.split(":")
+			else label.push("Diagram")
+			for (var i = 0; i < col.length; i++) {
 				if (dictionary[col[i]]) {
-					label.push(dictionary[col[i]].name || dictionary[col[i]])
+					label.push(dictionary[col[i]])
+				} else if (col[i].includes(":")) {
+					console.log(":", col[i], getLabel(col[i]))
+					label.push(getLabel(col[i]))
 				}
-				else return col
+				else return col[i]
 			}
-			return label.join(" - ")
+			return label.join(isDiagram ? ", ": " - ")
 		}
-		
-		
 
-		
+
+
+
 		function publishAll() {
-		
+
 			filteredData = Object.keys(fullData).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
-					.reduce((cur, key) => {
-						cur.push(fullData[key])
-						return cur
-					}, []);
+				.reduce((cur, key) => {
+					cur.push(fullData[key])
+					return cur
+				}, []);
 
 
 			var unnfoldedSettings = unnfoldSettings(settings);
-															
-			for ( var i = 0; i< sections.length; i++) {			
-				eval(sections[i] + "(filteredData, unnfoldedSettings)");  
+
+			for (var i = 0; i < sections.length; i++) {
+				eval(sections[i] + "(filteredData, unnfoldedSettings)");
 			}
-						
+
 		}
 
 		function unnfoldSettings(settings) {
-			
+
 			var unfoldedSettings = [];
 			for (const [key, value] of Object.entries(settings)) {
 				var item = {};
 				const defaultMarkup = "data";
-				if( typeof value !== 'object') {
+				if (typeof value !== 'object') {
 					item['data'] = value;
 					item['markup'] = defaultMarkup;
 				} else {
 					item = value;
-					if(!item['markup']) item['markup'] = defaultMarkup;
+					if (!item['markup']) item['markup'] = defaultMarkup;
 				}
 				unfoldedSettings.push(item);
 			}
@@ -341,15 +357,15 @@
 			});
 		}
 
-		
+
 
 		async function loadSettings() {
 			var param = new URL(location.href).searchParams.get('settings')
-			if(param) {
-				settings = JSON.parse(param)					
-			} else 
+			if (param) {
+				settings = JSON.parse(param)
+			} else
 				await $.getJSON("defaultSettings.json", function (data) {
-					settings = data;								
+					settings = data;
 				})
 			$("#config_textarea").html(JSON.stringify(settings, null, 2));
 			$("#settings_url").html("Megosztható link: <a href='" + location.href + "'>" + location.href + "</a>");
@@ -363,35 +379,35 @@
 
 
 		function updateUrlParameter(uri, key, value) {
-	    // remove the hash part before operating on the uri
-	    var i = uri.indexOf('#');
-	    var hash = i === -1 ? ''  : uri.substr(i);
-	         uri = i === -1 ? uri : uri.substr(0, i);
+			// remove the hash part before operating on the uri
+			var i = uri.indexOf('#');
+			var hash = i === -1 ? '' : uri.substr(i);
+			uri = i === -1 ? uri : uri.substr(0, i);
 
-	    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-	    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-	    if (uri.match(re)) {
-	        uri = uri.replace(re, '$1' + key + "=" + value + '$2');
-	    } else {
-	        uri = uri + separator + key + "=" + value;
-	    }
-	    return uri + hash;  // finally append the hash as well
+			var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+			var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+			if (uri.match(re)) {
+				uri = uri.replace(re, '$1' + key + "=" + value + '$2');
+			} else {
+				uri = uri + separator + key + "=" + value;
+			}
+			return uri + hash;  // finally append the hash as well
 		}
 
 		function getQueryParams(qs) {
-		    qs = qs.split('+').join(' ');
+			qs = qs.split('+').join(' ');
 
-		    var params = {},
-		        tokens,
-		        re = /[?&]?([^=]+)=([^&]*)/g;
+			var params = {},
+				tokens,
+				re = /[?&]?([^=]+)=([^&]*)/g;
 
-		    while (tokens = re.exec(qs)) {
-		        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
-		    }
+			while (tokens = re.exec(qs)) {
+				params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+			}
 
-		    return params;
+			return params;
 		}
-	
+
 
 	</script>
 

@@ -58,7 +58,7 @@ function publishDashboard (filteredData, settings) {
 		
 		
 		var markup = "markup" + value['markup'].charAt(0).toUpperCase() + value['markup'].slice(1);			
-		markup = eval ( markup + "( data['data'][value['data']], false, data['data'], value )");
+		markup = Markup.callMarkup(data['data'][value['data']], false, data['data'], value);
 	
 		var subtitle = "";
 		if(value['inProprotionTo']) subtitle =`
