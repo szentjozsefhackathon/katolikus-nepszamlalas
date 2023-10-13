@@ -227,7 +227,6 @@
 	<script>
 		const YEARS = ["2001", "2011", "2022"]
 	</script>
-
 	<script src="markups/Markup.js"></script>
 	<script src="markups/SimpleDataMarkup.js"></script>
 	<script src="markups/DataMarkup.js"></script>
@@ -305,12 +304,11 @@
 				if (dictionary[col[i]]) {
 					label.push(dictionary[col[i]])
 				} else if (col[i].includes(":")) {
-					console.log(":", col[i], getLabel(col[i]))
 					label.push(getLabel(col[i]))
 				}
 				else return col[i]
 			}
-			return label.join(isDiagram ? ", ": " - ")
+			return label.join(isDiagram ? ",<br/>" : " - ")
 		}
 
 
@@ -325,15 +323,15 @@
 				}, []);
 
 
-			var unnfoldedSettings = unnfoldSettings(settings);
+			var unfoldedSettings = unfoldSettings(settings);
 
 			for (var i = 0; i < sections.length; i++) {
-				eval(sections[i] + "(filteredData, unnfoldedSettings)");
+				eval(sections[i] + "(filteredData, unfoldedSettings)");
 			}
 
 		}
 
-		function unnfoldSettings(settings) {
+		function unfoldSettings(settings) {
 
 			var unfoldedSettings = [];
 			for (const [key, value] of Object.entries(settings)) {
