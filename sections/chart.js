@@ -25,7 +25,6 @@ function publishChart(filteredData, settings) {
 		data: {
 			labels: filteredData.map(d => d.name),
 			datasets: settings.filter(c => {
-				console.log("chart", c)
 				return typeof c["data"] === "string" && !c["inProprotionTo"]
 			}).map(c => {
 				if (colls.findIndex(col => col == c["data"]) == -1) {

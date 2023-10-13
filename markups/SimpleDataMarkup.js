@@ -26,13 +26,13 @@ class SimpleDataMarkup extends Markup {
         if (this.type == "sort" || this.type == 'type') {
             switch (document.getElementById(this.orderSelect).value) {
                 case "2022data":
-                    return this.data["2022"]
+                    return this.proptional? this.proptional["2022"] : this.data["2022"]
 
                 case "2011data":
-                    return this.data["2011"]
+                    return this.proptional? this.proptional["2011"] : this.data["2011"]
 
                 case "2001data":
-                    return this.data["2001"]
+                    return this.proptional? this.proptional["2001"] : this.data["2001"]
 
                 case "diff20012011":
                     return this.diff["20012011"]

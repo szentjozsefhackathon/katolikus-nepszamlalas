@@ -19,7 +19,7 @@ class Markup {
         throw `There is no registered markup with name '${markupName}'`
     }
 
-    static callMarkup(data, type, row, settings) {
+    static callMarkup(data, type, row, settings, orderSelect="selectOrder1") {
         if (!settings["markup"]) {
             settings["markup"] = "data"
         }
@@ -30,7 +30,7 @@ class Markup {
             throw `There is no registered markup with name '${markupName}'`
         }
 
-        const markup = new this.markups[markupName](data, type, row, settings)
+        const markup = new this.markups[markupName](data, type, row, settings, orderSelect)
 
         return markup.render()
     }
