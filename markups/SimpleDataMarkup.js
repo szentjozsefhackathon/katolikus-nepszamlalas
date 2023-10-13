@@ -24,7 +24,6 @@ class SimpleDataMarkup extends Markup {
     sortTable() {
         if (!this.calculated) this.calculate()
         if (this.type == "sort" || this.type == 'type') {
-            console.log(document.getElementById(this.orderSelect).value)
             switch (document.getElementById(this.orderSelect).value) {
                 case "2022data":
                     return this.data["2022"]
@@ -36,7 +35,6 @@ class SimpleDataMarkup extends Markup {
                     return this.data["2001"]
 
                 case "diff20012011":
-                    console.log(this.row["diocese"], this.diff["20012011"])
                     return this.diff["20012011"]
 
                 case "diff20112022":

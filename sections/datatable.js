@@ -60,7 +60,7 @@ function publishDatatable(data, settings) {
 								<br/><small>Arányosítva: <span title="${c['inProprotionTo']}">${getLabel(c['inProprotionTo'])}</span></small>`;
 							
 						} else { 
-							var title =  "<span title='" + c['data'] + "'>" + getLabel(c['data']) + "</span>";
+							var title =  "<span title='" + c['data'] + "' data-bs-toggle='tooltip'>" + getLabel(c['data']) + "</span>";
 						}
 					
 						return {

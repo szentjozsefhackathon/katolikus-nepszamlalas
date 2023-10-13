@@ -5,7 +5,7 @@ class ChartMarkup extends Markup {
 
         if (this.type == "sort" || this.type == 'type') return 0
         const labels = JSON.stringify(this.settings.data.map(d => getLabel(d)))
-        const years = this.settings["years"] || YEARS
+        const years = this.settings["years"] || ["2022"]
         const _datasets = JSON.stringify(YEARS.map(y => {
             return {
                 type,
