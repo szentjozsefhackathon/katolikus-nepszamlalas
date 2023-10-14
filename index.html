@@ -12,6 +12,14 @@
 
 	<script src="https://cdn.datatables.net/v/dt/dt-1.13.6/cr-1.7.0/datatables.min.js"></script>
 
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+
 	<style>
 		.badge.even-larger-badge {
 			font-size: 1.1em;
@@ -21,6 +29,36 @@
 		td {
 			white-space: nowrap;
 			overflow: hidden;
+		}
+	</style>
+
+	<style>
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255, 255, 255, 0.8);
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+		}
+
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+
+		.legend {
+			text-align: left;
+			line-height: 18px;
+			color: #555;
+		}
+
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
 		}
 	</style>
 </head>
@@ -183,6 +221,7 @@
 			<script src="sections/datatable.js"></script>
 			<script src="sections/dashboard.js"></script>
 			<script src="sections/chart.js"></script>
+			<script src="sections/map.js"></script>
 
 		</div>
 
@@ -197,7 +236,6 @@
 		<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
 	</div>
 	<div class="b-example-divider"></div>
-
 	<div class="container" id="config">
 		<div class="px-4 py-5 my-5 text-center">
 			<h4>Beállítások</h4>
@@ -231,6 +269,7 @@
 	<script src="markups/SimpleDataMarkup.js"></script>
 	<script src="markups/DataMarkup.js"></script>
 	<script src="markups/ChartMarkup.js"></script>
+	<script src="OSM DataSources/dioceses.js"></script>
 
 	<script>
 		var settings = {}; //A beállítások. Főként a mezők/dimenziók
@@ -246,27 +285,30 @@
 
 			publishCheckboxes(fullData); //Az egyházmegye választó szűrő betöltése
 
-			publishAll(); // A nagy táblázatok és csartok betöltése. Minden beállítás módosításkor újrahívjuk ezt.
+			publish(); // A nagy táblázatok és csartok betöltése. Minden beállítás módosításkor újrahívjuk ezt.
 
 			// A "Beállítások" részhez kellenek a következő részek
 			// A lehetséges mezők/dimenziók kilistázása
 			$("#config_colls div.colls").html(function () {
 				colls.sort();
-				var ret = [];
-				var ret2 = [];
-				for (var i = 0; i < colls.length; i++) {
-					ret.push('<span title="' + getLabel(colls[i]) + '">' + colls[i] + '</span>');
-					ret2.push(colls[i] + " = " + getLabel(colls[i]));
-				}
-				return ret2.join("<br/>");
-				//return ret.join(", ");
+				return colls.map(c => `${c} = ${getLabel(c)}`).join("<br/>")
+
 			});
+
+			$("#mapData").html(function() {
+				colls.sort();
+				return colls.map(c => `<option ${c=="RE_C"?"selected ":""}value="${c}">${c} - ${getLabel(c)}</option>`)
+			})
+			$("#mapInProprotionTo").html(function() {
+				colls.sort();
+				return colls.map(c => `<option ${c=="NEME_SEX"?"selected ":""}value="${c}">${c} - ${getLabel(c)}</option>`)
+			})
 			// A beállítások textarea átírása után frissítjük a megjelenítéset
 			$("#config_button").click(function () {
 				settings = jQuery.parseJSON($("#config_textarea").val());
 
 				changeSetting();
-				publishAll();
+				publish();
 				// TODO: valami visszajelző <div class="alert-success"> ami aztán eltűnik
 			});
 
@@ -278,7 +320,7 @@
 			$.each(data, function (key, value) {
 				$("#cb_dioceses").append(
 					`<div class="form-check form-check-inline">
- 	<input class="form-check-input" type="checkbox" value="" id="cb_dioceses_${key}" checked onclick="reRender()">
+ 	<input class="form-check-input" type="checkbox" value="" id="cb_dioceses_${key}" checked onclick="publish()">
   	<label class="form-check-label" for="cb_dioceses_${key}">
     	${value.name}
   	</label>
@@ -289,10 +331,6 @@
 		function changeSetting() {
 			var newUrl = updateUrlParameter(window.location.href, "settings", encodeURI(JSON.stringify(settings)));
 			window.location.replace(newUrl);
-		}
-
-		function reRender() {
-			publishAll()
 		}
 
 		function getLabel(col) {
@@ -314,7 +352,7 @@
 
 
 
-		function publishAll() {
+		function publish(section=null) {
 
 			filteredData = Object.keys(fullData).filter(d => document.getElementById(`cb_dioceses_${d}`).checked)
 				.reduce((cur, key) => {
@@ -326,7 +364,8 @@
 			var unfoldedSettings = unfoldSettings(settings);
 
 			for (var i = 0; i < sections.length; i++) {
-				eval(sections[i] + "(filteredData, unfoldedSettings)");
+				if(section && sections[i]!=section) continue;
+				eval(sections[i] + `(${sections[i]=="publishMap"?'Object.keys(fullData).reduce((cur, key) => {cur.push(fullData[key]); return cur;}, [])':'filteredData'}, unfoldedSettings)`);
 			}
 
 		}
