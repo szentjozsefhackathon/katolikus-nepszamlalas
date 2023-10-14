@@ -25,3 +25,24 @@ out skel qt;
 ```
 
 Ezt egyelőre külön-külön meg kell csinálni valamennyi egyházmegyére.
+
+
+Egyházmegye határokat az alábbi lekérdezéssel értük el:
+```
+[out:json][timeout:25];
+area[name="Magyarország"]->.boundaryarea;
+
+// gather results
+(
+nwr(area.boundaryarea)["admin_level"=6]["denomination"="roman_catholic"][name!="Pannonhalmi Területi Főapátság"];
+  - node(r:"admin_centre");
+);
+// print results
+out;
+(
+  way(r);
+  node(w);
+);
+
+out skel qt;
+```
