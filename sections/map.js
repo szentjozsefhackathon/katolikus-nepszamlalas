@@ -24,11 +24,21 @@ if (!$("#container_map").length) {
 
 var map;
 
+
+var color = {
+    max: 100,
+    min: -100
+}
+
 function publishMap(filteredData, settings) {
-    if(map) {
+    if (map) {
         map.remove()
         $("#map").html("")
+
     }
+    color.min = Math.min(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX" }, "mapColoring")).filter(d => !isNaN(d))))
+    color.max = Math.max(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX" }, "mapColoring")).filter(d => !isNaN(d))))
+
     map = L.map('map').setView([47.134, 19.693], 8);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 8,
@@ -67,25 +77,65 @@ function publishMap(filteredData, settings) {
     info.addTo(map);
 
 
-    function getColor(name) {
+    function getColor(value) {
         function RGB2HTML(red, green, blue) {
+            red = Math.floor(Math.max(Math.min(255, red), 0))
+            green = Math.floor(Math.max(Math.min(255, green), 0))
+            blue = Math.floor(Math.max(Math.min(255, blue), 0))
             var decColor = 0x1000000 + blue + 0x100 * green + 0x10000 * red;
             return '#' + decColor.toString(16).substr(1);
         }
 
+        var retCol;
+        if (color.min < 0 && color.max > 0) {
+            retCol = value < 0 ? RGB2HTML(255, value * (255 / (color.min * (-1))), value * (255 / (color.min * (-1)))) :
+                value > 0 ? RGB2HTML(255 - value * (255 / color.max), 255, 255 - value * 255 / color.max) : "#FFFFFF"
+        }
+        else if (color.min > 0 && color.max <= 100) {
+            retCol = RGB2HTML(
+                255 - (value - color.min) * (255 / (color.max - color.min)),
+                255,
+                255 - (value - color.min) * (255 / (color.max - color.min)))
+        }
+        else if (color.min > 0 && color.min < 100 && color.max >= 100) {
+            retCol = value < 100 ? RGB2HTML(
+                255,
+                (value - color.min) * (255 / (100 - color.min)),
+                (value - color.min) * (255 / (100 - color.min))) :
+                color.max == 100 ? "#FFFFFF" : RGB2HTML(
+                    255 - ((value - 100) * (255 / (color.max - 100))),
+                    255,
+                    255 - ((value - 100) * (255 / (color.max - 100))))
+        }
+        else if (color.min >= 100) {
+            retCol = RGB2HTML(
+                255 - (value - color.min) * (255 / (color.max - color.min)),
+                255,
+                255 - (value - color.min) * (255 / (color.max - color.min)))
+        }
+        else if (color.max < 0) {
+            retCol = RGB2HTML(
+                255,
+                (value - color.min) * (255 / (color.max - color.min)),
+                (value - color.min) * (255 / (color.max - color.min)))
+        }
+
+        return retCol
+
+    }
+
+    function getValue(name) {
         var d = filteredData.find(d => d.name.toLowerCase() == name.toLowerCase())
         if (d) {
             d = { diocese: d.name, ...d.data }
         }
-        const value = Math.floor(Markup.callMarkup(d[$("#mapData option:selected")[0]?.value||"RE_C"], "sort", d, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value ||"NEME_SEX" }, "mapColoring"))
-        return value < 0 ? RGB2HTML(255, Math.floor(value*2.55), Math.floor(value*2.55)) :
-                value > 0 ? RGB2HTML(255-Math.floor(value*2.55), 255, 255-Math.floor(value*2.55)):"#FFFFFF"
-
+        const value = Markup.callMarkup(d[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", d, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX" }, "mapColoring")
+        return value
     }
 
     function style(feature) {
         return {
-            fillColor: getColor(feature.properties.name),
+            fillColor: getColor(getValue(feature.properties.name)),
             weight: 2,
             opacity: 1,
             color: 'white',
@@ -118,15 +168,42 @@ function publishMap(filteredData, settings) {
         info.update();
     }
 
-    function zoomToFeature(e) {
-        map.fitBounds(e.target.getBounds());
-    }
 
     function onEachFeature(feature, layer) {
         layer.on({
             mouseover: highlightFeature,
             mouseout: resetHighlight,
-            click: zoomToFeature
         });
     }
+
+    const legend = L.control({ position: 'bottomright' });
+
+    legend.onAdd = function (map) {
+        const div = L.DomUtil.create('div', 'info legend');
+        const HOWMANYCOLOR = 10
+        const grades = []
+        for (var i = 0; i < HOWMANYCOLOR; i++) {
+            grades.push(color.min + i * ((color.max - color.min) / HOWMANYCOLOR))
+        }
+        const labels = [];
+
+
+        for (let i = 0; i < grades.length; i++) {
+            labels.push(`<i style="background:${getColor(grades[i])}"></i>${Math.floor(grades[i])}%`);
+        }
+        labels.push("A színskála nem tartalmaz minden színt, csak az arányokat.")
+
+        div.innerHTML = labels.join('<br>');
+        return div;
+    };
+
+    legend.addTo(map);
+
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.boxZoom.disable();
+    map.keyboard.disable();
+    if (map.tap) map.tap.disable();
 }
