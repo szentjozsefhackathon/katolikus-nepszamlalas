@@ -390,7 +390,8 @@
 
 		async function loadFullData() {
 			await $.getJSON("fullData.json", function (data) {
-				for (const [key, value] of Object.entries(data[Object.keys(data)[0]]['data'])) {
+				// Mivel a fullData Magyarországgal kezdődik amihez nincs minden kulcs, ezért eggyel későbbiből rakjuk össze a kulcsokat.
+				for (const [key, value] of Object.entries(data[Object.keys(data)[1]]['data'])) {
 					colls.push(key);
 				}
 				fullData = data
