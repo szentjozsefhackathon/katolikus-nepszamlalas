@@ -1,0 +1,308 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2023-10-15T19:36:54Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/277546267",
+        "ksh_ref": "24305",
+        "name": "Pannonhalma",
+        "name:de": "Martinsberg",
+        "name:ru": "Паннонхальма",
+        "name:sk": "Rábsky Svätý Martin",
+        "old_name:-1965": "Győrszentmárton",
+        "place": "town",
+        "place:hu": "város",
+        "population": "4184",
+        "postal_code": "9090",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.7541679,
+          47.5502015
+        ]
+      },
+      "id": "node/277546267"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282434519",
+        "ksh_ref": "21801",
+        "name": "Ravazd",
+        "name:ru": "Равазд",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1196",
+        "postal_code": "9091",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.7526673,
+          47.5166849
+        ]
+      },
+      "id": "node/282434519"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282434682",
+        "ksh_ref": "19752",
+        "name": "Nyalka",
+        "place": "village",
+        "place:hu": "község",
+        "population": "498",
+        "postal_code": "9096",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.8081139,
+          47.5438069
+        ]
+      },
+      "id": "node/282434682"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282434709",
+        "ksh_ref": "14261",
+        "name": "Táp",
+        "name:ru": "Тап",
+        "place": "village",
+        "place:hu": "község",
+        "population": "749",
+        "postal_code": "9095",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.8320345,
+          47.5168295
+        ]
+      },
+      "id": "node/282434709"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282434837",
+        "ksh_ref": "21971",
+        "name": "Tápszentmiklós",
+        "place": "village",
+        "place:hu": "község",
+        "population": "964",
+        "postal_code": "9094",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.8510293,
+          47.4945365
+        ]
+      },
+      "id": "node/282434837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282434917",
+        "ksh_ref": "33914",
+        "name": "Tarjánpuszta",
+        "place": "village",
+        "place:hu": "község",
+        "population": "422",
+        "postal_code": "9092",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.7861413,
+          47.505322
+        ]
+      },
+      "id": "node/282434917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282434959",
+        "ksh_ref": "08721",
+        "name": "Győrasszonyfa",
+        "place": "village",
+        "place:hu": "község",
+        "population": "497",
+        "postal_code": "9093",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.8058287,
+          47.4969133
+        ]
+      },
+      "id": "node/282434959"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282436840",
+        "ksh_ref": "22691",
+        "name": "Veszprémvarsány",
+        "name:ru": "Веспремваршань",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1064",
+        "postal_code": "8438",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.8294955,
+          47.4273146
+        ]
+      },
+      "id": "node/282436840"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282436976",
+        "ksh_ref": "22062",
+        "name": "Bakonypéterd",
+        "name:de": "Peter",
+        "place": "village",
+        "place:hu": "község",
+        "population": "286",
+        "postal_code": "9088",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.7975324,
+          47.4654288
+        ]
+      },
+      "id": "node/282436976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282437346",
+        "ksh_ref": "04376",
+        "name": "Lázi",
+        "name:ru": "Лази",
+        "place": "village",
+        "place:hu": "község",
+        "population": "529",
+        "postal_code": "9089",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.8384606,
+          47.4652414
+        ]
+      },
+      "id": "node/282437346"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/282453422",
+        "ksh_ref": "05014",
+        "name": "Vének",
+        "name:hr": "Vinak",
+        "place": "village",
+        "place:hu": "község",
+        "population": "193",
+        "postal_code": "9062",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.7594607,
+          47.7394914
+        ]
+      },
+      "id": "node/282453422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296137600",
+        "ksh_ref": "23746",
+        "name": "Bakonybél",
+        "name:ru": "Баконьбель",
+        "place": "village",
+        "place:hu": "község",
+        "population": "1219",
+        "postal_code": "8427",
+        "source:population": "KSH (www.ksh.hu)",
+        "source:population:date": "2022-01-01",
+        "source:postal_code": "Magyar Posta (posta.hu)",
+        "source:postal_code:date": "2009-03-01",
+        "website": "https://www.bakonybel.hu/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.7280196,
+          47.2551092
+        ]
+      },
+      "id": "node/296137600"
+    }
+  ]
+}

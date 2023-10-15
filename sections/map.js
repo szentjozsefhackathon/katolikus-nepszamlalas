@@ -54,7 +54,7 @@ function publishMap(filteredData, settings) {
         var HU = filteredData.find(d => d.name == "Magyarország")
         HU = {diocese: HU.name, ...HU.data}
         const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX"})
-        var d = props ? filteredData.find(d => d.name == props.name) : null
+        var d = props ? filteredData.find(d => d.name.toLowerCase() == props.name.toLowerCase()) : null
         if (d) {
             d = { diocese: d.name, ...d.data }
         }
@@ -73,7 +73,7 @@ function publishMap(filteredData, settings) {
             return '#' + decColor.toString(16).substr(1);
         }
 
-        var d = filteredData.find(d => d.name == name)
+        var d = filteredData.find(d => d.name.toLowerCase() == name.toLowerCase())
         if (d) {
             d = { diocese: d.name, ...d.data }
         }

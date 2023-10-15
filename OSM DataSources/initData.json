@@ -51,6 +51,11 @@
         "osmid": "relation-12535238",
         "name": "Kaposvári egyházmegye"
     },
+	{
+		"osmid": "relation-13005188",
+		"name": "Pannonhalmi területi főapátság"
+	},
+
     {
         "osmid": "relation-14735896",
         "name": "Hajdúdorogi főegyházmegye"
