@@ -305,7 +305,7 @@
 			})
 			$("#mapInProprotionTo").html(function() {
 				colls.sort();
-				return colls.map(c => `<option ${c=="NEME_SEX"?"selected ":""}value="${c}">${c} - ${getLabel(c)}</option>`)
+				return colls.map(c => `<option ${c=="TOTAL"?"selected ":""}value="${c}">${c} - ${getLabel(c)}</option>`)
 			})
 			
 			 $('#mapData').select2();

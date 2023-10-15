@@ -36,8 +36,8 @@ function publishMap(filteredData, settings) {
         $("#map").html("")
 
     }
-    color.min = Math.min(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX" }, "mapColoring")).filter(d => !isNaN(d))))
-    color.max = Math.max(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX" }, "mapColoring")).filter(d => !isNaN(d))))
+    color.min = Math.min(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")).filter(d => !isNaN(d))))
+    color.max = Math.max(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")).filter(d => !isNaN(d))))
 
     map = L.map('map', {zoomControl: false }).setView([47.134, 19.693], 8);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -51,7 +51,7 @@ function publishMap(filteredData, settings) {
 	const title = L.control({position: 'topleft'});
     title.onAdd = function (map) {
 		const dataType = $("#mapData option:selected")[0]?.value || "RE_C";
-		const inProprotionToType = $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX";
+		const inProprotionToType = $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL";
 		const mapColoring = $("#mapColoring option:selected")[0]?.name || "2022-es KSH adatok" ;
 		
         const div = L.DomUtil.create('div', 'info title');		
@@ -76,7 +76,7 @@ function publishMap(filteredData, settings) {
     info.update = function (props) {
         var HU = filteredData.find(d => d.name == "Magyarország")
         HU = {diocese: HU.name, ...HU.data}
-        const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX"})
+        const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL"})
         var d = props ? filteredData.find(d => d.name.toLowerCase() == props.name.toLowerCase()) : null
         if (d) {
             d = { diocese: d.name, ...d.data }

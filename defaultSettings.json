@@ -1,5 +1,5 @@
 [
-  "NEME_SEX",
+  "TOTAL",
   {
     "data": "RE_C"
   },
@@ -14,7 +14,7 @@
   },
   {
     "data": "RE_C",
-    "inProprotionTo": "NEME_SEX",
+    "inProprotionTo": "TOTAL",
 	  "markup": "simpleData"	
   },
   "CH_R_CPERP",
@@ -26,7 +26,7 @@
   "RE_NA",
   {
 	"data": "DIV_DISREP",
-	"inProprotionTo": "NEME_SEX"
+	"inProprotionTo": "TOTAL"
   },
   {
     "data": ["RE_C:DIV_DISREP", "RE_C:MAR_REP"],

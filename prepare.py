@@ -297,6 +297,12 @@ for key, area in areas.items():
         '2022': area['data']['RE_C']['2022'] - area['data']['RE_RC']['2022'] - area['data']['RE_GC']['2022'],
     }
 
+    areas[key]['data']['TOTAL'] = {
+        '2001': area['data']['NEME_SEX']['2001'],
+        '2011': area['data']['NEME_SEX']['2011'],
+        '2022': area['data']['NEME_SEX']['2022']
+    }
+
     if 'MKPK_PRIEST_D' in data and 'MKPK_PRIEST_R' in data:
         areas[key]['data']['MKPK_PRIEST'] = {}
         for year in ['2001', '2011', '2022']:
