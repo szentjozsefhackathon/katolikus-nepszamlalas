@@ -11,6 +11,7 @@
     "RE_OCD": "Más vallási közösséghez, felekezethez tartozó",
     "RE_NOT":  "Vallási közösséghez, felekezethez nem tartozó",
     "RE_NA": "Nem kíván válaszolni (vallás, felekezet)",
+    "RE_FC": "Hit Gyülekezete",
     "DIV_DISREP": "Elvált",
     "FY_GE65": "65 éves és idősebb nő",
     "FY15-64": "15-64 éves nő",
@@ -69,7 +70,7 @@
 	"MKPK_PRIEST": "Papok összesen(MKPK) (származtatott)",
     "MKPK_RECTORY": "Templomigazgatóságok (MKPK)",
 	"CH_R_C": "Katolikusok (CH)",
-    "CH_R_CPERP": "Egy papra jutó katoliksok (CH)" ,
+    "CH_R_CPERP": "Egy papra jutó katolikusok (CH)" ,
     "CH_PRIEST_D": "Egyházmegyés papok (CH)", 
     "CH_MREL": "Női szerzetes (CH)",
     "CH_FREL": "Férfi szerzetes (CH)",
@@ -78,5 +79,6 @@
     "CH_DEACON": "Állandó diakónusok (CH)",
     "CH_PRIEST_R": "Szerzetes papok (CH)",
     "CH_TOTAL": "Lakosság (CH)",
-    "CH_PRIEST": "Papok összesen (CH)"
+    "CH_PRIEST": "Papok összesen (CH)",
+    "TOTAL": "Összesen"
 }
