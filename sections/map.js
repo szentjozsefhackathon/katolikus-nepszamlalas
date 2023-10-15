@@ -39,7 +39,7 @@ function publishMap(filteredData, settings) {
     color.min = Math.min(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX" }, "mapColoring")).filter(d => !isNaN(d))))
     color.max = Math.max(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX" }, "mapColoring")).filter(d => !isNaN(d))))
 
-    map = L.map('map').setView([47.134, 19.693], 8);
+    map = L.map('map', {zoomControl: false }).setView([47.134, 19.693], 8);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 8,
         minZoom: 8,
@@ -48,7 +48,20 @@ function publishMap(filteredData, settings) {
 
     map.dragging.disable();
 
-
+	const title = L.control({position: 'topleft'});
+    title.onAdd = function (map) {
+		const dataType = $("#mapData option:selected")[0]?.value || "RE_C";
+		const inProprotionToType = $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX";
+		const mapColoring = $("#mapColoring option:selected")[0]?.name || "2022-es KSH adatok" ;
+		
+        const div = L.DomUtil.create('div', 'info title');		
+        div.innerHTML = "<h2><strong>„" + getLabel(dataType) + "”</strong> személyek létszáma <br/> a(z) <strong>„" + getLabel(inProprotionToType) + "”</strong> arányában</h2>";
+		div.innerHTML += "<h4><strong>" + getLabel(mapColoring) + "</strong></h4>";
+		return div;
+        
+    };
+	title.addTo(map);
+	
 
     // control that shows state info on hover
     const info = L.control();
