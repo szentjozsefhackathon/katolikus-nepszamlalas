@@ -52,11 +52,11 @@ function publishMap(filteredData, settings) {
     title.onAdd = function (map) {
 		const dataType = $("#mapData option:selected")[0]?.value || "RE_C";
 		const inProprotionToType = $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL";
-		const mapColoring = $("#mapColoring option:selected")[0]?.name || "2022-es KSH adatok" ;
+		const mapColoring = $("#mapColoring option:selected")[0]?.innerHTML || "2022-es KSH adatok" ;
 		
         const div = L.DomUtil.create('div', 'info title');		
         div.innerHTML = "<h2><strong>„" + getLabel(dataType) + "”</strong> személyek létszáma <br/> a(z) <strong>„" + getLabel(inProprotionToType) + "”</strong> arányában</h2>";
-		div.innerHTML += "<h4><strong>" + getLabel(mapColoring) + "</strong></h4>";
+		div.innerHTML += "<h4><strong>" + mapColoring + "</strong></h4>";
 		return div;
         
     };
