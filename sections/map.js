@@ -24,12 +24,12 @@ if (!$("#container_map").length) {
                 <input class="form-check-input" type="checkbox" id="switchMapLegend" checked onclick="publish('publishMap')">
                 <label class="form-check-label" for="switchMapScale">Skála</label>
             </div>
-            <div class="form-check form-switch form-check-inline">
+            <div class="form-check form-switch form-check-inline" style="display: none">
                 <input class="form-check-input" type="checkbox" id="switchMapTitle" checked onclick="publish('publishMap')">
                 <label class="form-check-label" for="switchMapTitle">Cím</label>
             </div>
             <div class="form-check form-switch form-check-inline">
-            <input class="form-check-input" type="checkbox" id="switchMapMap" checked onclick="publish('publishMap')">
+            <input class="form-check-input" type="checkbox" id="switchMapMap" onclick="publish('publishMap')">
             <label class="form-check-label" for="switchMapMap">Térkép</label>
         </div>
 			<div id="map" style="height: 800px"></div>
