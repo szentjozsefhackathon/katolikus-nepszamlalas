@@ -16,6 +16,22 @@ if (!$("#container_map").length) {
 				<option value="diff20112022">Változás 2011 és 2022 között</option>
 				<option value="diff20012022">Változás 2001 és 2022 között</option>
 			</select>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="switchMapInfo" checked onclick="publish('publishMap')">
+                <label class="form-check-label" for="switchMapInfo">Információk</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="switchMapLegend" checked onclick="publish('publishMap')">
+                <label class="form-check-label" for="switchMapScale">Skála</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="switchMapTitle" checked onclick="publish('publishMap')">
+                <label class="form-check-label" for="switchMapTitle">Cím</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" type="checkbox" id="switchMapMap" checked onclick="publish('publishMap')">
+            <label class="form-check-label" for="switchMapMap">Térkép</label>
+        </div>
 			<div id="map" style="height: 800px"></div>
 		</div>
 		<div class="b-example-divider float-end"></div>`
@@ -40,7 +56,7 @@ function publishMap(filteredData, settings) {
     color.max = Math.max(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")).filter(d => !isNaN(d))))
 
     map = L.map('map', {zoomControl: false }).setView([47.134, 19.693], 8);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    if($("#switchMapMap").is(":checked")) L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 8,
         minZoom: 8,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -60,7 +76,7 @@ function publishMap(filteredData, settings) {
 		return div;
         
     };
-	title.addTo(map);
+	if($("#switchMapTitle").is(":checked")) title.addTo(map);
 	
 
     // control that shows state info on hover
@@ -74,6 +90,7 @@ function publishMap(filteredData, settings) {
 
 
     info.update = function (props) {
+        if(!$("#switchMapInfo").is(":checked")) return
         var HU = filteredData.find(d => d.name == "Magyarország")
         HU = {diocese: HU.name, ...HU.data}
         const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL"})
@@ -82,12 +99,12 @@ function publishMap(filteredData, settings) {
             d = { diocese: d.name, ...d.data }
         }
         const markup = props ? Markup.callMarkup(d[$("#mapData option:selected")[0].value], "data", d, { data: $("#mapData option:selected")[0].value, inProprotionTo: $("#mapInProprotionTo option:selected")[0].value }) : ""
-        const contents = props ? `<b>${props.name}</b><br/>${markup}` : 'Irányítsa a kurzort egy egyházmegye fölé';
+        const contents = props ? `<h4>${props.name}</h4>${markup}` : 'Irányítsa a kurzort egy egyházmegye fölé';
 
-        this._div.innerHTML = `<h4>Magyarország</h4>${_HU}<br>${contents}`;
+        this._div.innerHTML = `${contents}<br><h5>Magyarország</h5>${_HU}`;
     };
 
-    info.addTo(map);
+    if($("#switchMapInfo").is(":checked")) info.addTo(map);
 
 
     function getColor(value) {
@@ -210,7 +227,7 @@ function publishMap(filteredData, settings) {
         return div;
     };
 
-    legend.addTo(map);
+    if($("#switchMapLegend").is(":checked")) legend.addTo(map);
 
     map.dragging.disable();
     map.touchZoom.disable();
