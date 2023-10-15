@@ -9,6 +9,10 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link href="https://cdn.datatables.net/v/dt/dt-1.13.6/cr-1.7.0/datatables.min.css" rel="stylesheet">
+	
+	
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 	<script src="https://cdn.datatables.net/v/dt/dt-1.13.6/cr-1.7.0/datatables.min.js"></script>
 
@@ -303,6 +307,10 @@
 				colls.sort();
 				return colls.map(c => `<option ${c=="NEME_SEX"?"selected ":""}value="${c}">${c} - ${getLabel(c)}</option>`)
 			})
+			
+			 $('#mapData').select2();
+			 $('#mapInProprotionTo').select2();
+			
 			// A beállítások textarea átírása után frissítjük a megjelenítéset
 			$("#config_button").click(function () {
 				settings = jQuery.parseJSON($("#config_textarea").val());
