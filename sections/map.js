@@ -191,7 +191,34 @@ function publishMap(filteredData, settings) {
     }
 
     /* global statesData */
-    const geojson = L.geoJson(dioceses_osm, { style: style, onEachFeature: onEachFeature }).addTo(map);
+    const geojson = L.geoJson(dioceses_osm, { 
+		style: style, 
+		onEachFeature: onEachFeature,
+		filter: function(feature) {
+			if( feature.geometry.type == 'Point' ) {
+
+				var diocese = filteredData.find(d => d.osmid == feature.id.replace('/','-') ); 
+
+				const markup = Markup.callMarkup(diocese['data'][$("#mapData option:selected")[0]?.value || "RE_C"], "data", diocese['data'], { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL", "markup" : "oneDataOnly", "which" : $("#mapColoring option:selected")[0]?.value || "2022data" })
+				
+							
+				map.openTooltip(
+					markup, 
+					[feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 
+					{
+					permanent: true,
+					opacity: 1,
+					direction: "center",
+					className: "diocese-tooltip"
+				});
+				return false
+			}
+			return true;
+		}
+		}).addTo(map);
+
+
+	
 
 
     function resetHighlight(e) {
