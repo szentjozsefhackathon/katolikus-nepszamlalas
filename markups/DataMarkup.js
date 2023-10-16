@@ -1,13 +1,13 @@
 class DataMarkup extends SimpleDataMarkup {
 
     render() {
-        if (!this.data) return '<span class="alert alert-danger">' + this.settings['data'] + ' is missing!</span>';
+        if (!this.data) return '<i>Hiányzó adat.</i>'; // <span class="alert alert-danger">' + this.settings['data'] + ' is missing!</span>';
         this.calculate()
         if (this.sortTable()) return this.sortTable()
 
         if (this.settings['inProprotionTo']) {
             if (!this.row[this.settings['inProprotionTo']]) {
-                return '<span class="alert alert-danger">' + this.settings['inProprotionTo'] + ' is missing!</span>';
+                return '<i>Hiányzó adat.</i>'; // '<span class="alert alert-danger">' + this.settings['inProprotionTo'] + ' is missing!</span>';
             }
             if (this.diff["20012022"] > 5) var color = "success"
             else if (this.diff["20012022"] < -5) var color = "danger"
