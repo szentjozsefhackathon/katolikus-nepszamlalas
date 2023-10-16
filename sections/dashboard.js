@@ -1,9 +1,9 @@
 sections.push('publishDashboard');
 
 if (!$("#container_dashboard").length) {
-	$("#sections").append(`<div id="container_dashboard" class="float-end" style="display: none">
+	$("#sections").append(`<div id="container_dashboard" class=" container float-end" style="display: none">
 			<h2 class="chart-title">Egyházmegyénkénti Dashboard</h2>
-			
+			<p>Itt egy-egy területi egységnek láthatjuk a kiválogatott adatait, így a táblázatos formánál áttekinthetőbb információkat kapunk. Azt hogy milyen adatok jelenjenek meg itt, és hogy milyen sorrendben, azz alul a <a href="#config">Beállítások</a> részben adhatjuk meg egy elsőre talán szokatlan JSON formátumban. Számtalan adat áll rendelkezésre és akár grafikonokat is meg tudunk jeleníteni.</p>
 			<div id="dashboard"  class="">
 				<div class="description"></div>
 				<div class="settings"></div>

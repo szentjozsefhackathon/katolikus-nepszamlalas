@@ -4,7 +4,8 @@ var datatable1;
 
 if( ! $("#container_datatable").length ) {
 	$("#sections").append(`<div id="container_datatable" class="float-end container" style="display: none">
-			<h2>KSH adatok kategóriánként</h2>
+			<h2>Egyházmegyék összehasonlítása táblázatos formában</h2>
+			<p>Az egyes területi egységek különféle adatait itt táblázatos formában tudjuk összehasonlítani. Az oszlopok vonszolással mozgathatóak, és a legtöbb esetben sorba is lehet rendezni egy-egy oszlop szerint a táblázatot. Alul a <a href="#config">Beállítások</a> részben adhatjuk meg, hogy mely területek jelenjenek meg a listában. Valamint egy összetett JSON formátum segítségével állíthatjuk be, hogy milyen oszlopaink legyenek és ott hogyan jelenítsük meg az értékeket.</p>
 			<label for="selectOrder1">Rendezés alapja</label>
 			<select class="form-control" id="selectOrder1" onchange="reRender()">
 				<option value="2022data">2022-es KSH adatok</option>
@@ -70,7 +71,11 @@ function publishDatatable(data, settings) {
 								return Markup.callMarkup(data, type, row, c)
 							}
 						}
-					})]
+					})],
+					fixedColumns: {
+						left: 1
+					}
+
 				}
 			);
 		}

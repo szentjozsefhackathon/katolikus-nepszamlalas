@@ -3,6 +3,7 @@ sections.push('publishMap');
 if (!$("#container_map").length) {
     $("#sections").append(`<div class="container float-end" id="container_map">
             <h2>Térkép</h2>
+			<p>Itt a római katolikus egyházmegyék adatait tudjuk térképen vizualizálni és összehasonlítani. A megjelenítendő adat elemet legördülő menüből választhatjuk ki. Jó sok van. A térképen a görögkatolikus egyházmegyék nem szerepelnek.</p>
             <label for="mapData">Megjelenített adat</label>
             <select id="mapData" class="form-control" onchange="publish('publishMap')"></select>
             <label for="mapInProprotionTo">Arányosítva ehhez</label>

@@ -15,6 +15,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 	<script src="https://cdn.datatables.net/v/dt/dt-1.13.6/cr-1.7.0/datatables.min.js"></script>
+	<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+	<link href="https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.dataTables.min.css" rel="stylesheet" />
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
 		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -34,6 +36,20 @@
 			white-space: nowrap;
 			overflow: hidden;
 		}
+		
+		#datatable_wrapper {
+			overflow-x: scroll; 
+		}
+		
+		#sections .container {
+			margin-top: 4em
+		}
+		
+		#sections .container h2 {
+			text-align: center
+		}
+
+	
 	</style>
 
 	<style>
@@ -79,10 +95,9 @@
 					kutakodást kívánunk!</p>
 
 				<h3>Mielőtt belevágnánk:</h3>
-				<div class="alert alert-danger">Míg az egyházmegyei szintre átalakított (<a
+				<div class="alert alert-warning">Míg az egyházmegyei szintre átalakított (<a
 						href="fullData.json">letölthető</a>) adatok már elég pontosak és részletesek, addig a
-					megjelenítő felület még elég kezdetleges. Kérünk, hogy nézz vissza később. Illetve segíts nekünk a
-					fejlesztésben, véleményezésben, megjelenítés változat igénylésében a a <a
+					megjelenítő felület még folyamatos fejlesztés alatt áll. Várjuk a fejlesztéshez csatlakozni vágyókat a <a
 						href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.
 				</div>
 
@@ -211,14 +226,13 @@
 							megannyi magyarázat lehet. Ezek az adatok csak pillanatfelvételek!</p>
 					</div>
 				</div>
+				<div class="alert alert-info" id="toc">
+					<h5>Elérhető megjelenítők</h5>
+					<p>Oldalunkon lehetőség van <a href="#container_map">térképes</a>, <a href="#container_datatable">táblázatos</a>, <a href="#container_chart">közös grafikonos</a>, vagy egy-egy <a href="#container_dashboard">egyházmegyére lebontott</a> grafikus adatmegjelenítésre. A megjelenítendő adatokat és területi egységeket a legtöbb megjelenítőhöz a <a href="#config">beállítások</a> részben lehet részletesen összeállítani. Jó adatbúvárkodást kívánunk!</p>
+				</div>
+
 			</div>
 		</div>
-
-		<center>
-			<h3>Adatok, kimutatások, elemzések:</h3>
-			<div class="alert alert-info">Rengeteg különféle oszlopot és arányosítási adatot lekérdezni a <a
-					href="#config">Beállítások</a> résznél kézzel írt JSON formátummal.</div>
-		</center>
 
 		<div id="sections">
 			<script src="sections/map.js"></script>
@@ -226,44 +240,42 @@
 			<script src="sections/dashboard.js"></script>
 			<script src="sections/chart.js"></script>
 
-		</div>
 
 
-	</div>
+			<div class="container" id="config">
+				<div class="px-4 py-5 my-5 text-center">
+					<h2>Beállítások</h2>
+					<div id="cb_dioceses" style="display: none;">
+					<h4>Egyházmegyék kiválasztása</h4>
+					</div>
 
-
-	<div class="container">
-		<div id="cb_dioceses" style="display: none;">
-			<h2>Egyházmegyék kiválasztása</h2>
-		</div>
-		<div class=" text-nowrap alert alert-info" id="content">Adatok betöltését hamarosan kezdjük.</div>
-	</div>
-	<div class="b-example-divider"></div>
-	<div class="container" id="config">
-		<div class="px-4 py-5 my-5 text-center">
-			<h4>Beállítások</h4>
-			<p id="settings_url"></p>
-			<p>Az adatokat megjelenítő táblázatokban és más elemekben megjelenő információkat az alábbi JSON határozza
-				meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON (szerű) fájl
-				esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
-			<textarea id="config_textarea" cols="40"
-				rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
-			<br /><br />
-			<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a beállítások
-				alapján</button>
-
-			<div id="config_colls">
-				<p>A következő dimenziók érhetőek el adatbázisunkban (a rövidítésre húzva az egeret megjelenik a teljes
-					leírása a mezőnek): <span class="badge bg-primary" data-bs-toggle="collapse"
-						href="#config_colls_details" role="button" aria-expanded="false"
-						aria-controls="config_colls_details">Részletek</span></p>
-				<div id="config_colls_details" class="colls collapse"></div>
+					<h4>Adatmezők és megjelenítésük beállításai</h4>
+					<p>Az adatokat megjelenítő táblázatokban és más elemekben megjelenő információkat az alábbi JSON határozza
+						meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON (szerű) fájl
+						esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
+					
+					<textarea id="config_textarea" cols="40"
+						rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
+					<br /><br />
+					<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a beállítások
+						alapján</button>
+					<p id="settings_url"></p>
+					<div id="config_colls">
+						<p>A következő dimenziók érhetőek el adatbázisunkban (a rövidítésre húzva az egeret megjelenik a teljes
+							leírása a mezőnek): <span class="badge bg-primary" data-bs-toggle="collapse"
+								href="#config_colls_details" role="button" aria-expanded="false"
+								aria-controls="config_colls_details">Részletek</span></p>
+						<div id="config_colls_details" class="colls collapse"></div>
+					</div>
+				</div>
 			</div>
+
 		</div>
+
+
 	</div>
 
-	<center><a href="https://github.com/borazslo/katolikus-nepszamlalas" class="btn btn-secondary">View on
-			GitHub</a></center>
+	<center><strong>Készítették: Elek László SJ és Vörös László.<br/>További információ, forráskód, és bekapcsolódási lehetőség:<br/> <a href="https://github.com/borazslo/katolikus-nepszamlalas">github.com/borazslo/katolikus-nepszamlalas</a></strong></center>
 
 	<script>
 		const YEARS = ["2001", "2011", "2022"]
