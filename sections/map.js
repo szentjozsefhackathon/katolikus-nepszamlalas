@@ -56,8 +56,8 @@ function publishMap(filteredData, settings) {
     color.min = Math.min(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")).filter(d => !isNaN(d))))
     color.max = Math.max(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")).filter(d => !isNaN(d))))
 
-    map = L.map('map', {zoomControl: false }).setView([47.134, 19.693], 8);
-    if($("#switchMapMap").is(":checked")) L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    map = L.map('map', { zoomControl: false }).setView([47.134, 19.693], 8);
+    if ($("#switchMapMap").is(":checked")) L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 8,
         minZoom: 8,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -65,20 +65,31 @@ function publishMap(filteredData, settings) {
 
     map.dragging.disable();
 
-	const title = L.control({position: 'topleft'});
+    const title = L.control({ position: 'topleft' });
     title.onAdd = function (map) {
-		const dataType = $("#mapData option:selected")[0]?.value || "RE_C";
-		const inProprotionToType = $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL";
-		const mapColoring = $("#mapColoring option:selected")[0]?.innerHTML || "2022-es KSH adatok" ;
-		
-        const div = L.DomUtil.create('div', 'info title');		
+        const dataType = $("#mapData option:selected")[0]?.value || "RE_C";
+        const inProprotionToType = $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL";
+        const mapColoring = $("#mapColoring option:selected")[0]?.innerHTML || "2022-es KSH adatok";
+
+        const div = L.DomUtil.create('div', 'info title');
         div.innerHTML = "<h2><strong>„" + getLabel(dataType) + "”</strong> személyek létszáma <br/> a(z) <strong>„" + getLabel(inProprotionToType) + "”</strong> arányában</h2>";
-		div.innerHTML += "<h4><strong>" + mapColoring + "</strong></h4>";
-		return div;
-        
+        div.innerHTML += "<h4><strong>" + mapColoring + "</strong></h4>";
+        return div;
+
     };
-	if($("#switchMapTitle").is(":checked")) title.addTo(map);
-	
+    if ($("#switchMapTitle").is(":checked")) title.addTo(map);
+
+    const source = L.control({ position: 'bottomleft' });
+    source.onAdd = function (map) {
+
+
+        const div = L.DomUtil.create('div', 'source');
+        div.innerHTML = `<img class="img-thumbnail" src="qrcode.png" width="100"/><br>Forrás: <a href="borazslo.github.io/katolikus-nepszamlalas">borazslo.github.io/katolikus-nepszamlalas</a>`
+        return div;
+
+    };
+    source.addTo(map);
+
 
     // control that shows state info on hover
     const info = L.control();
@@ -91,10 +102,10 @@ function publishMap(filteredData, settings) {
 
 
     info.update = function (props) {
-        if(!$("#switchMapInfo").is(":checked")) return
+        if (!$("#switchMapInfo").is(":checked")) return
         var HU = filteredData.find(d => d.name == "Magyarország")
-        HU = {diocese: HU.name, ...HU.data}
-        const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL"})
+        HU = { diocese: HU.name, ...HU.data }
+        const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" })
         var d = props ? filteredData.find(d => d.name.toLowerCase() == props.name.toLowerCase()) : null
         if (d) {
             d = { diocese: d.name, ...d.data }
@@ -105,7 +116,7 @@ function publishMap(filteredData, settings) {
         this._div.innerHTML = `${contents}<br><h5>Magyarország</h5>${_HU}`;
     };
 
-    if($("#switchMapInfo").is(":checked")) info.addTo(map);
+    if ($("#switchMapInfo").is(":checked")) info.addTo(map);
 
 
     function getColor(value) {
@@ -228,7 +239,7 @@ function publishMap(filteredData, settings) {
         return div;
     };
 
-    if($("#switchMapLegend").is(":checked")) legend.addTo(map);
+    if ($("#switchMapLegend").is(":checked")) legend.addTo(map);
 
     map.dragging.disable();
     map.touchZoom.disable();
