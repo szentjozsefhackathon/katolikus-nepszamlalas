@@ -1,5 +1,21 @@
 [
   "TOTAL",
+    {
+    "data": [
+	  "RE_C:Y_LT10",
+      "RE_C:Y10-19",
+      "RE_C:Y20-29",
+      "RE_C:Y30-39",
+      "RE_C:Y40-49",
+      "RE_C:Y50-59",
+      "RE_C:Y60-69",
+      "RE_C:Y70-79",
+	  "RE_C:Y80-89",
+	  "RE_C:Y_GE90"
+    ],
+    "markup": "barChart"
+  },
+
   {
     "data": "RE_C"
   },
