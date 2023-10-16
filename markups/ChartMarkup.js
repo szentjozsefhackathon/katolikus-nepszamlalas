@@ -1,20 +1,21 @@
 class ChartMarkup extends Markup {
-    render() {
-        const type = this.settings["markup"].slice(0, -5)
-        const random = Math.random()
+  render() {
+    const type = this.settings["markup"].slice(0, -5)
+    const random = Math.random()
 
-        if (this.type == "sort" || this.type == 'type') return 0
-        const labels = JSON.stringify(this.settings.data.map(d => getLabel(d)))
-        const years = this.settings["years"] || ["2022"]
-        const _datasets = JSON.stringify(YEARS.map(y => {
-            return {
-                type,
-                label: y,
-                data: this.settings.data.map(d => this.row[d][y]),
-                hidden: !years.includes(y)
-            }
-        }))
-        var chart = `<canvas id="chart${random}"></canvas>
+    if (this.type == "sort" || this.type == 'type') return 0
+    const labels = JSON.stringify(this.settings.data.map(d => getLabel(d)))
+    this.settings.data = this.settings.data.filter(d => this.row[d])
+    const years = this.settings["years"] || ["2022"]
+    const _datasets = JSON.stringify(YEARS.map(y => {
+      return {
+        type,
+        label: y,
+        data: this.settings.data.map(d => this.row[d][y]),
+        hidden: !years.includes(y)
+      }
+    }))
+    var chart = `<canvas id="chart${random}"></canvas>
                 <script>
                 new Chart(document.getElementById("chart${random}"), {
                     type: 'bar',
@@ -32,11 +33,11 @@ class ChartMarkup extends Markup {
     }
                 })
                 </script>`
-        return chart
+    return chart
 
-    }
+  }
 }
 
 ["pie", "doughnut", "bar", "bubble", "line", "polarArea", "radar"].forEach(t => {
-    Markup.addMarkup(`${t}Chart`, ChartMarkup)
+  Markup.addMarkup(`${t}Chart`, ChartMarkup)
 })
