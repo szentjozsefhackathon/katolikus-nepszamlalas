@@ -26,13 +26,13 @@ s
 				return this.proptional[2001].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) + "%";
 				break;
 			  case "diff20012011":
-				return this.diff[20012011].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) + "%";
+				return this.diff[20012011].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) + " százalékpont";
 				break;
 			  case "diff20012022":
-				return this.diff[20012022].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) + "%";
+				return this.diff[20012022].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) + " százalékpont";
 				break;
 			  case "diff20112022":
-				return this.diff[20112022].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) + "%";
+				return this.diff[20112022].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) + " százalékpont";
 				break;				
 				
 			  default:
