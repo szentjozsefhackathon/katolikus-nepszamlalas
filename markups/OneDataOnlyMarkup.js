@@ -40,7 +40,6 @@ s
 
 			}
 			
-			console.log(this);
 			
 
         } else {

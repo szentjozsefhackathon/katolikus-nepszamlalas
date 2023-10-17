@@ -20,6 +20,8 @@
 	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+	<script type="text/javascript" src="jquery.qrcode.min.js"></script>
+
 
 
 	<style>
@@ -44,11 +46,11 @@
 		#sections .container h2 {
 			text-align: center
 		}
-		
-		.diocese-tooltip  {
+
+		.diocese-tooltip {
 			text-align: center;
-			background-color: transparent ;
-			color:Black;   
+			background-color: transparent;
+			color: Black;
 			text-shadow: 1px 1px #ffffff;
 			font-size: large;
 			font-weight: bold;
@@ -238,7 +240,8 @@
 						vagy egy-egy <a href="#container_dashboard">egyházmegyére lebontott</a> grafikus
 						adatmegjelenítésre. A megjelenítendő adatokat és területi egységeket a legtöbb megjelenítőhöz a
 						<a href="#config">beállítások</a> részben lehet részletesen összeállítani. Jó adatbúvárkodást
-						kívánunk!</p>
+						kívánunk!
+					</p>
 				</div>
 
 			</div>
@@ -298,7 +301,7 @@
 		const YEARS = ["2001", "2011", "2022"]
 	</script>
 	<script src="markups/Markup.js"></script>
-	<script src="markups/SimpleDataMarkup.js"></script>	
+	<script src="markups/SimpleDataMarkup.js"></script>
 	<script src="markups/DataMarkup.js"></script>
 	<script src="markups/OneDataOnlyMarkup.js"></script>
 	<script src="markups/ChartMarkup.js"></script>
@@ -327,25 +330,33 @@
 				return colls.map(c => `${c} = ${getLabel(c)}`).join("<br/>")
 
 			});
+			var mapSettings = jQuery.parseJSON(new URL(location.href).searchParams.get('map'))
+			initMap(mapSettings || {})
 
 			$("#mapData").html(function () {
 				colls.sort();
-				return colls.map(c => `<option ${c == "RE_C" ? "selected " : ""}value="${c}">${c} - ${getLabel(c)}</option>`)
+				return colls.map(c => `<option value="${c}" ${(mapSettings?.d || "RE_C") == c ? "selected" : ""}>${c} - ${getLabel(c)}</option>`)
 			})
 			$("#mapInProprotionTo").html(function () {
 				colls.sort();
-				return colls.map(c => `<option ${c == "TOTAL" ? "selected " : ""}value="${c}">${c} - ${getLabel(c)}</option>`)
+				return colls.map(c => `<option value="${c}" ${(mapSettings?.i || "TOTAL") == c ? "selected" : ""}>${c} - ${getLabel(c)}</option>`)
 			})
 
 			$('#mapData').select2();
 			$('#mapInProprotionTo').select2();
 
+			publish("publishMap")
+
 			// A beállítások textarea átírása után frissítjük a megjelenítéset
 			$("#config_button").click(function () {
-				settings = jQuery.parseJSON($("#config_textarea").val());
+				try {
+					settings = jQuery.parseJSON($("#config_textarea").val());
 
-				changeSetting();
-				publish();
+					changeSetting();
+					publish();
+				}
+				catch (e) { alert(e) }
+
 				// TODO: valami visszajelző <div class="alert-success"> ami aztán eltűnik
 			});
 
@@ -367,7 +378,8 @@
 
 		function changeSetting() {
 			var newUrl = updateUrlParameter(window.location.href, "settings", encodeURI(JSON.stringify(settings)));
-			window.location.replace(newUrl);
+			window.history.pushState({}, "", newUrl)
+			loadSettings()
 		}
 
 		function getLabel(col) {
@@ -484,6 +496,21 @@
 			}
 
 			return params;
+		}
+
+		function checkCountOfSettlements() {
+			var settlements = {}
+			for (const [key, value] of Object.entries(fullData)) {
+				value.settlements.forEach(settlement => {
+					settlements[settlement] = settlements[settlement] ? settlements[settlement] + 1 : 1
+				});
+			}
+
+			for (const [key, value] of Object.entries(settlements)) {
+				if (value != 3) {
+					console.log(key)
+				}
+			}
 		}
 
 
