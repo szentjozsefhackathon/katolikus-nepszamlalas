@@ -62,9 +62,9 @@ function changeMap() {
         d: $("#mapData option:selected")[0]?.value || "RE_C",
         i: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL",
         c: $("#mapColoring option:selected")[0]?.value || "2022data",
-        n: $("#switchMapInfo").is(":checked") || true,
-        l: $("#switchMapLegend").is(":checked") || true,
-        m: $("#switchMapMap").is(":checked") || false
+        n: $("#switchMapInfo").is(":checked"),
+        l: $("#switchMapLegend").is(":checked"),
+        m: $("#switchMapMap").is(":checked")
     }
     var newUrl = updateUrlParameter(window.location.href, "map", encodeURI(JSON.stringify(mapSettings)));
     window.history.pushState({}, "", newUrl)
