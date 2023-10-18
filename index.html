@@ -269,6 +269,8 @@
 						(szerű) fájl
 						esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
 
+					<div class="container" id="addNodeContainer"></div>
+
 					<textarea id="config_textarea" cols="40"
 						rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
 					<br /><br />
@@ -306,6 +308,7 @@
 	<script src="markups/OneDataOnlyMarkup.js"></script>
 	<script src="markups/ChartMarkup.js"></script>
 	<script src="OSM DataSources/dioceses.js"></script>
+	<script src="addNode.js"></script>
 
 	<script>
 		var settings = {}; //A beállítások. Főként a mezők/dimenziók
@@ -347,6 +350,10 @@
 
 			publish("publishMap")
 
+			$("#newNodeData").html($("#mapData").html())
+			$("#newNodeInProprotionTo").html($("#mapInProprotionTo").html())
+			$("#newNodeData").select2()
+			$("#newNodeInProprotionTo").select2()
 			// A beállítások textarea átírása után frissítjük a megjelenítéset
 			$("#config_button").click(function () {
 				try {

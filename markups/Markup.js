@@ -8,14 +8,20 @@ class Markup {
         this.orderSelect = orderSelect
     }
     static markups = {}
-    static addMarkup(markupName, markupClass) {
+    static addMarkup(markupName, markupClass, hungarianName=null, inProprotionTo=false, year=false, multipleData=false) {
         if (this.markups[markupName]) throw `Markup with name '${markupName}' are already registered`
         if (!(markupClass.prototype instanceof Markup)) throw `${markupName} is not Markup`
-        this.markups[markupName] = markupClass
+        this.markups[markupName] = {
+            markup: markupClass,
+            hungarianName: hungarianName || markupName,
+            inProprotionTo,
+            year,
+            multipleData
+        }
     }
 
     static getMarkup(markupName) {
-        if(this.markups[markupName]) return this.markups[markupName]
+        if(this.markups[markupName]) return this.markups[markupName].markup
         throw `There is no registered markup with name '${markupName}'`
     }
 
@@ -30,11 +36,14 @@ class Markup {
             throw `There is no registered markup with name '${markupName}'`
         }
 
-        const markup = new this.markups[markupName](data, type, row, settings, orderSelect)
+        const markup = new this.markups[markupName].markup(data, type, row, settings, orderSelect)
 
         return markup.render()
     }
 
+    static list() {
+        return this.markups
+    }
     render() {
         throw "render abstract method has no implementation"
     }
