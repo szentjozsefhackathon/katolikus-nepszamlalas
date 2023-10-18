@@ -38,6 +38,36 @@ class ChartMarkup extends Markup {
   }
 }
 
-["pie", "doughnut", "bar", "bubble", "line", "polarArea", "radar"].forEach(t => {
-  Markup.addMarkup(`${t}Chart`, ChartMarkup)
+const charts = [
+  {
+    type: "pie",
+    name: "Kördiagram"
+  },
+  {
+    type: "doughnut",
+    name: "Fánkdiagram"
+  },
+  {
+    type: "bar",
+    name: "Oszlopdiagram"
+  },
+  {
+    type: "bubble",
+    name: "Buborékdiagram"
+  },
+  {
+    type: "line",
+    name: "Vonaldiagram"
+  },
+  {
+    type: "polarArea",
+    name: "Hálódiagram" //Lehet, hogy ez a radar???? 
+  },
+  {
+    type: "radar",
+    name: "Radardiagram"
+  }
+]
+charts.forEach(c => {
+  Markup.addMarkup(`${c.type}Chart`, ChartMarkup, c.name, false, true, true)
 })

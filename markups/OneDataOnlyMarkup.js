@@ -49,4 +49,4 @@ s
     }
 }
 
-Markup.addMarkup("oneDataOnly", OneDataOnlyMarkup)
+Markup.addMarkup("oneDataOnly", OneDataOnlyMarkup, "Sorbarendezés szerinti adat", true, false, false)

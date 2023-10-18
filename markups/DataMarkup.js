@@ -54,4 +54,4 @@ class DataMarkup extends SimpleDataMarkup {
     }
 }
 
-Markup.addMarkup("data", DataMarkup)
+Markup.addMarkup("data", DataMarkup, "Részletes adat", true, false, false)

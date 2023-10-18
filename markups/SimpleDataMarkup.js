@@ -79,4 +79,4 @@ class SimpleDataMarkup extends Markup {
     }
 }
 
-Markup.addMarkup("simpleData", SimpleDataMarkup)
+Markup.addMarkup("simpleData", SimpleDataMarkup, "Egyszerű adat", true, false, false)
