@@ -25,7 +25,6 @@ if (!$("#container_datatable").length) {
 
 function publishDatatable(data, settings) {
 	$.fn.dataTableExt.sErrMode='none'
-	console.log(settings)
 	document.getElementById("container_datatable").style.display = "block";
 
 	if (datatable1) {
