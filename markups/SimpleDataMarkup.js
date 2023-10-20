@@ -51,27 +51,27 @@ class SimpleDataMarkup extends Markup {
         this.calculate()
         if(this.sortTable()) return this.sortTable()
         
-
+        const OS = document.getElementById(this.orderSelect).value;
         if (this.settings['inProprotionTo']) {
             if (!this.row[this.settings['inProprotionTo']]) {
                 return '<i>Hiányzó adat.</i>'; // '<span class="alert alert-danger">' + this.settings['inProprotionTo'] + ' is missing!</span>';
             }
 
             var markup =
-                `<span ${isNaN(this.proptional[2022])?'style="display: none" ':''}class="badge text-bg-primary even-larger-badge" title="${this.data[2022].toLocaleString('hu-HU', { maximumFractionDigits: 2 })} (2022-es adat)">
+                `<span ${isNaN(this.proptional[2022])?'style="display: none" ':''}class="badge text-bg-primary even-larger-badge ${OS=='2022data'? "highlight-data": ''}" title="${this.data[2022].toLocaleString('hu-HU', { maximumFractionDigits: 2 })} (2022-es adat)">
                     ${this.proptional[2022].toLocaleString('hu-HU', { maximumFractionDigits: 2 })}%</span><br/>
-                <span ${isNaN(this.proptional[2001])?'style="display: none" ':''} class="badge text-bg-secondary" title="${this.data[2001] ? this.data[2001].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) : "undefined"} (2001-es adat)">
+                <span ${isNaN(this.proptional[2001])?'style="display: none" ':''} class="badge text-bg-secondary ${OS=='2001data'? "highlight-data": ''}" title="${this.data[2001] ? this.data[2001].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) : "undefined"} (2001-es adat)">
                     ${this.proptional[2001].toLocaleString('hu-HU', { maximumFractionDigits: 2 })}%</span>&nbsp;
-                <span ${isNaN(this.proptional[2011])?'style="display: none" ':''}class="badge text-bg-secondary" title="${this.data[2011] ? this.data[2011].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) : "undefined"} (2011-es adat)">
+                <span ${isNaN(this.proptional[2011])?'style="display: none" ':''}class="badge text-bg-secondary ${OS=='2011data'? "highlight-data": ''}" title="${this.data[2011] ? this.data[2011].toLocaleString('hu-HU', { maximumFractionDigits: 2 }) : "undefined"} (2011-es adat)">
                     ${this.proptional[2011].toLocaleString('hu-HU', { maximumFractionDigits: 2 })}%
                 </span>&nbsp;`
 
         } else {
-            var markup = `<span ${isNaN(this.data[2022])?'style="display: none" ':''}class="badge text-bg-primary even-larger-badge" title="2022-es adat">
+            var markup = `<span ${isNaN(this.data[2022])?'style="display: none" ':''}class="badge text-bg-primary even-larger-badge ${OS=='2022data'? "highlight-data": ''}" title="2022-es adat">
                     ${this.data[2022]?.toLocaleString('hu-HU', { maximumFractionDigits: 2 })}</span><br/>		
-                <span ${isNaN(this.data[2001])?'style="display: none" ':''}class="badge text-bg-secondary" title="2001-es adat">
+                <span ${isNaN(this.data[2001])?'style="display: none" ':''}class="badge text-bg-secondary  ${OS=='2001data'? "highlight-data": ''}" title="2001-es adat">
                     ${this.data[2001]?.toLocaleString('hu-HU', { maximumFractionDigits: 2 })}</span>&nbsp;
-                <span ${isNaN(this.data[2011])?'style="display: none" ':''}class="badge text-bg-secondary" title="2011-es adat">
+                <span ${isNaN(this.data[2011])?'style="display: none" ':''}class="badge text-bg-secondary  ${OS=='2011data'? "highlight-data": ''}" title="2011-es adat">
                     ${this.data[2011]?.toLocaleString('hu-HU', { maximumFractionDigits: 2 })}
                 </span>&nbsp;`
         }
