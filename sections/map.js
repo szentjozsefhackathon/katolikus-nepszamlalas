@@ -56,7 +56,7 @@ var color = {
 
 
 function changeMap() {
-    if(!initialized) return
+    if (!initialized) return
     publish("publishMap")
     mapSettings = {
         d: $("#mapData option:selected")[0]?.value || "RE_C",
@@ -82,10 +82,12 @@ function publishMap(filteredData, settings) {
     map = L.map('map', { zoomControl: false }).setView([47.134, 19.693], 8);
     if ($("#switchMapMap").is(":checked")) L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 8,
-        minZoom: 8,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        minZoom: 8
     }).addTo(map);
-
+    
+    map.attributionControl.addAttribution('&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>')
+    map.attributionControl.addAttribution('Forrás: KSH / <a href="https://nepszamlalas2022.ksh.hu/">ksh.hu</a>');
+    map.attributionControl.addAttribution('<a href="https://borazslo.github.io/katolikus-nepszamlalas">https://borazslo.github.io/katolikus-nepszamlalas</a>')
     map.dragging.disable();
 
     const title = L.control({ position: 'topleft' });
@@ -107,7 +109,7 @@ function publishMap(filteredData, settings) {
 
 
         const div = L.DomUtil.create('div', 'source');
-        div.innerHTML = `<div id="mapQR"></div><br>Forrás: <a href="borazslo.github.io/katolikus-nepszamlalas">borazslo.github.io/katolikus-nepszamlalas</a>`
+        div.innerHTML = `<div id="mapQR"></div>`
         return div;
 
     };
@@ -299,6 +301,6 @@ function publishMap(filteredData, settings) {
     map.keyboard.disable();
     if (map.tap) map.tap.disable();
 
-    $('#mapQR').qrcode({width: 120,height: 120,text: updateUrlParameter(window.location.origin + window.location.pathname, "map", new URL(location.href).searchParams.get('map'))});
+    $('#mapQR').qrcode({ width: 120, height: 120, text: updateUrlParameter(window.location.origin + window.location.pathname, "map", new URL(location.href).searchParams.get('map')) });
 
 }
