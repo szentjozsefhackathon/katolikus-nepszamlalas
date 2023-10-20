@@ -130,12 +130,12 @@ function publishMap(filteredData, settings) {
         if (!$("#switchMapInfo").is(":checked")) return
         var HU = filteredData.find(d => d.name == "Magyarország")
         HU = { diocese: HU.name, ...HU.data }
-        const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" })
+        const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")
         var d = props ? filteredData.find(d => d.name.toLowerCase() == props.name.toLowerCase()) : null
         if (d) {
             d = { diocese: d.name, ...d.data }
         }
-        const markup = props ? Markup.callMarkup(d[$("#mapData option:selected")[0].value], "data", d, { data: $("#mapData option:selected")[0].value, inProprotionTo: $("#mapInProprotionTo option:selected")[0].value }) : ""
+        const markup = props ? Markup.callMarkup(d[$("#mapData option:selected")[0].value], "data", d, { data: $("#mapData option:selected")[0].value, inProprotionTo: $("#mapInProprotionTo option:selected")[0].value }, "mapColoring") : ""
         const contents = props ? `<h4>${props.name}</h4>${markup}` : 'Irányítsa a kurzort egy egyházmegye fölé';
 
         this._div.innerHTML = `${contents}<br><h5>Magyarország</h5>${_HU}`;
