@@ -313,6 +313,10 @@ for key, area in areas.items():
         print('.', end=' ', flush=True)
 
 
+    if 'MKPK_PRIEST' in data and 'MKPK_C' in data:
+        areas[key]['data']['MKPK_R_CPERP'] = {"2022": int(data['MKPK_C']['2022']) / int(data['MKPK_PRIEST']['2022'])   }
+    
+
     
     print('.', end=' ', flush=True)    
     

@@ -68,6 +68,7 @@
     "MKPK_PRIEST_D": "Egyházmegye papjai (MKPK)",
     "MKPK_PRIEST_R": "Szerzetes papok (MKPK)",
 	"MKPK_PRIEST": "Papok összesen(MKPK) (származtatott)",
+    "MKPK_R_CPERP": "Egy papra jutó katolikusok (MKPK, származtatott)" ,
     "MKPK_RECTORY": "Templomigazgatóságok (MKPK)",
 	"CH_R_C": "Katolikusok (CH)",
     "CH_R_CPERP": "Egy papra jutó katolikusok (CH)" ,
