@@ -42,10 +42,6 @@ if ($("#addNodeContainer").length == 1) {
         </div>
       </div>
       <button id="addNodeButton" type="button" class="btn btn-primary">Elem hozzáadása</button>
-<<<<<<< HEAD:configEditor/addNode.js
-=======
-
->>>>>>> Add nodes to config:addNode.js
    </div>`
   );
 }
