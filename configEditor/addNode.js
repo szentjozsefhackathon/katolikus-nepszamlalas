@@ -84,6 +84,7 @@ function getNewNodeData() {
 
 $("#addNodeButton").click(function() {
   settings.push(getNewNodeData())
+  $("#config_textarea").html(JSON.stringify(settings, null, 2));
   changeSetting()
   publish()
 })
