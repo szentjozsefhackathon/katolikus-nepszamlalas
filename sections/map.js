@@ -330,7 +330,7 @@ function publishMap(filteredData, settings) {
 
 
         for (let i = 0; i < grades.length; i++) {
-            labels.push(`<i style="background:${getColor(grades[i])}"></i>${Math.floor(grades[i])}%`);
+            labels.push(`<i style="background:${getColor(grades[i])}"></i>${Math.floor(grades[i]).toLocaleString('hu-HU', { maximumFractionDigits: 2 })}`);
         }
         labels.push("A színskála nem tartalmaz minden színt, csak az arányokat.")
 
