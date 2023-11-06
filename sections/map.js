@@ -38,9 +38,13 @@ if (!$("#container_map").length) {
                 <label class="form-check-label" for="switchMapTitle">Cím</label>
             </div>
             <div class="form-check form-switch form-check-inline">
-            <input class="form-check-input" type="checkbox" id="switchMapMap" onclick="changeMap()">
-            <label class="form-check-label" for="switchMapMap">Térkép</label>
-        </div>
+                <input class="form-check-input" type="checkbox" id="switchMapMap" onclick="changeMap()">
+                <label class="form-check-label" for="switchMapMap">Térkép</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="switchMapRG" onclick="changeMap()">
+                <label class="form-check-label" for="switchMapRG">Piros-Zöld csere</label>
+            </div>
 			<div id="map" style="height: 800px"></div>
 		</div>
 		<div class="b-example-divider float-end"></div>`
@@ -61,6 +65,7 @@ function initMap(settings) {
     $("#switchMapInfo").prop("checked", "n" in settings ? settings.n : true)
     $("#switchMapLegend").prop("checked", "l" in settings ? settings.l : true)
     $("#switchMapMap").prop("checked", "m" in settings ? settings.m : false)
+    $("#switchMapRG").prop("checked", "r" in settings ? settings.r : false)
     $("#mapInProprotionToCheck").prop("checked", "p" in settings ? settings.p : false)
     if ($("#mapInProprotionToCheck").prop("checked")) $("#container_mapInProprotionTo_Field").show()
     else $("#container_mapInProprotionTo_Field").hide()
@@ -83,7 +88,8 @@ function changeMap() {
         n: $("#switchMapInfo").is(":checked"),
         l: $("#switchMapLegend").is(":checked"),
         m: $("#switchMapMap").is(":checked"),
-        p: $("#mapInProprotionToCheck").is(":checked")
+        p: $("#mapInProprotionToCheck").is(":checked"),
+        r: $("#switchMapRG").is(":checked")
     }
     var newUrl = updateUrlParameter(window.location.href, "map", encodeURI(JSON.stringify(mapSettings)));
     window.history.pushState({}, "", newUrl)
@@ -196,6 +202,12 @@ function publishMap(filteredData, settings) {
             red = Math.floor(Math.max(Math.min(255, red), 0))
             green = Math.floor(Math.max(Math.min(255, green), 0))
             blue = Math.floor(Math.max(Math.min(255, blue), 0))
+
+            if ($("#switchMapRG").is(":checked")) {
+                var sw1 = red
+                red = green
+                green = sw1
+            }
             var decColor = 0x1000000 + blue + 0x100 * green + 0x10000 * red;
             return '#' + decColor.toString(16).substr(1);
         }
