@@ -6,8 +6,16 @@ if (!$("#container_map").length) {
 			<p>Itt a római katolikus egyházmegyék adatait tudjuk térképen vizualizálni és összehasonlítani. A megjelenítendő adat elemet legördülő menüből választhatjuk ki. Jó sok van. A térképen a görögkatolikus egyházmegyék nem szerepelnek.</p>
             <label for="mapData">Megjelenített adat</label>
             <select id="mapData" class="form-control" onchange="changeMap()"></select>
-            <label for="mapInProprotionTo">Arányosítva ehhez</label>
-            <select id="mapInProprotionTo" class="form-control" onchange="changeMap()"></select>
+            <input class="form-check-input" type="checkbox" id="mapInProprotionToCheck" checked>
+            <label class="form-check-label" for="mapInProprotionToCheck">
+              Arányosítás
+            </label>
+            <br>
+            <div id="container_mapInProprotionTo_Field">
+                <label for="mapInProprotionTo">Arányosítva ehhez</label>
+                <select id="mapInProprotionTo" class="form-control" onchange="changeMap()"></select>
+            </div>
+    
             <label for="mapColoring">Színezés alapja</label>
 			<select class="form-control" id="mapColoring" onchange="changeMap()">
 				<option value="2022data">2022-es KSH adatok</option>
@@ -30,14 +38,25 @@ if (!$("#container_map").length) {
                 <label class="form-check-label" for="switchMapTitle">Cím</label>
             </div>
             <div class="form-check form-switch form-check-inline">
-            <input class="form-check-input" type="checkbox" id="switchMapMap" onclick="changeMap()">
-            <label class="form-check-label" for="switchMapMap">Térkép</label>
-        </div>
+                <input class="form-check-input" type="checkbox" id="switchMapMap" onclick="changeMap()">
+                <label class="form-check-label" for="switchMapMap">Térkép</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="switchMapRG" onclick="changeMap()">
+                <label class="form-check-label" for="switchMapRG">Piros-Zöld csere</label>
+            </div>
 			<div id="map" style="height: 800px"></div>
 		</div>
 		<div class="b-example-divider float-end"></div>`
     );
 }
+$("#mapInProprotionToCheck").click(function() {
+    if ($("#mapInProprotionToCheck").prop("checked")) $("#container_mapInProprotionTo_Field").show()
+    else $("#container_mapInProprotionTo_Field").hide()
+
+    changeMap()
+  })
+
 
 var map;
 var initialized = false
@@ -46,6 +65,10 @@ function initMap(settings) {
     $("#switchMapInfo").prop("checked", "n" in settings ? settings.n : true)
     $("#switchMapLegend").prop("checked", "l" in settings ? settings.l : true)
     $("#switchMapMap").prop("checked", "m" in settings ? settings.m : false)
+    $("#switchMapRG").prop("checked", "r" in settings ? settings.r : false)
+    $("#mapInProprotionToCheck").prop("checked", "p" in settings ? settings.p : false)
+    if ($("#mapInProprotionToCheck").prop("checked")) $("#container_mapInProprotionTo_Field").show()
+    else $("#container_mapInProprotionTo_Field").hide()
     initialized = true
 }
 
@@ -64,7 +87,9 @@ function changeMap() {
         c: $("#mapColoring option:selected")[0]?.value || "2022data",
         n: $("#switchMapInfo").is(":checked"),
         l: $("#switchMapLegend").is(":checked"),
-        m: $("#switchMapMap").is(":checked")
+        m: $("#switchMapMap").is(":checked"),
+        p: $("#mapInProprotionToCheck").is(":checked"),
+        r: $("#switchMapRG").is(":checked")
     }
     var newUrl = updateUrlParameter(window.location.href, "map", encodeURI(JSON.stringify(mapSettings)));
     window.history.pushState({}, "", newUrl)
@@ -76,8 +101,36 @@ function publishMap(filteredData, settings) {
         $("#map").html("")
 
     }
-    color.min = Math.min(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")).filter(d => !isNaN(d))))
-    color.max = Math.max(...(filteredData.map(d => Markup.callMarkup(d.data[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", { diocese: d.name, ...d.data }, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")).filter(d => !isNaN(d))))
+
+    function getDataWhere() {
+        return $("#mapData option:selected")[0]?.value || "RE_C"
+    }
+
+    function getInProprotionTo() {
+        return $("#mapInProprotionToCheck").prop("checked")? {inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL"} : {}   
+    }
+
+    function getSettings() {
+        return {data: getDataWhere(), ...(getInProprotionTo())}
+        
+    }
+    color.min = Math.min(...(filteredData
+        .map(d => Markup.callMarkup(
+            d.data[getDataWhere()],
+            "sort",
+            { diocese: d.name, ...d.data },
+            getSettings(),
+            "mapColoring"))
+        .filter(d => !isNaN(d))))
+    color.max = Math.max(...(filteredData
+        .map(d => Markup.callMarkup(
+            d.data[getDataWhere()],
+            "sort",
+            { diocese: d.name, ...d.data },
+            getSettings(),
+            "mapColoring"))
+        .filter(d => !isNaN(d))))
+
 
     map = L.map('map', { zoomControl: false }).setView([47.134, 19.693], 8);
     if ($("#switchMapMap").is(":checked")) L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -93,11 +146,11 @@ function publishMap(filteredData, settings) {
     const title = L.control({ position: 'topleft' });
     title.onAdd = function (map) {
         const dataType = $("#mapData option:selected")[0]?.value || "RE_C";
-        const inProprotionToType = $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL";
+        const inProprotionToType = $("#mapInProprotionToCheck").prop("checked") ? $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" : null;
         const mapColoring = $("#mapColoring option:selected")[0]?.innerHTML || "2022-es KSH adatok";
 
         const div = L.DomUtil.create('div', 'info title');
-        div.innerHTML = "<h2><strong>„" + getLabel(dataType) + "”</strong> személyek létszáma <br/> a(z) <strong>„" + getLabel(inProprotionToType) + "”</strong> arányában</h2>";
+        div.innerHTML = `<h2><strong>„${getLabel(dataType)}”</strong> személyek létszáma${inProprotionToType? `<br/>a(z) <strong>„${getLabel(inProprotionToType)}”</strong> arányában`: ``}</h2>`;
         div.innerHTML += "<h4><strong>" + mapColoring + "</strong></h4>";
         return div;
 
@@ -130,12 +183,12 @@ function publishMap(filteredData, settings) {
         if (!$("#switchMapInfo").is(":checked")) return
         var HU = filteredData.find(d => d.name == "Magyarország")
         HU = { diocese: HU.name, ...HU.data }
-        const _HU = Markup.callMarkup(HU[$("#mapData option:selected")[0]?.value || "RE_C"], "data", HU, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" }, "mapColoring")
+        const _HU = Markup.callMarkup(HU[getDataWhere()], "data", HU, getSettings(), "mapColoring")
         var d = props ? filteredData.find(d => d.name.toLowerCase() == props.name.toLowerCase()) : null
         if (d) {
             d = { diocese: d.name, ...d.data }
         }
-        const markup = props ? Markup.callMarkup(d[$("#mapData option:selected")[0].value], "data", d, { data: $("#mapData option:selected")[0].value, inProprotionTo: $("#mapInProprotionTo option:selected")[0].value }, "mapColoring") : ""
+        const markup = props ? Markup.callMarkup(d[getDataWhere()], "data", d, getSettings(), "mapColoring") : ""
         const contents = props ? `<h4>${props.name}</h4>${markup}` : 'Irányítsa a kurzort egy egyházmegye fölé';
 
         this._div.innerHTML = `${contents}<br><h5>Magyarország</h5>${_HU}`;
@@ -149,6 +202,12 @@ function publishMap(filteredData, settings) {
             red = Math.floor(Math.max(Math.min(255, red), 0))
             green = Math.floor(Math.max(Math.min(255, green), 0))
             blue = Math.floor(Math.max(Math.min(255, blue), 0))
+
+            if ($("#switchMapRG").is(":checked")) {
+                var sw1 = red
+                red = green
+                green = sw1
+            }
             var decColor = 0x1000000 + blue + 0x100 * green + 0x10000 * red;
             return '#' + decColor.toString(16).substr(1);
         }
@@ -196,7 +255,7 @@ function publishMap(filteredData, settings) {
         if (d) {
             d = { diocese: d.name, ...d.data }
         }
-        const value = Markup.callMarkup(d[$("#mapData option:selected")[0]?.value || "RE_C"], "sort", d, { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "NEME_SEX" }, "mapColoring")
+        const value = Markup.callMarkup(d[getDataWhere()], "sort", d, getSettings(), "mapColoring")
         return value
     }
 
@@ -235,11 +294,11 @@ function publishMap(filteredData, settings) {
 
                 var diocese = filteredData.find(d => d.osmid == feature.id.replace('/', '-'));
 
-                const markup = Markup.callMarkup(diocese['data'][$("#mapData option:selected")[0]?.value || "RE_C"], "data", diocese['data'], { data: $("#mapData option:selected")[0]?.value || "RE_C", inProprotionTo: $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL", "markup": "oneDataOnly", "which": $("#mapColoring option:selected")[0]?.value || "2022data" })
-
+                const markup = Markup.callMarkup(diocese['data'][getDataWhere()], "data", diocese['data'], { ...(getSettings()), "markup": "oneDataOnly", "which": $("#mapColoring option:selected")[0]?.value || "2022data" }, "mapColoring")
+                
 
                 map.openTooltip(
-                    markup,
+                    `${markup}`,
                     [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
                     {
                         permanent: true,
@@ -283,7 +342,7 @@ function publishMap(filteredData, settings) {
 
 
         for (let i = 0; i < grades.length; i++) {
-            labels.push(`<i style="background:${getColor(grades[i])}"></i>${Math.floor(grades[i])}%`);
+            labels.push(`<i style="background:${getColor(grades[i])}"></i>${Math.floor(grades[i]).toLocaleString('hu-HU', { maximumFractionDigits: 2 })}`);
         }
         labels.push("A színskála nem tartalmaz minden színt, csak az arányokat.")
 

@@ -82,11 +82,13 @@ function publishDashboard(filteredData, settings) {
 		for (const markup in markups) {
 			actualRow[actualCol] = markups[markup]
 
-			if (++actualCol == COLUMNS) {
+			if (++actualCol == COLUMNS || markup == markups.length-1) {
 				rows.push(actualRow)
 				actualRow = {}
 				actualCol = 0
 			}
+
+
 		}
 		return rows
 	}

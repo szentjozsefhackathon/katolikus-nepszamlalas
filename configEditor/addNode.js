@@ -42,7 +42,6 @@ if ($("#addNodeContainer").length == 1) {
         </div>
       </div>
       <button id="addNodeButton" type="button" class="btn btn-primary">Elem hozzáadása</button>
-
    </div>`
   );
 }
@@ -85,6 +84,7 @@ function getNewNodeData() {
 
 $("#addNodeButton").click(function() {
   settings.push(getNewNodeData())
+  $("#config_textarea").html(JSON.stringify(settings, null, 2));
   changeSetting()
   publish()
 })
