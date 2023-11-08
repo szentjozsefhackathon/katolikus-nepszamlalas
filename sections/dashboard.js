@@ -20,7 +20,7 @@ function publishDashboard(filteredData, settings) {
 	document.getElementById("container_dashboard").style.display = "block";
 
 	if (!$('#dashboard .select').length) {
-		var markup = `<select id='dashboard_select' class='select form-control' onchange='publish("publishDashboard")'>`;
+		var markup = `<select id='dashboard_select' class='select form-select' onchange='publish("publishDashboard")'>`;
 		for (let i = 0; i < Object.values(filteredData).length; i++) {
 
 			markup += "<option value=\"" + filteredData[Object.keys(filteredData)[i]]['osmid'] + "\">" + filteredData[Object.keys(filteredData)[i]]['name'] + "</option>"

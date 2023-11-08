@@ -5,7 +5,7 @@ if (!$("#container_map").length) {
             <h2>Térkép</h2>
 			<p>Itt a római katolikus egyházmegyék adatait tudjuk térképen vizualizálni és összehasonlítani. A megjelenítendő adat elemet legördülő menüből választhatjuk ki. Jó sok van. A térképen a görögkatolikus egyházmegyék nem szerepelnek.</p>
             <label for="mapData">Megjelenített adat</label>
-            <select id="mapData" class="form-control" onchange="changeMap()"></select>
+            <select id="mapData" class="form-select" onchange="changeMap()"></select>
             <input class="form-check-input" type="checkbox" id="mapInProprotionToCheck" checked>
             <label class="form-check-label" for="mapInProprotionToCheck">
               Arányosítás
@@ -17,7 +17,7 @@ if (!$("#container_map").length) {
             </div>
     
             <label for="mapColoring">Színezés alapja</label>
-			<select class="form-control" id="mapColoring" onchange="changeMap()">
+			<select class="form-select" id="mapColoring" onchange="changeMap()">
 				<option value="2022data">2022-es KSH adatok</option>
 				<option value="2011data">2011-es KSH adatok</option>
 				<option value="2001data">2001-es KSH adatok</option>

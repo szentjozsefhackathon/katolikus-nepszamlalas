@@ -7,7 +7,7 @@ if (!$("#container_datatable").length) {
 			<h2>Egyházmegyék összehasonlítása táblázatos formában</h2>
 			<p>Az egyes területi egységek különféle adatait itt táblázatos formában tudjuk összehasonlítani. Az oszlopok vonszolással mozgathatóak, és a legtöbb esetben sorba is lehet rendezni egy-egy oszlop szerint a táblázatot. Alul a <a href="#config">Beállítások</a> részben adhatjuk meg, hogy mely területek jelenjenek meg a listában. Valamint egy összetett JSON formátum segítségével állíthatjuk be, hogy milyen oszlopaink legyenek és ott hogyan jelenítsük meg az értékeket.</p>
 			<label for="selectOrder1">Rendezés alapja</label>
-			<select class="form-control" id="selectOrder1" onchange="publish('publishDatatable')">
+			<select class="form-select" id="selectOrder1" onchange="publish('publishDatatable')">
 				<option value="2022data">2022-es KSH adatok</option>
 				<option value="2011data">2011-es KSH adatok</option>
 				<option value="2001data">2001-es KSH adatok</option>
