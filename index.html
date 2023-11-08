@@ -300,13 +300,17 @@
 						meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON
 						(szerű) fájl
 						esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
-					
-					<button type="button" class="addNodeOverlay_open btn btn-secondary">Újabb adat(mező) hozzáadása</button>
+
+
+					<table id="settingsTable" class="table stripe row-border hover">						
+					</table>					
+
+				<br/>	<button type="button" class="addNodeOverlay_open btn btn-secondary">Újabb adat(mező) hozzáadása</button><br/>
 
 					<textarea id="config_textarea" cols="40"
 						rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
 					<br /><br />
-					<button type="button" class="addNodeOverlay_open btn btn-primary">Az adatmegjelenítő frissítése a
+					<button type="button" id="config_button" class="btn btn-primary">Az adatmegjelenítő frissítése a
 						beállítások
 						alapján</button>
 					<p id="settings_url"></p>
@@ -518,6 +522,29 @@
 				})
 			$("#config_textarea").html(JSON.stringify(settings, null, 2));
 			$("#settings_url").html("Megosztható link: <a href='" + location.href + "'>" + location.href + "</a>");
+
+			updateSettingsEditor()
+
+		}
+
+		async function updateSettingsEditor() {
+			console.log("updateSettingsEditor");
+
+			$("#settingsTable").html('<thead class="thead-dark"><tr><th scope="col">#</th><th>Adat (arányosítva)</th><th>Megjelenítés típusa</th><th>Megjelenítés típusa</th></tr></thead><tbody></tbody>');
+			var i = 0;			
+			while (i < settings.length) {
+						var data = settings[i]['data'];
+						if ( settings[i]['inProprotionTo'] ) {
+							data += " (arányosítva: " + settings[i]['inProprotionTo'] + ')';
+						}
+						var markup = settings[i]['markup'];
+				    $("#settingsTable tbody").append('<tr><th scope="row">' + i + '</th><td>' + data + '</td><td>' + markup + '</td><td>szerkesztés törlés</td></tr>');
+				    i++;
+				}
+			$("#config_textarea").hide();
+			$("#config_button").hide();
+			
+
 		}
 
 		async function loadDictionary() {
