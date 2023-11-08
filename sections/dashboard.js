@@ -20,12 +20,12 @@ function publishDashboard(filteredData, settings) {
 	document.getElementById("container_dashboard").style.display = "block";
 
 	if (!$('#dashboard .select').length) {
-		var markup = `<select id='dashboard_select' class='select form-control' onchange='publish("publishDashboard")'>`;
+		var markup = `<div class="row"><label class="col-sm-1">Terület</label><select id='dashboard_select' class='select form-select col-sm' onchange='publish("publishDashboard")'>`;
 		for (let i = 0; i < Object.values(filteredData).length; i++) {
 
 			markup += "<option value=\"" + filteredData[Object.keys(filteredData)[i]]['osmid'] + "\">" + filteredData[Object.keys(filteredData)[i]]['name'] + "</option>"
 		}
-		markup += "</select>";
+		markup += "</select></div>";
 
 		$("#dashboard .settings").html(markup);
 	}
