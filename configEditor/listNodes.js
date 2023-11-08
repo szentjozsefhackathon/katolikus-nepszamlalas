@@ -2,7 +2,7 @@ function listNodes() {
     $("#listNodeContainer").html(`
       <div class="container">
         <label for="newNodeType">Megjelenítés típusa</label>
-        <select class="form-control" id="newNodeType">
+        <select class="form-select" id="newNodeType">
           ${Object.keys(Markup.list()).map(key => `<option value="${key}">${Markup.list()[key].hungarianName}</option>`).join('\n')}
         </select>
         <div id="container_NewNodeData">
