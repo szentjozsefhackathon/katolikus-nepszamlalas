@@ -34,7 +34,7 @@ def VFEM(filename=None):
                 print("Failed to fetch the website.")
         except:
             try:
-                response = requests.get(pap)
+                response = requests.get(url+pap)
                 if response.status_code == 200:
                     html_content = response.content
                 else:
