@@ -23,7 +23,6 @@
 
 	<script type="text/javascript" src="jquery.qrcode.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
 
 
 	<style>
@@ -93,36 +92,9 @@
 			opacity: 0.7;
 		}
 	</style>
-
-	<style>
-		.overlay {
-		  position: fixed;
-		  display: none;
-		  width: 100%;
-		  height: 100%;
-		  top: 0;
-		  left: 0;
-		  right: 0;
-		  bottom: 0;
-		  background-color: rgba(0,0,0,0.8);
-		  z-index: 20000;
-		  cursor: pointer;
-		}
-
-		.overlay .center{
-		  position: absolute;
-		  top: 50%;
-		  left: 50%;
-		  color: white;
-		  transform: translate(-50%,-50%);
-		  -ms-transform: translate(-50%,-50%);
-		}
-	</style>
 </head>
 
 <body>
-
-
 	<script>var sections = [];</script>
 	<div class="container">
 		<div class="px-4 py-5 my-5 text-center">
@@ -300,13 +272,13 @@
 						meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON
 						(szerű) fájl
 						esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
-					
-					<button type="button" class="addNodeOverlay_open btn btn-secondary">Újabb adat(mező) hozzáadása</button>
+
+					<div class="container" id="addNodeContainer"></div>
 
 					<textarea id="config_textarea" cols="40"
 						rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
 					<br /><br />
-					<button type="button" class="addNodeOverlay_open btn btn-primary">Az adatmegjelenítő frissítése a
+					<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a
 						beállítások
 						alapján</button>
 					<p id="settings_url"></p>
@@ -326,15 +298,10 @@
 
 	</div>
 
-	<center><strong onclick="on()">Készítették: Elek László SJ és Vörös László.<br />További információ, forráskód, és bekapcsolódási
+	<center><strong>Készítették: Elek László SJ és Vörös László.<br />További információ, forráskód, és bekapcsolódási
 			lehetőség:<br /> <a
 				href="https://github.com/borazslo/katolikus-nepszamlalas">github.com/borazslo/katolikus-nepszamlalas</a></strong>
 	</center>
-      
-			
-	<div class="overlay" id="addNodeOverlay"></div>
-
-	
 
 	<script>
 		const YEARS = ["2001", "2011", "2022"]
@@ -348,27 +315,12 @@
 	<script src="configEditor/addNode.js"></script>
 
 	<script>
-		
-		
-		
-
-    
-
-
-
 		var settings = {}; //A beállítások. Főként a mezők/dimenziók
 		var dictionary = {}; // KSH rövidítésből leírás
 		var fullData = []; // Minden ami adat
 		var colls = [];  // A minden adatban elérhető mezők/dimenziók
 
 		$(document).ready(async function () {
-
-
-			$('#addNodeOverlay').popup({
-			  pagecontainer: '#page',
-			  escape: true
-			});        
-    
 
 			await loadSettings() // Alapértelmezett mezők/dimenziók
 			await loadDictionary() // A teljes KHS szótár, hogy melyik mező/dimenzió mit jelent
@@ -579,10 +531,6 @@
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
 
-
-
 </body>
-
-
 
 </html>

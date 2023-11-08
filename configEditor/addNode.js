@@ -1,6 +1,6 @@
-if ($("#addNodeOverlay").length == 1) {
-  $("#addNodeOverlay").append(`
-    <div class="container center">
+if ($("#addNodeContainer").length == 1) {
+  $("#addNodeContainer").append(`
+    <div class="container">
       <label for="newNodeType">Megjelenítés típusa</label>
       <select class="form-select" id="newNodeType">
         ${Object.keys(Markup.list()).map(key => `<option value="${key}">${Markup.list()[key].hungarianName}</option>`).join('\n')}
@@ -42,7 +42,6 @@ if ($("#addNodeOverlay").length == 1) {
         </div>
       </div>
       <button id="addNodeButton" type="button" class="btn btn-primary">Elem hozzáadása</button>
-      <button id="cancelAddNodeButton" type="button" class="btn btn-secondary">Mégsem</button>
    </div>`
   );
 }
@@ -83,16 +82,9 @@ function getNewNodeData() {
   return node
 }
 
-
-$("#cancelAddNodeButton").click(function() {
-  $("#addNodeOverlay").popup('hide')
-})
-
 $("#addNodeButton").click(function() {
   settings.push(getNewNodeData())
   $("#config_textarea").html(JSON.stringify(settings, null, 2));
   changeSetting()
   publish()
-  $("#addNodeOverlay").popup('hide')
-
 })
