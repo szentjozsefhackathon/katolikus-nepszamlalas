@@ -4,8 +4,10 @@ if (!$("#container_map").length) {
     $("#sections").append(`<div class="container float-end" id="container_map">
             <h2>Térkép</h2>
 			<p>Itt a római katolikus egyházmegyék adatait tudjuk térképen vizualizálni és összehasonlítani. A megjelenítendő adat elemet legördülő menüből választhatjuk ki. Jó sok van. A térképen a görögkatolikus egyházmegyék nem szerepelnek.</p>
-            <label for="mapData">Megjelenített adat</label>
-            <select id="mapData" class="form-select" onchange="changeMap()"></select>
+            <div class="row">
+            <label for="mapData" class="col-md-2">Megjelenített adat</label>
+            <select id="mapData" class="form-select col-md" onchange="changeMap()"></select>
+            </div>
             <input class="form-check-input" type="checkbox" id="mapInProprotionToCheck" checked>
             <label class="form-check-label" for="mapInProprotionToCheck">
               Arányosítás
@@ -15,9 +17,9 @@ if (!$("#container_map").length) {
                 <label for="mapInProprotionTo">Arányosítva ehhez</label>
                 <select id="mapInProprotionTo" class="form-control" onchange="changeMap()"></select>
             </div>
-    
-            <label for="mapColoring">Színezés alapja</label>
-			<select class="form-select" id="mapColoring" onchange="changeMap()">
+            <div class="row">
+            <label for="mapColoring" class="col-sm-2">Színezés alapja</label>
+			<select class="form-select col-sm" id="mapColoring" onchange="changeMap()">
 				<option value="2022data">2022-es KSH adatok</option>
 				<option value="2011data">2011-es KSH adatok</option>
 				<option value="2001data">2001-es KSH adatok</option>
@@ -25,6 +27,7 @@ if (!$("#container_map").length) {
 				<option value="diff20112022">Változás 2011 és 2022 között</option>
 				<option value="diff20012022">Változás 2001 és 2022 között</option>
 			</select>
+            </div>
             <div class="form-check form-switch form-check-inline">
                 <input class="form-check-input" type="checkbox" id="switchMapInfo" checked onclick="changeMap()">
                 <label class="form-check-label" for="switchMapInfo">Információk</label>
