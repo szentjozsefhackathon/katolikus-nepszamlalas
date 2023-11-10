@@ -41,7 +41,7 @@ if ($("#addNodeContainer").length == 1) {
           <select class="form-control" id="newNodeInProprotionTo"></select>
         </div>
       </div>
-      <button id="addNodeButton" type="button" class="btn btn-primary">Elem hozzáadása</button>
+      <button id="addNodeButton" type="button" class="btn btn-primary">Adatmező hozzáadása</button>
    </div>`
   );
 }

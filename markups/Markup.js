@@ -44,6 +44,10 @@ class Markup {
     static list() {
         return this.markups
     }
+
+    static getName(markupType) {
+        return this.markups[markupType].hungarianName
+    }
     render() {
         throw "render abstract method has no implementation"
     }

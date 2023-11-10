@@ -23,6 +23,8 @@
 
 	<script type="text/javascript" src="jquery.qrcode.min.js"></script>
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 	<style>
@@ -253,10 +255,11 @@
 
 		<div id="sections">
 			<script src="sections/map.js"></script>
+			
 			<script src="sections/datatable.js"></script>
 			<script src="sections/dashboard.js"></script>
 			<script src="sections/chart.js"></script>
-
+			<script src="sections/settingsTable.js"></script>
 
 
 			<div class="container" id="config">
@@ -273,7 +276,6 @@
 						(szerű) fájl
 						esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
 
-					<div class="container" id="addNodeContainer"></div>
 
 					<textarea id="config_textarea" cols="40"
 						rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
@@ -393,9 +395,10 @@
 			loadSettings()
 		}
 
-		function getLabel(col) {
+		function getLabel(col, diagLong = false, diagBreak = false) {
 			var label = [];
 			const isDiagram = typeof col !== "string"
+			if (isDiagram && !diagLong) return "Diagram"
 			if (!isDiagram) col = col.split(":")
 			else label.push("Diagram")
 			for (var i = 0; i < col.length; i++) {
@@ -406,7 +409,7 @@
 				}
 				else return col[i]
 			}
-			return label.join(isDiagram ? ",<br/>" : " - ")
+			return label.join(isDiagram ? `,${diagBreak?'<br/>':' '}` : " - ")
 		}
 
 
