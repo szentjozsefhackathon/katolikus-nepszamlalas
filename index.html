@@ -268,30 +268,37 @@
 					<div id="cb_dioceses" style="display: none;">
 						<h4>Egyházmegyék kiválasztása</h4>
 					</div>
-
-					<h4>Adatmezők és megjelenítésük beállításai</h4>
-					<p>Az adatokat megjelenítő táblázatokban és más elemekben megjelenő információkat az alábbi JSON
-						határozza
-						meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON
-						(szerű) fájl
-						esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
-
-
-					<textarea id="config_textarea" cols="40"
-						rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
-					<br /><br />
-					<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a
-						beállítások
-						alapján</button>
 					<p id="settings_url"></p>
-					<div id="config_colls">
-						<p>A következő dimenziók érhetőek el adatbázisunkban (a rövidítésre húzva az egeret megjelenik a
-							teljes
-							leírása a mezőnek): <span class="badge bg-primary" data-bs-toggle="collapse"
-								href="#config_colls_details" role="button" aria-expanded="false"
-								aria-controls="config_colls_details">Részletek</span></p>
-						<div id="config_colls_details" class="colls collapse"></div>
+					<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#advancedJSON" aria-expanded="false" aria-controls="advancedJSON">
+						Haladó beállítások
+					  </button>
+					<div class="collapse" id="advancedJSON">
+						<h4>Adatmezők és megjelenítésük beállításai</h4>
+						<p>Az adatokat megjelenítő táblázatokban és más elemekben megjelenő információkat az alábbi JSON
+							határozza
+							meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON
+							(szerű) fájl
+							esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
+	
+	
+						<textarea id="config_textarea" cols="40"
+							rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
+						<br /><br />
+						<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a
+							beállítások
+							alapján</button>
+						
+						<div id="config_colls">
+							<p>A következő dimenziók érhetőek el adatbázisunkban (a rövidítésre húzva az egeret megjelenik a
+								teljes
+								leírása a mezőnek): <span class="badge bg-primary" data-bs-toggle="collapse"
+									href="#config_colls_details" role="button" aria-expanded="false"
+									aria-controls="config_colls_details">Részletek</span></p>
+							<div id="config_colls_details" class="colls collapse"></div>
+						</div>
 					</div>
+
+					
 				</div>
 			</div>
 
