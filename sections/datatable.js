@@ -75,7 +75,7 @@ function publishDatatable(data, settings) {
 					data: c['data'],
 					title: title,
 					render: function (data, type, row) {
-						return Markup.callMarkup(data, type, row, c)
+						return Markup.callMarkup(data, type, row, {...c, showBig: false})
 					}
 				}
 			})],

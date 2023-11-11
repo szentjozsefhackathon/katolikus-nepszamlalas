@@ -31,6 +31,7 @@
 		.highlight-data {
 			text-decoration: underline;
 		}
+
 		.badge.even-larger-badge {
 			font-size: 1.1em;
 		}
@@ -94,6 +95,8 @@
 			opacity: 0.7;
 		}
 	</style>
+
+
 </head>
 
 <body>
@@ -255,7 +258,7 @@
 
 		<div id="sections">
 			<script src="sections/map.js"></script>
-			
+
 			<script src="sections/datatable.js"></script>
 			<script src="sections/dashboard.js"></script>
 			<script src="sections/chart.js"></script>
@@ -269,9 +272,10 @@
 						<h4>Egyházmegyék kiválasztása</h4>
 					</div>
 					<p id="settings_url"></p>
-					<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#advancedJSON" aria-expanded="false" aria-controls="advancedJSON">
+					<button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+						data-bs-target="#advancedJSON" aria-expanded="false" aria-controls="advancedJSON">
 						Haladó beállítások
-					  </button>
+					</button>
 					<div class="collapse" id="advancedJSON">
 						<h4>Adatmezők és megjelenítésük beállításai</h4>
 						<p>Az adatokat megjelenítő táblázatokban és más elemekben megjelenő információkat az alábbi JSON
@@ -279,17 +283,18 @@
 							meg. Ennek megváltoztatásával sok mindent meg lehet nézni. Vigyázat! A program hibás JSON
 							(szerű) fájl
 							esetén nem jelez vissza semmit, csak nem fog az elvárt módon működni.</p>
-	
-	
+
+
 						<textarea id="config_textarea" cols="40"
 							rows="20">Ide lehet betölteni a beállításokat JSON formában.</textarea>
 						<br /><br />
 						<button id="config_button" type="button" class="btn btn-primary">Az adatmegjelenítő frissítése a
 							beállítások
 							alapján</button>
-						
+
 						<div id="config_colls">
-							<p>A következő dimenziók érhetőek el adatbázisunkban (a rövidítésre húzva az egeret megjelenik a
+							<p>A következő dimenziók érhetőek el adatbázisunkban (a rövidítésre húzva az egeret
+								megjelenik a
 								teljes
 								leírása a mezőnek): <span class="badge bg-primary" data-bs-toggle="collapse"
 									href="#config_colls_details" role="button" aria-expanded="false"
@@ -298,12 +303,28 @@
 						</div>
 					</div>
 
-					
+
 				</div>
 			</div>
 
 		</div>
-
+		<div class="modal fade" id="bigChartModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="bigChartModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-fullscreen">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h1 class="modal-title fs-5" id="bigChartModalLabel">Diagram nagyban.</h1>
+				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+				</div>
+				<div class="modal-body">
+				  <canvas id="bigChartCanvas"></canvas>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
 
 	</div>
 
@@ -324,12 +345,15 @@
 	<script src="configEditor/addNode.js"></script>
 
 	<script>
+
+
 		var settings = {}; //A beállítások. Főként a mezők/dimenziók
 		var dictionary = {}; // KSH rövidítésből leírás
 		var fullData = []; // Minden ami adat
 		var colls = [];  // A minden adatban elérhető mezők/dimenziók
 		var descriptions = {}
-
+		const bigChartModal = document.getElementById('bigChartModal')
+		var bigChart;
 		$(document).ready(async function () {
 
 			await loadSettings() // Alapértelmezett mezők/dimenziók
@@ -382,7 +406,11 @@
 			});
 
 		});
-
+		function showBigChart(settings) {
+			if (bigChart)
+				bigChart.destroy()
+			bigChart = new Chart(document.getElementById("bigChartCanvas"), settings)
+		}
 		// Egyházmegye (area) választó izé.
 		function publishCheckboxes(data) {
 			document.getElementById("cb_dioceses").style.display = "block";
@@ -417,7 +445,7 @@
 				}
 				else return col[i]
 			}
-			return label.join(isDiagram ? `,${diagBreak?'<br/>':' '}` : " - ")
+			return label.join(isDiagram ? `,${diagBreak ? '<br/>' : ' '}` : " - ")
 		}
 
 
@@ -493,8 +521,8 @@
 
 		async function loadDescriptions() {
 			await $.getJSON("descriptions.json", function (data) {
-					descriptions = data;
-				})
+				descriptions = data;
+			})
 		}
 
 
