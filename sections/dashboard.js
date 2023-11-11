@@ -50,9 +50,9 @@ function publishDashboard(filteredData, settings) {
 	}
 
 	const details = `
-	  <h5 class="card-title">` + data['name'] + `</h5>
-	  <h6 class="card-subtitle mb-2 text-muted">Ez egy remek hely.</h6>
-	  <p class="card-text">Bármi összefoglaló leírás itten.</p>`
+	  <h5 class="card-title">${data['name']}</h5>
+	  <h6 class="card-subtitle mb-2 text-muted">${descriptions[data['name']]?.subtitle||""}</h6>
+	  <p class="card-text">${descriptions[data['name']]?.description||""}</p>`
 	var markups = [details, ...settings.map((value) => {
 		var subtitle = "";
 		if (value['inProprotionTo']) subtitle = `

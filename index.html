@@ -328,13 +328,14 @@
 		var dictionary = {}; // KSH rövidítésből leírás
 		var fullData = []; // Minden ami adat
 		var colls = [];  // A minden adatban elérhető mezők/dimenziók
+		var descriptions = {}
 
 		$(document).ready(async function () {
 
 			await loadSettings() // Alapértelmezett mezők/dimenziók
 			await loadDictionary() // A teljes KHS szótár, hogy melyik mező/dimenzió mit jelent
 			await loadFullData(); // A teljes adatsor betöltése, amit korábban a prepare.py hozott létre
-
+			await loadDescriptions();
 			publishCheckboxes(fullData); //Az egyházmegye választó szűrő betöltése
 
 			publish(); // A nagy táblázatok és csartok betöltése. Minden beállítás módosításkor újrahívjuk ezt.
@@ -488,6 +489,12 @@
 			await $.getJSON("KSH DataSources/dictionary.json", function (data) {
 				dictionary = data
 			});
+		}
+
+		async function loadDescriptions() {
+			await $.getJSON("descriptions.json", function (data) {
+					descriptions = data;
+				})
 		}
 
 
