@@ -438,6 +438,8 @@
 				eval(sections[i] + `(${sections[i] == "publishMap" ? 'Object.keys(fullData).reduce((cur, key) => {cur.push(fullData[key]); return cur;}, [])' : 'filteredData'}, unfoldedSettings)`);
 			}
 
+			ChartMarkup.renderAll()
+
 		}
 
 		function unfoldSettings(settings) {

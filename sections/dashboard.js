@@ -62,7 +62,7 @@ function publishDashboard(filteredData, settings) {
 
 		return `<h5 class="card-title" title="${value['data']}">${getLabel(value['data'])}</h5>
 		 		${subtitle}
-		 		${Markup.callMarkup(data['data'][value['data']], false, data['data'], value)}`
+		 		${Markup.callMarkup(data['data'][value['data']], false, data['data'], {...value, toRender: false})}`
 	})]
 
 

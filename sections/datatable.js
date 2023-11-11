@@ -24,6 +24,10 @@ if (!$("#container_datatable").length) {
 	);
 }
 
+$('#datatable').on( 'column-reorder.dt', function () {
+	ChartMarkup.renderAll()
+} );
+
 
 function publishDatatable(data, settings) {
 	$.fn.dataTableExt.sErrMode='none'
@@ -31,6 +35,7 @@ function publishDatatable(data, settings) {
 
 	if (datatable1) {
 		datatable1.destroy()
+		datatable1 = null
 		$('#datatable').html('')
 	}
 
