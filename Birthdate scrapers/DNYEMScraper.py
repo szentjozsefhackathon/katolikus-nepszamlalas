@@ -45,10 +45,25 @@ def DNYEM(filename=None):
         soup = BeautifulSoup(html_content, 'html.parser')
         firstLine = True
         for sor in soup.select_one("#main table").findAll("tr"):
-            if firstLine:
+            if firstLine and soup.select_one("#main article h1").text!="Mészáros Zsolt":
                 firstLine = False
                 continue
-            sor.select_one("br").replace_with("\n")
+            if soup.select_one("#main article h1").text == "Molnár József":
+                paplista.append({
+                    "név": soup.select_one("#main article h1").text,
+                    "született": 1968
+                })
+                continue
+            if soup.select_one("#main article h1").text == "Sári András":
+                paplista.append({
+                    "név": soup.select_one("#main article h1").text,
+                    "született": 1971
+                })
+                continue
+            print(soup.select_one("#main article h1").text)
+            try:
+                sor.select_one("br").replace_with("\n")
+            except: pass
             if len(sor.text.split("\n")[0].split(", ")) < 2:
                 break # Ft. Czele József atyára tekintettel
             paplista.append({
