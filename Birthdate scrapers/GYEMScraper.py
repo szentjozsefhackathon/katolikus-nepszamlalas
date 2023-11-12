@@ -25,6 +25,11 @@ def GYEM(filename=None):
 
 
     for pap in tqdm(json_content["items"]):
+        if pap["type"] == "NYUGDIJAS":
+            continue
+
+        if pap["name"] == "Dr. Veres András":
+            continue
         print(pap["name"])
         soup = BeautifulSoup(pap["text"], 'html.parser')
         for sor in soup.select("p"):

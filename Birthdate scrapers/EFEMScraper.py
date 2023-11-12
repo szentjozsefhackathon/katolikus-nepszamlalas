@@ -20,7 +20,13 @@ def EFEM(filename=None):
             pap = _pap.select_one(".row")
             if not pap:
                 continue
-            
+
+            if "Ternyák Csaba" in pap.select_one("h2").text:
+                continue
+
+            if "Katona István" in pap.select_one("h2").text:
+                continue
+
             if "nyugállományban" in pap.text:
                 continue
             print(pap.select_one("h2").text)
