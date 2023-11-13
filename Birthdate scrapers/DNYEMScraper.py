@@ -7,7 +7,7 @@ import json
 import argparse
 
 
-def DNYEM(filename=None):
+def DNYEM(filename=None, year=None):
     url = 'https://www.dnyem.hu/papjaink/'
     response = requests.get(url)
     if response.status_code == 200:
@@ -50,14 +50,14 @@ def DNYEM(filename=None):
                 continue
             if soup.select_one("#main article h1").text == "Molnár József":
                 paplista.append({
-                    "név": soup.select_one("#main article h1").text,
-                    "született": 1968
+                    "name": soup.select_one("#main article h1").text,
+                    "birth": 1968
                 })
                 continue
             if soup.select_one("#main article h1").text == "Sári András":
                 paplista.append({
-                    "név": soup.select_one("#main article h1").text,
-                    "született": 1971
+                    "name": soup.select_one("#main article h1").text,
+                    "birth": 1971
                 })
                 continue
             print(soup.select_one("#main article h1").text)
@@ -67,8 +67,8 @@ def DNYEM(filename=None):
             if len(sor.text.split("\n")[0].split(", ")) < 2:
                 break # Ft. Czele József atyára tekintettel
             paplista.append({
-                "név": soup.select_one("#main article h1").text,
-                "született": int(sor.text.split("\n")[0].split(", ")[1].split(".")[0])
+                "name": soup.select_one("#main article h1").text,
+                "birth": int(sor.text.split("\n")[0].split(", ")[1].split(".")[0])
             })
             break
 

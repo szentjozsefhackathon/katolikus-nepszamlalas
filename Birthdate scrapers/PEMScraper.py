@@ -6,7 +6,7 @@ from tqdm import tqdm
 import  json
 import argparse
 
-def PEM(filename=None):
+def PEM(filename=None, year=None):
     # Replace this with the URL of the website you want to scrape
     url = 'https://pecsiegyhazmegye.hu/egyhazmegye/papsag/papjaink'
     response = requests.get(url)
@@ -53,8 +53,8 @@ def PEM(filename=None):
         for sor in soup.select_one(".kpriest-content-right table").findAll("tr"): # Papi táblázat
             if(sor.select_one("th").text == "Született"): #A született fejléc számít
                 paplista.append({
-                    "név": soup.select_one(".page-header h2").text, # A pap neve
-                    "született": int(sor.select_one("td").text.strip().split(", ")[1].split(".")[0]) # A vesszővel levágjuk a helyet, a .-tal meg az évet
+                    "name": soup.select_one(".page-header h2").text, # A pap neve
+                    "birth": int(sor.select_one("td").text.strip().split(", ")[1].split(".")[0]) # A vesszővel levágjuk a helyet, a .-tal meg az évet
                 })
     if filename == None: return paplista
     else:

@@ -5,7 +5,7 @@ from tqdm import tqdm
 import  json
 import argparse
 
-def SZFVEM(filename=None):
+def SZFVEM(filename=None, year=None):
     url = "https://www.szfvar.katolikus.hu/"
     papok = []
     def papkereso(link):
@@ -79,8 +79,8 @@ def SZFVEM(filename=None):
             raise Exception(nev)
         
         paplista.append({
-            "név": nev,
-            "született": szul
+            "name": nev,
+            "birth": szul
         })
 
 

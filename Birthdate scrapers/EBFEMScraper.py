@@ -8,7 +8,7 @@ import argparse
 from selenium import webdriver
 import time
 
-def EBFEM(filename=None):
+def EBFEM(filename=None, year=None):
 
     url = 'https://www.esztergomi-ersekseg.hu/papsag'
     driver = webdriver.Firefox()
@@ -89,8 +89,8 @@ def EBFEM(filename=None):
                                 break
             if szul<szent:
                 paplista.append({
-                                "név": nev,
-                                "született": szul
+                                "name": nev,
+                                "birth": szul
                             })
             else:
                 hibasak.append({"név": nev, "hiba": "Szentelése előbbi, mint születése"})

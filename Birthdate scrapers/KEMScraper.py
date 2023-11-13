@@ -6,7 +6,7 @@ import json
 import argparse
 
 
-def KEM(filename=None):
+def KEM(filename=None, year=None):
     url = 'https://kaposvar.egyhazmegye.hu/index.php/papok/aktiv-papok'
     response = requests.get(url)
     if response.status_code == 200:
@@ -19,8 +19,8 @@ def KEM(filename=None):
     paplista = []
     for pap in soup.select(".qx-element-person"):
         paplista.append({
-            "név": pap.select_one("h4").text,
-            "született": int(pap.select_one(".qx-person-description p").text.split("Szent.:")[0].split(", ")[1].split(".")[0])
+            "name": pap.select_one("h4").text,
+            "birth": int(pap.select_one(".qx-person-description p").text.split("Szent.:")[0].split(", ")[1].split(".")[0])
         })
 
 

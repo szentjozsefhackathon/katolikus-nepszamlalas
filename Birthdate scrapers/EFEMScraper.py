@@ -5,7 +5,7 @@ from tqdm import tqdm
 import  json
 import argparse
 
-def EFEM(filename=None):
+def EFEM(filename=None, year=None):
     url = "https://eger.egyhazmegye.hu/hitelet/papsag?page="
     paplista = []
     def papkereso(link):
@@ -31,8 +31,8 @@ def EFEM(filename=None):
                 continue
             print(pap.select_one("h2").text)
             _papok.append({
-                "név": pap.select_one("h2").text,
-                "született": int(pap.select_one(".col-sm-8 div").text.split(": ")[1].split(".")[0])
+                "name": pap.select_one("h2").text,
+                "birth": int(pap.select_one(".col-sm-8 div").text.split(": ")[1].split(".")[0])
             })
         return _papok
     

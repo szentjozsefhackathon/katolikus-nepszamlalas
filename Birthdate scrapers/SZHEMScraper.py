@@ -5,7 +5,7 @@ from tqdm import tqdm
 import  json
 import argparse
 
-def SZHEM(filename=None):
+def SZHEM(filename=None, year=None):
     url = "https://www.martinus.hu/nev-es-cimtar/lelkipasztorok?oldal="
     papok = []
     def papkereso(link):
@@ -61,8 +61,8 @@ def SZHEM(filename=None):
             if "Születési hely, idő:" in sor.text:
                 try:
                     paplista.append({
-                        "név": nev,
-                        "született": int(sor.text.split(".")[0].split(", ")[-1])
+                        "name": nev,
+                        "birth": int(sor.text.split(".")[0].split(", ")[-1])
                     })
                 except: pass
                 break

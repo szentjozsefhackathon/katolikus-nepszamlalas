@@ -83,5 +83,6 @@
     "CH_PRIEST_R": "Szerzetes papok (CH)",
     "CH_TOTAL": "Lakosság (CH)",
     "CH_PRIEST": "Papok összesen (CH)",
-    "TOTAL": "Összesen"
+    "TOTAL": "Összesen",
+    "PRIESTAVG": "Papok átlagéletkora"
 }

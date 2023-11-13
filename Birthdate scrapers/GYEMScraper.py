@@ -6,7 +6,7 @@ from tqdm import tqdm
 import json
 import argparse
 
-def GYEM(filename=None):
+def GYEM(filename=None, year=None):
 
     url = 'https://gyor.egyhazmegye.hu/api/priest?limit=116&offset=0'
     response = requests.get(url)
@@ -36,14 +36,14 @@ def GYEM(filename=None):
             if "Született" in sor.text:
                 try:
                     paplista.append({
-                        "név": pap["name"],
-                        "született": int(sor.text.split(", ")[1].split(".")[0])
+                        "name": pap["name"],
+                        "birth": int(sor.text.split(", ")[1].split(".")[0])
                     })
                 except:
                     try:
                         paplista.append({
-                            "név": pap["name"],
-                            "született": int(sor.text.split(", ")[2].split(".")[0])
+                            "name": pap["name"],
+                            "birth": int(sor.text.split(", ")[2].split(".")[0])
                         })
                     except: pass
 
