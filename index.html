@@ -117,6 +117,12 @@
 					a <a href="https://github.com/borazslo/katolikus-nepszamlalas">githubon</a>.
 				</div>
 
+				<div class="alert alert-success">
+					<h5>Érdekesség</h5>
+					Azon egyházmegyéknél, ahol elérhető volt a papok születésnapja, elérhető a felületünkön a papok
+					átlagéletkora.
+				</div>
+
 				<div class="alert alert-info" id="about_the_data">
 					<h5>Hogy készültek az adatok?</h5>
 					<p>Az Open Street Map alapján az egy-egy egyházmegye területén lévő települések KSH adatait szépen
@@ -209,6 +215,13 @@
 							gyakran nem a 2001-es, 2011-es és 2022-es adatokat használjuk, hanem ami ezekhez legközelebb
 							van! Tehát
 							a CH_ adatok nem megbízhatóak és csak közelítőlegesek!</p>
+
+						<h6>Papok átlagéletkora</h6>
+						<p>Írtunk szkripteket azon (még csak latin rítusú) egyházmegyék esetében, amelyek weboldalán elérhető volt a papok születése. 
+							A 2022-es adatok esetén a 2023.nov.13-i adatok vannak feltüntetve. A szkriptek elérhetők GitHubon. A nyugállományban lévő papokat
+							és aktív megyéspüspököket nem számoltuk bele az átlagéletkorba.
+						</p>
+
 						<h6>Tehát az adatok a lehetőségekhez képest igen pontosak, de fenntartásokkal kezelendőek.</h6>
 					</div>
 				</div>
@@ -308,23 +321,24 @@
 			</div>
 
 		</div>
-		<div class="modal fade" id="bigChartModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="bigChartModalLabel" aria-hidden="true">
+		<div class="modal fade" id="bigChartModal" data-bs-backdrop="static" data-bs-keyboard="false"
+			aria-labelledby="bigChartModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-fullscreen">
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <h1 class="modal-title fs-5" id="bigChartModalLabel">Diagram nagyban.</h1>
-				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="bigChartModalLabel">Diagram nagyban.</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+					</div>
+					<div class="modal-body">
+						<canvas id="bigChartCanvas"></canvas>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+					</div>
 				</div>
-				<div class="modal-body">
-				  <canvas id="bigChartCanvas"></canvas>
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
-				</div>
-			  </div>
 			</div>
-		  </div>
-		  
+		</div>
+
 
 	</div>
 
