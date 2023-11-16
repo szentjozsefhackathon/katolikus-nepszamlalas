@@ -54,7 +54,7 @@ def EBFEM(filename=None, year=None):
                 pass
 
         soup = BeautifulSoup(html_content, 'html.parser')
-        nev = soup.select_one("h1").text
+        nev = soup.select_one("h1").text.strip()
         print(nev)
         if soup.select_one(".titulus") and "érsek" in soup.select_one(".titulus").text:
             continue
@@ -85,8 +85,47 @@ def EBFEM(filename=None, year=None):
                             try:
                                 szul = int(fieldset.text.split(".")[0].split(" ")[-1])
                             except:
-                                hibasak.append({"név": nev, "hiba": "Születés nem található"})
-                                break
+                                pass
+                                
+            
+            if nev == "Fábry Kornél dr.": #https://hu.wikipedia.org/wiki/F%C3%A1bry_Korn%C3%A9l
+                szul = 1972
+            
+            if nev == "Riesz Domonkos": #http://esztergomiszeminarium.eu/riesz-domonkos/
+                szul = 1994
+            
+            if nev == "Faragó András": #http://esztergomiszeminarium.eu/i-evfolyam/farago-andras/
+                szul = 1993
+
+            if nev == "Fehér Zoltán": #https://albertfalviplebania.hu/index.php/cikkek/interju-feher-zoltan-atyaval
+                szul = 1995
+            
+            if nev == "Forgács Balázs": # http://esztergomiszeminarium.eu/forgacs-balazs/
+                szul = 1988
+            
+            if nev == "Gyurász Krisztián": #https://bosihirado.net/index.php/papjaink
+                szul = 1989
+            
+            if nev == "Kiss Géza Imre":
+                szul = 1988
+            
+            if nev == "Lendvai Z. Zalán OFM": #https://orszagutiferencesek.hu/plebania/kepviselotestulet/
+                szul = 1964
+            
+            if nev == "Lőw Gergely": #https://pmi.katolikus.hu/?page_id=1904
+                szul = 1993
+            
+            if nev == "Máté János Kristóf": #http://esztergomiszeminarium.eu/mate-janos-kristof/
+                szul = 1993
+
+            if nev == "Varga Kamill OFM": #http://jaszhelytortenet.hu/e-6-15-varga-jozsef-fr-kamill-ofm.html
+                szul = 1974
+
+            if szul == 0:
+                hibasak.append({"név": nev, "hiba": "Születés nem található"})
+                break
+
+
             if szul<szent:
                 paplista.append({
                                 "name": nev,

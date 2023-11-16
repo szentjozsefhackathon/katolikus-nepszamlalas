@@ -14,7 +14,7 @@ if ($("#addNodeContainer").length == 1) {
         <div class="form-check-inline">
           <input class="form-check-input" type="checkbox" id="newNode2022" checked>
           <label class="form-check-label" for="newNode2022">
-            2022
+            2022/23
           </label>
         </div>
         <div class="form-check-inline">

@@ -20,12 +20,12 @@ if (!$("#container_map").length) {
             <div class="row">
             <label for="mapColoring" class="col-sm-2">Színezés alapja</label>
 			<select class="form-select col-sm" id="mapColoring" onchange="changeMap()">
-				<option value="2022data">2022-es KSH adatok</option>
-				<option value="2011data">2011-es KSH adatok</option>
-				<option value="2001data">2001-es KSH adatok</option>
+				<option value="2022data">2022/23-as adatok</option>
+				<option value="2011data">2011-es adatok</option>
+				<option value="2001data">2001-es adatok</option>
 				<option value="diff20012011">Változás 2001 és 2011 között</option>
-				<option value="diff20112022">Változás 2011 és 2022 között</option>
-				<option value="diff20012022">Változás 2001 és 2022 között</option>
+				<option value="diff20112022">Változás 2011 és 2022/23 között</option>
+				<option value="diff20012022">Változás 2001 és 2022/23 között</option>
 			</select>
             </div>
             <div class="form-check form-switch form-check-inline">
@@ -150,7 +150,7 @@ function publishMap(filteredData, settings) {
     title.onAdd = function (map) {
         const dataType = $("#mapData option:selected")[0]?.value || "RE_C";
         const inProprotionToType = $("#mapInProprotionToCheck").prop("checked") ? $("#mapInProprotionTo option:selected")[0]?.value || "TOTAL" : null;
-        const mapColoring = $("#mapColoring option:selected")[0]?.innerHTML || "2022-es KSH adatok";
+        const mapColoring = $("#mapColoring option:selected")[0]?.innerHTML || "2022/23-as adatok";
 
         const div = L.DomUtil.create('div', 'info title');
         div.innerHTML = `<h2><strong>„${getLabel(dataType)}”</strong> személyek létszáma${inProprotionToType? `<br/>a(z) <strong>„${getLabel(inProprotionToType)}”</strong> arányában`: ``}</h2>`;

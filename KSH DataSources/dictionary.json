@@ -84,5 +84,15 @@
     "CH_TOTAL": "Lakosság (CH)",
     "CH_PRIEST": "Papok összesen (CH)",
     "TOTAL": "Összesen",
-    "PRIESTAVG": "Papok átlagéletkora"
+    "PRIEST_YAVG": "Aktív papok átlagéletkora (em. honlap)",
+    "PRIEST_YSTD": "Aktív papok életkorának szórása (em. honlap)",
+    "PRIEST_YMED": "Aktív papok életkorának mediánja (em. honlap)",
+    "PRIEST_YLT30": "Aktív papok 30 éves kor alatt (em. honlap)",
+    "PRIEST_Y30-39": "Aktív papok 30-39 kor között (em. honlap)",
+    "PRIEST_Y40-49": "Aktív papok 40-49 kor között (em. honlap)",
+    "PRIEST_Y50-59": "Aktív papok 50-59 kor között (em. honlap)",
+    "PRIEST_Y60-69": "Aktív papok 60-69 kor között (em. honlap)",
+    "PRIEST_Y70-79": "Aktív papok 70-79 kor között (em. honlap)",
+    "PRIEST_YGTE80": "Aktív papok 80 éves kor vagy afölött (em. honlap)",
+    "PRIEST_KNOWNY": "Papok ismert életkorral"
 }

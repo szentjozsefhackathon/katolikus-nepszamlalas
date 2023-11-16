@@ -196,13 +196,14 @@ def collectMKPK():
     print('Done', flush=True)
 
 def collectAverageAge():
-    print("Collecting average ages", flush=True)
-    _2022 = json.load(open("Average Age DataSources/2023-11-15.json"))
+    print("Collecting data from dioceses", flush=True)
+    _2022 = json.load(open("Diocese Website DataSources/2023-11-16.json"))
     for key, area in areas.items():
         if not 'data' in areas[key]:
                     areas[key]['data'] = {}
         if area['name'] in _2022:
-            areas[key]['data']["PRIESTAVG"] = {"2022": _2022[area["name"]]}
+            for datatype, data in _2022[area['name']].items():
+                areas[key]["data"][datatype] = {"2022": data}
 
 
 def collectCatholicHierarchy():

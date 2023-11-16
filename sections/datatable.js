@@ -9,12 +9,12 @@ if (!$("#container_datatable").length) {
 			<div class="row">
 			<label for="selectOrder1" class="col-sm-2">Rendezés alapja</label>
 			<select class="form-select col-sm" id="selectOrder1" onchange="publish('publishDatatable')">
-				<option value="2022data">2022-es KSH adatok</option>
-				<option value="2011data">2011-es KSH adatok</option>
-				<option value="2001data">2001-es KSH adatok</option>
+				<option value="2022data">2022/23-as adatok</option>
+				<option value="2011data">2011-es adatok</option>
+				<option value="2001data">2001-es adatok</option>
 				<option value="diff20012011">Változás 2001 és 2011 között</option>
-				<option value="diff20112022">Változás 2011 és 2022 között</option>
-				<option value="diff20012022">Változás 2001 és 2022 között</option>
+				<option value="diff20112022">Változás 2011 és 2022/23 között</option>
+				<option value="diff20012022">Változás 2001 és 2022/23 között</option>
 			</select>
 			</div>
 			<table id="datatable" class="stripe row-border hover"></table>

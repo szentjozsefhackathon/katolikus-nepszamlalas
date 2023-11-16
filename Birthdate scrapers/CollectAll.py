@@ -10,6 +10,7 @@ from VFEMScraper import VFEM
 
 import json
 import argparse
+import numpy
 
 def averageY(year, filename=None):
     _dioceses = {
@@ -35,7 +36,20 @@ def averageY(year, filename=None):
 
     for diocese, data in _dioceses.items():
         birthSum = sum(priest["birth"] for priest in data)
-        dioceses[diocese] = year - birthSum/len(data)
+        dioceses[diocese] = {
+            "PRIEST_YAVG": year - birthSum/len(data),
+            "PRIEST_YSTD": numpy.std([(year - priest["birth"]) for priest in data]),
+            "PRIEST_YMED": numpy.median([(year - priest["birth"]) for priest in data]),
+            "PRIEST_YLT30": sum([(1 if (year - priest["birth"]) < 30 else 0) for priest in data]),
+            "PRIEST_Y30-39": sum([(1 if 30 <= (year - priest["birth"]) < 40 else 0) for priest in data]),
+            "PRIEST_Y40-49": sum([(1 if 40 <= (year - priest["birth"]) < 50 else 0) for priest in data]),
+            "PRIEST_Y50-59": sum([(1 if 50 <= (year - priest["birth"]) < 60 else 0) for priest in data]),
+            "PRIEST_Y60-69": sum([(1 if 60 <= (year - priest["birth"]) < 70 else 0) for priest in data]),
+            "PRIEST_Y70-79": sum([(1 if 70 <= (year - priest["birth"]) < 80 else 0) for priest in data]),
+            "PRIEST_YGTE80": sum([(1 if 80 <= (year - priest["birth"]) else 0) for priest in data]),
+            "PRIEST_KNOWNY": len(data)
+        }
+
     
     if filename == None:
         return dioceses

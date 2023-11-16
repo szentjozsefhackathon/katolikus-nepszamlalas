@@ -5,7 +5,7 @@ var chart1;
 if (!$("#container_chart").length) {
 	$("#sections").append(`<div class="container float-end" id="container_chart" style="display: none">
 			<h2 class="chart-title">Összehasonlító diagram</h2>
-			<p>Itt egyetlen nagy diagramban hasonlíthatjuk össze az adatokat. A <a href="#config">Beállítások</a> részben megadott területek adatai kerülnek csak kijelzésre. Az elérhető - és kattintásra ki- és bekapcsolható - adattagokat pedig szintén a <a href="#config">Beállítások</a> részben elérhető JSON formában adhatjuk meg. Az atadok pedig mindig a 2022-es százalékos adatokból készül, melynél egy sima adattagot (nincs arányosítva, nincs diagramra téve) hasonlítunk össze az össznépességgel.</p>
+			<p>Itt egyetlen nagy diagramban hasonlíthatjuk össze az adatokat. A <a href="#config">Beállítások</a> részben megadott területek adatai kerülnek csak kijelzésre. Az elérhető - és kattintásra ki- és bekapcsolható - adattagokat pedig szintén a <a href="#config">Beállítások</a> részben elérhető JSON formában adhatjuk meg. Az adatok pedig mindig a 2022-es százalékos adatokból készül, melynél egy sima adattagot (nincs arányosítva, nincs diagramra téve) hasonlítunk össze az össznépességgel.</p>
 			<canvas id="chart"></canvas>
 		</div>
 		<div class="b-example-divider float-end"></div>`

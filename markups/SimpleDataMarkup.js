@@ -67,7 +67,7 @@ class SimpleDataMarkup extends Markup {
                 </span>&nbsp;`
 
         } else {
-            var markup = `<span ${isNaN(this.data[2022])?'style="display: none" ':''}class="badge text-bg-primary even-larger-badge ${OS=='2022data'? "highlight-data": ''}" title="2022-es adat">
+            var markup = `<span ${isNaN(this.data[2022])?'style="display: none" ':''}class="badge text-bg-primary even-larger-badge ${OS=='2022data'? "highlight-data": ''}" title="2022/23-as adat">
                     ${this.data[2022]?.toLocaleString('hu-HU', { maximumFractionDigits: 2 })}</span><br/>		
                 <span ${isNaN(this.data[2001])?'style="display: none" ':''}class="badge text-bg-secondary  ${OS=='2001data'? "highlight-data": ''}" title="2001-es adat">
                     ${this.data[2001]?.toLocaleString('hu-HU', { maximumFractionDigits: 2 })}</span>&nbsp;
