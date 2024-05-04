@@ -1,6 +1,6 @@
 # Népszámlálás adatai katolikus szemmel
 
-https://borazslo.github.io/katolikus-nepszamlalas/
+https://szentjozsefhackathon.github.io/katolikus-nepszamlalas/
 
 Cél a népszámlálása adatait egyházmegyei szintre lebontani és megjeleníteni.
 
