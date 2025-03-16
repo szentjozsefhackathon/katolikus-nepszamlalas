@@ -170,6 +170,13 @@ function publishMap(filteredData, settings) {
 
     };
     source.addTo(map);
+    var printer = L.easyPrint({
+        sizeModes: ['Current'],
+        filename: 'katolikusNepszamlalas',
+        exportOnly: true,
+        hideControlContainer: false,
+        
+  }).addTo(map);
 
 
     // control that shows state info on hover
